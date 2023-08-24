@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Jared Rosario</title>
+    <link>https://gokarna-hugo.netlify.app/projects/</link>
+    <description>Recent content in Projects on Jared Rosario</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://gokarna-hugo.netlify.app/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discord Bot</title>
+      <link>https://gokarna-hugo.netlify.app/projects/discordbot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gokarna-hugo.netlify.app/projects/discordbot/</guid>
+      <description>Info Made a discord bot named &amp;ldquo;eric&amp;rdquo; using discord.py and GPT-3 APIs.</description>
+    </item>
+    
+    <item>
+      <title>Video Game (using python)</title>
+      <link>https://gokarna-hugo.netlify.app/projects/videogamepy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gokarna-hugo.netlify.app/projects/videogamepy/</guid>
+      <description>Info Made a video game using python.</description>
+    </item>
+    
+    <item>
+      <title>Web Scrapper</title>
+      <link>https://gokarna-hugo.netlify.app/projects/webscrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gokarna-hugo.netlify.app/projects/webscrapper/</guid>
+      <description>Info Made a web scrapper in GOLang as a project.</description>
+    </item>
+    
+  </channel>
+</rss>
