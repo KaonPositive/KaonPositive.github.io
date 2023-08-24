@@ -2,74 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://gokarna-hugo.netlify.app/posts/theme-documentation-basics/</loc>
+    <loc>https://kaonpositive.github.io/posts/theme-documentation-basics/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/posts/theme-documentation-advanced/</loc>
+    <loc>https://kaonpositive.github.io/posts/theme-documentation-advanced/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/posts/markdown-syntax/</loc>
+    <loc>https://kaonpositive.github.io/posts/markdown-syntax/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/posts/aboutme/</loc>
+    <loc>https://kaonpositive.github.io/posts/aboutme/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/tags/code/</loc>
+    <loc>https://kaonpositive.github.io/tags/code/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/posts/learncode0/</loc>
+    <loc>https://kaonpositive.github.io/posts/learncode0/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/tags/configuration/</loc>
+    <loc>https://kaonpositive.github.io/tags/configuration/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/tags/css/</loc>
+    <loc>https://kaonpositive.github.io/tags/css/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/tags/html/</loc>
+    <loc>https://kaonpositive.github.io/posts/devlog00/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/tags/installation/</loc>
+    <loc>https://kaonpositive.github.io/tags/html/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/tags/introduction/</loc>
+    <loc>https://kaonpositive.github.io/tags/installation/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/</loc>
+    <loc>https://kaonpositive.github.io/tags/introduction/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/tags/learn/</loc>
+    <loc>https://kaonpositive.github.io/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/tags/markdown/</loc>
+    <loc>https://kaonpositive.github.io/tags/learn/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/tags/notes/</loc>
+    <loc>https://kaonpositive.github.io/tags/markdown/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/posts/</loc>
+    <loc>https://kaonpositive.github.io/tags/notes/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/tags/python/</loc>
+    <loc>https://kaonpositive.github.io/posts/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/posts/stats411notes00/</loc>
+    <loc>https://kaonpositive.github.io/tags/python/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/tags/stats411/</loc>
+    <loc>https://kaonpositive.github.io/posts/stats411notes00/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/tags/</loc>
+    <loc>https://kaonpositive.github.io/tags/stats411/</loc>
     <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/categories/</loc>
+    <loc>https://kaonpositive.github.io/tags/</loc>
+    <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/projects/discordbot/</loc>
+    <loc>https://kaonpositive.github.io/categories/</loc>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/projects/</loc>
+    <loc>https://kaonpositive.github.io/projects/discordbot/</loc>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/projects/videogamepy/</loc>
+    <loc>https://kaonpositive.github.io/projects/</loc>
   </url><url>
-    <loc>https://gokarna-hugo.netlify.app/projects/webscrapper/</loc>
+    <loc>https://kaonpositive.github.io/projects/videogamepy/</loc>
+  </url><url>
+    <loc>https://kaonpositive.github.io/projects/webscrapper/</loc>
   </url>
 </urlset>

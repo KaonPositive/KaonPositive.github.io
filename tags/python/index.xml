@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on Jared Rosario</title>
-    <link>https://gokarna-hugo.netlify.app/tags/python/</link>
+    <link>https://kaonpositive.github.io/tags/python/</link>
     <description>Recent content in python on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://gokarna-hugo.netlify.app/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Code Adventure 00</title>
-      <link>https://gokarna-hugo.netlify.app/posts/learncode0/</link>
+      <link>https://kaonpositive.github.io/posts/learncode0/</link>
       <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://gokarna-hugo.netlify.app/posts/learncode0/</guid>
+      <guid>https://kaonpositive.github.io/posts/learncode0/</guid>
       <description>New things I&amp;rsquo;ve learned today.
 Code Here print( &amp;#34;hello world&amp;#34; ); </description>
     </item>
