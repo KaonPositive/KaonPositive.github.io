@@ -17,14 +17,5 @@
 Code Here print( &amp;#34;hello world&amp;#34; ); </description>
     </item>
     
-    <item>
-      <title>Dev Log #00</title>
-      <link>https://kaonpositive.github.io/posts/devlog00/</link>
-      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/devlog00/</guid>
-      <description>log</description>
-    </item>
-    
   </channel>
 </rss>
