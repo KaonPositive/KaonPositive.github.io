@@ -6,7 +6,16 @@
     <description>Recent content in notes on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithms</title>
+      <link>https://kaonpositive.github.io/posts/algos/</link>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/algos/</guid>
+      <description>What is an algorithm?  Sequence of steps that transform input into output.  What is time complexity of an algorithm?  Indicates total time needed by program to run to completion. Expressed by using Big O notation.  What are the types of notation used for time complexity?  Big Oh: Fewer than or same as iterations. Big Omega: More than or same as iterations. Big Theta: Same as iterations.</description>
+    </item>
+    
     <item>
       <title>Data Structures</title>
       <link>https://kaonpositive.github.io/posts/datastructures/</link>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>algorithms on Jared Rosario</title>
+    <link>https://kaonpositive.github.io/tags/algorithms/</link>
+    <description>Recent content in algorithms on Jared Rosario</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithms</title>
+      <link>https://kaonpositive.github.io/posts/algos/</link>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/algos/</guid>
+      <description>What is an algorithm?  Sequence of steps that transform input into output.  What is time complexity of an algorithm?  Indicates total time needed by program to run to completion. Expressed by using Big O notation.  What are the types of notation used for time complexity?  Big Oh: Fewer than or same as iterations. Big Omega: More than or same as iterations. Big Theta: Same as iterations.</description>
+    </item>
+    
+  </channel>
+</rss>

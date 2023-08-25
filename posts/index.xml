@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Archive - Basics</title>
       <link>https://kaonpositive.github.io/posts/theme-documentation-basics/</link>
@@ -37,6 +37,15 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
       
       <guid>https://kaonpositive.github.io/posts/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Algorithms</title>
+      <link>https://kaonpositive.github.io/posts/algos/</link>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/algos/</guid>
+      <description>What is an algorithm?  Sequence of steps that transform input into output.  What is time complexity of an algorithm?  Indicates total time needed by program to run to completion. Expressed by using Big O notation.  What are the types of notation used for time complexity?  Big Oh: Fewer than or same as iterations. Big Omega: More than or same as iterations. Big Theta: Same as iterations.</description>
     </item>
     
     <item>
