@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Data Structures</title>
+    <meta name="description" content="Information about data structures">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, data structures'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/datastructures/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Data Structures">
+    <meta property="og:description" content="Information about data structures">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Data Structures">
+    <meta name="twitter:description" content="Information about data structures">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/datastructures/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/datastructures/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/datastructures/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Data Structures</h1>
+        <small role="doc-subtitle">Information about data structures</small>
+        <p class="post-date">
+            August 24, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/data-structures">data structures</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="what-is-a-data-structure">What is a data structure?</h3>
+<ul>
+<li>Used for organization and modification of data.</li>
+</ul>
+<h3 id="what-are-the-two-types-of-data-structures">What are the two types of data structures?</h3>
+<ol>
+<li><code>Linear</code>: Elements result in a sequence or linear list. Examples: arrays, linked lists, stacks, etc.</li>
+<li><code>Non-linear</code>: Traversal of nodes is not done in a sequential manner. Examples: trees, graphs, etc.</li>
+</ol>
+<h3 id="what-is-an-array">What is an array?</h3>
+<ul>
+<li>A collection of the same data type that are stored at contiguous memory locations (memory locations are adjacent to each other in memory).</li>
+<li>Insertion takes O(n) time since you would need to shift elements down.</li>
+<li>Deletion takes O(n) time since you would need to shift elements up.</li>
+<li>Arrays use <code>random access</code>&ndash;can access certain elements directly by referring to their indeces. Thus, readings will take O(1) time.</li>
+</ul>
+<h3 id="what-is-a-multidimensional-array">What is a multidimensional array?</h3>
+<ul>
+<li>An array that spans across more than one dimension.</li>
+</ul>
+<h3 id="what-is-a-linked-list">What is a linked list?</h3>
+<ul>
+<li>Sequence of nodes where every node is connected to the next node by a reference pointer.</li>
+<li>A collection of elements can be of different data types.
+<ul>
+<li>Each element will hold the address of the next element in the list (reference dependent) and other data that is relevant.</li>
+<li>It uses sequential access&ndash;can only read elements one at a time starting from the first node. Thus, it takes O(n) time.</li>
+<li>Can view it as a treasure hunt&ndash;address will basically say,
+Oh, the next item will be stored in this specific location!&quot;</li>
+</ul>
+</li>
+<li>Elements are not stored in adjacent memory locations&ndash;they are NOT contiguous.</li>
+<li>EVERY linked-list has a head and tail node
+<ul>
+<li>Head = start of the linked-list</li>
+<li>Tail = end of the linked-list</li>
+</ul>
+</li>
+</ul>
+<h3 id="how-are-linked-lists-more-efficient-than-arrays">How are linked lists more efficient than arrays?</h3>
+<ul>
+<li>Insertion and deletion</li>
+<li>Dynamic data structure</li>
+<li>No wastage of memory</li>
+</ul>
+<h3 id="scenarios-when-you-can-use-linked-lists-and-arrays">Scenarios when you can use linked lists and arrays?</h3>
+<ul>
+<li>Linked list over array
+<ul>
+<li>When you do not know the exact number of elements beforehand.</li>
+</ul>
+</li>
+<li>Array over linked list
+<ul>
+<li>Know the exact number of elements beforehand.</li>
+</ul>
+</li>
+</ul>
+<h3 id="what-is-a-doubly-linked-list">What is a doubly-linked list?</h3>
+<ul>
+<li>Linked list where nodes have two references.
+<ul>
+<li>Reference to next node in sequence</li>
+<li>Reference to previous node in sequence.</li>
+</ul>
+</li>
+</ul>
+<h3 id="what-is-a-stack">What is a stack?</h3>
+<ul>
+<li>LIFO (Last In First Out)</li>
+<li>Push, pop, peek are basic operations</li>
+</ul>
+<h3 id="what-is-a-queue">What is a queue?</h3>
+<ul>
+<li>FIFO (First In First Out)</li>
+<li>Enqueue, dequeue, get front, get rear are basic operations.</li>
+</ul>
+<h3 id="how-is-a-stack-different-from-a-queue">How is a stack different from a queue?</h3>
+<ul>
+<li>In a stack, the item that is most recently added is removed first whereas in a queue, the item least recently added is removed first.</li>
+</ul>
+<h3 id="how-to-implement-a-queue-using-stacks">How to implement a queue using stacks?</h3>
+<ul>
+<li>Using 2 stacks.</li>
+</ul>
+<h3 id="how-to-implement-a-stack-using-queues">How to implement a stack using queues?</h3>
+<ul>
+<li>Using 2 queues.</li>
+</ul>
+<h3 id="what-is-a-hashmap">What is a hashmap?</h3>
+<ul>
+<li>Implementation of a hash table data structure allows basic operations in constant time O(1).</li>
+</ul>
+<h3 id="can-we-store-a-duplicate-key-in-a-hashmap">Can we store a duplicate key in a hashmap?</h3>
+<ul>
+<li>no.</li>
+</ul>
+<h3 id="which-data-structures-are-used-for-implementing-cache">Which data structures are used for implementing cache?</h3>
+<ol>
+<li><code>Queue</code>: Using doubly-linked list. Maximum size of queue is determined by cache size. Least recently used will be at the front of queue.</li>
+<li><code>Hashmap</code>: Stores the page number as the key along with address of corresponding queue node as value.</li>
+</ol>
+<h3 id="what-is-a-priority-queue">What is a priority queue?</h3>
+<ul>
+<li>Queue but with priority assigned to elements.</li>
+<li>Elements with higher priority are processed first.</li>
+</ul>
+<h3 id="what-is-a-tree">What is a tree?</h3>
+<ul>
+<li>Recursive, non-linear data structure consisting of the set of one or more elements where one node is designated as the root and the remaining nodes are called children of the root.</li>
+<li>Tree organizes data into a hierarchical manner.</li>
+</ul>
+<h3 id="what-is-a-binary-tree">What is a binary tree?</h3>
+<ul>
+<li>Tree where each node can have AT MOST two children.</li>
+</ul>
+<h3 id="what-is-the-maximum-number-of-nodes-in-a-binary-tree-of-height-k">What is the maximum number of nodes in a binary tree of height k?</h3>
+<ul>
+<li>(2^k+1) - 1, where k &gt;= 1.</li>
+</ul>
+<h3 id="what-are-tree-traversals">What are tree traversals?</h3>
+<ul>
+<li>Process of visiting all nodes of a tree.</li>
+<li>Inorder, preorder, postorder</li>
+</ul>
+<h3 id="what-is-a-binary-search-tree-bst">What is a binary search tree (BST)?</h3>
+<ul>
+<li>Variant of binary tree where the values of nodes in the left sub-tree are less than the root and values of nodes in the right sub-tree are greater than the root.</li>
+</ul>
+<h3 id="what-is-an-avl-tree">What is an AVL tree?</h3>
+<ul>
+<li>Height balancing BST.</li>
+<li>Checks the height of left and right sub-trees and assures that the difference is NOT more than 1.</li>
+</ul>
+<h3 id="what-is-a-graph">What is a graph?</h3>
+<ul>
+<li>Non-linear data structure that consists of vertices and edges.</li>
+<li>Edges connecting nodes may be directed or undirected.</li>
+</ul>
+<h3 id="how-do-you-represent-a-graph">How do you represent a graph?</h3>
+<ol>
+<li><code>Adjacency matrix</code>: Used for sequential data representation.</li>
+<li><code>Adjacency list</code>: Used to represent linked data.</li>
+</ol>
+<h3 id="what-is-the-difference-between-a-tree-and-a-graph">What is the difference between a tree and a graph?</h3>
+<ul>
+<li>Trees must be connected and can NEVER have loops; graphs have no restrictions.</li>
+<li>Trees are hierarchical and graphs follow a network model.</li>
+</ul>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#what-is-a-data-structure">What is a data structure?</a></li>
+            <li><a href="#what-are-the-two-types-of-data-structures">What are the two types of data structures?</a></li>
+            <li><a href="#what-is-an-array">What is an array?</a></li>
+            <li><a href="#what-is-a-multidimensional-array">What is a multidimensional array?</a></li>
+            <li><a href="#what-is-a-linked-list">What is a linked list?</a></li>
+            <li><a href="#how-are-linked-lists-more-efficient-than-arrays">How are linked lists more efficient than arrays?</a></li>
+            <li><a href="#scenarios-when-you-can-use-linked-lists-and-arrays">Scenarios when you can use linked lists and arrays?</a></li>
+            <li><a href="#what-is-a-doubly-linked-list">What is a doubly-linked list?</a></li>
+            <li><a href="#what-is-a-stack">What is a stack?</a></li>
+            <li><a href="#what-is-a-queue">What is a queue?</a></li>
+            <li><a href="#how-is-a-stack-different-from-a-queue">How is a stack different from a queue?</a></li>
+            <li><a href="#how-to-implement-a-queue-using-stacks">How to implement a queue using stacks?</a></li>
+            <li><a href="#how-to-implement-a-stack-using-queues">How to implement a stack using queues?</a></li>
+            <li><a href="#what-is-a-hashmap">What is a hashmap?</a></li>
+            <li><a href="#can-we-store-a-duplicate-key-in-a-hashmap">Can we store a duplicate key in a hashmap?</a></li>
+            <li><a href="#which-data-structures-are-used-for-implementing-cache">Which data structures are used for implementing cache?</a></li>
+            <li><a href="#what-is-a-priority-queue">What is a priority queue?</a></li>
+            <li><a href="#what-is-a-tree">What is a tree?</a></li>
+            <li><a href="#what-is-a-binary-tree">What is a binary tree?</a></li>
+            <li><a href="#what-is-the-maximum-number-of-nodes-in-a-binary-tree-of-height-k">What is the maximum number of nodes in a binary tree of height k?</a></li>
+            <li><a href="#what-are-tree-traversals">What are tree traversals?</a></li>
+            <li><a href="#what-is-a-binary-search-tree-bst">What is a binary search tree (BST)?</a></li>
+            <li><a href="#what-is-an-avl-tree">What is an AVL tree?</a></li>
+            <li><a href="#what-is-a-graph">What is a graph?</a></li>
+            <li><a href="#how-do-you-represent-a-graph">How do you represent a graph?</a></li>
+            <li><a href="#what-is-the-difference-between-a-tree-and-a-graph">What is the difference between a tree and a graph?</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2023 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
