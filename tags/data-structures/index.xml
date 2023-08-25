@@ -6,7 +6,17 @@
     <description>Recent content in data structures on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/data-structures/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/data-structures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OA Notes</title>
+      <link>https://kaonpositive.github.io/posts/oanotes/</link>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/oanotes/</guid>
+      <description>review data structures and algorithms.
+ strings, lists, trees, queues, stacks, graphs, heaps, hash tables, and hash maps. sorts, searches, recursion, iterative approaches, and traversals (BFS and DFS) understand basic programming concepts time yourself as you will have 120 minutes to complete the assessment. practice different types of questions in the Candidate Prep on HackerRank  </description>
+    </item>
+    
     <item>
       <title>Data Structures</title>
       <link>https://kaonpositive.github.io/posts/datastructures/</link>
