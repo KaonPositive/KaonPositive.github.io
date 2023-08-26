@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Design Patterns</title>
+    <meta name="description" content="Information about design patterns">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, interview, review'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/designpatterns/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Design Patterns">
+    <meta property="og:description" content="Information about design patterns">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Design Patterns">
+    <meta name="twitter:description" content="Information about design patterns">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/designpatterns/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/designpatterns/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/designpatterns/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Design Patterns</h1>
+        <small role="doc-subtitle">Information about design patterns</small>
+        <p class="post-date">
+            August 25, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/interview">interview</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/review">review</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="what-is-abstract-factory">What is Abstract Factory?</h3>
+<ul>
+<li>Provide an interface for creating families of related or dependent objects without specifying their concrete classes.</li>
+</ul>
+<h3 id="what-is-an-adapter">What is an Adapter?</h3>
+<ul>
+<li>Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn&rsquo;t otherwise because of incompatibility interfaces.</li>
+</ul>
+<h3 id="what-is-a-bridge">What is a Bridge?</h3>
+<ul>
+<li>Decouple an abstraction from its implementation so that the two can very independetly.</li>
+</ul>
+<h3 id="what-is-a-builder">What is a builder?</h3>
+<ul>
+<li>Separate the construction of a complex object from its representation so that the same construction processes can create different representations.</li>
+</ul>
+<h3 id="what-is-the-chain-of-responsibility">What is the Chain of Responsibility?</h3>
+<ul>
+<li>Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.</li>
+</ul>
+<h3 id="what-is-a-command">What is a command?</h3>
+<ul>
+<li>Encapsulate a request as an onject, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.</li>
+</ul>
+<h3 id="what-is-composite">What is Composite?</h3>
+<ul>
+<li>Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.</li>
+</ul>
+<h3 id="what-is-a-decorator">What is a Decorator?</h3>
+<ul>
+<li>Attach additional responsibilities to an object dynamically. Provide a flexible alternative to subclassing for extending functionality.</li>
+</ul>
+<h3 id="what-is-a-facade">What is a Facade?</h3>
+<ul>
+<li>Provide a unified interface to a set of interfaces in a system. Facade defines a higher-level interface that makes the subsystem easier to use.</li>
+</ul>
+<h3 id="what-is-factory-method">What is Factory Method?</h3>
+<ul>
+<li>Define an interface for creating an object, but let the subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.</li>
+</ul>
+<h3 id="what-is-flyweight">What is Flyweight?</h3>
+<ul>
+<li>use sharing to support large numbers of fine-grained objects efficiently. A flyweight is a shared object that can be used to multiple contexts simultaneously. The flyweight acts as an independent object in each context; it&rsquo;s indistinguishable from an instance of an object that&rsquo;s not shared.</li>
+</ul>
+<h3 id="what-is-an-interpreter">What is an Interpreter?</h3>
+<ul>
+<li>Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in a language.</li>
+</ul>
+<h3 id="what-is-an-iterator">What is an Iterator?</h3>
+<ul>
+<li>Provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.</li>
+</ul>
+<h3 id="what-is-a-mediator">What is a Mediator?</h3>
+<ul>
+<li>Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and lets you vary their interaction independently.</li>
+</ul>
+<h3 id="what-is-memento">What is Memento?</h3>
+<ul>
+<li>Without violating encapsulation, capture and externalize an object&rsquo;s internal state so that the object can be restored to this state later.</li>
+</ul>
+<h3 id="what-is-an-observer">What is an Observer?</h3>
+<ul>
+<li>Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.</li>
+</ul>
+<h3 id="what-is-a-prototype">What is a Prototype?</h3>
+<ul>
+<li>Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.</li>
+</ul>
+<h3 id="what-is-a-proxy">What is a Proxy?</h3>
+<ul>
+<li>Provide a surrogate or placeholder for another object to control access to it.</li>
+</ul>
+<h3 id="what-is-a-singleton">What is a Singleton?</h3>
+<ul>
+<li>Ensure a class only has one instance, and provide a global point of access to it.</li>
+</ul>
+<h3 id="what-is-a-state">What is a State?</h3>
+<ul>
+<li>Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.</li>
+</ul>
+<h3 id="what-is-strategy">What is Strategy?</h3>
+<ul>
+<li>Defines a family of algorithms, encapsulates each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients who use it.</li>
+</ul>
+<h3 id="what-is-a-template">What is a Template?</h3>
+<ul>
+<li>Define a skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithms structure.</li>
+</ul>
+<h3 id="what-is-a-visitor">What is a Visitor?</h3>
+<ul>
+<li>Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.</li>
+</ul>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#what-is-abstract-factory">What is Abstract Factory?</a></li>
+            <li><a href="#what-is-an-adapter">What is an Adapter?</a></li>
+            <li><a href="#what-is-a-bridge">What is a Bridge?</a></li>
+            <li><a href="#what-is-a-builder">What is a builder?</a></li>
+            <li><a href="#what-is-the-chain-of-responsibility">What is the Chain of Responsibility?</a></li>
+            <li><a href="#what-is-a-command">What is a command?</a></li>
+            <li><a href="#what-is-composite">What is Composite?</a></li>
+            <li><a href="#what-is-a-decorator">What is a Decorator?</a></li>
+            <li><a href="#what-is-a-facade">What is a Facade?</a></li>
+            <li><a href="#what-is-factory-method">What is Factory Method?</a></li>
+            <li><a href="#what-is-flyweight">What is Flyweight?</a></li>
+            <li><a href="#what-is-an-interpreter">What is an Interpreter?</a></li>
+            <li><a href="#what-is-an-iterator">What is an Iterator?</a></li>
+            <li><a href="#what-is-a-mediator">What is a Mediator?</a></li>
+            <li><a href="#what-is-memento">What is Memento?</a></li>
+            <li><a href="#what-is-an-observer">What is an Observer?</a></li>
+            <li><a href="#what-is-a-prototype">What is a Prototype?</a></li>
+            <li><a href="#what-is-a-proxy">What is a Proxy?</a></li>
+            <li><a href="#what-is-a-singleton">What is a Singleton?</a></li>
+            <li><a href="#what-is-a-state">What is a State?</a></li>
+            <li><a href="#what-is-strategy">What is Strategy?</a></li>
+            <li><a href="#what-is-a-template">What is a Template?</a></li>
+            <li><a href="#what-is-a-visitor">What is a Visitor?</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2023 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
