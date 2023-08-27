@@ -19,7 +19,7 @@
     
     <title>Linked List</title>
     <meta name="description" content="Information about linked-list and its implementation">
-    <meta name="keywords" content='blog, gokarna, hugo, notes, interview, review'>
+    <meta name="keywords" content='blog, gokarna, hugo, notes, interview, review, data structures'>
 
     <meta property="og:url" content="https://kaonpositive.github.io/posts/linkedlist/">
     <meta property="og:type" content="website">
@@ -142,7 +142,7 @@
         <h1>Linked List</h1>
         <small role="doc-subtitle">Information about linked-list and its implementation</small>
         <p class="post-date">
-            August 25, 2023
+            August 26, 2023
         </p>
 
         <ul class="post-tags">
@@ -153,6 +153,8 @@
         
             <li class="post-tag"><a href="https://kaonpositive.github.io/tags/review">review</a></li>
         
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/data-structures">data structures</a></li>
+        
         </ul>
     </div>
 
@@ -160,7 +162,7 @@
         <p>
             <h3 id="what-is-a-linked-list">What is a linked-list?</h3>
 <ul>
-<li>It is a non-contiguous linear data structure where a sequence of nodes are connected to one another via a reference pointer.</li>
+<li>It is a <code>non-contiguous linear data structure</code> where a sequence of nodes are connected to one another via a reference pointer.</li>
 <li>Each node stores the data and address of the next node.</li>
 </ul>
 <h3 id="what-does-each-node-have">What does each node have?</h3>
@@ -209,7 +211,12 @@
   <span style="color:#66d9ef">def</span> __init__( self, data ):
     self<span style="color:#f92672">.</span>data <span style="color:#f92672">=</span> data;
     self<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>;
-</code></pre></div>
+</code></pre></div><h3 id="what-are-ways-to-traverse-through-a-linked-list">What are ways to traverse through a linked-list?</h3>
+<ol>
+<li>Use an iterative approach ( while or for loop where the current node is not pointing to NULL/nullptr ).</li>
+<li>Recursive approach (same condition as the iterative approach).</li>
+</ol>
+
         </p>
         
     </div>

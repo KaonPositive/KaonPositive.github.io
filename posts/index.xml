@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 25 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Archive - Basics</title>
       <link>https://kaonpositive.github.io/posts/theme-documentation-basics/</link>
@@ -40,6 +40,25 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
     </item>
     
     <item>
+      <title>Binary Trees</title>
+      <link>https://kaonpositive.github.io/posts/binarytrees/</link>
+      <pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/binarytrees/</guid>
+      <description>What is a binary tree? It is a recursive, non-linear tree data structure where one node is designated as the root and the others are called the children of the root. Each node has AT MOST two children.
+What does each node have?  Each node in the tree must have:  Data: Holds the value/data of the associated node Pointer to the left child Pointer to the right child.    C++ Code Example:</description>
+    </item>
+    
+    <item>
+      <title>Linked List</title>
+      <link>https://kaonpositive.github.io/posts/linkedlist/</link>
+      <pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/linkedlist/</guid>
+      <description>What is a linked-list?  It is a non-contiguous linear data structure where a sequence of nodes are connected to one another via a reference pointer. Each node stores the data and address of the next node.  What does each node have?  A node in a linked-list typically have two components:  Data: Holds the value/data of the associated node Next Pointer: Stores memory address (reference pointer) of the next node in the sequence Head and Tail: The head node will be the way to access the linked list&amp;ndash;it points to the first node of the list.</description>
+    </item>
+    
+    <item>
       <title>Algorithms</title>
       <link>https://kaonpositive.github.io/posts/algos/</link>
       <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
@@ -64,15 +83,6 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
       
       <guid>https://kaonpositive.github.io/posts/designpatterns/</guid>
       <description>What is Abstract Factory?  Provide an interface for creating families of related or dependent objects without specifying their concrete classes.  What is an Adapter?  Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn&amp;rsquo;t otherwise because of incompatibility interfaces.  What is a Bridge?  Decouple an abstraction from its implementation so that the two can very independetly.  What is a builder?</description>
-    </item>
-    
-    <item>
-      <title>Linked List</title>
-      <link>https://kaonpositive.github.io/posts/linkedlist/</link>
-      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/linkedlist/</guid>
-      <description>What is a linked-list?  It is a non-contiguous linear data structure where a sequence of nodes are connected to one another via a reference pointer. Each node stores the data and address of the next node.  What does each node have?  A node in a linked-list typically have two components:  Data: Holds the value/data of the associated node Next Pointer: Stores memory address (reference pointer) of the next node in the sequence Head and Tail: The head node will be the way to access the linked list&amp;ndash;it points to the first node of the list.</description>
     </item>
     
     <item>
@@ -110,16 +120,6 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
       
       <guid>https://kaonpositive.github.io/posts/aboutme/</guid>
       <description>My name is Jared Rosario and I am a 21 year old that was born in San Jose, California. I&amp;rsquo;m passionate about coding and music. For most of my free time, I&amp;rsquo;m either coding exciting projects or scrolling through my music library to find the perfect track to fit my mood. I&amp;rsquo;ve been coding since my early years, and I&amp;rsquo;m always striving to be better. I love to learn new things and build things from scratch, and I&amp;rsquo;m always seeking out new opportunities to advance my skills.</description>
-    </item>
-    
-    <item>
-      <title>Code Adventure 00</title>
-      <link>https://kaonpositive.github.io/posts/learncode0/</link>
-      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/learncode0/</guid>
-      <description>New things I&amp;rsquo;ve learned today.
-Code Here print( &amp;#34;hello world&amp;#34; ); </description>
     </item>
     
     <item>

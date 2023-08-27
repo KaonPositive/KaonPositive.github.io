@@ -17,26 +17,26 @@
     
 
     
-    <title>STATS 411 Notes #00</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo, STATS411, notes'>
+    <title>Binary Trees</title>
+    <meta name="description" content="Information about binary trees and its implementation">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, interview, review, data structures, dfs, bfs'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/posts/stats411notes00/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/binarytrees/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="STATS 411 Notes #00">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="Binary Trees">
+    <meta property="og:description" content="Information about binary trees and its implementation">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="STATS 411 Notes #00">
-    <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/stats411notes00/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/stats411notes00/">
+    <meta name="twitter:title" content="Binary Trees">
+    <meta name="twitter:description" content="Information about binary trees and its implementation">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/binarytrees/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/binarytrees/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/posts/stats411notes00/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/binarytrees/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -139,24 +139,80 @@
 <main id="content">
     <div class="post container">
     <div class="post-header-section">
-        <h1>STATS 411 Notes #00</h1>
-        <small role="doc-subtitle"></small>
+        <h1>Binary Trees</h1>
+        <small role="doc-subtitle">Information about binary trees and its implementation</small>
         <p class="post-date">
-            August 24, 2023
+            August 26, 2023
         </p>
 
         <ul class="post-tags">
         
-            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/stats411">STATS411</a></li>
-        
             <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/interview">interview</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/review">review</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/data-structures">data structures</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/dfs">dfs</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/bfs">bfs</a></li>
         
         </ul>
     </div>
 
     <div class="post-content">
         <p>
-            <p>notes here</p>
+            <h3 id="what-is-a-binary-tree">What is a binary tree?</h3>
+<p>It is a <code>recursive, non-linear tree data structure</code> where one node is designated as the root and the others are called the children of the root. Each node has AT MOST two children.</p>
+<h3 id="what-does-each-node-have">What does each node have?</h3>
+<ul>
+<li>Each node in the tree must have:
+<ol>
+<li>Data: Holds the value/data of the associated node</li>
+<li>Pointer to the left child</li>
+<li>Pointer to the right child.</li>
+</ol>
+</li>
+</ul>
+<p>C++ Code Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Node</span> {
+  <span style="color:#66d9ef">int</span> data;
+  <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Node</span><span style="color:#f92672">*</span> left;
+  <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Node</span><span style="color:#f92672">*</span> right;
+};
+</code></pre></div><p>Python Code Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span>:
+  <span style="color:#66d9ef">def</span> __init__( self, data ):
+    self<span style="color:#f92672">.</span>data <span style="color:#f92672">=</span> data;
+    self<span style="color:#f92672">.</span>left <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>;
+    self<span style="color:#f92672">.</span>right <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>;
+</code></pre></div><h3 id="what-are-ways-to-traverse-through-a-binary-tree">What are ways to traverse through a binary tree?</h3>
+<p><img src="/images/dsAndA/bt.png" alt="Binary Tree Example" title="Binary Tree Example"></p>
+<ol>
+<li>Depth-First Search (DFS)</li>
+</ol>
+<ul>
+<li>Preorder Traversal (current-left-right): You visit current node <code>BEFORE</code> visiting nodes from left or right subtrees. 1-2-4-5-3-6-7</li>
+<li>Inorder Traversal (left-current-right): You visit current node <code>AFTER</code> visiting left subtree. After that, visit the right subtree. 4-2-5-1-6-3-7</li>
+<li>Postorder Traversal (left-right-current): You visit current node <code>AFTER</code> visiting all nodes of the left and right subtrees. 4-5-2-6-7-3-1</li>
+</ul>
+<ol start="2">
+<li>Breadth-First Search (BFS)</li>
+</ol>
+<ul>
+<li>Level-Order Traversal: You visit nodes level-by-level (left-to-right fashion) at the same level. 1-2-3-4-5-6-7</li>
+</ul>
+<h3 id="what-is-the-maximum-number-of-nodes-in-a-binary-tree-of-height-k">What is the maximum number of nodes in a binary tree of height k?</h3>
+<ul>
+<li>(2^k+1) - 1, where k &gt;= 1.</li>
+<li>Level 1 = 3 Node; Level 2 = 7 Nodes; Level 3 = 15 &hellip;</li>
+</ul>
+<h3 id="what-is-the-maximum-number-of-nodes-at-a-certain-level-l">What is the maximum number of nodes at a certain level &lsquo;l&rsquo;?</h3>
+<ul>
+<li>2^l nodes at a certain level.</li>
+</ul>
 
         </p>
         

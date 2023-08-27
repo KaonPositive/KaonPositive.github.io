@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bfs on Jared Rosario</title>
+    <link>https://kaonpositive.github.io/tags/bfs/</link>
+    <description>Recent content in bfs on Jared Rosario</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/bfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binary Trees</title>
+      <link>https://kaonpositive.github.io/posts/binarytrees/</link>
+      <pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/binarytrees/</guid>
+      <description>What is a binary tree? It is a recursive, non-linear tree data structure where one node is designated as the root and the others are called the children of the root. Each node has AT MOST two children.
+What does each node have?  Each node in the tree must have:  Data: Holds the value/data of the associated node Pointer to the left child Pointer to the right child.    C++ Code Example:</description>
+    </item>
+    
+  </channel>
+</rss>

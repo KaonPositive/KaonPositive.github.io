@@ -6,7 +6,26 @@
     <description>Recent content in review on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 25 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binary Trees</title>
+      <link>https://kaonpositive.github.io/posts/binarytrees/</link>
+      <pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/binarytrees/</guid>
+      <description>What is a binary tree? It is a recursive, non-linear tree data structure where one node is designated as the root and the others are called the children of the root. Each node has AT MOST two children.
+What does each node have?  Each node in the tree must have:  Data: Holds the value/data of the associated node Pointer to the left child Pointer to the right child.    C++ Code Example:</description>
+    </item>
+    
+    <item>
+      <title>Linked List</title>
+      <link>https://kaonpositive.github.io/posts/linkedlist/</link>
+      <pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/linkedlist/</guid>
+      <description>What is a linked-list?  It is a non-contiguous linear data structure where a sequence of nodes are connected to one another via a reference pointer. Each node stores the data and address of the next node.  What does each node have?  A node in a linked-list typically have two components:  Data: Holds the value/data of the associated node Next Pointer: Stores memory address (reference pointer) of the next node in the sequence Head and Tail: The head node will be the way to access the linked list&amp;ndash;it points to the first node of the list.</description>
+    </item>
+    
     <item>
       <title>Design Patterns</title>
       <link>https://kaonpositive.github.io/posts/designpatterns/</link>
@@ -14,15 +33,6 @@
       
       <guid>https://kaonpositive.github.io/posts/designpatterns/</guid>
       <description>What is Abstract Factory?  Provide an interface for creating families of related or dependent objects without specifying their concrete classes.  What is an Adapter?  Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn&amp;rsquo;t otherwise because of incompatibility interfaces.  What is a Bridge?  Decouple an abstraction from its implementation so that the two can very independetly.  What is a builder?</description>
-    </item>
-    
-    <item>
-      <title>Linked List</title>
-      <link>https://kaonpositive.github.io/posts/linkedlist/</link>
-      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/linkedlist/</guid>
-      <description>What is a linked-list?  It is a non-contiguous linear data structure where a sequence of nodes are connected to one another via a reference pointer. Each node stores the data and address of the next node.  What does each node have?  A node in a linked-list typically have two components:  Data: Holds the value/data of the associated node Next Pointer: Stores memory address (reference pointer) of the next node in the sequence Head and Tail: The head node will be the way to access the linked list&amp;ndash;it points to the first node of the list.</description>
     </item>
     
     <item>
