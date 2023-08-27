@@ -67,6 +67,15 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
     </item>
     
     <item>
+      <title>Linked List</title>
+      <link>https://kaonpositive.github.io/posts/linkedlist/</link>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/linkedlist/</guid>
+      <description>What is a linked-list?  It is a non-contiguous linear data structure where a sequence of nodes are connected to one another via a reference pointer. Each node stores the data and address of the next node.  What does each node have?  A node in a linked-list typically have two components:  Data: Holds the value/data of the associated node Next Pointer: Stores memory address (reference pointer) of the next node in the sequence Head and Tail: The head node will be the way to access the linked list&amp;ndash;it points to the first node of the list.</description>
+    </item>
+    
+    <item>
       <title>OA Notes</title>
       <link>https://kaonpositive.github.io/posts/oanotes/</link>
       <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
@@ -74,6 +83,15 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
       <guid>https://kaonpositive.github.io/posts/oanotes/</guid>
       <description>review data structures and algorithms.
  strings, lists, trees, queues, stacks, graphs, heaps, hash tables, and hash maps. sorts, searches, recursion, iterative approaches, and traversals (BFS and DFS) understand basic programming concepts time yourself as you will have 120 minutes to complete the assessment. practice different types of questions in the Candidate Prep on HackerRank  </description>
+    </item>
+    
+    <item>
+      <title>Study Plan 75</title>
+      <link>https://kaonpositive.github.io/posts/studyplan75/</link>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/studyplan75/</guid>
+      <description></description>
     </item>
     
     <item>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Linked List</title>
+    <meta name="description" content="Information about linked-list and its implementation">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, interview, review'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/linkedlist/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Linked List">
+    <meta property="og:description" content="Information about linked-list and its implementation">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Linked List">
+    <meta name="twitter:description" content="Information about linked-list and its implementation">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/linkedlist/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/linkedlist/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/linkedlist/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Linked List</h1>
+        <small role="doc-subtitle">Information about linked-list and its implementation</small>
+        <p class="post-date">
+            August 25, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/interview">interview</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/review">review</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="what-is-a-linked-list">What is a linked-list?</h3>
+<ul>
+<li>It is a non-contiguous linear data structure where a sequence of nodes are connected to one another via a reference pointer.</li>
+<li>Each node stores the data and address of the next node.</li>
+</ul>
+<h3 id="what-does-each-node-have">What does each node have?</h3>
+<ul>
+<li>A node in a linked-list typically have two components:
+<ol>
+<li>Data: Holds the value/data of the associated node</li>
+<li>Next Pointer: Stores memory address (reference pointer) of the next node in the sequence</li>
+<li>Head and Tail: The <code>head node</code> will be the way to access the linked list&ndash;it points to the first node of the list. The <code>tail node</code> is the last node in the list. It will point to NULL (or nullptr) which will indicate the end of the list.</li>
+</ol>
+</li>
+</ul>
+<h3 id="when-a-linked-list-is-necessary">When a linked-list is necessary</h3>
+<ul>
+<li>When you need to implement a queue/stack by scratch.</li>
+<li>When you need to insert/delete items from the middle of a list in constant time ( O(1) ). No shifting of elements after insertion or deletion is necessary&ndash;just need to update the address of the reference node.</li>
+<li>When you know the size of the list ahead of time and memory efficiency is a thing to be considered.</li>
+</ul>
+<h3 id="what-are-some-advantages-of-using-a-linked-list">What are some advantages of using a linked-list?</h3>
+<ol>
+<li>Dynamic Size: Linked-list can grow or shrink dynamically; memory allocation is done at runtime.</li>
+<li>Insertion and Deletion: adding and removing elements from a linked list will take constant time, making them efficient on large lists.</li>
+<li>Flexibility: Linked-list can be easily reorganized and modified without requiring contiguous block of memory.</li>
+</ol>
+<h3 id="what-are-some-disadvantages-of-using-a-linked-list">What are some disadvantages of using a linked-list?</h3>
+<ol>
+<li>Random Access: Linked-list do not allow direct access to elements via index, so if you need to access a specific element, you must traverse through the list.</li>
+<li>Extra Memory: Linked-list require additional memory for storing pointers.</li>
+</ol>
+<h3 id="node-classstruct-layout">Node Class/Struct Layout</h3>
+<ul>
+<li>The node class/struct must have:
+<ol>
+<li>data (of any data type)</li>
+<li>a &ldquo;next&rdquo; reference node</li>
+</ol>
+</li>
+</ul>
+<p>C++ Code Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Node</span> {
+  <span style="color:#66d9ef">int</span> data;
+  <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Node</span><span style="color:#f92672">*</span> next;
+};
+</code></pre></div><p>Python Code Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span>:
+  <span style="color:#66d9ef">def</span> __init__( self, data ):
+    self<span style="color:#f92672">.</span>data <span style="color:#f92672">=</span> data;
+    self<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>;
+</code></pre></div>
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2023 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
