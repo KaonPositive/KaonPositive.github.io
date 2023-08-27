@@ -119,7 +119,8 @@ What does each node have?  Each node in the tree must have:  Data: Holds the val
       <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/timecomplexity/</guid>
-      <description>time complex</description>
+      <description>What is time complexity?   It is the measure of how long an algorithm will run as the size of the input increases&amp;ndash;this examines the proportional time of the largest components of the algorithm.
+ Proportional Time: Only being mindful of the running-time of an input of size n, NOT the running-time for a specific input. Example:  int sum{}; for( const auto i : arr ) if( num % 2 == 0 ) sum += num; return sum;  Note: In this example, the loop will iterate the entire array once, so it runs directly proportional to n (linear run time).</description>
     </item>
     
     <item>
