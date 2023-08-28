@@ -156,7 +156,50 @@
 
     <div class="post-content">
         <p>
-            <p>notes</p>
+            <h3 id="types-of-running-time">Types of Running Time:</h3>
+<ol>
+<li>O(n) - Worst-case Running Time</li>
+</ol>
+<ul>
+<li>f(n) = O(g(n))</li>
+<li>Grows no faster than n</li>
+<li>Describes the upper bound</li>
+<li>It is the maximum number of steps taken in any instance of size n&ndash;calculates the maximum time an algorithm takes to complete execution.</li>
+<li>Formal Definition of O(n):
+<ul>
+<li><code>f(n) &lt;= c*g(n) for all n &gt;= n0 where n0 can be some number greater than 0 and c is some constant</code></li>
+<li>Ex: f(n) = 2n + 3; g(n) = n</li>
+<li>2n + 3 &lt;= 10n, which is true</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>$\Omega$(n) - Best-case Running Time</li>
+</ol>
+<ul>
+<li>f(n) = $\Omega$(g(n))</li>
+<li>Grows at least as fast as n</li>
+<li>Describes the lower bound</li>
+<li>Calculates the shortest time an algorithm takes to complete execution</li>
+<li>Formal Definition of $\Omega$(n):
+<ul>
+<li><code>f(n) &gt;= c*g(n) for all n &gt;= n0 where n0 can be some number greater than 0 and c is some constant</code></li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>$\Theta$(n) - Expected-case Running Time</li>
+</ol>
+<ul>
+<li>f(n) = $\Theta$(g(n))</li>
+<li>Means both $\Omega$(n) and O(n)</li>
+<li>Gives the average bound (expresses lower and upper bound of algorithm&rsquo;s run time).</li>
+<li>Formal Definition of $\Theta$(n):
+<ul>
+<li><code>c1*g(n) &lt;= f(n) &lt;= c2*g(n) for all n &gt;= n0 where n0 can be some number greater than 0 and c1 and c2 are some constants</code></li>
+</ul>
+</li>
+</ul>
 
         </p>
         
@@ -169,7 +212,19 @@
 
 <aside class="post-toc">
     <nav id="toc">
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#types-of-running-time">Types of Running Time:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </nav>
 </aside>
 
