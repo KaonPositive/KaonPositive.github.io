@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>stats411 on Jared Rosario</title>
-    <link>https://kaonpositive.github.io/tags/stats411/</link>
-    <description>Recent content in stats411 on Jared Rosario</description>
+    <title>integrals on Jared Rosario</title>
+    <link>https://kaonpositive.github.io/tags/integrals/</link>
+    <description>Recent content in integrals on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/stats411/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/integrals/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Integrals</title>
       <link>https://kaonpositive.github.io/posts/integrals/</link>
@@ -16,15 +16,6 @@
       <description>Integration by Parts Guidelines for selecting u and dv:   Remember &amp;ldquo;L-I-A-T-E&amp;rdquo; where you choose &amp;ldquo;u&amp;rdquo; to be the function that comes first in the list.
  L - Logrithmic Function I - Inverse Trig Function A - Algebraic Function T - Trig Function E - Exponential Function   Example:     Alternative Guidelines for Choosing u and dv:
  dv is the complicated portion of the integrand that can easily be integrated.</description>
-    </item>
-    
-    <item>
-      <title>STATS 411 Notes #00</title>
-      <link>https://kaonpositive.github.io/posts/stats411notes00/</link>
-      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/stats411notes00/</guid>
-      <description>notes here</description>
     </item>
     
   </channel>
