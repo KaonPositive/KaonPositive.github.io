@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Integrals</title>
+    <meta name="description" content="Notes for CS456">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs456'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs456notes00/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Integrals">
+    <meta property="og:description" content="Notes for CS456">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Integrals">
+    <meta name="twitter:description" content="Notes for CS456">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs456notes00/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs456notes00/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs456notes00/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Integrals</h1>
+        <small role="doc-subtitle">Notes for CS456</small>
+        <p class="post-date">
+            August 29, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs456">cs456</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="what-is-an-alphabet">What is an alphabet?</h3>
+<ul>
+<li>It is a non-empty finite set of symbols.</li>
+<li>Ex:
+<ol>
+<li>$\Sigma$ = {0,1}</li>
+<li>$\Sigma$ = {a, b, c}</li>
+<li>$\Sigma$ = {a, b, c, &hellip; z}</li>
+</ol>
+</li>
+</ul>
+<h3 id="what-is-a-string">What is a string?</h3>
+<ul>
+<li>It is a finite sequence of symbols from an alphabet.</li>
+<li>Ex: $\Sigma$ = {a, b, c}
+<ol>
+<li>w1 = &ldquo;abc&rdquo; - This is a string of 3 symbols.</li>
+<li>w2 = &ldquo;acaba&rdquo; - This is a string of 5 symbols.</li>
+</ol>
+</li>
+<li><code>There is a empty string w/ no symbols.</code>
+<ul>
+<li>Represented by using the greek symbol lambda ($\lambda$)</li>
+<li>So an empty string is represented as w1 = $\lambda$</li>
+</ul>
+</li>
+<li>At times, the term &ldquo;word&rdquo; is used to indicate a string,</li>
+</ul>
+<h3 id="what-is-concatenation">What is concatenation?</h3>
+<ul>
+<li>Piecing multiple strings together.</li>
+<li>Ex: if <code>u = &quot;abc&quot;</code> and <code>u = &quot;ababab&quot;</code>, then <code>uu = abcababab</code> is made. <code>uu</code> is a concatenation.</li>
+</ul>
+<h3 id="what-is-reverse">What is reverse?</h3>
+<ul>
+<li>Order for last to first.</li>
+<li>Ex: if <code>w1 = &quot;bbba&quot;</code>, then <code>rev(w1) = &quot;abbb&quot;</code></li>
+</ul>
+<h3 id="what-is-length-of-a-string">What is length (of a string)?</h3>
+<ul>
+<li>It is the total number of symbols in a given string.</li>
+<li>Ex:
+<ol>
+<li><code>w1 = &quot;abbb&quot;</code>, then <code>len(w1) = 4</code></li>
+<li><code>w2 = &quot;hello world!</code>, then <code>len(w2) = 12</code></li>
+<li><code>w3 =</code> $\lambda$ then <code>len(w3) = 0</code> since $\lambda$ represents an empty string.</li>
+</ol>
+</li>
+</ul>
+<h3 id="what-is-a-substring">What is a substring?</h3>
+<ul>
+<li>It is part of a string (it is continuous).</li>
+<li>Ex: <code>w1 = &quot;abbababb&quot;</code>
+<ol>
+<li>ab is a substring of w1</li>
+<li>baba is also a substring of w1</li>
+<li>baab is NOT a substring of w1</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>IMPORTANT: $\lambda$ will always be a substring whether the string is empty or not.</p>
+</blockquote>
+<h3 id="what-is-prefix-and-suffix">What is prefix and suffix?</h3>
+<ol>
+<li>Prefix: start from the first position</li>
+<li>Suffix: start from the last position</li>
+</ol>
+<ul>
+<li>Ex: <code>w1 = &quot;abbaab&quot;</code>
+<ol>
+<li>Prefixes are: $\lambda$, a, ab, abb, abba, abbaa, abbaab</li>
+<li>Suffixes are: $\lambda$, b, ab, abb, abba, abbaa, abbaab</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>Main differences are in &lsquo;a&rsquo; and &lsquo;b&rsquo; characters right after $\lambda$</p>
+</blockquote>
+<h3 id="what-is-wn-notation">What is w^n notation?</h3>
+<ul>
+<li>If w is a string, the w^n denotes the string obtained by <code>repeating w n times.</code></li>
+<li>Ex: <code>w1 = &quot;abb&quot;</code> then:
+<ol>
+<li><code>w1^3 = &quot;abbabbabb&quot;</code></li>
+<li><code>w1^0 =</code> $\lambda$ since w^0 is an empty string (if n is 0, then it is an empty string since lambda is the only symbol/character that exists in the string).</li>
+</ol>
+</li>
+</ul>
+<h3 id="what-is-sigma-notation-star-closure-of-alphabet-sigma">What is $\Sigma$*-Notation (Star Closure of Alphabet $\Sigma$)</h3>
+<ul>
+<li>
+<p>Given an alphabet set $\Sigma$, $\Sigma$* denotes all words that can be formed by using symbols $\Sigma$ including $\lambda$.</p>
+</li>
+<li>
+<p>Ex1: $\Sigma$ = {0, 1}, then $\Sigma$* = All string that can be formed using 0 and 1, including $\lambda$</p>
+</li>
+<li>
+<p>$\Sigma$+ - Notation: Includes everything but <code>NOT lambda</code>.</p>
+</li>
+<li>
+<p>Ex2: Let $\Sigma$ = {a, b} be an alphabet and let $\Sigma$* be a language. How many words of length 3 does this language have?</p>
+<ul>
+<li>It has 2^3 (or 8) words.</li>
+</ul>
+</li>
+<li>
+<p>Ex3: S = {aa, b} and let S* be a language. How many words of length 4 are in S?</p>
+<ul>
+<li>There are a total of 5 words of length 4 in S*.
+<table>
+<thead>
+<tr>
+<th>String</th>
+<th>Times</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;aaaa&rdquo;</td>
+<td>x2a</td>
+</tr>
+<tr>
+<td>&ldquo;bbbb&rdquo;</td>
+<td>x4b</td>
+</tr>
+<tr>
+<td>&ldquo;aabb&rdquo;</td>
+<td>x1a, x2b</td>
+</tr>
+<tr>
+<td>&ldquo;bbaa&rdquo;</td>
+<td>x2b, x1a</td>
+</tr>
+<tr>
+<td>&ldquo;baab&rdquo;</td>
+<td>x1b, x1a, x1b</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>Ex4: How many words of length 5 in S* if S = {aa, b}?</p>
+<ul>
+<li>There are a total of 8 words of length 5 in S*
+<table>
+<thead>
+<tr>
+<th>String</th>
+<th>Times</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;aabbb&rdquo;</td>
+<td>x1a, x3b</td>
+</tr>
+<tr>
+<td>&ldquo;bbbaa&rdquo;</td>
+<td>x3b, x1a</td>
+</tr>
+<tr>
+<td>&ldquo;aaaab&rdquo;</td>
+<td>x2a, x1b</td>
+</tr>
+<tr>
+<td>&ldquo;baaaa&rdquo;</td>
+<td>x1b, x2a</td>
+</tr>
+<tr>
+<td>&ldquo;baabb&rdquo;</td>
+<td>x1b, x1a, x1b</td>
+</tr>
+<tr>
+<td>&ldquo;bbaab&rdquo;</td>
+<td>x2b, x1a, x1b</td>
+</tr>
+<tr>
+<td>&ldquo;aabaa&rdquo;</td>
+<td>x1a, x1b, x1a</td>
+</tr>
+<tr>
+<td>&ldquo;bbbbb&rdquo;</td>
+<td>x4b</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="concatenation-of-languages">Concatenation of Languages</h3>
+<ul>
+<li>if L1 and L2 are two languages, then L1 and L2 concatenated together is L1L2
+<ul>
+<li>L1L2 = {xy | x is in L1 and y is in L2}</li>
+</ul>
+</li>
+<li>Ex: L1 = {a, b, ab, abb} and L2 = {0, 1, 00}
+<ol>
+<li>a00 is in L1L2</li>
+<li>abb1 is in L1L2</li>
+<li>1a is NOT in L1L2 since 1 is NOT in L1</li>
+<li>a1 is in L1L2</li>
+</ol>
+</li>
+</ul>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#what-is-an-alphabet">What is an alphabet?</a></li>
+            <li><a href="#what-is-a-string">What is a string?</a></li>
+            <li><a href="#what-is-concatenation">What is concatenation?</a></li>
+            <li><a href="#what-is-reverse">What is reverse?</a></li>
+            <li><a href="#what-is-length-of-a-string">What is length (of a string)?</a></li>
+            <li><a href="#what-is-a-substring">What is a substring?</a></li>
+            <li><a href="#what-is-prefix-and-suffix">What is prefix and suffix?</a></li>
+            <li><a href="#what-is-wn-notation">What is w^n notation?</a></li>
+            <li><a href="#what-is-sigma-notation-star-closure-of-alphabet-sigma">What is $\Sigma$*-Notation (Star Closure of Alphabet $\Sigma$)</a></li>
+            <li><a href="#concatenation-of-languages">Concatenation of Languages</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2023 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cs456 on Jared Rosario</title>
+    <link>https://kaonpositive.github.io/tags/cs456/</link>
+    <description>Recent content in cs456 on Jared Rosario</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs456/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integrals</title>
+      <link>https://kaonpositive.github.io/posts/cs456notes00/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs456notes00/</guid>
+      <description>What is an alphabet?  It is a non-empty finite set of symbols. Ex:  $\Sigma$ = {0,1} $\Sigma$ = {a, b, c} $\Sigma$ = {a, b, c, &amp;hellip; z}    What is a string?  It is a finite sequence of symbols from an alphabet. Ex: $\Sigma$ = {a, b, c}  w1 = &amp;ldquo;abc&amp;rdquo; - This is a string of 3 symbols. w2 = &amp;ldquo;acaba&amp;rdquo; - This is a string of 5 symbols.</description>
+    </item>
+    
+  </channel>
+</rss>

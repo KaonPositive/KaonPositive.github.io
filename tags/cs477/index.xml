@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cs477 on Jared Rosario</title>
+    <link>https://kaonpositive.github.io/tags/cs477/</link>
+    <description>Recent content in cs477 on Jared Rosario</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs477/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 477 Notes 00</title>
+      <link>https://kaonpositive.github.io/posts/cs477notes00/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs477notes00/</guid>
+      <description>Types of Running Time:  O(n) - Worst-case Running Time   f(n) = O(g(n)) Grows no faster than n Describes the upper bound It is the maximum number of steps taken in any instance of size n&amp;ndash;calculates the maximum time an algorithm takes to complete execution. Formal Definition of O(n):  f(n) &amp;lt;= c*g(n) for all n &amp;gt;= n0 where n0 can be some number greater than 0 and c is some constant Ex: f(n) = 2n + 3; g(n) = n 2n + 3 &amp;lt;= 10n, which is true    $\Omega$ (n) - Best-case Running Time   f(n) = $\Omega$ (g(n)) Grows at least as fast as n Describes the lower bound Calculates the shortest time an algorithm takes to complete execution Formal Definition of $\Omega$ (n):  f(n) &amp;gt;= c*g(n) for all n &amp;gt;= n0 where n0 can be some number greater than 0 and c is some constant    $\Theta$ (n) - Expected-case Running Time   f(n) = $\Theta$ (g(n)) Means both $\Omega$ (n) and O(n) Gives the average bound (expresses lower and upper bound of algorithm&amp;rsquo;s run time).</description>
+    </item>
+    
+  </channel>
+</rss>

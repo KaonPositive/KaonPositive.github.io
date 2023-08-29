@@ -6,7 +6,16 @@
     <description>Recent content in algorithms on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 25 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 477 Notes 00</title>
+      <link>https://kaonpositive.github.io/posts/cs477notes00/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs477notes00/</guid>
+      <description>Types of Running Time:  O(n) - Worst-case Running Time   f(n) = O(g(n)) Grows no faster than n Describes the upper bound It is the maximum number of steps taken in any instance of size n&amp;ndash;calculates the maximum time an algorithm takes to complete execution. Formal Definition of O(n):  f(n) &amp;lt;= c*g(n) for all n &amp;gt;= n0 where n0 can be some number greater than 0 and c is some constant Ex: f(n) = 2n + 3; g(n) = n 2n + 3 &amp;lt;= 10n, which is true    $\Omega$ (n) - Best-case Running Time   f(n) = $\Omega$ (g(n)) Grows at least as fast as n Describes the lower bound Calculates the shortest time an algorithm takes to complete execution Formal Definition of $\Omega$ (n):  f(n) &amp;gt;= c*g(n) for all n &amp;gt;= n0 where n0 can be some number greater than 0 and c is some constant    $\Theta$ (n) - Expected-case Running Time   f(n) = $\Theta$ (g(n)) Means both $\Omega$ (n) and O(n) Gives the average bound (expresses lower and upper bound of algorithm&amp;rsquo;s run time).</description>
+    </item>
+    
     <item>
       <title>Algorithms</title>
       <link>https://kaonpositive.github.io/posts/algos/</link>
@@ -14,15 +23,6 @@
       
       <guid>https://kaonpositive.github.io/posts/algos/</guid>
       <description>What is an algorithm?  Sequence of steps that transform input into output.  What is time complexity of an algorithm?  Indicates total time needed by program to run to completion. Expressed by using Big O notation.  What are the types of notation used for time complexity?  Big Oh: Fewer than or same as iterations. Big Omega: More than or same as iterations. Big Theta: Same as iterations.</description>
-    </item>
-    
-    <item>
-      <title>CS 477 Notes 00</title>
-      <link>https://kaonpositive.github.io/posts/cs477notes00/</link>
-      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/cs477notes00/</guid>
-      <description>Types of Running Time:  O(n) - Worst-case Running Time   f(n) = O(g(n)) Grows no faster than n Describes the upper bound It is the maximum number of steps taken in any instance of size n&amp;ndash;calculates the maximum time an algorithm takes to complete execution. Formal Definition of O(n):  f(n) &amp;lt;= c*g(n) for all n &amp;gt;= n0 where n0 can be some number greater than 0 and c is some constant Ex: f(n) = 2n + 3; g(n) = n 2n + 3 &amp;lt;= 10n, which is true    $\Omega$(n) - Best-case Running Time   f(n) = $\Omega$(g(n)) Grows at least as fast as n Describes the lower bound Calculates the shortest time an algorithm takes to complete execution Formal Definition of $\Omega$(n):  f(n) &amp;gt;= c*g(n) for all n &amp;gt;= n0 where n0 can be some number greater than 0 and c is some constant    $\Theta$(n) - Expected-case Running Time   f(n) = $\Theta$(g(n)) Means both $\Omega$(n) and O(n) Gives the average bound (expresses lower and upper bound of algorithm&amp;rsquo;s run time).</description>
     </item>
     
     <item>
