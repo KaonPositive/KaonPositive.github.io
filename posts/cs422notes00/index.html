@@ -17,26 +17,26 @@
     
 
     
-    <title>CS 477 Notes 00</title>
-    <meta name="description" content="Notes for CS477">
-    <meta name="keywords" content='blog, gokarna, hugo, notes, algorithms, cs477'>
+    <title>CS 422 Notes 00</title>
+    <meta name="description" content="Notes for CS422">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs422'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs477notes00/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422notes00/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CS 477 Notes 00">
-    <meta property="og:description" content="Notes for CS477">
+    <meta property="og:title" content="CS 422 Notes 00">
+    <meta property="og:description" content="Notes for CS422">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CS 477 Notes 00">
-    <meta name="twitter:description" content="Notes for CS477">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs477notes00/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs477notes00/">
+    <meta name="twitter:title" content="CS 422 Notes 00">
+    <meta name="twitter:description" content="Notes for CS422">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422notes00/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422notes00/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs477notes00/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs422notes00/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -139,8 +139,8 @@
 <main id="content">
     <div class="post container">
     <div class="post-header-section">
-        <h1>CS 477 Notes 00</h1>
-        <small role="doc-subtitle">Notes for CS477</small>
+        <h1>CS 422 Notes 00</h1>
+        <small role="doc-subtitle">Notes for CS422</small>
         <p class="post-date">
             August 29, 2023
         </p>
@@ -149,65 +149,14 @@
         
             <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
         
-            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/algorithms">algorithms</a></li>
-        
-            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs477">cs477</a></li>
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs422">cs422</a></li>
         
         </ul>
     </div>
 
     <div class="post-content">
         <p>
-            <h3 id="types-of-running-time">Types of Running Time:</h3>
-<ol>
-<li>O(n) - Worst-case Running Time</li>
-</ol>
-<ul>
-<li>f(n) = O(g(n))</li>
-<li>Grows no faster than n</li>
-<li>Describes the upper bound</li>
-<li>It is the maximum number of steps taken in any instance of size n&ndash;calculates the maximum time an algorithm takes to complete execution.</li>
-<li>Formal Definition of O(n):
-<ul>
-<li><code>f(n) &lt;= c*g(n) for all n &gt;= n0 where n0 can be some number greater than 0 and c is some constant</code></li>
-<li>Ex: f(n) = 2n + 3; g(n) = n</li>
-<li>2n + 3 &lt;= 10n, which is true</li>
-</ul>
-</li>
-</ul>
-<ol start="2">
-<li>$ \Omega $(n) - Best-case Running Time</li>
-</ol>
-<ul>
-<li>f(n) = $ \Omega $(g(n))</li>
-<li>Grows at least as fast as n</li>
-<li>Describes the lower bound</li>
-<li>Calculates the shortest time an algorithm takes to complete execution</li>
-<li>Formal Definition of $ \Omega $(n):
-<ul>
-<li><code>f(n) &gt;= c*g(n) for all n &gt;= n0 where n0 can be some number greater than 0 and c is some constant</code></li>
-</ul>
-</li>
-</ul>
-<ol start="3">
-<li>$ \Theta $(n) - Expected-case Running Time</li>
-</ol>
-<ul>
-<li>f(n) = $ \Theta $(g(n))</li>
-<li>Means both $ \Omega $(n) and O(n)</li>
-<li>Gives the average bound (expresses lower and upper bound of algorithm&rsquo;s run time).</li>
-<li>Formal Definition of $ \Theta $(n):
-<ul>
-<li><code>c1*g(n) &lt;= f(n) &lt;= c2*g(n) for all n &gt;= n0 where n0 can be some number greater than 0 and c1 and c2 are some constants</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="summation-formulas-to-remember">Summation Formulas to Remember:</h3>
-<ol>
-<li>$ \sum_{i=1}^{n} ar^{i-1} = a(\frac{1-r^n}{1-r}) $</li>
-<li>$ \sum_{i=m}^{n} c = c(n+1-m) $</li>
-<li>$ \sum_{i=m}^{n} i =\frac{n(n+1)}{2} - \frac{m(m-1)}{2} $</li>
-</ol>
+            <p>notes for 422</p>
 
         </p>
         
@@ -220,20 +169,7 @@
 
 <aside class="post-toc">
     <nav id="toc">
-        <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#types-of-running-time">Types of Running Time:</a></li>
-            <li><a href="#summation-formulas-to-remember">Summation Formulas to Remember:</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+        <nav id="TableOfContents"></nav>
     </nav>
 </aside>
 
