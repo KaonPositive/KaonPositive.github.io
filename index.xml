@@ -49,21 +49,12 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
     </item>
     
     <item>
-      <title>Integrals</title>
+      <title>CS456 Notes 00</title>
       <link>https://kaonpositive.github.io/posts/cs456notes00/</link>
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs456notes00/</guid>
       <description>What is an alphabet?  It is a non-empty finite set of symbols. Ex:  $\Sigma$ = {0,1} $\Sigma$ = {a, b, c} $\Sigma$ = {a, b, c, &amp;hellip; z}    What is a string?  It is a finite sequence of symbols from an alphabet. Ex: $\Sigma$ = {a, b, c}  w1 = &amp;ldquo;abc&amp;rdquo; - This is a string of 3 symbols. w2 = &amp;ldquo;acaba&amp;rdquo; - This is a string of 5 symbols.</description>
-    </item>
-    
-    <item>
-      <title>Notes for CS422</title>
-      <link>https://kaonpositive.github.io/posts/cs422notes00/</link>
-      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/cs422notes00/</guid>
-      <description></description>
     </item>
     
     <item>
