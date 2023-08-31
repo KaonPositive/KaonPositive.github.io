@@ -6,7 +6,7 @@
     <description>Recent content on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Archive - Basics</title>
       <link>https://kaonpositive.github.io/posts/theme-documentation-basics/</link>
@@ -42,10 +42,13 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
     <item>
       <title>CS 422 Notes 00</title>
       <link>https://kaonpositive.github.io/posts/cs422notes00/</link>
-      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs422notes00/</guid>
-      <description>notes for 422</description>
+      <description>What is Machine Learning? By definition from Tom Mitchell:
+ A computer program is learning form experience E w/ respect to some class of tasks T, and performance measure P, if its performance at tasks in T, as measured by P, improves w/ experience E.
+ Breaking it down into simple terms&amp;hellip;
+ You improve over tasks T.   Ex: Predicting the price of the house in the market.  W/ repect to some performance P   Ex: How much the house is sold for.</description>
     </item>
     
     <item>

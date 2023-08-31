@@ -19,7 +19,7 @@
     
     <title>CS 422 Notes 00</title>
     <meta name="description" content="Notes for CS422">
-    <meta name="keywords" content='blog, gokarna, hugo, notes, cs422'>
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs422, machine learning'>
 
     <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422notes00/">
     <meta property="og:type" content="website">
@@ -161,7 +161,7 @@
         <h1>CS 422 Notes 00</h1>
         <small role="doc-subtitle">Notes for CS422</small>
         <p class="post-date">
-            August 29, 2023
+            August 31, 2023
         </p>
 
         <ul class="post-tags">
@@ -170,12 +170,86 @@
         
             <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs422">cs422</a></li>
         
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/machine-learning">machine learning</a></li>
+        
         </ul>
     </div>
 
     <div class="post-content">
         <p>
-            <p>notes for 422</p>
+            <h3 id="what-is-machine-learning">What is Machine Learning?</h3>
+<p>By definition from Tom Mitchell:</p>
+<blockquote>
+<p>A computer program is learning form experience E w/ respect to some class of tasks T, and performance measure P, if its performance at tasks in T, as measured by P, improves w/ experience E.</p>
+</blockquote>
+<p>Breaking it down into simple terms&hellip;</p>
+<ol>
+<li>You improve over tasks T.</li>
+</ol>
+<ul>
+<li>Ex: Predicting the price of the house in the market.</li>
+</ul>
+<ol start="2">
+<li>W/ repect to some performance P</li>
+</ol>
+<ul>
+<li>Ex: How much the house is sold for.</li>
+</ul>
+<ol start="3">
+<li>Based on some experience E</li>
+</ol>
+<ul>
+<li>Ex: Data of houses sold in some specific year and the characteristics of the house (how many floors, age of the house, etc.).</li>
+</ul>
+<blockquote>
+<p>This example (predicting the price of the house) is an example of supervised learning.</p>
+</blockquote>
+<p>Machine learning requires explicit learning.</p>
+<ul>
+<li>It requires data in order for it to learn</li>
+<li>It is ruled-based.</li>
+</ul>
+<h3 id="why-do-we-need-to-learn">Why do we need to learn?</h3>
+<ul>
+<li>Because we are inexperienced and are trying to be experts at something.</li>
+</ul>
+<h3 id="what-are-the-diffrent-types-of-machine-learning">What are the diffrent types of machine learning?</h3>
+<ol>
+<li>Supervised</li>
+</ol>
+<ul>
+<li>Classification - Outputs are categorical and finite (ex: Yes/No)</li>
+</ul>
+<ol start="2">
+<li>Unsupervised (Descriptive) Learning</li>
+<li>Reinforcement Learning</li>
+</ol>
+<h3 id="what-are-unknown-variables">What are unknown variables?</h3>
+<p>They are variables that can&rsquo;t be predicted. They are also treated as <code>random variables</code>.</p>
+<ul>
+<li>Ex: Predicting tomorrow&rsquo;s temperature.</li>
+</ul>
+<blockquote>
+<p>IMPORTANT: Random variables have probability distributions (probabilities of one of the outcomes (like rolling a fair die) ).</p>
+</blockquote>
+<ul>
+<li>Random variables have <code>uncertain outcomes</code> (getting a 1 from rolling a fair die)</li>
+</ul>
+<h3 id="what-is-the-most-common-form-of-ml">What is the most common form of ML?</h3>
+<p>Supervised learning is the most common form of ML.</p>
+<h3 id="supervised-learning">Supervised Learning</h3>
+<p>Supervised learning makes the assumption that there is a function that perfectly maps each input to its output. <code>Its task is to approximate that function.</code></p>
+<ul>
+<li>Supervised learning models work w/ input-output pairs.
+<ol>
+<li>x (bold lowercase): is the <code>input vector</code></li>
+<li>y (bold lowercase): is scalar (unless output is multi-dimensional).</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>NOTE: multi-dimensional means it contains two outputs 0/1</p>
+</blockquote>
 
         </p>
         
@@ -188,7 +262,24 @@
 
 <aside class="post-toc">
     <nav id="toc">
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#what-is-machine-learning">What is Machine Learning?</a></li>
+            <li><a href="#why-do-we-need-to-learn">Why do we need to learn?</a></li>
+            <li><a href="#what-are-the-diffrent-types-of-machine-learning">What are the diffrent types of machine learning?</a></li>
+            <li><a href="#what-are-unknown-variables">What are unknown variables?</a></li>
+            <li><a href="#what-is-the-most-common-form-of-ml">What is the most common form of ML?</a></li>
+            <li><a href="#supervised-learning">Supervised Learning</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </nav>
 </aside>
 
