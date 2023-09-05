@@ -248,8 +248,47 @@
 </li>
 </ul>
 <blockquote>
-<p>NOTE: multi-dimensional means it contains two outputs 0/1.</p>
+<p>NOTE: multi-dimensional means it contains two outputs.</p>
 </blockquote>
+<p>The functions below are supervised learning models
+Actual function that we assume exists:
+is represented using the function f(${x_i}$) = $ {y_i} $ where:</p>
+<ol>
+<li>$ {x_i} $ is the ith data instance&rsquo;s input</li>
+<li>$ {y_i} $ data instance&rsquo;s output</li>
+</ol>
+<p>The model&rsquo;s predicted output:
+is represented using the function $ \hat{y_i} $ = f*(${x_i}$) where:</p>
+<ol>
+<li>$ \hat{y_i} $ is the predicted output/model&rsquo;s prediction</li>
+</ol>
+<blockquote>
+<p>NOTE: if the model matches, we say that it was accurately predicted, else we say that it made an error.</p>
+</blockquote>
+<h3 id="dataset-example-note-important-to-understand">Dataset Example (NOTE: IMPORTANT TO UNDERSTAND)</h3>
+<ul>
+<li>Each row represents a data instance (ex: certain flower)</li>
+<li>Column represents the characteristics</li>
+</ul>
+<ol>
+<li>N = # of data instances/examples in a dataset (training data)</li>
+<li>D = # of input features (D = 5 since ${x_1} - {x_5} $)</li>
+</ol>
+<p>table here</p>
+<p>Ex:</p>
+<ol>
+<li>$ {x_{2,5}} $ = 5th input feature of the 2nd data instance</li>
+<li>$ {y_{10}} $ = output of the 10th data instance</li>
+</ol>
+<blockquote>
+<p>Dimensions is N * (D + 1)
+so&hellip; 1,000 * (5 + 1) = 1,000 * 6 = 6000</p>
+</blockquote>
+<h3 id="supervised-learning-continued">Supervised Learning Continued&hellip;</h3>
+<ul>
+<li>Features are also known as <code>independent variables</code></li>
+<li>Outputs are also known as <code>dependent variables</code></li>
+</ul>
 
         </p>
         
@@ -274,6 +313,8 @@
             <li><a href="#what-are-unknown-variables">What are unknown variables?</a></li>
             <li><a href="#what-is-the-most-common-form-of-ml">What is the most common form of ML?</a></li>
             <li><a href="#supervised-learning">Supervised Learning</a></li>
+            <li><a href="#dataset-example-note-important-to-understand">Dataset Example (NOTE: IMPORTANT TO UNDERSTAND)</a></li>
+            <li><a href="#supervised-learning-continued">Supervised Learning Continued&hellip;</a></li>
           </ul>
         </li>
       </ul>

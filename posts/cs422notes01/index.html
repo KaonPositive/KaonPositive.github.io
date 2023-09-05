@@ -18,19 +18,19 @@
 
     
     <title>CS 422 Notes 01</title>
-    <meta name="description" content="Notes for CS422">
+    <meta name="description" content="Notes for CS422 - Supervised Learning">
     <meta name="keywords" content='blog, gokarna, hugo, notes, cs422, machine learning'>
 
     <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422notes01/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="CS 422 Notes 01">
-    <meta property="og:description" content="Notes for CS422">
+    <meta property="og:description" content="Notes for CS422 - Supervised Learning">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CS 422 Notes 01">
-    <meta name="twitter:description" content="Notes for CS422">
+    <meta name="twitter:description" content="Notes for CS422 - Supervised Learning">
     <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422notes01/">
     <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422notes01/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
@@ -159,7 +159,7 @@
     <div class="post container">
     <div class="post-header-section">
         <h1>CS 422 Notes 01</h1>
-        <small role="doc-subtitle">Notes for CS422</small>
+        <small role="doc-subtitle">Notes for CS422 - Supervised Learning</small>
         <p class="post-date">
             September 5, 2023
         </p>
@@ -177,7 +177,52 @@
 
     <div class="post-content">
         <p>
-            <p>notes</p>
+            <h3 id="supervised-learning-continued">Supervised Learning continued&hellip;</h3>
+<ul>
+<li>x $ {\in} $ X (capital X is the input space)</li>
+<li>y $ {\in} $ Y (capital Y is the output space)</li>
+</ul>
+<blockquote>
+<p>Basically, the input space is the set of possible inputs; output space is the set of possible outputs.</p>
+</blockquote>
+<ul>
+<li>D = {(${x_n}, {y_n}$)}${_n}^{N}$ is the set of all input-output pairs.
+<blockquote>
+<p>N is the dataset size and D is script D.</p>
+</blockquote>
+</li>
+</ul>
+<p>REMEMBER: there are two types of learning models:</p>
+<ol>
+<li>Classification - Supervised ML model where outputs are categorical where ${y_n}$ is categorical. (ex: classes 0-9 for handwritten digits)</li>
+</ol>
+<blockquote>
+<p>EX: Classifying hand-written digits</p>
+</blockquote>
+<ol start="2">
+<li>Regression</li>
+</ol>
+<ul>
+<li>Example of model parameters:
+$ f(x) = a{x^2} + bx + c$ where ${a, b, c}$ are parameters and ${x}$ is the input
+if ${a = 3, b = 5, c = -4}$ and ${x = 5}$: ${f(5) = 75 + 25 - 4 = 96}$</li>
+</ul>
+<h3 id="example-w-3-dimensional-input">Example w/ 3-dimensional input:</h3>
+<p>enter notes here</p>
+<h3 id="what-is-classification">What is classification?</h3>
+<p>It is a supervised learning model where the outputs are categorical (${y_n}$ is categorical)</p>
+<ul>
+<li>EX: Hand-written digits (MNIST dataset) where the dataset has 10 different classes (0-9).</li>
+</ul>
+<blockquote>
+<p>NOTE: input for MNIST is a matrix (28 * 28) matrix of pixels (black and white) where each position is heavily accounted for to predict different classes (0-9).</p>
+</blockquote>
+<ul>
+<li>generalization = how well the model performs with data that it hasn&rsquo;t used before.</li>
+</ul>
+<blockquote>
+<p>MOST IMPORTANT NOTE: A model&rsquo;s performance with data that it hasn&rsquo;t used before will determine whether it is good or not (performance measure).</p>
+</blockquote>
 
         </p>
         
@@ -190,7 +235,21 @@
 
 <aside class="post-toc">
     <nav id="toc">
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#supervised-learning-continued">Supervised Learning continued&hellip;</a></li>
+            <li><a href="#example-w-3-dimensional-input">Example w/ 3-dimensional input:</a></li>
+            <li><a href="#what-is-classification">What is classification?</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </nav>
 </aside>
 

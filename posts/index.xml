@@ -45,7 +45,8 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
       <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs422notes01/</guid>
-      <description>notes</description>
+      <description>Supervised Learning continued&amp;hellip;  x $ {\in} $ X (capital X is the input space) y $ {\in} $ Y (capital Y is the output space)   Basically, the input space is the set of possible inputs; output space is the set of possible outputs.
+  D = {(${x_n}, {y_n}$)}${_n}^{N}$ is the set of all input-output pairs.  N is the dataset size and D is script D.</description>
     </item>
     
     <item>
