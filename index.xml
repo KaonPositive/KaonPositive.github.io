@@ -6,7 +6,7 @@
     <description>Recent content on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 31 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Archive - Basics</title>
       <link>https://kaonpositive.github.io/posts/theme-documentation-basics/</link>
@@ -37,6 +37,18 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
       
       <guid>https://kaonpositive.github.io/posts/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>STATS 411 Notes #00</title>
+      <link>https://kaonpositive.github.io/posts/stats411notes00/</link>
+      <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/stats411notes00/</guid>
+      <description>What are Individuals/subjects/objects? They are units described by a set of data.
+ These units can be people, things, animals, companies, etc. They are actual nouns.
+  Examples of individuals/subjects/objects: Freshman students, companies, cells, etc.  What are variables? They are characteristics of individuals/subjects/objects. They can either be qualitative or quantitative (categorical)
+ Quantitative: can be counted (number of things)  Ex: age (in years), length (in m), number of children, etc.</description>
     </item>
     
     <item>
@@ -171,15 +183,6 @@ What does each node have?  Each node in the tree must have:  Data: Holds the val
       
       <guid>https://kaonpositive.github.io/posts/datastructures/</guid>
       <description>What is a data structure?  Used for organization and modification of data.  What are the two types of data structures?  Linear: Elements result in a sequence or linear list. Examples: arrays, linked lists, stacks, etc. Non-linear: Traversal of nodes is not done in a sequential manner. Examples: trees, graphs, etc.  What is an array?  A collection of the same data type that are stored at contiguous memory locations (memory locations are adjacent to each other in memory).</description>
-    </item>
-    
-    <item>
-      <title>STATS 411 Notes #00</title>
-      <link>https://kaonpositive.github.io/posts/stats411notes00/</link>
-      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/stats411notes00/</guid>
-      <description></description>
     </item>
     
     <item>
