@@ -13,7 +13,7 @@
       <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs456notes01/</guid>
-      <description></description>
+      <description>What are features of deterministic accepters?  Process an input string, which consist of a sequence of symbols Make transitions from one state to another state (depending on current state and current input symbol). Have a finite number of internal states. Produces some output in a slightly different form.  What is DFA? Deterministic Finite Accepter (or DFA) is a simple automaton finite state accepter (accepts only a finite set of internal states and no other memory).</description>
     </item>
     
     <item>

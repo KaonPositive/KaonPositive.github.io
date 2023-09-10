@@ -175,7 +175,27 @@
 
     <div class="post-content">
         <p>
-            
+            <h3 id="what-are-features-of-deterministic-accepters">What are features of deterministic accepters?</h3>
+<ol>
+<li>Process an input string, which consist of a sequence of symbols</li>
+<li>Make transitions from one state to another state (depending on current state and current input symbol).</li>
+<li>Have a finite number of internal states.</li>
+<li>Produces some output in a slightly different form.</li>
+</ol>
+<h3 id="what-is-dfa">What is DFA?</h3>
+<p>Deterministic Finite Accepter (or DFA) is a simple automaton finite state accepter (accepts only a finite set of internal states and no other memory).</p>
+<blockquote>
+<p>For a DFA, the term &ldquo;deterministic&rdquo; signifies that the automaton has one and only one option at any time (only one relative path).</p>
+</blockquote>
+<h3 id="what-is-nfa">What is NFA?</h3>
+<p>Another simple automaton finite state accepter but the only difference is that <code>it has several options/relative paths that it can go to--therefore it has choices to pick which path.</code></p>
+<blockquote>
+<p>Think of it as if NFA explores all choices (by search and backtrack method) and makes no decision UNTIL all the options have been analyzed.</p>
+</blockquote>
+<ul>
+<li>IMPORTANT: nondeterminism is important for simplifying the solution of many problems.</li>
+</ul>
+
         </p>
         
     </div>
@@ -187,7 +207,21 @@
 
 <aside class="post-toc">
     <nav id="toc">
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#what-are-features-of-deterministic-accepters">What are features of deterministic accepters?</a></li>
+            <li><a href="#what-is-dfa">What is DFA?</a></li>
+            <li><a href="#what-is-nfa">What is NFA?</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </nav>
 </aside>
 
