@@ -17,26 +17,26 @@
     
 
     
-    <title>cs422</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>CS 422 Notes 03</title>
+    <meta name="description" content="Notes for CS422 - Unsupervised Learning">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs422, machine learning'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/tags/cs422/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422notes03/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="cs422">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="CS 422 Notes 03">
+    <meta property="og:description" content="Notes for CS422 - Unsupervised Learning">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="cs422">
-    <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/tags/cs422/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/tags/cs422/">
+    <meta name="twitter:title" content="CS 422 Notes 03">
+    <meta name="twitter:description" content="Notes for CS422 - Unsupervised Learning">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422notes03/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422notes03/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/tags/cs422/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs422notes03/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -156,37 +156,119 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 422 Notes 03</h1>
+        <small role="doc-subtitle">Notes for CS422 - Unsupervised Learning</small>
+        <p class="post-date">
+            September 14, 2023
+        </p>
 
-    <h1 class="list-title">cs422</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs422">cs422</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/machine-learning">machine learning</a></li>
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <h3 id="what-is-unsupervised-learning">What is Unsupervised Learning?</h3>
+<p>It is a learning model where it is trained ONLY on the inputs.</p>
+<blockquote>
+<p>REMEMBER: Supervised learning uses input-output pairs to parameterize the model for improvement.</p>
+</blockquote>
+<ul>
+<li>Ex of Unsupervised Learning: Music recommendations by using <code>clusters</code> of users that have similar music taste.</li>
+</ul>
+<h3 id="what-is-clustering">What is Clustering?</h3>
+<p>No classification exists to determine data clusters. Therefore, it is a challenge to separate data in their respective classes/groups.</p>
+<h3 id="differences-between-clustering-and-classification">Differences between CLustering and Classification:</h3>
+<table>
+<thead>
+<tr>
+<th>Clustering</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No Labels (Unsupervised)</td>
+<td>Labels/Classes (Supervised)</td>
+</tr>
+<tr>
+<td>Determine # of Clusters is part of task</td>
+<td>Training data to determine # of classes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dimensionality-reduction-w-principal-compinents-analysis-pca">Dimensionality Reduction w/ Principal Compinents Analysis (PCA):</h3>
+<p>Linearly transforms input features by removing the correlated features w/ the objection of maximizing the variance</p>
+<blockquote>
+<p>OG Dataset -&gt;PCA-&gt; Dataset represented w/ components -&gt; Choose the PCs that explain a certain variability in the data -&gt; Apply the ML Algo</p>
+</blockquote>
+<ul>
+<li>PCA is a &ldquo;feature extraction&rdquo; method, because the original input features are transformed and not included.</li>
+<li>A &ldquo;feature selection&rdquo; method selects a subset of input features that explain a certain percentage of variability.</li>
+<li>The input features that are not selected are eliminated (feature elimination).</li>
+</ul>
+<blockquote>
+<p>REMEMBER: A lot of input features does not necessarily mean they are useful!</p>
+</blockquote>
+<h3 id="inputoutput-types">Input/Output Types</h3>
+<ol>
+<li>Binary (Categorical w/ two possible values)</li>
+<li>Categorical (W/ more than 2 possible values)</li>
+<li>Real-valued (continuous)</li>
+</ol>
+<p>Examples of each type:</p>
+<ul>
+<li>Real-valued: 7, 9, -3.3, 10001, &hellip;</li>
+<li>Binary: {0,1}, {yes,no}, {pass,fail}, &hellip;</li>
+<li>Categorical: {&lsquo;Panda&rsquo;, &lsquo;Cat&rsquo;, &lsquo;Lion&rsquo;}, {&lsquo;Sedan&rsquo;, &lsquo;Sport&rsquo;, &lsquo;Truck&rsquo;}, &hellip;</li>
+</ul>
+<blockquote>
+<p>We cannot use single integers to represent classes because the numbers have a natural order.</p>
+</blockquote>
 
-    <h2 class="posts-year">2023</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes03/" class="post-link">CS 422 Notes 03</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 14, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes02/" class="post-link">CS 422 Notes 02</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 12, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes01/" class="post-link">CS 422 Notes 01</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 5, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes00/" class="post-link">CS 422 Notes 00</a>
-    <div class="flex-break"></div>
-    <span class="post-date">August 31, 2023</span>
-</article>
+        </p>
+        
+    </div>
 
-    
-
+    <div class="prev-next">
+        
+    </div>
 </div>
 
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#what-is-unsupervised-learning">What is Unsupervised Learning?</a></li>
+            <li><a href="#what-is-clustering">What is Clustering?</a></li>
+            <li><a href="#differences-between-clustering-and-classification">Differences between CLustering and Classification:</a></li>
+            <li><a href="#dimensionality-reduction-w-principal-compinents-analysis-pca">Dimensionality Reduction w/ Principal Compinents Analysis (PCA):</a></li>
+            <li><a href="#inputoutput-types">Input/Output Types</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
 
         </main><footer class="footer">
     

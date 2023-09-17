@@ -6,7 +6,30 @@
     <description>Recent content in cs422 on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs422/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs422/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 422 Notes 03</title>
+      <link>https://kaonpositive.github.io/posts/cs422notes03/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422notes03/</guid>
+      <description>What is Unsupervised Learning? It is a learning model where it is trained ONLY on the inputs.
+ REMEMBER: Supervised learning uses input-output pairs to parameterize the model for improvement.
+  Ex of Unsupervised Learning: Music recommendations by using clusters of users that have similar music taste.  What is Clustering? No classification exists to determine data clusters. Therefore, it is a challenge to separate data in their respective classes/groups.</description>
+    </item>
+    
+    <item>
+      <title>CS 422 Notes 02</title>
+      <link>https://kaonpositive.github.io/posts/cs422notes02/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422notes02/</guid>
+      <description>$ {y_n} = f({x_n})$ where $f$ is the fuction we assume exist and try to approximate.
+$ \hat{y_n} = f^({x_n})$ where $ \hat{y_n} $ is the prediction and $ f^ $ is the model&amp;rsquo;s approximation.
+If we try to get comparisons for a data instance, we try to find the best line that fits the data instance the best.
+ Ex: you will prefer a function over another function since data is closests to it.</description>
+    </item>
+    
     <item>
       <title>CS 422 Notes 01</title>
       <link>https://kaonpositive.github.io/posts/cs422notes01/</link>

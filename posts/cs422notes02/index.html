@@ -17,26 +17,26 @@
     
 
     
-    <title>cs422</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>CS 422 Notes 02</title>
+    <meta name="description" content="Notes for CS422 - Supervised Learning (continued)">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs422, machine learning'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/tags/cs422/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422notes02/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="cs422">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="CS 422 Notes 02">
+    <meta property="og:description" content="Notes for CS422 - Supervised Learning (continued)">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="cs422">
-    <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/tags/cs422/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/tags/cs422/">
+    <meta name="twitter:title" content="CS 422 Notes 02">
+    <meta name="twitter:description" content="Notes for CS422 - Supervised Learning (continued)">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422notes02/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422notes02/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/tags/cs422/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs422notes02/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -156,37 +156,107 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 422 Notes 02</h1>
+        <small role="doc-subtitle">Notes for CS422 - Supervised Learning (continued)</small>
+        <p class="post-date">
+            September 12, 2023
+        </p>
 
-    <h1 class="list-title">cs422</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs422">cs422</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/machine-learning">machine learning</a></li>
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <p>$ {y_n} = f({x_n})$ where $f$ is the fuction we assume exist and try to approximate.</p>
+<p>$ \hat{y_n} = f^<em>({x_n})$ where $ \hat{y_n} $ is the prediction and $ f^</em> $ is the model&rsquo;s approximation.</p>
+<p>If we try to get comparisons for a data instance, we try to find the best line that fits the data instance the best.</p>
+<ul>
+<li>Ex: you will prefer a function over another function since data is closests to it.</li>
+</ul>
+<h3 id="what-is-overfitting">What is overfitting?</h3>
+<p>Fits the training data REALLY well but does not do well on the predictions when using unknown data instances (it is only trained well on the training data that it has been working with).</p>
+<h3 id="what-is-underfitting">What is underfitting?</h3>
+<p>Fits the trianing data loosely&ndash;not complex enough (or points do not fit well/overlap).</p>
+<h3 id="what-is-the-common-technique-to-find-errors">What is the common technique to find errors?</h3>
+<p>Square Loss - getting the squared values of predicted-actual values.
+Examples of Squared Loss Errors:</p>
+<ol>
+<li>Squared Error (Quadratic Loss): $ L({x_n}) = {(y_n - \hat{y_n})^2}$</li>
+<li>Sum of Squared Errors: $\sum_{n=1}^N({y_n}-\hat{y_n})^2$</li>
+<li>Mean Squared Error: $ \frac{1}{N} \sum_{n=1}^{N} ({y_n}-\hat{y_n})^2$</li>
+<li>Mean Absolute Error: $ \frac{1}{N} \sum_{n=1}^{N} |{y_n} - {\hat{y_n}}|$</li>
+</ol>
+<h3 id="what-is-linear-regression">What is Linear Regression?</h3>
+<p>The algorithm will try to optimize the parameters of the line&ndash;goal is to have the dataset fit into it.</p>
+<ul>
+<li>Ex: $ {argmin}({x^2}) = 0$ where argmin is ${x}$</li>
+<li>$\hat{\theta} = {argmin}MSE({\theta})$ where argmin is ${\theta}$</li>
+</ul>
+<blockquote>
+<p>It returns theta that minimize mean squared error.</p>
+</blockquote>
+<ul>
+<li>
+<p>IMPORTANT TO REMEMBER: The more complex the model, the more you have to optimize parameters of the line.</p>
+</li>
+<li>
+<p>For data in Mean Squared Error (MSE), if the data is fitted perfectly (where no margin of error exist ${y = \hat{y}}$), then MSE will ALWAYS be equal to 0.</p>
+</li>
+</ul>
+<p>Things to Note:</p>
+<ol>
+<li>A low error on the training data does NOT guarantee a low error on the test data.</li>
+<li>Underfitting - When the model is not complex enough to represent the training data well.</li>
+<li>Overfitting - When the model is too complex that it fits the trianing data very well, but does not perform well on the test data (data it hasn&rsquo;t seen before).</li>
+<li>As the complexity of the model increases, the number of parameters increase as well.</li>
+</ol>
+<h3 id="what-is-generalization">What is Generalization?</h3>
+<p>It is how well the model performs on data it has not seen before (new/test data).</p>
 
-    <h2 class="posts-year">2023</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes03/" class="post-link">CS 422 Notes 03</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 14, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes02/" class="post-link">CS 422 Notes 02</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 12, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes01/" class="post-link">CS 422 Notes 01</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 5, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes00/" class="post-link">CS 422 Notes 00</a>
-    <div class="flex-break"></div>
-    <span class="post-date">August 31, 2023</span>
-</article>
+        </p>
+        
+    </div>
 
-    
-
+    <div class="prev-next">
+        
+    </div>
 </div>
 
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#what-is-overfitting">What is overfitting?</a></li>
+            <li><a href="#what-is-underfitting">What is underfitting?</a></li>
+            <li><a href="#what-is-the-common-technique-to-find-errors">What is the common technique to find errors?</a></li>
+            <li><a href="#what-is-linear-regression">What is Linear Regression?</a></li>
+            <li><a href="#what-is-generalization">What is Generalization?</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
 
         </main><footer class="footer">
     
