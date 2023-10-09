@@ -215,10 +215,26 @@
 <p>IMPORTANT: The time complexity of this algorithm is O(kn^2) where k is the number of alphabets and n is the number of states.</p>
 </blockquote>
 <h3 id="reverse-language">Reverse Language</h3>
-<p>Let L be an infinite/finite language, then teh reverse of L will be denoted as:</p>
+<p>Let L be an infinite/finite language, then the reverse of L will be denoted as:</p>
 <ul>
 <li>${L^r}$ = {${W^r}$ | ${W\in L}$}</li>
 </ul>
+<p>Ex:
+${L_1 = ab, aab, aaab, aaaab, &hellip;}$
+${L_1^R = ba, baa, baaa, baaaa, &hellip;}$</p>
+<blockquote>
+<p>IMPORTANT NOTE: If L is a regular language, then L^R is also regular.</p>
+</blockquote>
+<p>Proof:</p>
+<ul>
+<li>Let M be a NFA accepting L.</li>
+<li>To construct ${M^R}$, NFA accepting ${L^R}$ do as follows:</li>
+</ul>
+<ol>
+<li>If M has many final states, then introduce a new final state (call it foo). Connect final states of M to foo via ${\lambda}$-transition.</li>
+<li>Change start state to final state, then change final state (foo) as start state.</li>
+<li>Reverse the directions of arcs we obtain ${M^R}$.</li>
+</ol>
 
         </p>
         

@@ -18,6 +18,17 @@
     </item>
     
     <item>
+      <title>CS456 Notes 03</title>
+      <link>https://kaonpositive.github.io/posts/cs456notes03/</link>
+      <pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs456notes03/</guid>
+      <description>What is a Regular Expression? It is a way of denoting regular languages.
+Rules for regular expression:
+ Empty set ${\empty}$ is a regular expression and denotes language ${\empty}$. Empty string ${lambda}$ is a regular expression denoting set {${\lambda}$}. Each alphabet a is a regular expression and denotes the set {${a}$}. If r and s are regular expressions, then r + s denotes the set ${r \cup s}$. if r and s are regular expressions, then rs denotes concatenation r with s.</description>
+    </item>
+    
+    <item>
       <title>CS 422 Notes 03</title>
       <link>https://kaonpositive.github.io/posts/cs422notes03/</link>
       <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
