@@ -17,20 +17,20 @@
     
 
     
-    <title>Jared Rosario</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>CS456 Notes 02</title>
+    <meta name="description" content="Notes for CS456">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs456'>
 
     <meta property="og:url" content="https://kaonpositive.github.io/posts/cs456notes02/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Jared Rosario">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="CS456 Notes 02">
+    <meta property="og:description" content="Notes for CS456">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jared Rosario">
-    <meta name="twitter:description" content="Obsession creates greatness.">
+    <meta name="twitter:title" content="CS456 Notes 02">
+    <meta name="twitter:description" content="Notes for CS456">
     <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs456notes02/">
     <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs456notes02/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
@@ -156,7 +156,101 @@
     </nav>
 </header>
 <main id="content">
-    
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS456 Notes 02</h1>
+        <small role="doc-subtitle">Notes for CS456</small>
+        <p class="post-date">
+            October 9, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs456">cs456</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="related-question">Related Question:</h3>
+<p>How do you know the given DFA has the smallest number of states?</p>
+<ul>
+<li>Often more than one DFA can be there that recognize the same language.</li>
+</ul>
+<h3 id="dfa-minimization-algorithm">DFA Minimization Algorithm:</h3>
+<ol>
+<li>Construct a table being indexed by non-final and final states.</li>
+</ol>
+<blockquote>
+<p>Mark all non-final and final pairs (each pair does not have to be connected to one another; as long as they are non-final and final pairs).</p>
+</blockquote>
+<ol start="2">
+<li>Process the first column (in this case, process q0).</li>
+</ol>
+<blockquote>
+<p>In the column q0, look into which pairs have not been marked. Within each unarked pair, look to see if that one state will reach to another state depending on what edge it needs to traverse.</p>
+</blockquote>
+<ol start="3">
+<li>Repeat this step with the other columns until you are sure if the states have reached a possible reachable state.</li>
+<li>Perform a second pass if needed.</li>
+</ol>
+<h3 id="dfa-minimization-algorithm-steps-professors-words">DFA Minimization Algorithm Steps (Professor&rsquo;s Words):</h3>
+<p>Given: A DFA M = (Q, ${\sum}$, ${\sigma}$, ${q_0}$, F)</p>
+<ol>
+<li>Create a 2D table of static pairs (p, q). ALl entries in the initiated table are not marked.</li>
+<li>Check all features (p,q) in the table and mark it if $p{\in}F$ and $p{\notin}F$ and vice versa.</li>
+<li>Repeat the following until an entire pass is made in the table and no new pair gets marked.</li>
+</ol>
+<ul>
+<li>if (p, q) is marked and for a symbol ${a\in\sum}$ such that (${\sigma(p,a)}$, ${\sigma(q,a)}$) is marked then mark pair (p,q)</li>
+</ul>
+<ol start="4">
+<li>After step 3, ${p\subset}q$ if entry (p,q) is not marked.</li>
+<li>Collapse all indistinguishable pair (${\approx}$) &lt;- the symbol means equivalent</li>
+</ol>
+<blockquote>
+<p>IMPORTANT: The time complexity of this algorithm is O(kn^2) where k is the number of alphabets and n is the number of states.</p>
+</blockquote>
+<h3 id="reverse-language">Reverse Language</h3>
+<p>Let L be an infinite/finite language, then teh reverse of L will be denoted as:</p>
+<ul>
+<li>${L^r}$ = {${W^r}$ | ${W\in L}$}</li>
+</ul>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#related-question">Related Question:</a></li>
+            <li><a href="#dfa-minimization-algorithm">DFA Minimization Algorithm:</a></li>
+            <li><a href="#dfa-minimization-algorithm-steps-professors-words">DFA Minimization Algorithm Steps (Professor&rsquo;s Words):</a></li>
+            <li><a href="#reverse-language">Reverse Language</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
 
     
 
