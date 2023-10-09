@@ -17,19 +17,19 @@
     
 
     
-    <title>CS456 Notes 00</title>
+    <title>CS456 Notes 01</title>
     <meta name="description" content="Notes for CS456 -- DFA and NFA">
     <meta name="keywords" content='blog, gokarna, hugo, notes, cs456'>
 
     <meta property="og:url" content="https://kaonpositive.github.io/posts/cs456notes01/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CS456 Notes 00">
+    <meta property="og:title" content="CS456 Notes 01">
     <meta property="og:description" content="Notes for CS456 -- DFA and NFA">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CS456 Notes 00">
+    <meta name="twitter:title" content="CS456 Notes 01">
     <meta name="twitter:description" content="Notes for CS456 -- DFA and NFA">
     <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs456notes01/">
     <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs456notes01/">
@@ -158,7 +158,7 @@
 <main id="content">
     <div class="post container">
     <div class="post-header-section">
-        <h1>CS456 Notes 00</h1>
+        <h1>CS456 Notes 01</h1>
         <small role="doc-subtitle">Notes for CS456 -- DFA and NFA</small>
         <p class="post-date">
             September 7, 2023
@@ -175,7 +175,14 @@
 
     <div class="post-content">
         <p>
-            <h3 id="what-are-features-of-deterministic-accepters">What are features of deterministic accepters?</h3>
+            <h3 id="what-is-a-power-set">What is a Power-Set?</h3>
+<p>Power set of ${2^s}$ of set s is the set of all subsets of S.
+Examples:
+${S_1} = $ {a, b}
+${2^{S_1}} = $ {{a}, {b}, {ab}, {0}} ${2^2} = 4$ total elements</p>
+<p>${S_2} = $ {a, b, c}
+${2^{S_2}} = $ {{0}, {a}, {b}, {c}, {a,b}, {a,c}, {b,c}, {a,b,c}, } ${2^3} = 8$ total elements</p>
+<h3 id="what-are-features-of-deterministic-accepters">What are features of deterministic accepters?</h3>
 <ol>
 <li>Process an input string, which consist of a sequence of symbols</li>
 <li>Make transitions from one state to another state (depending on current state and current input symbol).</li>
@@ -183,18 +190,44 @@
 <li>Produces some output in a slightly different form.</li>
 </ol>
 <h3 id="what-is-dfa">What is DFA?</h3>
-<p>Deterministic Finite Accepter (or DFA) is a simple automaton finite state accepter (accepts only a finite set of internal states and no other memory).</p>
+<p>Deterministic Finite Accepter (or DFA) is a simple automaton <code>finite</code> state accepter (accepts only a <code>finite set</code> of internal states and no other memory).</p>
 <blockquote>
 <p>For a DFA, the term &ldquo;deterministic&rdquo; signifies that the automaton has one and only one option at any time (only one relative path).</p>
 </blockquote>
+<p>DFA is a <code>five-tuple.</code> M = (Q, ${\sum}$, ${\sigma}$, ${q_0}$, F)
+Where:</p>
+<ol>
+<li>Q = <code>Finite</code> set of states</li>
+<li>${\sum}$ = <code>Finite</code> set of input alphabet symbols</li>
+<li>${\sigma}$ = Transition function mapping: ${Q * {\sum} -&gt; Q}$</li>
+<li>${q_0 \in Q}$ = is the <code>initial state.</code></li>
+<li>F ${\subset}$ ${Q}$ = <code>set</code> of final states. Has multiple final states.</li>
+</ol>
+<h3 id="what-is-a-regular-language">What is a regular language?</h3>
+<p>It is a language <code>accepted/recognized</code> by a <code>DFA.</code></p>
 <h3 id="what-is-nfa">What is NFA?</h3>
-<p>Another simple automaton finite state accepter but the only difference is that <code>it has several options/relative paths that it can go to--therefore it has choices to pick which path.</code></p>
+<p>Another simple automaton <code>finite</code> state accepter but the only difference is that <code>it has several options/relative paths that it can go to--therefore it has choices to pick which path.</code>
+In a NFA, there can be zero or more transition on an input.</p>
 <blockquote>
 <p>Think of it as if NFA explores all choices (by search and backtrack method) and makes no decision UNTIL all the options have been analyzed.</p>
 </blockquote>
 <ul>
 <li>IMPORTANT: nondeterminism is important for simplifying the solution of many problems.</li>
 </ul>
+<p>NFA is a <code>five-tuple.</code> M = (Q, ${\sum}$, ${\sigma}$, ${q_0}$, F)
+Where:</p>
+<ol>
+<li>Q = <code>Finite</code> set of states</li>
+<li>${\sum}$ = <code>Finite</code> set of input alphabet symbols (finite)</li>
+<li>${\sigma}$ = Transition function mapping: ${Q * {\sum} -&gt; Q}$</li>
+<li>${q_0 \in Q}$ = is the <code>initial state.</code></li>
+<li>F ${\subset}$ ${Q}$ = <code>set</code> of final states. Has multiple final states.</li>
+<li>${\sigma}$ maps: Q * (${\sum}$ ${\cup}$ {${\lambda}$}) -&gt; ${2^Q}$</li>
+</ol>
+<blockquote>
+<p>2^Q is the powerset.</p>
+</blockquote>
+<h3 id="converting-nfa-to-dfa">Converting NFA to DFA</h3>
 
         </p>
         
@@ -213,9 +246,12 @@
       <ul>
         <li>
           <ul>
+            <li><a href="#what-is-a-power-set">What is a Power-Set?</a></li>
             <li><a href="#what-are-features-of-deterministic-accepters">What are features of deterministic accepters?</a></li>
             <li><a href="#what-is-dfa">What is DFA?</a></li>
+            <li><a href="#what-is-a-regular-language">What is a regular language?</a></li>
             <li><a href="#what-is-nfa">What is NFA?</a></li>
+            <li><a href="#converting-nfa-to-dfa">Converting NFA to DFA</a></li>
           </ul>
         </li>
       </ul>

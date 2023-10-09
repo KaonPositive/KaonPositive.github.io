@@ -8,12 +8,14 @@
     <language>en</language>
     <lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs456/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>CS456 Notes 00</title>
+      <title>CS456 Notes 01</title>
       <link>https://kaonpositive.github.io/posts/cs456notes01/</link>
       <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs456notes01/</guid>
-      <description>What are features of deterministic accepters?  Process an input string, which consist of a sequence of symbols Make transitions from one state to another state (depending on current state and current input symbol). Have a finite number of internal states. Produces some output in a slightly different form.  What is DFA? Deterministic Finite Accepter (or DFA) is a simple automaton finite state accepter (accepts only a finite set of internal states and no other memory).</description>
+      <description>What is a Power-Set? Power set of ${2^s}$ of set s is the set of all subsets of S. Examples: ${S_1} = $ {a, b} ${2^{S_1}} = $ {{a}, {b}, {ab}, {0}} ${2^2} = 4$ total elements
+${S_2} = $ {a, b, c} ${2^{S_2}} = $ {{0}, {a}, {b}, {c}, {a,b}, {a,c}, {b,c}, {a,b,c}, } ${2^3} = 8$ total elements
+What are features of deterministic accepters?  Process an input string, which consist of a sequence of symbols Make transitions from one state to another state (depending on current state and current input symbol).</description>
     </item>
     
     <item>
