@@ -198,17 +198,17 @@
 <li>Perform a second pass if needed.</li>
 </ol>
 <h3 id="dfa-minimization-algorithm-steps-professors-words">DFA Minimization Algorithm Steps (Professor&rsquo;s Words):</h3>
-<p>Given: A DFA M = (Q, ${\sum}$, ${\sigma}$, ${q_0}$, F)</p>
+<p>Given: A DFA M = (Q, ${\Sigma}$, ${\sigma}$, ${q_0}$, F)</p>
 <ol>
-<li>Create a 2D table of static pairs (p, q). ALl entries in the initiated table are not marked.</li>
+<li>Create a 2D table of static pairs (p, q). All entries in the initiated table are not marked.</li>
 <li>Check all features (p,q) in the table and mark it if $p{\in}F$ and $p{\notin}F$ and vice versa.</li>
 <li>Repeat the following until an entire pass is made in the table and no new pair gets marked.</li>
 </ol>
 <ul>
-<li>if (p, q) is marked and for a symbol ${a\in\sum}$ such that (${\sigma(p,a)}$, ${\sigma(q,a)}$) is marked then mark pair (p,q)</li>
+<li>if (p, q) is marked and for a symbol ${a\in\Sigma}$ such that (${\sigma(p,a)}$, ${\sigma(q,a)}$) is marked then mark pair (p,q)</li>
 </ul>
 <ol start="4">
-<li>After step 3, ${p\subset}q$ if entry (p,q) is not marked.</li>
+<li>After step 3, $p{\subset}q$ if entry (p,q) is not marked.</li>
 <li>Collapse all indistinguishable pair (${\approx}$) &lt;- the symbol means equivalent</li>
 </ol>
 <blockquote>

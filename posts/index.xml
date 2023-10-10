@@ -55,9 +55,9 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
       <pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs456notes03/</guid>
-      <description>What is a Regular Expression? It is a way of denoting regular languages.
+      <description>What is a Regular Expression? It is a way of denoting/describing languages. EX: $(0{\cup}1)0^*$ is an example of a regular expression. Says that the language starts with a 0 or a 1 followed by any number of 0s.
 Rules for regular expression:
- Empty set ${\empty}$ is a regular expression and denotes language ${\empty}$. Empty string ${lambda}$ is a regular expression denoting set {${\lambda}$}. Each alphabet a is a regular expression and denotes the set {${a}$}. If r and s are regular expressions, then r + s denotes the set ${r \cup s}$. if r and s are regular expressions, then rs denotes concatenation r with s.</description>
+ Empty set ${\empty}$ is a regular expression and denotes language ${\empty}$. Empty string ${\lambda}$ is a regular expression denoting set {${\lambda}$}. Each alphabet a is a regular expression and denotes the set {${a}$}.</description>
     </item>
     
     <item>
@@ -116,9 +116,9 @@ If we try to get comparisons for a data instance, we try to find the best line t
       <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs456notes01/</guid>
-      <description>What is a Power-Set? Power set of ${2^s}$ of set s is the set of all subsets of S. Examples: ${S_1} = $ {a, b} ${2^{S_1}} = $ {{a}, {b}, {ab}, {0}} ${2^2} = 4$ total elements
+      <description>What is a Finite State Machine/Finite Automata? What is a Power-Set? Power set of ${2^s}$ of set s is the set of all subsets of S. Examples: ${S_1} = $ {a, b} ${2^{S_1}} = $ {{a}, {b}, {ab}, {0}} ${2^2} = 4$ total elements
 ${S_2} = $ {a, b, c} ${2^{S_2}} = $ {{0}, {a}, {b}, {c}, {a,b}, {a,c}, {b,c}, {a,b,c}, } ${2^3} = 8$ total elements
-What are features of deterministic accepters?  Process an input string, which consist of a sequence of symbols Make transitions from one state to another state (depending on current state and current input symbol).</description>
+What are features of deterministic accepters?</description>
     </item>
     
     <item>
@@ -170,7 +170,7 @@ What are features of deterministic accepters?  Process an input string, which co
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs456notes00/</guid>
-      <description>What is an alphabet?  It is a non-empty finite set of symbols. Ex:  $\Sigma$ = {0,1} $\Sigma$ = {a, b, c} $\Sigma$ = {a, b, c, &amp;hellip; z}    What is a string?  It is a finite sequence of symbols from an alphabet. Ex: $\Sigma$ = {a, b, c}  w1 = &amp;ldquo;abc&amp;rdquo; - This is a string of 3 symbols. w2 = &amp;ldquo;acaba&amp;rdquo; - This is a string of 5 symbols.</description>
+      <description>What is an alphabet?  It is a non-empty finite set of symbols. Use ${\Sigma}$ to denote the alphabet. Ex:  $\Sigma$ = {0,1} $\Sigma$ = {a, b, c} $\Sigma$ = {a, b, c, &amp;hellip; z}    What is a string?  It is a finite sequence of symbols from an alphabet. Ex: $\Sigma$ = {a, b, c}  w1 = &amp;ldquo;abc&amp;rdquo; - This is a string of 3 symbols.</description>
     </item>
     
     <item>

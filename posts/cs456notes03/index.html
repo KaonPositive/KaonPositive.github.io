@@ -176,11 +176,12 @@
     <div class="post-content">
         <p>
             <h3 id="what-is-a-regular-expression">What is a Regular Expression?</h3>
-<p>It is a way of denoting regular languages.</p>
+<p>It is a way of denoting/describing languages.
+EX: $(0{\cup}1)0^*$ is an example of a regular expression. Says that the language starts with a 0 or a 1 followed by any number of 0s.</p>
 <p>Rules for regular expression:</p>
 <ol>
-<li>Empty set ${\empty}$ is a regular expression and denotes language ${\empty}$.</li>
-<li>Empty string ${lambda}$ is a regular expression denoting set {${\lambda}$}.</li>
+<li><code>Empty set</code> ${\empty}$ is a regular expression and denotes language ${\empty}$.</li>
+<li><code>Empty string</code> ${\lambda}$ is a regular expression denoting set {${\lambda}$}.</li>
 <li>Each alphabet <code>a</code> is a regular expression and denotes the set {${a}$}.</li>
 <li>If r and s are regular expressions, then r + s denotes the set ${r \cup s}$.</li>
 <li>if r and s are regular expressions, then rs denotes concatenation r with s.</li>
@@ -189,24 +190,38 @@
 <blockquote>
 <p>Look at given examples in notebook.</p>
 </blockquote>
+<h3 id="what-is-a-non-regular-language">What is a Non-regular Language?</h3>
+<p>List of Non-regular Languages:</p>
+<ol>
+<li>$L_1 =$ {$a^nb^n | n&gt;=0$}</li>
+<li>$L_2 =$ {$a^nb^{(n+2)} | n &gt;= 0$}</li>
+<li>$L_3 =$ {$b^na^{(n+4)} | n &gt; 0$}</li>
+<li>$L_4 =$ {$ww^r | w \in (a+b)^*$}</li>
+</ol>
 <h3 id="what-is-pumping-lemma-for-regular-languages">What is Pumping Lemma for Regular Languages?</h3>
-<p>Let L be an infinite regular language. THen there exists some positive integer m (construct of pumping lemma) such that for any $w{\in}L$ with ${|w| &gt;= m}$ can be decomposed into 3 parts:</p>
+<p>It is used to prove nonregularity of regular languages.
+The pumping lemma will state that all regular languages will have this property&ndash;if we can show that a language does not have this property, then it is <code>guaranteed to not be regular.</code>
+Let L be an infinite regular language. Then there exists some positive integer m (construct of pumping lemma) such that for any $w{\in}L$ with ${|w| &gt;= m}$ can be decomposed into 3 parts:</p>
 <blockquote>
 <p>THIS IS AN IMPORTANT THING TO KNOW!!!</p>
 </blockquote>
-<p>W = xyz</p>
-<p>With ${|xy| &lt;= m}$ and ${|y| &gt;= 1}$
-Such that ${w_i} = xyz$ is also in for all ${i \in Z}$</p>
+<h4 id="definition-of-pumping-lemma">Definition of Pumping Lemma:</h4>
+<p>If A is a regular language, then there is a number p (the pumping length) where, if s is any string in A of length at least p, then s may be divided into three pieces, <code>s = xyz</code> where it satisfies the three conditions:</p>
+<ol>
+<li>for each i &gt;= 0, ${xy^iz \in A}$</li>
+<li>$|y| &gt; 0$</li>
+<li>$|xy| &lt;= p$</li>
+</ol>
 <ul>
 <li>Examples in notes&ndash;read it!</li>
 </ul>
 <h3 id="context-free-grammar-cfg">Context-Free Grammar (CFG)</h3>
-<p>A context free grammar (CFG) ($G = (V, T, P, S)$) is a 4-tuple where:</p>
+<p>A context free grammar (CFG) ($G = (V, T, P, S)$) is a <code>4-tuple</code> where:</p>
 <ol>
 <li>V = finite set of variables</li>
 <li>T = finite set of terminals</li>
 <li>P = finite set of production</li>
-<li>${S \in}V$ is the start symbol</li>
+<li>$S{\in}V$ is the start symbol</li>
 </ol>
 <p>Conversions:</p>
 <ul>
@@ -233,7 +248,12 @@ Such that ${w_i} = xyz$ is also in for all ${i \in Z}$</p>
         <li>
           <ul>
             <li><a href="#what-is-a-regular-expression">What is a Regular Expression?</a></li>
-            <li><a href="#what-is-pumping-lemma-for-regular-languages">What is Pumping Lemma for Regular Languages?</a></li>
+            <li><a href="#what-is-a-non-regular-language">What is a Non-regular Language?</a></li>
+            <li><a href="#what-is-pumping-lemma-for-regular-languages">What is Pumping Lemma for Regular Languages?</a>
+              <ul>
+                <li><a href="#definition-of-pumping-lemma">Definition of Pumping Lemma:</a></li>
+              </ul>
+            </li>
             <li><a href="#context-free-grammar-cfg">Context-Free Grammar (CFG)</a></li>
           </ul>
         </li>

@@ -175,7 +175,8 @@
 
     <div class="post-content">
         <p>
-            <h3 id="what-is-a-power-set">What is a Power-Set?</h3>
+            <h3 id="what-is-a-finite-state-machinefinite-automata">What is a Finite State Machine/Finite Automata?</h3>
+<h3 id="what-is-a-power-set">What is a Power-Set?</h3>
 <p>Power set of ${2^s}$ of set s is the set of all subsets of S.
 Examples:
 ${S_1} = $ {a, b}
@@ -194,42 +195,63 @@ ${2^{S_2}} = $ {{0}, {a}, {b}, {c}, {a,b}, {a,c}, {b,c}, {a,b,c}, } ${2^3} = 8$ 
 <blockquote>
 <p>For a DFA, the term &ldquo;deterministic&rdquo; signifies that the automaton has one and only one option at any time (only one relative path).</p>
 </blockquote>
-<p>DFA is a <code>five-tuple.</code> M = (Q, ${\sum}$, ${\sigma}$, ${q_0}$, F)
+<p>DFA is a <code>five-tuple.</code> M = (Q, ${\Sigma}$, ${\sigma}$, ${q_0}$, F)
 Where:</p>
 <ol>
 <li>Q = <code>Finite</code> set of states</li>
-<li>${\sum}$ = <code>Finite</code> set of input alphabet symbols</li>
-<li>${\sigma}$ = Transition function mapping: ${Q * {\sum} -&gt; Q}$</li>
+<li>${\Sigma}$ = <code>Finite</code> set of input alphabet symbols</li>
+<li>${\sigma}$ = Transition function mapping: ${Q * {\Sigma} -&gt; Q}$</li>
 <li>${q_0 \in Q}$ = is the <code>initial state.</code></li>
-<li>F ${\subset}$ ${Q}$ = <code>set</code> of final states. Has multiple final states.</li>
+<li>F ${\subset}$ ${Q}$ = <code>set</code> of final/accept states. Q($F \subset Q$)Has multiple final states.</li>
 </ol>
+<h3 id="what-is-a-transition-function">What is a transition function?</h3>
+<p>It defines the rules for moving from one state to another state.
+Ex: If an arrow from a state x to a state y labeled with the input symbol 1, that means that if the automaton is in state x, when it reads a 1, then it moves to state y.</p>
 <h3 id="what-is-a-regular-language">What is a regular language?</h3>
-<p>It is a language <code>accepted/recognized</code> by a <code>DFA.</code></p>
-<h3 id="what-is-nfa">What is NFA?</h3>
+<p>It is a language <code>accepted/recognized</code> by a <code>DFA.</code> A language is called a regular language if and only if some nondeterministic finite automaton recognizes it. A language is also considered regular if and only if some regular expression describes it.</p>
+<blockquote>
+<p>NOTE: if an NFA recognizes some language, it can be converted into an equivalent DFA. Consequently, if an NFA recognizes some language, so does some DFA, and hence the langauge is regular.</p>
+</blockquote>
+<h3 id="what-is-nfa-nondeterministic-finite-automata">What is NFA (Nondeterministic Finite Automata)?</h3>
 <p>Another simple automaton <code>finite</code> state accepter but the only difference is that <code>it has several options/relative paths that it can go to--therefore it has choices to pick which path.</code>
-In a NFA, there can be zero or more transition on an input.</p>
+In a NFA, there can be <code>zero or more transition on an input</code>. Look at page 48</p>
 <blockquote>
 <p>Think of it as if NFA explores all choices (by search and backtrack method) and makes no decision UNTIL all the options have been analyzed.</p>
 </blockquote>
 <ul>
 <li>IMPORTANT: nondeterminism is important for simplifying the solution of many problems.</li>
+<li>Can think of NFA being a parallel computation where multiple independent &ldquo;processes&rdquo; or &ldquo;threads&rdquo; can be running concurrently. If NFA splits to follow several choices, it basically corresponds to a process &ldquo;forking&rdquo; into several children.</li>
 </ul>
 <p>NFA is a <code>five-tuple.</code> M = (Q, ${\sum}$, ${\sigma}$, ${q_0}$, F)
 Where:</p>
 <ol>
 <li>Q = <code>Finite</code> set of states</li>
-<li>${\sum}$ = <code>Finite</code> set of input alphabet symbols (finite)</li>
-<li>${\sigma}$ = Transition function mapping: ${Q * {\sum} -&gt; Q}$</li>
+<li>${\Sigma}$ = <code>Finite</code> set of input alphabet symbols (finite)</li>
+<li>${\sigma}$ = Transition function mapping: ${Q * {\Sigma} -&gt; Q}$</li>
 <li>${q_0 \in Q}$ = is the <code>initial state.</code></li>
-<li>F ${\subset}$ ${Q}$ = <code>set</code> of final states. Has multiple final states.</li>
-<li>${\sigma}$ maps: Q * (${\sum}$ ${\cup}$ {${\lambda}$}) -&gt; ${2^Q}$</li>
+<li>F ${\subset}$ ${Q}$ = <code>set</code> of final/accept states. Has multiple final/accept states.</li>
+<li>${\sigma}$ maps: Q * (${\Sigma}$ ${\cup}$ {${\lambda}$}) -&gt; ${2^Q}$</li>
 </ol>
 <blockquote>
 <p>2^Q is the powerset.</p>
 </blockquote>
+<ul>
+<li>
+<p>Basically, finite automata is a 5-tuple.</p>
+</li>
+<li>
+<p>If the start state is an accept state, then if the machine reads an empty string, the empty string is accepted.</p>
+</li>
+<li>
+<p>The difference between NFA and DFA in terms of definition is within the transition function.</p>
+</li>
+</ul>
+<blockquote>
+<p>For DFA, the transition function takes a state and an input symbol and produces the next state; NFA takes a state and an input symbol OR EMPTY STRING and produces the SET OF POSSIBLE NEXT STATES.</p>
+</blockquote>
 <h3 id="converting-nfa-to-dfa">Converting NFA to DFA</h3>
-<p>Let the given NFA be: M = (Q, ${\sum}$, ${\sigma}$, ${q_0}$, F)
-The equivalent DFA be given by: M' = (Q', ${\sum}$, ${\sigma}'$, F')</p>
+<p>Let the given NFA be: M = (Q, ${\Sigma}$, ${\sigma}$, ${q_0}$, F)
+The equivalent DFA be given by: M' = (Q', ${\Sigma}$, ${\sigma}'$, F')</p>
 <blockquote>
 <p>Q' = 2^Q is the powerset of Q and Q = {q0, q1, q2}</p>
 </blockquote>
@@ -254,11 +276,13 @@ The equivalent DFA be given by: M' = (Q', ${\sum}$, ${\sigma}'$, F')</p>
       <ul>
         <li>
           <ul>
+            <li><a href="#what-is-a-finite-state-machinefinite-automata">What is a Finite State Machine/Finite Automata?</a></li>
             <li><a href="#what-is-a-power-set">What is a Power-Set?</a></li>
             <li><a href="#what-are-features-of-deterministic-accepters">What are features of deterministic accepters?</a></li>
             <li><a href="#what-is-dfa">What is DFA?</a></li>
+            <li><a href="#what-is-a-transition-function">What is a transition function?</a></li>
             <li><a href="#what-is-a-regular-language">What is a regular language?</a></li>
-            <li><a href="#what-is-nfa">What is NFA?</a></li>
+            <li><a href="#what-is-nfa-nondeterministic-finite-automata">What is NFA (Nondeterministic Finite Automata)?</a></li>
             <li><a href="#converting-nfa-to-dfa">Converting NFA to DFA</a></li>
           </ul>
         </li>
