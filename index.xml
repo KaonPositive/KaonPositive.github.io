@@ -6,7 +6,7 @@
     <description>Recent content on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Archive - Basics</title>
       <link>https://kaonpositive.github.io/posts/theme-documentation-basics/</link>
@@ -40,6 +40,15 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
     </item>
     
     <item>
+      <title>STATS 411 Notes 02</title>
+      <link>https://kaonpositive.github.io/posts/stats411notes02/</link>
+      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/stats411notes02/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>CS456 Notes 02</title>
       <link>https://kaonpositive.github.io/posts/cs456notes02/</link>
       <pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate>
@@ -58,6 +67,31 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
       <description>What is a Regular Expression? It is a way of denoting/describing languages. EX: $(0{\cup}1)0^*$ is an example of a regular expression. Says that the language starts with a 0 or a 1 followed by any number of 0s.
 Rules for regular expression:
  Empty set ${\empty}$ is a regular expression and denotes language ${\empty}$. Empty string ${\lambda}$ is a regular expression denoting set {${\lambda}$}. Each alphabet a is a regular expression and denotes the set {${a}$}.</description>
+    </item>
+    
+    <item>
+      <title>CS 422 Notes 04</title>
+      <link>https://kaonpositive.github.io/posts/cs422notes05/</link>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422notes05/</guid>
+      <description>Random Variables It is a variable that has unknown/random quantity of interest.
+${\mathcal X}$: the set of all possible values. Also called a sample space or static space.
+Discrete Random Variables Sample space is finite/countably infinite (${\mathcal X}$). Probability of event X = x is denoted by $P(X=x)$ or $P(x)$ for short.
+ x: Random Variable (ex: heads/tails) ${\mathcal X}$: Sample Space (ex: S={Heads, Tails}) x (small x) -&amp;gt; x: one of the possible values (ex: x=heads, or x = tails)  Continuous Random Variables If x (a random variable) ${\in\mathbb{R}}$ is a real-valued quantity, it is called a continous random variable.</description>
+    </item>
+    
+    <item>
+      <title>CS 422 Notes 04</title>
+      <link>https://kaonpositive.github.io/posts/cs422notes04/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422notes04/</guid>
+      <description>Probability Probability quantifies uncertainty.
+ Probability is between 0 and 1.
+ P(A): Probability that the event A will occur.
+ 0 &amp;lt;= P(A) &amp;lt;= 1  P(${A&#39;}$): Probability that the event A will NOT occur.
+ $0 &amp;lt;= P({A^c}) &amp;lt;= 1$ $P(A) + P({A^c}) = 1$ $P({A^c}) = 1 - P(A)$  Joint Probability Define probability of two events occuring at the same time. ${P(A \cap B}) = P(A, B)$</description>
     </item>
     
     <item>

@@ -6,7 +6,32 @@
     <description>Recent content in cs422 on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 14 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs422/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs422/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 422 Notes 04</title>
+      <link>https://kaonpositive.github.io/posts/cs422notes05/</link>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422notes05/</guid>
+      <description>Random Variables It is a variable that has unknown/random quantity of interest.
+${\mathcal X}$: the set of all possible values. Also called a sample space or static space.
+Discrete Random Variables Sample space is finite/countably infinite (${\mathcal X}$). Probability of event X = x is denoted by $P(X=x)$ or $P(x)$ for short.
+ x: Random Variable (ex: heads/tails) ${\mathcal X}$: Sample Space (ex: S={Heads, Tails}) x (small x) -&amp;gt; x: one of the possible values (ex: x=heads, or x = tails)  Continuous Random Variables If x (a random variable) ${\in\mathbb{R}}$ is a real-valued quantity, it is called a continous random variable.</description>
+    </item>
+    
+    <item>
+      <title>CS 422 Notes 04</title>
+      <link>https://kaonpositive.github.io/posts/cs422notes04/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422notes04/</guid>
+      <description>Probability Probability quantifies uncertainty.
+ Probability is between 0 and 1.
+ P(A): Probability that the event A will occur.
+ 0 &amp;lt;= P(A) &amp;lt;= 1  P(${A&#39;}$): Probability that the event A will NOT occur.
+ $0 &amp;lt;= P({A^c}) &amp;lt;= 1$ $P(A) + P({A^c}) = 1$ $P({A^c}) = 1 - P(A)$  Joint Probability Define probability of two events occuring at the same time. ${P(A \cap B}) = P(A, B)$</description>
+    </item>
+    
     <item>
       <title>CS 422 Notes 03</title>
       <link>https://kaonpositive.github.io/posts/cs422notes03/</link>

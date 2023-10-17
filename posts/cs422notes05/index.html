@@ -17,26 +17,26 @@
     
 
     
-    <title>stats411</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>CS 422 Notes 04</title>
+    <meta name="description" content="Notes for CS422--Random Variables">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs422, machine learning'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/tags/stats411/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422notes05/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="stats411">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="CS 422 Notes 04">
+    <meta property="og:description" content="Notes for CS422--Random Variables">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="stats411">
-    <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/tags/stats411/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/tags/stats411/">
+    <meta name="twitter:title" content="CS 422 Notes 04">
+    <meta name="twitter:description" content="Notes for CS422--Random Variables">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422notes05/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422notes05/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/tags/stats411/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs422notes05/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -156,37 +156,117 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 422 Notes 04</h1>
+        <small role="doc-subtitle">Notes for CS422--Random Variables</small>
+        <p class="post-date">
+            September 21, 2023
+        </p>
 
-    <h1 class="list-title">stats411</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs422">cs422</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/machine-learning">machine learning</a></li>
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <h3 id="random-variables">Random Variables</h3>
+<p>It is a variable that has unknown/random quantity of interest.</p>
+<p>${\mathcal X}$: the set of all possible values. Also called a sample space or static space.</p>
+<h3 id="discrete-random-variables">Discrete Random Variables</h3>
+<p>Sample space is finite/countably infinite (${\mathcal X}$).
+Probability of event X = x is denoted by $P(X=x)$ or $P(x)$ for short.</p>
+<ul>
+<li>x: Random Variable (ex: heads/tails)</li>
+<li>${\mathcal X}$: Sample Space (ex: S={Heads, Tails})</li>
+<li>x (small x) -&gt; x: one of the possible values (ex: x=heads, or x = tails)</li>
+</ul>
+<h3 id="continuous-random-variables">Continuous Random Variables</h3>
+<p>If x (a random variable) ${\in\mathbb{R}}$ is a real-valued quantity, it is called a <code>continous random variable.</code></p>
+<p>With continuous random variables, $P(X=x) = 0$ since there are infinitely many values that x can take on.</p>
+<ul>
+<li>Proof as to why it&rsquo;s zero:
+$\lim{x \to \infty} \sum_{i=0}^\infty\frac{n}\infty = \frac{1}{\infty} = 0$</li>
+</ul>
+<h3 id="marginal-distribution">Marginal Distribution</h3>
+<p>Assume we have two random variables x and y (both take on binary values (ex: 0, 1)) with finite cardinality, then we can represent their joint probability w/ a 2-dimensional table.</p>
+<blockquote>
+<p>NOTE: random variables don&rsquo;t have to take on binary values; as long as x and y have finite cardinality, it is valid.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>P(X,Y)</th>
+<th>y = 0</th>
+<th>y = 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x = 0</td>
+<td>0.4</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>x = 1</td>
+<td>0.3</td>
+<td>0.1</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>$P(x = 0, y = 0) = 0.4$</li>
+<li>$P(x = 0, y = 1) = 0.2$</li>
+<li>$P(x = 1, y = 0) = 0.3$</li>
+<li>$P(x = 1, y = 1) = 0.1$</li>
+</ol>
+<p>Given a joint distribution, the marginal distribution can be computed as follows:
+$P(x = 0) = P(x=0, y=0) \cup P(x=0, y=1) = 0.4 + 0.2 = 0.6$
+$P(y = 1) = P(x=0, y=1) \cup P(x=1, y=1) = 0.2 + 0.1 = 0.3$</p>
+<p>Formula for $P(X=x)$
+$P(X=x) = \sum{_y}P(X=x, Y=y)$ This sums up joint prob for y.
+$P(Y=y) = \sum{_x}P(X=x, Y=y)$ This sums up joint prob for x.</p>
 
-    <h2 class="posts-year">2023</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/stats411notes02/" class="post-link">STATS 411 Notes 02</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 10, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/stats411notes01/" class="post-link">STATS 411 Notes 01</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 11, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/stats411notes00/" class="post-link">STATS 411 Notes 00</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 5, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/integrals/" class="post-link">Integrals</a>
-    <div class="flex-break"></div>
-    <span class="post-date">August 27, 2023</span>
-</article>
+        </p>
+        
+    </div>
 
-    
-
+    <div class="prev-next">
+        
+    </div>
 </div>
 
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#random-variables">Random Variables</a></li>
+            <li><a href="#discrete-random-variables">Discrete Random Variables</a></li>
+            <li><a href="#continuous-random-variables">Continuous Random Variables</a></li>
+            <li><a href="#marginal-distribution">Marginal Distribution</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
 
         </main><footer class="footer">
     
