@@ -6,9 +6,58 @@
     <description>Recent content in cs422 on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs422/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs422/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>CS 422 Notes 04</title>
+      <title>CS 422 Notes 09</title>
+      <link>https://kaonpositive.github.io/posts/cs422notes09/</link>
+      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422notes09/</guid>
+      <description>Entropy It is the measure of uncertainty in a probability distribution.
+Formula: $\mathbb{H}(x) = -\sum_k^kP(X=k)*logp(X=k)$
+Gross Entropy Gross Entropy of two distributions P and Q is given by: $\mathbb{H}(p,q) = -\sum_{k=1}^kP_k*log(q_k)$
+ Gross Entropy is used as log loss in binary classification.
+ Generate Classifier $P(y = c|x, \theta) \alpha P(x|y = c, \theta)P(y=c | \theta)$
+ NOTE: Alpha means proportional
+ Difference between Discrimitive and Generative Classifiers  Discrimitive Classifier finds a boundry that separates the two classes.</description>
+    </item>
+    
+    <item>
+      <title>CS 422 Notes 07</title>
+      <link>https://kaonpositive.github.io/posts/cs422notes07/</link>
+      <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422notes07/</guid>
+      <description>Statistics The task of estimating the parameters ($\theta$) from the training data is called training\model fitting.
+$\hat{\theta} = argmin L ({\theta})$
+ $\hat{\theta}$ = estimated parameter $L = $ Loss Function (aka objective/cost function)  argmin $f(\theta)$ returns $\theta$ that minimizes $L(\theta)$. Ex: argmin $x^2$ = 0
+Maximum Likelihood Estimate (MLE) Refers to finding parameters that maximizes one likelihood of training data. It is the most common approach to parameter estimation.</description>
+    </item>
+    
+    <item>
+      <title>CS 422 Notes 08</title>
+      <link>https://kaonpositive.github.io/posts/cs422notes08/</link>
+      <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422notes08/</guid>
+      <description>Bayesian Decision Theory Allows to choose the best action based on the given situation.
+ Baye&amp;rsquo;s Rule will show up on the exam. An example of Baye&amp;rsquo;s rule is on Section 2.3.1 of the textbook (COVID-19).
+ </description>
+    </item>
+    
+    <item>
+      <title>CS 422 Notes 06</title>
+      <link>https://kaonpositive.github.io/posts/cs422notes06/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422notes06/</guid>
+      <description>Bernoulli Distribution Used to represent the distribution of a binary outcome. For example, tossing a coin.
+ y = 1 &amp;lt;- &amp;lsquo;heads&amp;rsquo; $P(y=1) = \theta$ y = 0 &amp;lt;- &amp;lsquo;tails&amp;rsquo; $P(y=0) = 1 - \theta$  PMF is defined as: $P(y | \theta) = \theta$ if $y = 1$ $P(y | \theta) = 1 - \theta$ if $y = 0$
+Binomial Distributions Used to represent the distribution of a repeated binary outcome.</description>
+    </item>
+    
+    <item>
+      <title>CS 422 Notes 05</title>
       <link>https://kaonpositive.github.io/posts/cs422notes05/</link>
       <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
       

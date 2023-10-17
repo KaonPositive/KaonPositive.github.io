@@ -17,26 +17,26 @@
     
 
     
-    <title>CS 422 Notes 05</title>
-    <meta name="description" content="Notes for CS422--Random Variables">
+    <title>CS 422 Notes 07</title>
+    <meta name="description" content="Notes for CS422--Statistics">
     <meta name="keywords" content='blog, gokarna, hugo, notes, cs422, machine learning'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422notes05/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422notes07/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CS 422 Notes 05">
-    <meta property="og:description" content="Notes for CS422--Random Variables">
+    <meta property="og:title" content="CS 422 Notes 07">
+    <meta property="og:description" content="Notes for CS422--Statistics">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CS 422 Notes 05">
-    <meta name="twitter:description" content="Notes for CS422--Random Variables">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422notes05/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422notes05/">
+    <meta name="twitter:title" content="CS 422 Notes 07">
+    <meta name="twitter:description" content="Notes for CS422--Statistics">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422notes07/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422notes07/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs422notes05/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs422notes07/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -158,10 +158,10 @@
 <main id="content">
     <div class="post container">
     <div class="post-header-section">
-        <h1>CS 422 Notes 05</h1>
-        <small role="doc-subtitle">Notes for CS422--Random Variables</small>
+        <h1>CS 422 Notes 07</h1>
+        <small role="doc-subtitle">Notes for CS422--Statistics</small>
         <p class="post-date">
-            September 21, 2023
+            October 3, 2023
         </p>
 
         <ul class="post-tags">
@@ -177,94 +177,64 @@
 
     <div class="post-content">
         <p>
-            <h3 id="random-variables">Random Variables</h3>
-<p>It is a variable that has unknown/random quantity of interest.</p>
-<p>${\mathcal X}$: the set of all possible values. Also called a sample space or static space.</p>
-<h3 id="discrete-random-variables">Discrete Random Variables</h3>
-<p>Sample space is finite/countably infinite (${\mathcal X}$).
-Probability of event X = x is denoted by $P(X=x)$ or $P(x)$ for short.</p>
-<ul>
-<li>x: Random Variable (ex: heads/tails)</li>
-<li>${\mathcal X}$: Sample Space (ex: S={Heads, Tails})</li>
-<li>x (small x) -&gt; x: one of the possible values (ex: x=heads, or x = tails)</li>
-</ul>
-<h3 id="continuous-random-variables">Continuous Random Variables</h3>
-<p>If x (a random variable) ${\in\mathbb{R}}$ is a real-valued quantity, it is called a <code>continous random variable.</code></p>
-<p>With continuous random variables, $P(X=x) = 0$ since there are infinitely many values that x can take on.</p>
-<ul>
-<li>Proof as to why it&rsquo;s zero:
-$\lim{x \to \infty} \sum_{i=0}^\infty\frac{n}\infty = \frac{1}{\infty} = 0$</li>
-</ul>
-<h3 id="marginal-distribution">Marginal Distribution</h3>
-<p>Assume we have two random variables x and y (both take on binary values (ex: 0, 1)) with finite cardinality, then we can represent their joint probability w/ a 2-dimensional table.</p>
-<blockquote>
-<p>NOTE: random variables don&rsquo;t have to take on binary values; as long as x and y have finite cardinality, it is valid.</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>P(X,Y)</th>
-<th>y = 0</th>
-<th>y = 1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>x = 0</td>
-<td>0.4</td>
-<td>0.2</td>
-</tr>
-<tr>
-<td>x = 1</td>
-<td>0.3</td>
-<td>0.1</td>
-</tr>
-</tbody>
-</table>
+            <h3 id="statistics">Statistics</h3>
+<p>The task of estimating the parameters ($\theta$) from the training data is called <code>training\model fitting</code>.</p>
+<p>$\hat{\theta} = argmin L ({\theta})$</p>
 <ol>
-<li>$P(x = 0, y = 0) = 0.4$</li>
-<li>$P(x = 0, y = 1) = 0.2$</li>
-<li>$P(x = 1, y = 0) = 0.3$</li>
-<li>$P(x = 1, y = 1) = 0.1$</li>
+<li>$\hat{\theta}$ = estimated parameter</li>
+<li>$L = $ Loss Function (aka objective/cost function)</li>
 </ol>
-<p>Given a joint distribution, the marginal distribution can be computed as follows:
-$P(x = 0) = P(x=0, y=0) \cup P(x=0, y=1) = 0.4 + 0.2 = 0.6$
-$P(y = 1) = P(x=0, y=1) \cup P(x=1, y=1) = 0.2 + 0.1 = 0.3$</p>
-<p>Formula for $P(X=x)$
-$P(X=x) = \sum{_y}P(X=x, Y=y)$ This sums up joint prob for y.
-$P(Y=y) = \sum{_x}P(X=x, Y=y)$ This sums up joint prob for x.</p>
-<p>$= {P(X=0) = \sum{_y}P(X=0, Y=y)}$
-$= P(X=0, Y=0) + P(X=0, Y=1)$
-$= 0.4 + 0.2 = 0.6$</p>
-<h3 id="with-conditional-probability">With Conditional Probability</h3>
-<p>$P(X | Y) = \frac{P(X \cap Y)}{P(Y)} $
-$P(X=x | Y=y) = \frac{P(X=x, Y=y)}{P(Y=y)}$ top is joint probability; marginal probabiltiy
-$P(X=x | Y=y) = \frac{P(X=x, Y=y)}{\sum{_x}P(X=x, Y=y)}$</p>
-<h3 id="moments-of-a-distribution">Moments of a Distribution</h3>
+<p>argmin $f(\theta)$ returns $\theta$ that minimizes $L(\theta)$.
+Ex: argmin $x^2$ = 0</p>
+<h3 id="maximum-likelihood-estimate-mle">Maximum Likelihood Estimate (MLE)</h3>
+<p>Refers to finding parameters that maximizes one likelihood of training data.
+It is the most common approach to parameter estimation. It picks parameters that assign the highest probability to the training data.
+$\hat{\theta}_{MLE}=argmax P(D | {\theta})$</p>
+<p>Maximizing the likelihood is equivalent to maximizing the log-likelihood.
+$L(\theta) = logP(D|\theta)$
+above equation equals to:
+$log-likelihood = log()$</p>
 <ul>
-<li>Mean (expected value)</li>
+<li>Most optimization algorithms minimize the cost function. We can redefine the cost function to be negative of the log-likelihood (NLL):
+$NLL = -logP(D|\theta) = -\sum_{n=1}logP(y_n|x_n, \theta)$</li>
 </ul>
-<p>For discrete random variables:
-$\mu = \mathbb{E}[x] = {\sum_{\mathcal X} x*P(x)} $</p>
+<h3 id="mle-for-bernoulli">MLE for Bernoulli</h3>
+<p>${\hat\theta} = argminNLL(\theta)$
+${\hat\theta_{MLE}} = \frac{N_1}{N_0 + N_1}$</p>
+<h3 id="empirical-risk-minimization-erm">Empirical Risk Minimization (ERM)</h3>
+<p>We generalize MLE by replacing the log loss with any other loss function to get:
+$L(\theta) = \frac{1}{N}\sum{_{n=1}^N} L(y_n, \theta, x_n)$</p>
+<h3 id="regularization">Regularization</h3>
+<p>MLE (Maximum Likelihood Estimate) and ERM (Empirical Risk Minimization) will find parameters that minimize loss on the training data, but this doesn&rsquo;t guarantee that the model will generalize well on the data.</p>
 <blockquote>
-<p>Learn more about expected mean.</p>
+<p>If the model doesn&rsquo;t generalize well on the data, then it is underfitted.</p>
 </blockquote>
-<h3 id="variance">Variance</h3>
-<p>${\sigma^2} = \mathbb{E}[(x - \mu^2)]$
-= ${\mathbb{E}[x^2 - 2x\mu + \mu^2]}$
-= ${\mathbb{E}[x^2] - \mathbb{E}[2x, \mu] + \mathbb{E}[\mu^2]}$
-= ${\mathbb{E}[x^2] - 2\mu\mathbb{E}[x] + \mu^2 }$
-= ${\mathbb{E}[x^2]-2\mu^2 +\mu^2}$
-= ${\mathbb{E}[x^2]-\mu^2 = \mathbb{E}[x^2] - (\mathbb{E}[x])^2 }$</p>
-<h3 id="standard-deviation">Standard Deviation</h3>
-<p>${\sigma = \sqrt{variance}}$</p>
+<h3 id="ways-to-combat-overfitting">Ways to combat overfitting</h3>
+<ol>
+<li>Use more data/or use a less complex model</li>
+<li>Apply regularization (adding a penalty term to the model)</li>
+</ol>
+<p>$L(\theta, \lambda) = [\frac{1}{N}\sum_{n=1}^N L(y_n \theta, x_n)] + \lambda C(\theta)$</p>
 <ul>
-<li>Variance and std. deviation calculates above apply to the entire population and if we are doing with a sample from the population, the denominator is n-1 instead of n.</li>
+<li>C is the complexity penalty</li>
+<li>$\lambda$ is the regularization constant</li>
 </ul>
-<h3 id="bayes-rule">Baye&rsquo;s Rule</h3>
-<p>Combining the definition of the conditional probability with the product rule and the sum rule yields and Baye&rsquo;s Rule (aka <code>Baye's Theorem</code>).</p>
-<p>Formula:
-$P(H=h | Y=y) = \frac{P(Y=y | H=h) * P(H=h)}{\sum{_h}P(Y=y|H=h)*P(H=h)}$</p>
+<blockquote>
+<p>By increasing the regularization constant, the bigger the regularization, it gives you a more smoother curve for your model.</p>
+</blockquote>
+<h3 id="weight-decay">Weight Decay</h3>
+<p>It is another way of <code>regularization</code>.
+$y_n = w_0 + w_1x_1 + w_2x_2+&hellip;+w_dx_d$</p>
+<blockquote>
+<p>The data is D-dimensional.</p>
+</blockquote>
+<p>$\theta = (w_0, w_2, &hellip;, w_b)$ are the parameters of the model. W&rsquo;s are called weights/parameters.</p>
+<p>$\hat w_{map} = argmin[NLL(w) + \lambda||w||_2^2]$</p>
+<ol>
+<li>W is the penalty</li>
+<li>$||w||^2_2$ is hte square of L_2 norm of W</li>
+<li>$\lambda$ is the regularization constant</li>
+</ol>
 
         </p>
         
@@ -283,15 +253,13 @@ $P(H=h | Y=y) = \frac{P(Y=y | H=h) * P(H=h)}{\sum{_h}P(Y=y|H=h)*P(H=h)}$</p>
       <ul>
         <li>
           <ul>
-            <li><a href="#random-variables">Random Variables</a></li>
-            <li><a href="#discrete-random-variables">Discrete Random Variables</a></li>
-            <li><a href="#continuous-random-variables">Continuous Random Variables</a></li>
-            <li><a href="#marginal-distribution">Marginal Distribution</a></li>
-            <li><a href="#with-conditional-probability">With Conditional Probability</a></li>
-            <li><a href="#moments-of-a-distribution">Moments of a Distribution</a></li>
-            <li><a href="#variance">Variance</a></li>
-            <li><a href="#standard-deviation">Standard Deviation</a></li>
-            <li><a href="#bayes-rule">Baye&rsquo;s Rule</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#maximum-likelihood-estimate-mle">Maximum Likelihood Estimate (MLE)</a></li>
+            <li><a href="#mle-for-bernoulli">MLE for Bernoulli</a></li>
+            <li><a href="#empirical-risk-minimization-erm">Empirical Risk Minimization (ERM)</a></li>
+            <li><a href="#regularization">Regularization</a></li>
+            <li><a href="#ways-to-combat-overfitting">Ways to combat overfitting</a></li>
+            <li><a href="#weight-decay">Weight Decay</a></li>
           </ul>
         </li>
       </ul>

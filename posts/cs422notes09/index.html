@@ -17,26 +17,26 @@
     
 
     
-    <title>CS 422 Notes 05</title>
-    <meta name="description" content="Notes for CS422--Random Variables">
+    <title>CS 422 Notes 09</title>
+    <meta name="description" content="Notes for CS422--Bayesian Decision Theory">
     <meta name="keywords" content='blog, gokarna, hugo, notes, cs422, machine learning'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422notes05/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422notes09/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CS 422 Notes 05">
-    <meta property="og:description" content="Notes for CS422--Random Variables">
+    <meta property="og:title" content="CS 422 Notes 09">
+    <meta property="og:description" content="Notes for CS422--Bayesian Decision Theory">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CS 422 Notes 05">
-    <meta name="twitter:description" content="Notes for CS422--Random Variables">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422notes05/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422notes05/">
+    <meta name="twitter:title" content="CS 422 Notes 09">
+    <meta name="twitter:description" content="Notes for CS422--Bayesian Decision Theory">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422notes09/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422notes09/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs422notes05/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs422notes09/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -158,10 +158,10 @@
 <main id="content">
     <div class="post container">
     <div class="post-header-section">
-        <h1>CS 422 Notes 05</h1>
-        <small role="doc-subtitle">Notes for CS422--Random Variables</small>
+        <h1>CS 422 Notes 09</h1>
+        <small role="doc-subtitle">Notes for CS422--Bayesian Decision Theory</small>
         <p class="post-date">
-            September 21, 2023
+            October 10, 2023
         </p>
 
         <ul class="post-tags">
@@ -177,94 +177,43 @@
 
     <div class="post-content">
         <p>
-            <h3 id="random-variables">Random Variables</h3>
-<p>It is a variable that has unknown/random quantity of interest.</p>
-<p>${\mathcal X}$: the set of all possible values. Also called a sample space or static space.</p>
-<h3 id="discrete-random-variables">Discrete Random Variables</h3>
-<p>Sample space is finite/countably infinite (${\mathcal X}$).
-Probability of event X = x is denoted by $P(X=x)$ or $P(x)$ for short.</p>
-<ul>
-<li>x: Random Variable (ex: heads/tails)</li>
-<li>${\mathcal X}$: Sample Space (ex: S={Heads, Tails})</li>
-<li>x (small x) -&gt; x: one of the possible values (ex: x=heads, or x = tails)</li>
-</ul>
-<h3 id="continuous-random-variables">Continuous Random Variables</h3>
-<p>If x (a random variable) ${\in\mathbb{R}}$ is a real-valued quantity, it is called a <code>continous random variable.</code></p>
-<p>With continuous random variables, $P(X=x) = 0$ since there are infinitely many values that x can take on.</p>
-<ul>
-<li>Proof as to why it&rsquo;s zero:
-$\lim{x \to \infty} \sum_{i=0}^\infty\frac{n}\infty = \frac{1}{\infty} = 0$</li>
-</ul>
-<h3 id="marginal-distribution">Marginal Distribution</h3>
-<p>Assume we have two random variables x and y (both take on binary values (ex: 0, 1)) with finite cardinality, then we can represent their joint probability w/ a 2-dimensional table.</p>
-<blockquote>
-<p>NOTE: random variables don&rsquo;t have to take on binary values; as long as x and y have finite cardinality, it is valid.</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>P(X,Y)</th>
-<th>y = 0</th>
-<th>y = 1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>x = 0</td>
-<td>0.4</td>
-<td>0.2</td>
-</tr>
-<tr>
-<td>x = 1</td>
-<td>0.3</td>
-<td>0.1</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>$P(x = 0, y = 0) = 0.4$</li>
-<li>$P(x = 0, y = 1) = 0.2$</li>
-<li>$P(x = 1, y = 0) = 0.3$</li>
-<li>$P(x = 1, y = 1) = 0.1$</li>
-</ol>
-<p>Given a joint distribution, the marginal distribution can be computed as follows:
-$P(x = 0) = P(x=0, y=0) \cup P(x=0, y=1) = 0.4 + 0.2 = 0.6$
-$P(y = 1) = P(x=0, y=1) \cup P(x=1, y=1) = 0.2 + 0.1 = 0.3$</p>
-<p>Formula for $P(X=x)$
-$P(X=x) = \sum{_y}P(X=x, Y=y)$ This sums up joint prob for y.
-$P(Y=y) = \sum{_x}P(X=x, Y=y)$ This sums up joint prob for x.</p>
-<p>$= {P(X=0) = \sum{_y}P(X=0, Y=y)}$
-$= P(X=0, Y=0) + P(X=0, Y=1)$
-$= 0.4 + 0.2 = 0.6$</p>
-<h3 id="with-conditional-probability">With Conditional Probability</h3>
-<p>$P(X | Y) = \frac{P(X \cap Y)}{P(Y)} $
-$P(X=x | Y=y) = \frac{P(X=x, Y=y)}{P(Y=y)}$ top is joint probability; marginal probabiltiy
-$P(X=x | Y=y) = \frac{P(X=x, Y=y)}{\sum{_x}P(X=x, Y=y)}$</p>
-<h3 id="moments-of-a-distribution">Moments of a Distribution</h3>
-<ul>
-<li>Mean (expected value)</li>
-</ul>
-<p>For discrete random variables:
-$\mu = \mathbb{E}[x] = {\sum_{\mathcal X} x*P(x)} $</p>
-<blockquote>
-<p>Learn more about expected mean.</p>
-</blockquote>
-<h3 id="variance">Variance</h3>
-<p>${\sigma^2} = \mathbb{E}[(x - \mu^2)]$
-= ${\mathbb{E}[x^2 - 2x\mu + \mu^2]}$
-= ${\mathbb{E}[x^2] - \mathbb{E}[2x, \mu] + \mathbb{E}[\mu^2]}$
-= ${\mathbb{E}[x^2] - 2\mu\mathbb{E}[x] + \mu^2 }$
-= ${\mathbb{E}[x^2]-2\mu^2 +\mu^2}$
-= ${\mathbb{E}[x^2]-\mu^2 = \mathbb{E}[x^2] - (\mathbb{E}[x])^2 }$</p>
-<h3 id="standard-deviation">Standard Deviation</h3>
-<p>${\sigma = \sqrt{variance}}$</p>
-<ul>
-<li>Variance and std. deviation calculates above apply to the entire population and if we are doing with a sample from the population, the denominator is n-1 instead of n.</li>
-</ul>
-<h3 id="bayes-rule">Baye&rsquo;s Rule</h3>
-<p>Combining the definition of the conditional probability with the product rule and the sum rule yields and Baye&rsquo;s Rule (aka <code>Baye's Theorem</code>).</p>
+            <h3 id="entropy">Entropy</h3>
+<p>It is the measure of uncertainty in a probability distribution.</p>
 <p>Formula:
-$P(H=h | Y=y) = \frac{P(Y=y | H=h) * P(H=h)}{\sum{_h}P(Y=y|H=h)*P(H=h)}$</p>
+$\mathbb{H}(x) = -\sum_k^kP(X=k)*logp(X=k)$</p>
+<h3 id="gross-entropy">Gross Entropy</h3>
+<p>Gross Entropy of two distributions P and Q is given by:
+$\mathbb{H}(p,q) = -\sum_{k=1}^kP_k*log(q_k)$</p>
+<blockquote>
+<p>Gross Entropy is used as log loss in binary classification.</p>
+</blockquote>
+<h3 id="generate-classifier">Generate Classifier</h3>
+<p>$P(y = c|x, \theta) \alpha P(x|y = c, \theta)P(y=c | \theta)$</p>
+<blockquote>
+<p>NOTE: Alpha means proportional</p>
+</blockquote>
+<h3 id="difference-between-discrimitive-and-generative-classifiers">Difference between Discrimitive and Generative Classifiers</h3>
+<ul>
+<li>Discrimitive Classifier finds a boundry that separates the two classes.</li>
+<li>Generative Classifier considers the data in each class and compute the probability of a test instance belonging to that class.</li>
+</ul>
+<p>Formula:
+$P(y = c|x, \theta) = \frac{P(x|y=c, \theta) * P(y=c|\theta)}{\sum_{c'}P(x|y=c', \theta)*P(y=c'|\theta)}$</p>
+<ol>
+<li>$P(y=c|x, \theta) = $ Posterior Probability</li>
+<li>$P(x|y=c, \theta) = $ Class-conditional Density</li>
+<li>$P(y = c|\theta) = $ Prior Probability</li>
+</ol>
+<h3 id="naive-bayes-classifier-nbc">Naive Bayes Classifier (NBC)</h3>
+<p>It&rsquo;s a generative classifier that assume the input features are conditionally independent within each class. Then the class conditional density becomes:
+$P(x|y=c, \theta) = \prod_{d=1}^DP(x_d | y =c,\theta)$</p>
+<h3 id="maximum-likelihood-estimate-mle-for-naive-based-classifiers">Maximum Likelihood Estimate (MLE) for Naive-based Classifiers</h3>
+<p>MLE for class prior is given by:
+$\prod_c = \frac{N_c}{N}$</p>
+<ol>
+<li>$N_c =$ number of examples in Class C</li>
+<li>$N =$ total number of examples in dataset</li>
+</ol>
 
         </p>
         
@@ -283,15 +232,12 @@ $P(H=h | Y=y) = \frac{P(Y=y | H=h) * P(H=h)}{\sum{_h}P(Y=y|H=h)*P(H=h)}$</p>
       <ul>
         <li>
           <ul>
-            <li><a href="#random-variables">Random Variables</a></li>
-            <li><a href="#discrete-random-variables">Discrete Random Variables</a></li>
-            <li><a href="#continuous-random-variables">Continuous Random Variables</a></li>
-            <li><a href="#marginal-distribution">Marginal Distribution</a></li>
-            <li><a href="#with-conditional-probability">With Conditional Probability</a></li>
-            <li><a href="#moments-of-a-distribution">Moments of a Distribution</a></li>
-            <li><a href="#variance">Variance</a></li>
-            <li><a href="#standard-deviation">Standard Deviation</a></li>
-            <li><a href="#bayes-rule">Baye&rsquo;s Rule</a></li>
+            <li><a href="#entropy">Entropy</a></li>
+            <li><a href="#gross-entropy">Gross Entropy</a></li>
+            <li><a href="#generate-classifier">Generate Classifier</a></li>
+            <li><a href="#difference-between-discrimitive-and-generative-classifiers">Difference between Discrimitive and Generative Classifiers</a></li>
+            <li><a href="#naive-bayes-classifier-nbc">Naive Bayes Classifier (NBC)</a></li>
+            <li><a href="#maximum-likelihood-estimate-mle-for-naive-based-classifiers">Maximum Likelihood Estimate (MLE) for Naive-based Classifiers</a></li>
           </ul>
         </li>
       </ul>

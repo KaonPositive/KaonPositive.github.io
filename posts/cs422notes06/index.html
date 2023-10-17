@@ -17,26 +17,26 @@
     
 
     
-    <title>CS 422 Notes 05</title>
-    <meta name="description" content="Notes for CS422--Random Variables">
+    <title>CS 422 Notes 06</title>
+    <meta name="description" content="Notes for CS422--Probability Distributions">
     <meta name="keywords" content='blog, gokarna, hugo, notes, cs422, machine learning'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422notes05/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422notes06/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CS 422 Notes 05">
-    <meta property="og:description" content="Notes for CS422--Random Variables">
+    <meta property="og:title" content="CS 422 Notes 06">
+    <meta property="og:description" content="Notes for CS422--Probability Distributions">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CS 422 Notes 05">
-    <meta name="twitter:description" content="Notes for CS422--Random Variables">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422notes05/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422notes05/">
+    <meta name="twitter:title" content="CS 422 Notes 06">
+    <meta name="twitter:description" content="Notes for CS422--Probability Distributions">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422notes06/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422notes06/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs422notes05/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs422notes06/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -158,10 +158,10 @@
 <main id="content">
     <div class="post container">
     <div class="post-header-section">
-        <h1>CS 422 Notes 05</h1>
-        <small role="doc-subtitle">Notes for CS422--Random Variables</small>
+        <h1>CS 422 Notes 06</h1>
+        <small role="doc-subtitle">Notes for CS422--Probability Distributions</small>
         <p class="post-date">
-            September 21, 2023
+            September 28, 2023
         </p>
 
         <ul class="post-tags">
@@ -177,94 +177,59 @@
 
     <div class="post-content">
         <p>
-            <h3 id="random-variables">Random Variables</h3>
-<p>It is a variable that has unknown/random quantity of interest.</p>
-<p>${\mathcal X}$: the set of all possible values. Also called a sample space or static space.</p>
-<h3 id="discrete-random-variables">Discrete Random Variables</h3>
-<p>Sample space is finite/countably infinite (${\mathcal X}$).
-Probability of event X = x is denoted by $P(X=x)$ or $P(x)$ for short.</p>
-<ul>
-<li>x: Random Variable (ex: heads/tails)</li>
-<li>${\mathcal X}$: Sample Space (ex: S={Heads, Tails})</li>
-<li>x (small x) -&gt; x: one of the possible values (ex: x=heads, or x = tails)</li>
-</ul>
-<h3 id="continuous-random-variables">Continuous Random Variables</h3>
-<p>If x (a random variable) ${\in\mathbb{R}}$ is a real-valued quantity, it is called a <code>continous random variable.</code></p>
-<p>With continuous random variables, $P(X=x) = 0$ since there are infinitely many values that x can take on.</p>
-<ul>
-<li>Proof as to why it&rsquo;s zero:
-$\lim{x \to \infty} \sum_{i=0}^\infty\frac{n}\infty = \frac{1}{\infty} = 0$</li>
-</ul>
-<h3 id="marginal-distribution">Marginal Distribution</h3>
-<p>Assume we have two random variables x and y (both take on binary values (ex: 0, 1)) with finite cardinality, then we can represent their joint probability w/ a 2-dimensional table.</p>
-<blockquote>
-<p>NOTE: random variables don&rsquo;t have to take on binary values; as long as x and y have finite cardinality, it is valid.</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>P(X,Y)</th>
-<th>y = 0</th>
-<th>y = 1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>x = 0</td>
-<td>0.4</td>
-<td>0.2</td>
-</tr>
-<tr>
-<td>x = 1</td>
-<td>0.3</td>
-<td>0.1</td>
-</tr>
-</tbody>
-</table>
+            <h3 id="bernoulli-distribution">Bernoulli Distribution</h3>
+<p>Used to represent the distribution of a <code>binary outcome</code>. For example, tossing a coin.</p>
 <ol>
-<li>$P(x = 0, y = 0) = 0.4$</li>
-<li>$P(x = 0, y = 1) = 0.2$</li>
-<li>$P(x = 1, y = 0) = 0.3$</li>
-<li>$P(x = 1, y = 1) = 0.1$</li>
+<li>y = 1 &lt;- &lsquo;heads&rsquo; $P(y=1) = \theta$</li>
+<li>y = 0 &lt;- &lsquo;tails&rsquo; $P(y=0) = 1 - \theta$</li>
 </ol>
-<p>Given a joint distribution, the marginal distribution can be computed as follows:
-$P(x = 0) = P(x=0, y=0) \cup P(x=0, y=1) = 0.4 + 0.2 = 0.6$
-$P(y = 1) = P(x=0, y=1) \cup P(x=1, y=1) = 0.2 + 0.1 = 0.3$</p>
-<p>Formula for $P(X=x)$
-$P(X=x) = \sum{_y}P(X=x, Y=y)$ This sums up joint prob for y.
-$P(Y=y) = \sum{_x}P(X=x, Y=y)$ This sums up joint prob for x.</p>
-<p>$= {P(X=0) = \sum{_y}P(X=0, Y=y)}$
-$= P(X=0, Y=0) + P(X=0, Y=1)$
-$= 0.4 + 0.2 = 0.6$</p>
-<h3 id="with-conditional-probability">With Conditional Probability</h3>
-<p>$P(X | Y) = \frac{P(X \cap Y)}{P(Y)} $
-$P(X=x | Y=y) = \frac{P(X=x, Y=y)}{P(Y=y)}$ top is joint probability; marginal probabiltiy
-$P(X=x | Y=y) = \frac{P(X=x, Y=y)}{\sum{_x}P(X=x, Y=y)}$</p>
-<h3 id="moments-of-a-distribution">Moments of a Distribution</h3>
-<ul>
-<li>Mean (expected value)</li>
-</ul>
-<p>For discrete random variables:
-$\mu = \mathbb{E}[x] = {\sum_{\mathcal X} x*P(x)} $</p>
+<p>PMF is defined as:
+$P(y | \theta) = \theta$ if $y = 1$
+$P(y | \theta) = 1 - \theta$ if $y = 0$</p>
+<h3 id="binomial-distributions">Binomial Distributions</h3>
+<p>Used to represent the distribution of a <code>repeated</code> binary outcome.</p>
 <blockquote>
-<p>Learn more about expected mean.</p>
+<p>Bernoulli is a special case of a binomial distribution.</p>
 </blockquote>
-<h3 id="variance">Variance</h3>
-<p>${\sigma^2} = \mathbb{E}[(x - \mu^2)]$
-= ${\mathbb{E}[x^2 - 2x\mu + \mu^2]}$
-= ${\mathbb{E}[x^2] - \mathbb{E}[2x, \mu] + \mathbb{E}[\mu^2]}$
-= ${\mathbb{E}[x^2] - 2\mu\mathbb{E}[x] + \mu^2 }$
-= ${\mathbb{E}[x^2]-2\mu^2 +\mu^2}$
-= ${\mathbb{E}[x^2]-\mu^2 = \mathbb{E}[x^2] - (\mathbb{E}[x])^2 }$</p>
-<h3 id="standard-deviation">Standard Deviation</h3>
-<p>${\sigma = \sqrt{variance}}$</p>
+<p>PMF will be defined as:
+$P(S | N, \theta) = \frac{N!}{S!(N-S)!}<em>\theta^s</em>(1-\theta)^{N-S}$</p>
+<h3 id="categorical-distribution-aka-multinulli">Categorical Distribution (aka Multinulli)</h3>
+<p>Generalizes the Bernoulli distribution to more than two possible outcomes.
+Ex: Like rolling a C-sided die, where C &gt; 2.</p>
+<h3 id="multinomial-distribution">Multinomial Distribution</h3>
+<p>Generalizes the categorical distribution to N &gt; 1. Suppose we roll a C-sided die N times, S represent C-dimensional vector that keeps track of how many times each side comes up. What is the probability of getting a particular vector S?</p>
 <ul>
-<li>Variance and std. deviation calculates above apply to the entire population and if we are doing with a sample from the population, the denominator is n-1 instead of n.</li>
+<li>The distribution of S is given by the multinomial distribution
+S ~ $Mu(s | N, \theta) = \frac{N!}{S_1!<em>S_2!</em>&hellip;S_C!} * (\theta_1)^{S_1}&hellip;*(\theta)^{S_c}$</li>
 </ul>
-<h3 id="bayes-rule">Baye&rsquo;s Rule</h3>
-<p>Combining the definition of the conditional probability with the product rule and the sum rule yields and Baye&rsquo;s Rule (aka <code>Baye's Theorem</code>).</p>
-<p>Formula:
-$P(H=h | Y=y) = \frac{P(Y=y | H=h) * P(H=h)}{\sum{_h}P(Y=y|H=h)*P(H=h)}$</p>
+<blockquote>
+<p>NOTE: Theta here is a vector.</p>
+</blockquote>
+<h3 id="gaussian-distribution-aka-normal">Gaussian Distribution (aka Normal)</h3>
+<p>It is the <code>most commonly used distribution</code> in statistics and machine learning. Its Probability Density Function (PDF) is given by:</p>
+<p>$\mathcal{N}(y|\mu, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} * e^{-\frac{1}{2\sigma^2}(y-\mu)^2}$</p>
+<p>Where:</p>
+<ol>
+<li>$\mu$ = Mean</li>
+<li>$\sigma^2$ = Variance of the distribution</li>
+<li>$\sqrt{2\pi\sigma^2}$ = the normalization constant that ensures the density integrates to 1</li>
+</ol>
+<ul>
+<li>SPECIAL CASE:
+If $\mu = 0$, $\sigma^2 = 1$ (where std dev = 1), it is the <code>Standard Gaussian Distribution</code>
+The more variant in the distribution = more wide the curve will be.
+Narrowness indicates data will reside in a range of numbers.</li>
+</ul>
+<blockquote>
+<p>Don&rsquo;t need to memorize the formula; however, you need to know how it works.</p>
+</blockquote>
+<h3 id="multiveriate-gaussian-distribution">Multiveriate Gaussian Distribution</h3>
+<h3 id="covariance">Covariance</h3>
+<p>It measures the degree to which two random variables are <code>linearly related</code>.
+Cov[x,y] = ${\mathbb{E}[(x-{\mathbb{E}[x]}) * (y-{\mathbb{E}[y]})]}$
+$= {\mathbb{E}[xy]-\mathbb{E}[x]*\mathbb{E}[y]}$</p>
+<h3 id="correlation">Correlation</h3>
+<p>Normalized measure of covariance.</p>
 
         </p>
         
@@ -283,15 +248,14 @@ $P(H=h | Y=y) = \frac{P(Y=y | H=h) * P(H=h)}{\sum{_h}P(Y=y|H=h)*P(H=h)}$</p>
       <ul>
         <li>
           <ul>
-            <li><a href="#random-variables">Random Variables</a></li>
-            <li><a href="#discrete-random-variables">Discrete Random Variables</a></li>
-            <li><a href="#continuous-random-variables">Continuous Random Variables</a></li>
-            <li><a href="#marginal-distribution">Marginal Distribution</a></li>
-            <li><a href="#with-conditional-probability">With Conditional Probability</a></li>
-            <li><a href="#moments-of-a-distribution">Moments of a Distribution</a></li>
-            <li><a href="#variance">Variance</a></li>
-            <li><a href="#standard-deviation">Standard Deviation</a></li>
-            <li><a href="#bayes-rule">Baye&rsquo;s Rule</a></li>
+            <li><a href="#bernoulli-distribution">Bernoulli Distribution</a></li>
+            <li><a href="#binomial-distributions">Binomial Distributions</a></li>
+            <li><a href="#categorical-distribution-aka-multinulli">Categorical Distribution (aka Multinulli)</a></li>
+            <li><a href="#multinomial-distribution">Multinomial Distribution</a></li>
+            <li><a href="#gaussian-distribution-aka-normal">Gaussian Distribution (aka Normal)</a></li>
+            <li><a href="#multiveriate-gaussian-distribution">Multiveriate Gaussian Distribution</a></li>
+            <li><a href="#covariance">Covariance</a></li>
+            <li><a href="#correlation">Correlation</a></li>
           </ul>
         </li>
       </ul>
