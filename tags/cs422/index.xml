@@ -23,6 +23,19 @@ Gross Entropy Gross Entropy of two distributions P and Q is given by: $\mathbb{H
     </item>
     
     <item>
+      <title>CS 422 Midterm Review</title>
+      <link>https://kaonpositive.github.io/posts/cs422midtermreview/</link>
+      <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422midtermreview/</guid>
+      <description>What is Supervised Learning? Function that perfectly maps each input to its output.
+ Supervised Learning Algorithms work with input-output pairs!
+ f* &amp;lt;- model&amp;rsquo;s approximation x (bold lowercase) = input vector y = output (typically scalar unless output is multi-dimensional)
+What is a model parameter? Variable which can be estimatted by fitting given data to model.
+ ex: $f(x) = mx+c$, where x = independent variable, c = dependent   m and c are parameters.</description>
+    </item>
+    
+    <item>
       <title>CS 422 Notes 07</title>
       <link>https://kaonpositive.github.io/posts/cs422notes07/</link>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>

@@ -85,6 +85,19 @@ Rules for regular expression:
     </item>
     
     <item>
+      <title>CS 422 Midterm Review</title>
+      <link>https://kaonpositive.github.io/posts/cs422midtermreview/</link>
+      <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422midtermreview/</guid>
+      <description>What is Supervised Learning? Function that perfectly maps each input to its output.
+ Supervised Learning Algorithms work with input-output pairs!
+ f* &amp;lt;- model&amp;rsquo;s approximation x (bold lowercase) = input vector y = output (typically scalar unless output is multi-dimensional)
+What is a model parameter? Variable which can be estimatted by fitting given data to model.
+ ex: $f(x) = mx+c$, where x = independent variable, c = dependent   m and c are parameters.</description>
+    </item>
+    
+    <item>
       <title>CS 422 Notes 07</title>
       <link>https://kaonpositive.github.io/posts/cs422notes07/</link>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
@@ -358,6 +371,15 @@ What does each node have?  Each node in the tree must have:  Data: Holds the val
       
       <guid>https://kaonpositive.github.io/posts/datastructures/</guid>
       <description>What is a data structure?  Used for organization and modification of data.  What are the two types of data structures?  Linear: Elements result in a sequence or linear list. Examples: arrays, linked lists, stacks, etc. Non-linear: Traversal of nodes is not done in a sequential manner. Examples: trees, graphs, etc.  What is an array?  A collection of the same data type that are stored at contiguous memory locations (memory locations are adjacent to each other in memory).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kaonpositive.github.io/posts/stats411notes03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/stats411notes03/</guid>
+      <description></description>
     </item>
     
     <item>

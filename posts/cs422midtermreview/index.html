@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>CS 422 Midterm Review</title>
+    <meta name="description" content="Notes for CS422--Statistics">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs422, machine learning'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422midtermreview/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CS 422 Midterm Review">
+    <meta property="og:description" content="Notes for CS422--Statistics">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS 422 Midterm Review">
+    <meta name="twitter:description" content="Notes for CS422--Statistics">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422midtermreview/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422midtermreview/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs422midtermreview/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 422 Midterm Review</h1>
+        <small role="doc-subtitle">Notes for CS422--Statistics</small>
+        <p class="post-date">
+            October 3, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs422">cs422</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/machine-learning">machine learning</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="what-is-supervised-learning">What is Supervised Learning?</h3>
+<p>Function that perfectly maps each input to its output.</p>
+<blockquote>
+<p>Supervised Learning Algorithms work with input-output pairs!</p>
+</blockquote>
+<p>f* &lt;- model&rsquo;s approximation
+x (bold lowercase) = input vector
+y = output (typically scalar unless output is multi-dimensional)</p>
+<h3 id="what-is-a-model-parameter">What is a model parameter?</h3>
+<p>Variable which can be estimatted by fitting given data to model.</p>
+<ul>
+<li>ex: $f(x) = mx+c$, where x = independent variable, c = dependent</li>
+</ul>
+<blockquote>
+<p>m and c are parameters. They are estimated by fitting a straight line to the data by minimizing root from squared error. Goal of parameters is to optimize model.</p>
+</blockquote>
+<h3 id="how-to-determine-inputs-dimensions">How to determine input&rsquo;s dimensions?</h3>
+<p>n-dimensional input is determined by the number of features.</p>
+<ul>
+<li>ex: 5 features yields a 5-dimensional input.</li>
+</ul>
+<h3 id="what-is-classification">What is Classification?</h3>
+<p>Categorical Outputs</p>
+<ul>
+<li>ex: Hand-written Digits</li>
+</ul>
+<h3 id="what-is-a-confusion-matrix">What is a Confusion Matrix?</h3>
+<p>Describes the performance of a classification algorithm.</p>
+<ol>
+<li>Output can be TWO OR MORE classes.</li>
+<li>Predicts how many are <code>in its own class</code> and how many are predicted in each of the <code>other classes.</code></li>
+</ol>
+<blockquote>
+<p>Confusion Matrix will always have a combo of actual and predicted values.</p>
+</blockquote>
+<h3 id="what-is-misclassification-rate">What is Misclassification Rate?</h3>
+<p>Tells the percentage of observations that were <code>incorrectly predicted by a classification model.</code>
+It gives ratio of <code>misclassified examples to all given examples.</code></p>
+<ul>
+<li>ex: $L(\theta) = \frac{6}{50} = 0.04 = 4%$ This says that 4% of observations were <code>incorrectly predicted</code>.</li>
+</ul>
+<h3 id="what-is-zero-one-loss">What is Zero-One Loss?</h3>
+<p>Loss = 1 for misclassification; 0 otherwise</p>
+<h3 id="what-is-a-loss-matrix">What is a Loss Matrix?</h3>
+<p>Defines penalties for getting the answer wrong.</p>
+<ul>
+<li>ex: covid example. if you misclassify someone having COVID and you give them meds, the cost would be giving expensive meds for nothing since they don&rsquo;t have COVID.</li>
+</ul>
+<h3 id="what-is-uncertainty">What is Uncertainty?</h3>
+<p>Uncertainty of Classification Model Predicted is represented as Conditional Probability Distribution.</p>
+<p>$P(y=c|x, \theta) = f_c(x,\theta)$</p>
+<ol>
+<li>y=c is the class</li>
+<li>x is the input feature</li>
+<li>$\theta$ is the parameter</li>
+</ol>
+<blockquote>
+<p>NOTE: Uncertainty Class = Conditional Probability</p>
+</blockquote>
+<h3 id="what-is-maximum-a-posteriori-map-estimate">What is Maximum A Posteriori (MAP) Estimate?</h3>
+<p>Model output for each class can be represented as a real number.</p>
+<blockquote>
+<p>Softmax Function will map the given output to probabilities.</p>
+</blockquote>
+<ul>
+<li>Ex: 3 Classes A, B, and C
+a = [5, 10, 100]
+$P(Y = A|x, \theta) = \frac{e^5}{e^5+e^10+e^100}$</li>
+</ul>
+<h3 id="what-is-regression">What is Regression?</h3>
+<p>A supervised learning model where outputs are continuous (uncountable/real-valued).</p>
+<h3 id="commonly-used-loss-functions">Commonly Used Loss Functions:</h3>
+<p>Most commonly used loss functions with regression is squared loss.</p>
+<ol>
+<li>$L(x_n) = (y_n - \hat y_n)^2$ is squared error</li>
+<li>$\sum_{n=1}^N(y_n-\hat y_n)^2$ is the sum squared error</li>
+<li>$\frac{1}{N}\sum_{n=1}^N(y_n-\hat y_n)^2$ is the mean squared error</li>
+<li>$\frac{1}{N}\sum_{n=1}^N|y_n-\hat y_n|$ is the mean absolute squared error</li>
+</ol>
+<h3 id="what-is-generalization">What is Generalization?</h3>
+<p>How well the model performs on data it hasn&rsquo;t seen before.</p>
+<ul>
+<li>Underfitting - model not complex enough to represent training data well.</li>
+<li>Overfitting - model too complex that model performs really good on training data but performs really poorly on test data.</li>
+<li>Note: As complexity increases, then so the model&rsquo;s parameters.</li>
+</ul>
+<blockquote>
+<p>REALLY IMPORTANT TO KNOW</p>
+</blockquote>
+<h1 id="unsupervised-learning-stuff-below">Unsupervised Learning Stuff Below</h1>
+<h3 id="what-is-unsupervised-learning">What is Unsupervised Learning?</h3>
+<p>It is <code>only</code> trained on inputs.</p>
+<h3 id="what-is-the-difference-between-clustering-and-classification">What is the difference between clustering and classification?</h3>
+<table>
+<thead>
+<tr>
+<th>Clustering</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No Labels (Unsupervised)</td>
+<td>Has Labels (classes). Is supervised</td>
+</tr>
+<tr>
+<td>Must determine # of clusters</td>
+<td>Training Data determines # of classes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dimensionality-reduction-with-principal-components-analysis-pca">Dimensionality Reduction With Principal Components Analysis (PCA)</h3>
+<p>Will transform large set of variables into smaller one that still contain most of the information in the large set.</p>
+<ul>
+<li>Feature Selection Method = select subset of input features that explain certain percentage of variability. Features not selected = eliminated.</li>
+</ul>
+<h3 id="what-are-the-types-of-inputoutputs">What are the types of Input/Outputs?</h3>
+<ol>
+<li>Binary (Categorical w/ TWO possible values)</li>
+<li>Categorical (with MORE THAN TWO possible values)</li>
+<li>Real-valued (Continuous)</li>
+</ol>
+<h3 id="what-is-one-hot-encoding">What is One-Hot Encoding?</h3>
+<p>Represent categorical variables as numerical values.
+Example:
+Panda = [1,0,0]
+Cat = [0,1,0]
+Lion = [0,0,1]</p>
+<p>Before:</p>
+<table>
+<thead>
+<tr>
+<th>x1</th>
+<th>x2</th>
+<th>x3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n=1</td>
+<td>..</td>
+<td>Panda</td>
+</tr>
+<tr>
+<td>n=2</td>
+<td>..</td>
+<td>Cat</td>
+</tr>
+<tr>
+<td>n=3</td>
+<td>..</td>
+<td>Lion</td>
+</tr>
+<tr>
+<td>n=4</td>
+<td>..</td>
+<td>Panda</td>
+</tr>
+</tbody>
+</table>
+<p>After:</p>
+<table>
+<thead>
+<tr>
+<th>x1</th>
+<th>x2</th>
+<th>x3</th>
+<th>x4</th>
+<th>x5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n=1</td>
+<td>..</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>n=2</td>
+<td>..</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>n=3</td>
+<td>..</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>n=4</td>
+<td>..</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Categorical input feature or output would be replaced with one-hot encoding.</li>
+</ul>
+<blockquote>
+<p>Basically expand table by introducing more features</p>
+</blockquote>
+<h3 id="what-are-random-variables">What are Random Variables?</h3>
+<p>Variable X that is unknown or has random quality of interest.</p>
+<h3 id="what-are-discrete-random-variables">What are Discrete Random Variables?</h3>
+<p>If the sample space is finite or countably infinite.</p>
+<h3 id="what-are-continuous-random-variables">What are Continuous Random Variables?</h3>
+<p>Random Variable that is a real-valued quantity.</p>
+<ul>
+<li>Since there are infintely many values, you must use P(a &lt;= x &lt;= b)</li>
+</ul>
+<h3 id="what-is-a-marginal-distribution">What is a Marginal Distribution?</h3>
+<p>Represented using a two-way table.</p>
+<table>
+<thead>
+<tr>
+<th>P(x,y)</th>
+<th>y=0</th>
+<th>y=1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x=0</td>
+<td>0.4</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>x=1</td>
+<td>0.3</td>
+<td>0.1</td>
+</tr>
+</tbody>
+</table>
+<p>P(x=0, y=0) = 0.4
+P(x=1, y=0) = 0.3
+P(x=0) = 0.4 + 0.3 = 0.6
+P(y=1) = 0.2 + 0.1 = 0.3</p>
+<h3 id="bayes-rule">Baye&rsquo;s Rule</h3>
+<p>It combines conditional probability, product rule, and sum rule</p>
+<p>Formula:
+$P(H=h|Y=y) = \frac{P(Y=y|H=h)*P(H=h)}{\sum_hP(Y=y|H=h)*P(H=h)}$</p>
+<blockquote>
+<p>Numerator is product; denominator is sunm</p>
+</blockquote>
+<h3 id="what-is-bernoulli-distribution">What is Bernoulli Distribution</h3>
+<p>Represents the distribution of a binary outcome</p>
+<ul>
+<li>ex: a coin toss
+y = 1 &lt;- heads; $P(Y=1) = \theta$
+y = 0 &lt;- tails; $P(Y=0) = 1 - \theta$</li>
+</ul>
+<h3 id="what-is-binomial-distribution">What is Binomial Distribution?</h3>
+<p>Represent distribution of a repeated binary outcome
+$P(S|N, \theta) = $ N Choose S$* \theta * (1-\theta)^{N-S}$</p>
+<blockquote>
+<p>Special case of Binomial, when N = 1</p>
+</blockquote>
+<h3 id="categorical-distribution-multinoulli">Categorical Distribution (Multinoulli)</h3>
+<p>Generalizes Bernoulli to <code>more than 2 possible outcomes</code></p>
+<ul>
+<li>Ex: Rolling a C-sided die where C &gt; 2</li>
+</ul>
+<h3 id="multinomial-distribution">Multinomial Distribution</h3>
+<p>Generalizes categorical distribution to N &gt; 1</p>
+<h3 id="what-is-trainingmodel-fitting">What is Training/Model Fitting?</h3>
+<p>Task of estimating parameters from training data.</p>
+<h3 id="what-is-maximum-likelihood-estimate-mle">What is Maximum Likelihood Estimate (MLE)?</h3>
+<p>It is the most common approach to parameter estimation.
+It picks parameters that assign highest probability to training data.</p>
+<h3 id="what-is-empircal-risk-minimization-erm">What is Empircal Risk Minimization (ERM)?</h3>
+<p>Generalize MLE by replacing log loss with any other loss function.</p>
+<h3 id="what-is-regularization">What is Regularization?</h3>
+<p>MLE and ERM will find parameters that minimize loss on training data, but no guarantee the model will generalize well on new data (overfitting).</p>
+<h3 id="what-are-ways-to-combat-overfitting">What are ways to combat overfitting?</h3>
+<ol>
+<li>Increase data instances</li>
+<li>Use Complex Model</li>
+<li>Apply Regularization (adding penalty term to model)</li>
+</ol>
+<h3 id="what-is-bayesian-decision-theory">What is Bayesian Decision Theory</h3>
+<p>Lets us choose best action in a given siutation</p>
+<h3 id="what-is-entropy">What is Entropy?</h3>
+<p>Measure of uncertainty in a probability distribution</p>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#what-is-supervised-learning">What is Supervised Learning?</a></li>
+            <li><a href="#what-is-a-model-parameter">What is a model parameter?</a></li>
+            <li><a href="#how-to-determine-inputs-dimensions">How to determine input&rsquo;s dimensions?</a></li>
+            <li><a href="#what-is-classification">What is Classification?</a></li>
+            <li><a href="#what-is-a-confusion-matrix">What is a Confusion Matrix?</a></li>
+            <li><a href="#what-is-misclassification-rate">What is Misclassification Rate?</a></li>
+            <li><a href="#what-is-zero-one-loss">What is Zero-One Loss?</a></li>
+            <li><a href="#what-is-a-loss-matrix">What is a Loss Matrix?</a></li>
+            <li><a href="#what-is-uncertainty">What is Uncertainty?</a></li>
+            <li><a href="#what-is-maximum-a-posteriori-map-estimate">What is Maximum A Posteriori (MAP) Estimate?</a></li>
+            <li><a href="#what-is-regression">What is Regression?</a></li>
+            <li><a href="#commonly-used-loss-functions">Commonly Used Loss Functions:</a></li>
+            <li><a href="#what-is-generalization">What is Generalization?</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#unsupervised-learning-stuff-below">Unsupervised Learning Stuff Below</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#what-is-unsupervised-learning">What is Unsupervised Learning?</a></li>
+            <li><a href="#what-is-the-difference-between-clustering-and-classification">What is the difference between clustering and classification?</a></li>
+            <li><a href="#dimensionality-reduction-with-principal-components-analysis-pca">Dimensionality Reduction With Principal Components Analysis (PCA)</a></li>
+            <li><a href="#what-are-the-types-of-inputoutputs">What are the types of Input/Outputs?</a></li>
+            <li><a href="#what-is-one-hot-encoding">What is One-Hot Encoding?</a></li>
+            <li><a href="#what-are-random-variables">What are Random Variables?</a></li>
+            <li><a href="#what-are-discrete-random-variables">What are Discrete Random Variables?</a></li>
+            <li><a href="#what-are-continuous-random-variables">What are Continuous Random Variables?</a></li>
+            <li><a href="#what-is-a-marginal-distribution">What is a Marginal Distribution?</a></li>
+            <li><a href="#bayes-rule">Baye&rsquo;s Rule</a></li>
+            <li><a href="#what-is-bernoulli-distribution">What is Bernoulli Distribution</a></li>
+            <li><a href="#what-is-binomial-distribution">What is Binomial Distribution?</a></li>
+            <li><a href="#categorical-distribution-multinoulli">Categorical Distribution (Multinoulli)</a></li>
+            <li><a href="#multinomial-distribution">Multinomial Distribution</a></li>
+            <li><a href="#what-is-trainingmodel-fitting">What is Training/Model Fitting?</a></li>
+            <li><a href="#what-is-maximum-likelihood-estimate-mle">What is Maximum Likelihood Estimate (MLE)?</a></li>
+            <li><a href="#what-is-empircal-risk-minimization-erm">What is Empircal Risk Minimization (ERM)?</a></li>
+            <li><a href="#what-is-regularization">What is Regularization?</a></li>
+            <li><a href="#what-are-ways-to-combat-overfitting">What are ways to combat overfitting?</a></li>
+            <li><a href="#what-is-bayesian-decision-theory">What is Bayesian Decision Theory</a></li>
+            <li><a href="#what-is-entropy">What is Entropy?</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2023 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
