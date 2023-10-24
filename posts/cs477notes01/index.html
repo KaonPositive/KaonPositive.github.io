@@ -161,7 +161,7 @@
         <h1>CS 477 Notes 01</h1>
         <small role="doc-subtitle">Notes for CS477</small>
         <p class="post-date">
-            September 11, 2023
+            October 23, 2023
         </p>
 
         <ul class="post-tags">
@@ -177,7 +177,79 @@
 
     <div class="post-content">
         <p>
-            <p>notes</p>
+            <h3 id="recurrences">Recurrences</h3>
+<p>It describes a sequence of numbers.
+For instance, an example of a recurrence would be:
+$T_1 = 1$
+$T_n = T_{n-1}+1$ for n &gt;= 2</p>
+<blockquote>
+<p>They are useful to analyze the performance of recursive algorithms</p>
+</blockquote>
+<h3 id="anti-derivative-method">Anti-Derivative Method</h3>
+<p>Formula is: $f'(x) = \lim_{h-&gt;0}\frac{f(x)-f(x-h)}{h}$</p>
+<blockquote>
+<p>In terms of asymptotic analysis, in this case, we only need h to be &ldquo;close&rdquo; to zero but still positive. NOTE: h must be smaller than x.</p>
+</blockquote>
+<p>Example:</p>
+<ol>
+<li>$F(n) = F(n-1)+n$ can be written as:
+$\frac{F(n)-F(n-1)}{1} = n$</li>
+</ol>
+<blockquote>
+<p>1 is close to 0, so F'(n) = theta(n), from which we obtain hence F(n) = theta(n^2)</p>
+</blockquote>
+<ol start="2">
+<li>$F(n) = F(n-\sqrt{n} + n$ can be written as:
+$\frac{F(n)-F(n-\sqrt{n})}{\sqrt(n)} = \frac{n}{\sqrt{n}}$</li>
+</ol>
+<blockquote>
+<p>sqrt(n) is close enough to zero that the left-hand side is asymptotically the derivative of F. We have F'(n) = theta(sqrt(n)). If we take the anti-derivative, then we obtain F(n) = theta(n^(3/2))</p>
+</blockquote>
+<p>So basically, subtract F(n-1) on both sides, then divide by h on both sides. Afterward, integrate both functions to obtain the final answer.</p>
+<h3 id="master-theorem">Master Theorem</h3>
+<p>If we have an occurrence $F(n) = AF(n/B)+n^C$ where A, B, and C are constants, where A &gt; 0, B &gt; 1, and C &gt;= 0:</p>
+<ol>
+<li>$F(n) = \theta(n^C)$ if $B^C &gt; A$</li>
+<li>$F(n) = \theta(n^Clogn)$ if $B^C=A$</li>
+<li>$F(n) = \theta(n^{log_BA})$ if $B^C &lt; A$</li>
+</ol>
+<h3 id="generalized-master-theorem">Generalized Master Theorem</h3>
+<p>Same thing as the Master Theorem, but the only difference is we change all letters (A, B, and C) into greek letters.</p>
+<ol>
+<li>$\alpha = A$</li>
+<li>$\beta = 1/B$</li>
+<li>$\lambda = C$</li>
+</ol>
+<p>Your goal is to compute $T$, where $T = \sum_{i=1}^k\alpha_i\beta_i^\lambda$.
+Cases:</p>
+<ol>
+<li>If T = 1, then $F(n) = \theta(n^\lambda logn)$</li>
+<li>If T &lt; 1, then $F(n) = \theta (n^\lambda)$</li>
+<li>If T &gt; 1, then you must find some variable X, such that $\sum_{i=1}^k\alpha_i\beta_i^x = 1$. Once you found a variable that satisfies this, then $F(n) = \theta(n^x)$</li>
+</ol>
+<h3 id="substitution">Substitution</h3>
+<p>Can use substitution to transform a reuccrence into one which we can solve using one of the above methods.</p>
+<h3 id="steps-for-huffmans-algorithm">Steps for Huffman&rsquo;s Algorithm:</h3>
+<ol>
+<li>Arrange/sort the frequencies from min-max (ascending order)</li>
+<li>After that is sorted, sum the two smallest numbers (typically the ones in the front) together. Keep doing this until you ONLY have one number remaining. Must keep the lowest number in the sum on the left; the biggest on the right.</li>
+<li>Once you have a single whole number, break the sum into smaller pieces and form a binary tree.</li>
+<li>After your binary tree has formed, have all the branches that are on the left of the subtrees be assigned 0; have all branches that are on the right be assigned 1.</li>
+</ol>
+<h3 id="steps-for-dijkstras-algorithm">Steps for Dijkstra&rsquo;s Algorithm:</h3>
+<ol>
+<li>Go to your source vertex and mark its adjacent edge/out-neighbors to be the shortest path.</li>
+<li>After that is marked, pop the source, then go to the source&rsquo;s lowest outneighbor (is determined by looking at the value that it was assigned) and do the same thing as you did on step 1.</li>
+<li>Keep doing this until all edges have been visited.</li>
+</ol>
+<h3 id="steps-for-johnsons-algorithm">Steps for Johnson&rsquo;s Algorithm:</h3>
+<ol>
+<li>Add an additional vertex and create a path of weight 0 to all existing nodes in the weighted graph.</li>
+<li>After that is established, find the shortest distance for all edges of that graph.</li>
+<li>Keep doing this until all edges have been marked with a value.</li>
+<li>Once that is established, update the paths from once connected node to another by using this formula:
+$New Weight = (Head Neighbor + CurrentWeight) - (Tail Neighbor)$</li>
+</ol>
 
         </p>
         
@@ -190,7 +262,26 @@
 
 <aside class="post-toc">
     <nav id="toc">
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#recurrences">Recurrences</a></li>
+            <li><a href="#anti-derivative-method">Anti-Derivative Method</a></li>
+            <li><a href="#master-theorem">Master Theorem</a></li>
+            <li><a href="#generalized-master-theorem">Generalized Master Theorem</a></li>
+            <li><a href="#substitution">Substitution</a></li>
+            <li><a href="#steps-for-huffmans-algorithm">Steps for Huffman&rsquo;s Algorithm:</a></li>
+            <li><a href="#steps-for-dijkstras-algorithm">Steps for Dijkstra&rsquo;s Algorithm:</a></li>
+            <li><a href="#steps-for-johnsons-algorithm">Steps for Johnson&rsquo;s Algorithm:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </nav>
 </aside>
 

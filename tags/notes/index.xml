@@ -6,7 +6,19 @@
     <description>Recent content in notes on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 477 Notes 01</title>
+      <link>https://kaonpositive.github.io/posts/cs477notes01/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs477notes01/</guid>
+      <description>Recurrences It describes a sequence of numbers. For instance, an example of a recurrence would be: $T_1 = 1$ $T_n = T_{n-1}+1$ for n &amp;gt;= 2
+ They are useful to analyze the performance of recursive algorithms
+ Anti-Derivative Method Formula is: $f&#39;(x) = \lim_{h-&amp;gt;0}\frac{f(x)-f(x-h)}{h}$
+ In terms of asymptotic analysis, in this case, we only need h to be &amp;ldquo;close&amp;rdquo; to zero but still positive. NOTE: h must be smaller than x.</description>
+    </item>
+    
     <item>
       <title>CS 422 Notes 09</title>
       <link>https://kaonpositive.github.io/posts/cs422notes09/</link>
@@ -145,15 +157,6 @@ Discrete Random Variables Sample space is finite/countably infinite (${\mathcal 
 $ \hat{y_n} = f^({x_n})$ where $ \hat{y_n} $ is the prediction and $ f^ $ is the model&amp;rsquo;s approximation.
 If we try to get comparisons for a data instance, we try to find the best line that fits the data instance the best.
  Ex: you will prefer a function over another function since data is closests to it.</description>
-    </item>
-    
-    <item>
-      <title>CS 477 Notes 01</title>
-      <link>https://kaonpositive.github.io/posts/cs477notes01/</link>
-      <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/cs477notes01/</guid>
-      <description>notes</description>
     </item>
     
     <item>

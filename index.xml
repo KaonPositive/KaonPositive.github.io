@@ -6,7 +6,7 @@
     <description>Recent content on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Archive - Basics</title>
       <link>https://kaonpositive.github.io/posts/theme-documentation-basics/</link>
@@ -37,6 +37,18 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
       
       <guid>https://kaonpositive.github.io/posts/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CS 477 Notes 01</title>
+      <link>https://kaonpositive.github.io/posts/cs477notes01/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs477notes01/</guid>
+      <description>Recurrences It describes a sequence of numbers. For instance, an example of a recurrence would be: $T_1 = 1$ $T_n = T_{n-1}+1$ for n &amp;gt;= 2
+ They are useful to analyze the performance of recursive algorithms
+ Anti-Derivative Method Formula is: $f&#39;(x) = \lim_{h-&amp;gt;0}\frac{f(x)-f(x-h)}{h}$
+ In terms of asymptotic analysis, in this case, we only need h to be &amp;ldquo;close&amp;rdquo; to zero but still positive. NOTE: h must be smaller than x.</description>
     </item>
     
     <item>
@@ -177,15 +189,6 @@ Discrete Random Variables Sample space is finite/countably infinite (${\mathcal 
 $ \hat{y_n} = f^({x_n})$ where $ \hat{y_n} $ is the prediction and $ f^ $ is the model&amp;rsquo;s approximation.
 If we try to get comparisons for a data instance, we try to find the best line that fits the data instance the best.
  Ex: you will prefer a function over another function since data is closests to it.</description>
-    </item>
-    
-    <item>
-      <title>CS 477 Notes 01</title>
-      <link>https://kaonpositive.github.io/posts/cs477notes01/</link>
-      <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/cs477notes01/</guid>
-      <description>notes</description>
     </item>
     
     <item>
@@ -371,6 +374,33 @@ What does each node have?  Each node in the tree must have:  Data: Holds the val
       
       <guid>https://kaonpositive.github.io/posts/datastructures/</guid>
       <description>What is a data structure?  Used for organization and modification of data.  What are the two types of data structures?  Linear: Elements result in a sequence or linear list. Examples: arrays, linked lists, stacks, etc. Non-linear: Traversal of nodes is not done in a sequential manner. Examples: trees, graphs, etc.  What is an array?  A collection of the same data type that are stored at contiguous memory locations (memory locations are adjacent to each other in memory).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kaonpositive.github.io/posts/cs456notes04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs456notes04/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kaonpositive.github.io/posts/cs477notes02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs477notes02/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kaonpositive.github.io/posts/shortestpaths/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/shortestpaths/</guid>
+      <description></description>
     </item>
     
     <item>
