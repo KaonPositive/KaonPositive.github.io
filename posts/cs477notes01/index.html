@@ -17,19 +17,19 @@
     
 
     
-    <title>CS 477 Notes 01</title>
+    <title>CS 477 Study Guide</title>
     <meta name="description" content="Notes for CS477">
     <meta name="keywords" content='blog, gokarna, hugo, notes, algorithms, cs477'>
 
     <meta property="og:url" content="https://kaonpositive.github.io/posts/cs477notes01/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CS 477 Notes 01">
+    <meta property="og:title" content="CS 477 Study Guide">
     <meta property="og:description" content="Notes for CS477">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CS 477 Notes 01">
+    <meta name="twitter:title" content="CS 477 Study Guide">
     <meta name="twitter:description" content="Notes for CS477">
     <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs477notes01/">
     <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs477notes01/">
@@ -158,7 +158,7 @@
 <main id="content">
     <div class="post container">
     <div class="post-header-section">
-        <h1>CS 477 Notes 01</h1>
+        <h1>CS 477 Study Guide</h1>
         <small role="doc-subtitle">Notes for CS477</small>
         <p class="post-date">
             October 23, 2023
@@ -225,10 +225,13 @@ Cases:</p>
 <ol>
 <li>If T = 1, then $F(n) = \theta(n^\lambda logn)$</li>
 <li>If T &lt; 1, then $F(n) = \theta (n^\lambda)$</li>
-<li>If T &gt; 1, then you must find some variable X, such that $\sum_{i=1}^k\alpha_i\beta_i^x = 1$. Once you found a variable that satisfies this, then $F(n) = \theta(n^x)$</li>
+<li>If T &gt; 1, then you must find some variable X, such that $\sum_{i=1}^k\alpha_i\beta_i^x = $. Once you found a variable that satisfies this, then $F(n) = \theta(n^x)$</li>
 </ol>
+<blockquote>
+<p>Basically, the formula is a glorified geometric series formula. a is alpha, and r^n is basically beta^lambda</p>
+</blockquote>
 <h3 id="substitution">Substitution</h3>
-<p>Can use substitution to transform a reuccrence into one which we can solve using one of the above methods.</p>
+<p>Can use substitution to transform a recurrence into one which we can solve using one of the above methods.</p>
 <h3 id="steps-for-huffmans-algorithm">Steps for Huffman&rsquo;s Algorithm:</h3>
 <ol>
 <li>Arrange/sort the frequencies from min-max (ascending order)</li>
