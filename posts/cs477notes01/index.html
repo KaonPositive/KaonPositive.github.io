@@ -199,7 +199,7 @@ $\frac{F(n)-F(n-1)}{1} = n$</li>
 <p>1 is close to 0, so F'(n) = theta(n), from which we obtain hence F(n) = theta(n^2)</p>
 </blockquote>
 <ol start="2">
-<li>$F(n) = F(n-\sqrt{n} + n$ can be written as:
+<li>$F(n) = F(n-\sqrt{n}) + n$ can be written as:
 $\frac{F(n)-F(n-\sqrt{n})}{\sqrt(n)} = \frac{n}{\sqrt{n}}$</li>
 </ol>
 <blockquote>
@@ -249,6 +249,9 @@ Cases:</p>
 <li>After that is marked, pop the source, then go to the source&rsquo;s lowest outneighbor (is determined by looking at the value that it was assigned) and do the same thing as you did on step 1.</li>
 <li>Keep doing this until all edges have been visited.</li>
 </ol>
+<blockquote>
+<p>Runtime: O(mlogn). m represents edges and n represents vertices. NO NEGATIVE EDGES ALLOWED!</p>
+</blockquote>
 <h3 id="steps-for-johnsons-algorithm">Steps for Johnson&rsquo;s Algorithm:</h3>
 <ol>
 <li>Add an additional vertex and create a path of weight 0 to all existing nodes in the weighted graph.</li>
@@ -257,6 +260,9 @@ Cases:</p>
 <li>Once that is established, update the paths from once connected node to another by using this formula:
 $New Weight = (Head Neighbor + CurrentWeight) - (Tail Neighbor)$</li>
 </ol>
+<blockquote>
+<p>Apply Dijkstra&rsquo;s Algorithm n times</p>
+</blockquote>
 <h3 id="floyd-warshall-algorithm">Floyd-Warshall Algorithm</h3>
 <ol>
 <li>Basing off the initial matrix, create another matrix and fill those according to the row and column (in this case, the separate matrix will keep values found in the first row, first column.) Also set the values in the diagonals to zero since edges can&rsquo;t loop themselves.</li>
@@ -269,7 +275,7 @@ $New Weight = (Head Neighbor + CurrentWeight) - (Tail Neighbor)$</li>
   b[i, j] <span style="color:#f92672">=</span> i
 
 <span style="color:#66d9ef">for</span> all i <span style="color:#f92672">from</span> <span style="color:#ae81ff">1</span> to n:
-  v[i, j] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  v[i, i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 
 <span style="color:#66d9ef">for</span> all j <span style="color:#f92672">from</span> <span style="color:#ae81ff">1</span> to n:
   <span style="color:#66d9ef">for</span> all i <span style="color:#f92672">from</span> <span style="color:#ae81ff">1</span> to n:
@@ -277,7 +283,10 @@ $New Weight = (Head Neighbor + CurrentWeight) - (Tail Neighbor)$</li>
       <span style="color:#66d9ef">if</span>(v[i, j] <span style="color:#f92672">+</span> v[j, k] <span style="color:#f92672">&lt;</span> v[i, k])
         v[i, k] <span style="color:#f92672">=</span> v[i, j] <span style="color:#f92672">+</span> v[j, k]
         back[i, k] <span style="color:#f92672">=</span> back[j, k]
-</code></pre></div><h3 id="bellman-ford-algorithm">Bellman-Ford Algorithm</h3>
+</code></pre></div><blockquote>
+<p>Runtime for Floyd-Warshall is theta(n^3)</p>
+</blockquote>
+<h3 id="bellman-ford-algorithm">Bellman-Ford Algorithm</h3>
 <ol>
 <li>First, prepare a list of all edges (find all possible paths from one edge to the other edge).</li>
 <li>Then pick some vertex (this will be your source vertex). Make the source vertex as 0 and mark the rest as infinity.</li>
@@ -305,7 +314,10 @@ finished <span style="color:#f92672">=</span> false;
     <span style="color:#66d9ef">if</span>(v[s] <span style="color:#f92672">+</span> w[s, t] <span style="color:#f92672">&lt;</span> v[t]):
       v[t] <span style="color:#f92672">=</span> v[s] <span style="color:#f92672">+</span> w[s, t] <span style="color:#f92672">//</span> update shortest path <span style="color:#f92672">from</span> <span style="color:#ae81ff">1</span> to t by concatenating shortest path <span style="color:#f92672">from</span> <span style="color:#ae81ff">1</span> to s <span style="color:#66d9ef">with</span> the arc <span style="color:#f92672">from</span> s to t
       finished <span style="color:#f92672">=</span> false;
-</code></pre></div><h3 id="complex-numbers">Complex Numbers</h3>
+</code></pre></div><blockquote>
+<p>Runtime for this algorithm O(mn) where m is the number of arcs and n is the number of edges (based on lecture, it is O(md) where d is some number).</p>
+</blockquote>
+<h3 id="complex-numbers">Complex Numbers</h3>
 <ul>
 <li>Modulus: $|z| = \sqrt{a^2+b^2}$</li>
 <li>Square Root Cases:</li>
@@ -321,6 +333,14 @@ $cos\frac{2k\pi}{n}+i\frac{2k\pi}{n}$</p>
 <p>To find modulus and argument of $e^{c+\theta i}$:
 $e^z = e^a(cosb+isinb)$ where $z = a + bi$
 The argument of $e^z$ is b; modulus of $e^z$ is $e^a$.</p>
+<h3 id="log-star">Log Star</h3>
+<p>$log^<em>(x) = 0$ if $x &lt;= 1$
+$log^</em>(x) = 1 + log^*(logx)$ otherwise</p>
+<blockquote>
+<p>log* is just a pseudo-function that repeats log multiple times until x &lt;= 1</p>
+</blockquote>
+<h3 id="dynamic-programming">Dynamic Programming</h3>
+<p>Way of breaking down a problem into individual sub-problems (recursion).</p>
 
         </p>
         
@@ -350,6 +370,8 @@ The argument of $e^z$ is b; modulus of $e^z$ is $e^a$.</p>
             <li><a href="#floyd-warshall-algorithm">Floyd-Warshall Algorithm</a></li>
             <li><a href="#bellman-ford-algorithm">Bellman-Ford Algorithm</a></li>
             <li><a href="#complex-numbers">Complex Numbers</a></li>
+            <li><a href="#log-star">Log Star</a></li>
+            <li><a href="#dynamic-programming">Dynamic Programming</a></li>
           </ul>
         </li>
       </ul>
