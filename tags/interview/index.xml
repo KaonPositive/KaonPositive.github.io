@@ -6,7 +6,19 @@
     <description>Recent content in interview on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shortest Path</title>
+      <link>https://kaonpositive.github.io/posts/shortestpaths/</link>
+      <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/shortestpaths/</guid>
+      <description>Djiksta&amp;rsquo;s Algorithm You are given a start vetex $s$, and it finds the shortest path from $s$ to every other vertex in the graph, including your desired destination $t$.
+ Shortest Path does not necessarily mean it is the fastest path; it means that the path has the least number of segments (edges).
+ Steps for Djikstra&amp;rsquo;s:
+ Find the cheapest node starting from the source/start vertex. Update the costs of the neighbors of this node.</description>
+    </item>
+    
     <item>
       <title>Binary Trees</title>
       <link>https://kaonpositive.github.io/posts/binarytrees/</link>

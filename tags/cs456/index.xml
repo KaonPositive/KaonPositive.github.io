@@ -6,7 +6,18 @@
     <description>Recent content in cs456 on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs456/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs456/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS456 Notes 04</title>
+      <link>https://kaonpositive.github.io/posts/cs456notes04/</link>
+      <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs456notes04/</guid>
+      <description>What are Context-Free Languages? It is a collection of languages that are associated with context-free grammars.
+ Includes all regular languages and many additional languages.  Context-Free Grammars It is a 4-tuple where (V, $\sum$, R, S), where:
+ V is a finite set called the variables. Is uppercase. $\sum$ is a finite set, disjoint from V, called terminals. Is lowercase. R is a finite set of rules, with each rule being a variable and a string of variables and terminals $S \in V$ is the start variable  What is a derivation?</description>
+    </item>
+    
     <item>
       <title>CS456 Notes 02</title>
       <link>https://kaonpositive.github.io/posts/cs456notes02/</link>

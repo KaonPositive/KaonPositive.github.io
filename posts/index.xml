@@ -52,6 +52,29 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
     </item>
     
     <item>
+      <title>CS456 Notes 04</title>
+      <link>https://kaonpositive.github.io/posts/cs456notes04/</link>
+      <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs456notes04/</guid>
+      <description>What are Context-Free Languages? It is a collection of languages that are associated with context-free grammars.
+ Includes all regular languages and many additional languages.  Context-Free Grammars It is a 4-tuple where (V, $\sum$, R, S), where:
+ V is a finite set called the variables. Is uppercase. $\sum$ is a finite set, disjoint from V, called terminals. Is lowercase. R is a finite set of rules, with each rule being a variable and a string of variables and terminals $S \in V$ is the start variable  What is a derivation?</description>
+    </item>
+    
+    <item>
+      <title>Shortest Path</title>
+      <link>https://kaonpositive.github.io/posts/shortestpaths/</link>
+      <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/shortestpaths/</guid>
+      <description>Djiksta&amp;rsquo;s Algorithm You are given a start vetex $s$, and it finds the shortest path from $s$ to every other vertex in the graph, including your desired destination $t$.
+ Shortest Path does not necessarily mean it is the fastest path; it means that the path has the least number of segments (edges).
+ Steps for Djikstra&amp;rsquo;s:
+ Find the cheapest node starting from the source/start vertex. Update the costs of the neighbors of this node.</description>
+    </item>
+    
+    <item>
       <title>CS 422 Notes 09</title>
       <link>https://kaonpositive.github.io/posts/cs422notes09/</link>
       <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
@@ -378,15 +401,6 @@ What does each node have?  Each node in the tree must have:  Data: Holds the val
     
     <item>
       <title></title>
-      <link>https://kaonpositive.github.io/posts/cs456notes04/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/cs456notes04/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://kaonpositive.github.io/posts/cs477notes02/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -396,19 +410,28 @@ What does each node have?  Each node in the tree must have:  Data: Holds the val
     
     <item>
       <title></title>
-      <link>https://kaonpositive.github.io/posts/shortestpaths/</link>
+      <link>https://kaonpositive.github.io/posts/stats411notes03/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaonpositive.github.io/posts/shortestpaths/</guid>
+      <guid>https://kaonpositive.github.io/posts/stats411notes03/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://kaonpositive.github.io/posts/stats411notes03/</link>
+      <link>https://kaonpositive.github.io/posts/stats411notes04/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaonpositive.github.io/posts/stats411notes03/</guid>
+      <guid>https://kaonpositive.github.io/posts/stats411notes04/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>STATS 411 Exam2 Review</title>
+      <link>https://kaonpositive.github.io/posts/stats411exam2review/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/stats411exam2review/</guid>
       <description></description>
     </item>
     
