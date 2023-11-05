@@ -6,7 +6,27 @@
     <description>Recent content in notes on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>STATS 411 Exam2 Review</title>
+      <link>https://kaonpositive.github.io/posts/stats411exam2review/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/stats411exam2review/</guid>
+      <description>Cumulative Density Function Probability Density Function Probability Mass Function Continuous Probability Distributions Joint Probability Distributions Mean of a Random Variable (Expected Value) Let X be a random variable w/ probability distribution f(x). The mean/expected value of X is:
+ $\mu = E(X) = \sum_x xf(x)$ if X is discrete $\mu = E(X) = \int_{-\infty}^{\infty}xf(x)dx$ if X is continuous  Difference between sample mean and expected value is sample mean is calculated using data; expected value is calculated using probability distribution.</description>
+    </item>
+    
+    <item>
+      <title>STATS 411 Notes 02</title>
+      <link>https://kaonpositive.github.io/posts/stats411notes02/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/stats411notes02/</guid>
+      <description>IMPORTANT: For Quiz, questions a, b, and c are on the exam. Also for quiz, instead of leaving answers in exponential form, convert it to decimal.
+ Section 5.5 Poisson Distribution and Poisson Process A discrete random variable X is said to have the Poisson distribution w/ parameter $\mu &amp;gt; 0$ if its probability mass function is given by: $P(X = x) = \frac{e^{-\mu}\mu^x}{x!}$ for x in all positive integers</description>
+    </item>
+    
     <item>
       <title>CS 477 Study Guide</title>
       <link>https://kaonpositive.github.io/posts/cs477notes01/</link>
@@ -55,15 +75,6 @@ Gross Entropy Gross Entropy of two distributions P and Q is given by: $\mathbb{H
  Generate Classifier $P(y = c|x, \theta) \alpha P(x|y = c, \theta)P(y=c | \theta)$
  NOTE: Alpha means proportional
  Difference between Discrimitive and Generative Classifiers  Discrimitive Classifier finds a boundry that separates the two classes.</description>
-    </item>
-    
-    <item>
-      <title>STATS 411 Notes 02</title>
-      <link>https://kaonpositive.github.io/posts/stats411notes02/</link>
-      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/stats411notes02/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -356,15 +367,6 @@ What does each node have?  Each node in the tree must have:  Data: Holds the val
       
       <guid>https://kaonpositive.github.io/posts/datastructures/</guid>
       <description>What is a data structure?  Used for organization and modification of data.  What are the two types of data structures?  Linear: Elements result in a sequence or linear list. Examples: arrays, linked lists, stacks, etc. Non-linear: Traversal of nodes is not done in a sequential manner. Examples: trees, graphs, etc.  What is an array?  A collection of the same data type that are stored at contiguous memory locations (memory locations are adjacent to each other in memory).</description>
-    </item>
-    
-    <item>
-      <title>STATS 411 Exam2 Review</title>
-      <link>https://kaonpositive.github.io/posts/stats411exam2review/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/stats411exam2review/</guid>
-      <description></description>
     </item>
     
   </channel>

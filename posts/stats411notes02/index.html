@@ -161,7 +161,7 @@
         <h1>STATS 411 Notes 02</h1>
         <small role="doc-subtitle"></small>
         <p class="post-date">
-            October 10, 2023
+            November 1, 2023
         </p>
 
         <ul class="post-tags">
@@ -175,7 +175,62 @@
 
     <div class="post-content">
         <p>
-            
+            <blockquote>
+<p>IMPORTANT: For Quiz, questions a, b, and c are on the exam. Also for quiz, instead of leaving answers in exponential form, convert it to decimal.</p>
+</blockquote>
+<h3 id="section-55-poisson-distribution-and-poisson-process">Section 5.5 Poisson Distribution and Poisson Process</h3>
+<p>A discrete random variable X is said to have the Poisson distribution w/ parameter $\mu &gt; 0$ if its probability mass function is given by:
+$P(X = x) = \frac{e^{-\mu}\mu^x}{x!}$ for x in all positive integers</p>
+<p>The mean and the variance of X are both given by $\mu$, ex:
+$E(X) = \mu = Var(X)$</p>
+<blockquote>
+<p>IT IS IMPORTNT TO USE THE PROBABILITY NOTATION ( P(X = x) ). STANDARD FOR 411 CLASS.</p>
+</blockquote>
+<h3 id="proof-for-varx--mu">Proof for Var(X) = mu</h3>
+<p>$E(X) = 0P(X=0) + 1P(X=1) + 2P(X=2) + &hellip; $
+&hellip;
+$= e^{-\mu}{\mu}e^{\mu} = {\mu}e^0 = \mu$</p>
+<blockquote>
+<p>Must know proof for the final exam. Proof located on <em><strong>page 285</strong></em>.</p>
+</blockquote>
+<h3 id="poisson-experiments">Poisson Experiments</h3>
+<p>Located on page 286.</p>
+<p><strong>Definition:</strong> They are experiments involving such randon variables.</p>
+<p>X must be the <strong>number of outcomes occuring during a given time interval</strong> (or some <strong>plan region with area t</strong>, or a <strong>given space region with volume t</strong>.)</p>
+<p>There is no upperbound, since we don&rsquo;t know the upper bounds for this experiment (could be anything).</p>
+<p>The experiment is derived from the <strong>Poisson Process</strong>.</p>
+<h3 id="what-is-a-poisson-random-variable">What is a Poisson Random Variable?</h3>
+<p>The number of outcomes occurring during a Poisson experiment.
+Its <strong>discrete</strong> probability distribution is called the <strong>Poisson distribution</strong>.
+Number of outcomes is:
+$E(X) = \mu = {\lambda}t$</p>
+<p>t is specified time, distance, area, or volume of interest.
+$\lambda$ = rate of occurrence of outcomes (ex: per unit time, length, area, region).</p>
+<p>There are three properties for the Poisson process:
+1.
+2.
+3.</p>
+<p>Example of poisson random variable in real life applications: cars entering the parking lot at 8am in the morning. ALso look at Prussian Horses example.</p>
+<blockquote>
+<p>IMPORTANT TO KNOW POISSON RANDOM VARIABLE, AS THEY ARE IN THE QUIZ AND FINAL EXAM.</p>
+</blockquote>
+<p>Ex:
+$P(X &lt;= 2) = P(X=0) + P(X=1) + P(X=2)$</p>
+<p>$P(X = x) = P(x;{\lambda}t) = dpois(x, {\lambda}t)$</p>
+<ul>
+<li>Says that the probability that exactly x outcomes occur in a time interval of length t.</li>
+</ul>
+<p>$P(X &lt;= x) = P(x;{\lambda}t) = ppois(x, {\lambda}t)$</p>
+<blockquote>
+<p>Must know what d-binom and p-binom for exam.</p>
+</blockquote>
+<h3 id="poisson-approximation-to-the-binomial-distribution">Poisson Approximation to the binomial distribution</h3>
+<p>Let X be a binomial random variable w/ parameters n (=number of trials) and p (=probability of success in each trial). When n approaches infinity and p approaches 0:</p>
+<p>For poisson approaximation, we must specify X to the problem (look at page 295).</p>
+<blockquote>
+<p>look at correlation coefficient.</p>
+</blockquote>
+
         </p>
         
     </div>

@@ -161,7 +161,7 @@
         <h1>STATS 411 Exam2 Review</h1>
         <small role="doc-subtitle"></small>
         <p class="post-date">
-            January 1, 0001
+            November 1, 2023
         </p>
 
         <ul class="post-tags">
@@ -175,7 +175,62 @@
 
     <div class="post-content">
         <p>
-            
+            <h3 id="cumulative-density-function">Cumulative Density Function</h3>
+<h3 id="probability-density-function">Probability Density Function</h3>
+<h3 id="probability-mass-function">Probability Mass Function</h3>
+<h3 id="continuous-probability-distributions">Continuous Probability Distributions</h3>
+<h3 id="joint-probability-distributions">Joint Probability Distributions</h3>
+<h3 id="mean-of-a-random-variable-expected-value">Mean of a Random Variable (Expected Value)</h3>
+<p>Let X be a random variable w/ probability distribution f(x). The mean/expected value of X is:</p>
+<ul>
+<li>$\mu = E(X) = \sum_x xf(x)$ if X is discrete</li>
+<li>$\mu = E(X) = \int_{-\infty}^{\infty}xf(x)dx$ if X is continuous</li>
+</ul>
+<p>Difference between sample mean and expected value is sample mean is calculated using data; expected value is calculated using probability distribution.</p>
+<p>Let X be a random variable w/ probability distribution f(x). The expected value of a random variable g(X) is:</p>
+<ul>
+<li>$\mu_{g(X)} = E[g(X)] = \sum_xg(x)f(x)$ if X is discrete</li>
+<li>$\mu_{g(X)} = E[g(X)] = \int_{-\infty}^{\infty}g(x)f(x)dx$ if X is continous</li>
+</ul>
+<blockquote>
+<p>IMPORTANT: Mean/expected value of a random variable X is important because it describes where the probability distribution is centered.</p>
+</blockquote>
+<h3 id="variance">Variance</h3>
+<p>Let X be a random ariable w/ probability distribution f(x) and mean $\mu$. The variance of X is:</p>
+<ul>
+<li>$\sigma^2 = E[(X - \mu)^2] = \sum_x(x - \mu)^2f(x)$ if X is discrete</li>
+<li>$\sigma^2 = $</li>
+</ul>
+<p>Proof of formula for $Var(X_1) = E({X_1}^2) - {\mu_1}^2:$</p>
+<p>$Var(X_1) = E[({X_1} - \mu_1)^2] = E({X_1}^2 - 2X_1\mu_1 + {\mu_1}^2) = E({X_1}^2) - 2\mu_1E(X_1) + E({\mu_1}^2)$</p>
+<p>Then</p>
+<p>$Var(X_1) = E({X_1}^2) - 2\mu_1(\mu_1) + {\mu_1}^2 = E({X_1}^2) - 2{\mu_1}^2 + {\mu_1}^2 = E({X_1}^2) - {\mu_1}^2$</p>
+<blockquote>
+<p>The positive square root of the variance is the standard deviation of X.</p>
+</blockquote>
+<h3 id="covariance">Covariance</h3>
+<p>The covariance of two random variables X and Y w/ means $\mu_x$ and $\mu_y$, respecitvely, is given by:
+$\sigma_{xy} = E(XY) - {\mu_x}{\mu_y}$</p>
+<p>Proof of formula for $Cov(X_1, X_2) = E({X_1}{X_2}) - {\mu_1}{\mu_2}$:</p>
+<p>$Cov(X_1,X_2) = E[(X_1-\mu_1)(X_2-\mu_2)] = E({X_1}{X_2}-{X_1}{\mu_2}-{\mu_1}{X_2}+{\mu_1}{\mu_2})$
+$= E(X_1X_2) - E(X_1\mu_2) - E(\mu_1X_2) + E(\mu_1\mu_2)$</p>
+<p>Since $\mu_1$ and $\mu_2$ are non-random constants, we obtain:
+$Cov(X_1,X_2) = E(X_1X_2) - \mu_2E(X_1)-\mu_1E(X_2)+\mu_1\mu_2$</p>
+<p>Since $E(X_1) = \mu_1$ and $E(X_2) = \mu_2$, we get:</p>
+<p>$Cov(X_1,X_2) = E(X_1X_2) - \mu_2\mu_1 - \mu_1\mu_2 + \mu_1\mu_2 = E(X_1X_2) - \mu_1\mu_2$</p>
+<h3 id="bernoulli-trial">Bernoulli Trial</h3>
+<p>It is an experiment that can result in one of two outcomes, &ldquo;success&rdquo; and &ldquo;failure&rdquo;, with:</p>
+<p>$P(success) = p$ and $P(failure) = 1-p = q$ where $0 &lt; p &lt; 1$</p>
+<h3 id="bernoulli-and-binomial-distributions">Bernoulli and Binomial Distributions</h3>
+<p>The probability mass function (pmf) of a binomial random variable X is given by:
+$P(X=x) = {{n}\choose{x}}p^xq^{n-x}$ for x $\in \mathbb{Z}$</p>
+<p>The cumulative distribution function (cdf) of a binomial random variable X w/ number of trials n and probability of success p is denoted by:</p>
+<p>$P(X &lt;= r) = \sum_{x=0}^r P(X=x) = \sum_{x=0}^r {{n}\choose{x}}p^xq^{n-x}$ for r $\in \mathbb{Z}$</p>
+<p>If X ~ Bin(n, p), then the theoritical mean of X is:
+$\mu_x = E(X) = np$
+and the theoritical variance is:
+$\sigma_{X}^2 = Var(x) = npq = np(1-p)$</p>
+
         </p>
         
     </div>
