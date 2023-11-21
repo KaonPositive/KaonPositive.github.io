@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>CS477 Exam 3 Review</title>
+    <meta name="description" content="Obsession creates greatness.">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, algorithms, cs477'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs477exam3review/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CS477 Exam 3 Review">
+    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS477 Exam 3 Review">
+    <meta name="twitter:description" content="Obsession creates greatness.">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs477exam3review/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs477exam3review/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs477exam3review/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS477 Exam 3 Review</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            November 20, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/algorithms">algorithms</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs477">cs477</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="kruskals-algorithm">Kruskal&rsquo;s Algorithm</h3>
+<p>It is a greedy algorithm that gives an optimal solution for a minimum spanning tree for a connected weighted graph.</p>
+<p>Steps to solve Kruskal&rsquo;s Algorithm:</p>
+<ol>
+<li>Sort graph edges in nondecreasing order (from least to greatest).</li>
+<li>Then, starting with an empty subgraph, it scans the sorted list which adds the next edge on the list to the current subgraph IF it does NOT create a cycle. If the edge does create a cycle, simply just skip it.</li>
+<li>Continue to add all edges to the subgraph until all vertices have been reached.</li>
+</ol>
+<h3 id="recurrences">Recurrences</h3>
+<p>Master Theorem:
+If need to divide something in F(n), then use this theorem.</p>
+<p>$F(n) = AF(n/B) + n^C$</p>
+<p>Cases to consider:
+Calculate $B^C$ to compare to A.</p>
+<p>If:</p>
+<ol>
+<li>$B^C &gt; A$, then $F(n) = \theta(n^C)$</li>
+<li>$B^C = A$, then $F(n) = \theta(n^C logn)$</li>
+<li>$B^C &lt; A$, then $F(n) = \theta(n^{log_B A})$</li>
+</ol>
+<p>Think &gt; = &lt; (squinting face) n^c, n^c logn, n^(log_B A)</p>
+<blockquote>
+<p>Use when you have one recursive call and is in the form F(n) = AF(n/B) + n^C</p>
+</blockquote>
+<p>Generalized Master Theorem:
+Requires you to change letters into greek letters.
+Formula is as follows:
+$F(n) = \alpha F(\beta n) + n ^ \gamma$ where:
+$\alpha = $ A
+$\beta = $ 1/B
+$\gamma = $ C</p>
+<p>Cases to consider:
+Let $T = \sum^{k}_{i=1}\alpha_i\beta_i^\gamma$</p>
+<p>If:</p>
+<ol>
+<li>$T &gt; 1$, then find a constant $P$ such that $\sum^{k}_{i=1}\alpha_i\beta_i^P = 1$, then $F(n) = \theta(n^P)$</li>
+<li>$T = 1$, then $F(n) = \theta(n^{\gamma}logn)$</li>
+<li>$T &lt; 1$, then $F(n) = \theta(n^{\gamma})$</li>
+</ol>
+<blockquote>
+<p>Use when you more than one recursive call.</p>
+</blockquote>
+<p>Anti-Derivative:
+Steps:</p>
+<ol>
+<li>Try isolating n on the right side by itself by subtracting F(n - k).</li>
+<li>After that, divide both sides by k.</li>
+<li>Take the integral of the right side of the equation to obtain the answer.</li>
+</ol>
+<blockquote>
+<p>Use when you have one recursive call and don&rsquo;t have to divide by anything in parameter.</p>
+</blockquote>
+<p>Substitution:</p>
+<blockquote>
+<p>Use when</p>
+</blockquote>
+<h3 id="treap">Treap</h3>
+<p>It is a combination of trees and heaps.
+It maintains the following properties:</p>
+<ol>
+<li>Keys (letters) are organized as in a BST. Left child node is less than parent; right child node is greater than parent.</li>
+<li>Priorities (numbers) are organized as in a heap. Parent node is greater than its children.</li>
+</ol>
+<blockquote>
+<p>NOTE: TREAPS NEED TO BE BALANCED, SIMILAR TO AN AVL TREE.</p>
+</blockquote>
+<h3 id="complex-numbers">Complex Numbers</h3>
+<p>Square Root of complex numbers:
+$\sqrt{z} = \pm(\sqrt{\frac{\sqrt{a^2+b^2}+a}{2}} + \sqrt{\frac{\sqrt{a^2+b^2}-a}{2}})$ if b &gt; 0</p>
+<p>$\sqrt{z} = \pm(\sqrt{\frac{\sqrt{a^2+b^2}+a}{2}} - \sqrt{\frac{\sqrt{a^2+b^2}-a}{2}})$ if b &lt; 0</p>
+<blockquote>
+<p>For square root, it&rsquo;s basically sqrt( (modulus+a) / 2 ) pm sqrt( (modulus-a) / 2 )</p>
+</blockquote>
+<p>Roots of unity formula:
+$\cos{\frac{2k\pi}{n}} + i\sin{\frac{2k\pi}{n}}$ where k is from 0 to n-1.</p>
+<p>Modulus formula:
+$|z| = \sqrt{a^2+b^2}$</p>
+<h3 id="hash-tables">Hash Tables</h3>
+<p>Hashing distributes keys among a one-dimensional array called a hash table via a hash function. Function assigns an integer between 0 and m-1 called a hash address to a key.</p>
+<p>Calculating expected number of cells w/ exactly k items:</p>
+<p>$\frac{m(\frac{n}{m})^k}{k!e^{\frac{n}{m}}}$ where m is the table size, n is the number of data items, and k is the items per cell</p>
+<h3 id="memoization">Memoization</h3>
+<p>It is used to speed up programs by removing repetitive computation of results. It avoids repeated calls to functions that produces the same output.</p>
+<p>Example of memoization:
+Computing the Fibonacci Sequence. Once each function has reached its base case, go back up and see</p>
+<h3 id="dynamic-programming">Dynamic Programming</h3>
+<p>Technique where a problem is broken down into smaller sub-problems. Each sub-problem is optimized to find the overall solution.</p>
+<p>Once each sub-problem has computed a solution, store the results of those sub-problems so the function does not have to re-compute them when they are needed later (this is why memoization is important).</p>
+<blockquote>
+<p>Can think of it as an optimization technique over recursion.</p>
+</blockquote>
+<h3 id="loop-invariance">Loop Invariance</h3>
+<p>Steps to loop invariance:</p>
+<h3 id="huffman-encoding">Huffman Encoding</h3>
+<p>In Huffman Encoding, the codons for the different symbols of a message may be written consecutively without spaces.</p>
+<p>Steps to Huffman Encoding:</p>
+<ol>
+<li>Place the frequencies from least to greatest.</li>
+<li>Afterward, add the two least frequencies together. Keep doing this until you are left one a single number.</li>
+<li>Assign a weight of 0 to the left branch of each root; assign a wieght of 1 to the right branch of each root.</li>
+</ol>
+<h3 id="calculating-addresses">Calculating Addresses</h3>
+<p>2-D Array:
+In Row-major, the formula is
+$A[i][j] = BaseAddress + n*(i*q+j)$</p>
+<p>In Column-major, the formula is
+$A[i][j] = BaseAddress + n*(i + (j*p))$</p>
+<p>3-D Array:
+In Row-major, the formula is
+$A[i][j][k] = BaseAddress + n*(i<em>q</em>r + (j*r) + k$</p>
+<p>In Column-major, the formula is
+$A[i][j][k] = BaseAddress + n*((p<em>q</em>k)+(p*j)+i)$</p>
+<h3 id="sparse-array">Sparse Array</h3>
+<p>A sparse array uses a search structure to search through a set of memos ( each memo will be an ordered pair(i,x) where A[i] = x ). If i is not mapped to anything, then A[i] = 0. Fetch will use some find function and store will use an insert function.</p>
+<h3 id="difference-between-asymptotic-time-complexity-and-asymptotic-complexity">Difference between asymptotic time complexity and asymptotic complexity:</h3>
+<p>Asymptotic complexity wants the overall/general complexity of F(n). For example:</p>
+<p>$F(n) = 4F(n/2) + n^2$ would yield $F(n) = \theta(n^2 logn)$</p>
+<p>Asymptotic time complexity does not want the overall/general complexity of F(n) but rather only the recurrence (group of functions being called). For example:</p>
+<p>$F(n) = 4F(n/2) + 1$ would yield $F(n) = \theta(n^2)$ via the Master Theorem</p>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2023 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

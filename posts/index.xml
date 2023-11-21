@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Archive - Basics</title>
       <link>https://kaonpositive.github.io/posts/theme-documentation-basics/</link>
@@ -40,6 +40,17 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
     </item>
     
     <item>
+      <title>CS477 Exam 3 Review</title>
+      <link>https://kaonpositive.github.io/posts/cs477exam3review/</link>
+      <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs477exam3review/</guid>
+      <description>Kruskal&amp;rsquo;s Algorithm It is a greedy algorithm that gives an optimal solution for a minimum spanning tree for a connected weighted graph.
+Steps to solve Kruskal&amp;rsquo;s Algorithm:
+ Sort graph edges in nondecreasing order (from least to greatest). Then, starting with an empty subgraph, it scans the sorted list which adds the next edge on the list to the current subgraph IF it does NOT create a cycle. If the edge does create a cycle, simply just skip it.</description>
+    </item>
+    
+    <item>
       <title>STATS 411 Exam2 Review</title>
       <link>https://kaonpositive.github.io/posts/stats411exam2review/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
@@ -69,6 +80,15 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
  They are useful to analyze the performance of recursive algorithms
  Anti-Derivative Method Formula is: $f&#39;(x) = \lim_{h-&amp;gt;0}\frac{f(x)-f(x-h)}{h}$
  In terms of asymptotic analysis, in this case, we only need h to be &amp;ldquo;close&amp;rdquo; to zero but still positive. NOTE: h must be smaller than x.</description>
+    </item>
+    
+    <item>
+      <title>CS 477 Study Guide</title>
+      <link>https://kaonpositive.github.io/posts/cs477notes02/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs477notes02/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -412,10 +432,10 @@ What does each node have?  Each node in the tree must have:  Data: Holds the val
     
     <item>
       <title></title>
-      <link>https://kaonpositive.github.io/posts/cs477notes02/</link>
+      <link>https://kaonpositive.github.io/posts/cs477notes03/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaonpositive.github.io/posts/cs477notes02/</guid>
+      <guid>https://kaonpositive.github.io/posts/cs477notes03/</guid>
       <description></description>
     </item>
     
