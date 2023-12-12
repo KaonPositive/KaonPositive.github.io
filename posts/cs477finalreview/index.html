@@ -17,26 +17,26 @@
     
 
     
-    <title>algorithms</title>
+    <title>CS477 Final Study Guide</title>
     <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <meta name="keywords" content='blog, gokarna, hugo, notes, algorithms, cs477'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/tags/algorithms/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs477finalreview/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="algorithms">
+    <meta property="og:title" content="CS477 Final Study Guide">
     <meta property="og:description" content="Obsession creates greatness.">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="algorithms">
+    <meta name="twitter:title" content="CS477 Final Study Guide">
     <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/tags/algorithms/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/tags/algorithms/">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs477finalreview/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs477finalreview/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/tags/algorithms/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs477finalreview/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -156,72 +156,140 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS477 Final Study Guide</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            November 27, 2023
+        </p>
 
-    <h1 class="list-title">algorithms</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/algorithms">algorithms</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs477">cs477</a></li>
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <h3 id="time-complexity">Time Complexity</h3>
+<h3 id="implementing-sparse-array-w-search-structure">Implementing Sparse Array w/ Search Structure</h3>
+<p>In terms of implementing a sparse array with a search structure, you can implement any search strcuture as you wish (a search structure <em><strong>must be able have a find function which returns a boolean value</strong></em>. That will indicate whether the item is found or not).</p>
+<p>For example, you can implement a sparse array with memos. With these memos, you have pairs (i, A[i]) where i is the query and A[i] is the collection of items/data of said query.</p>
+<h3 id="complex-numbers">Complex Numbers</h3>
+<p>Modulus of $e^{cos\theta + isin\theta}$ is simply just ${\sqrt{cos^2{\theta} + sin^2{\theta}}} = 1$</p>
+<p>MUST REMEMBER THIS FORMULA:
+$\sqrt{a + bi} = \pm \sqrt{\frac{\sqrt{a^2 + b^2} + a}{2}} + \sqrt{\frac{\sqrt{a^2 + b^2} - a}{2}}$ if b &gt; 0</p>
+<p>$a^2 + b^2 = 1$ where $a = \frac{1}{\sqrt{2}}$ and $b = \frac{1}{\sqrt{2}}$</p>
+<h3 id="runtimes-of-algorithms-covered-in-this-class">Runtimes of Algorithms Covered in this Class</h3>
+<h4 id="greedy-algorithms">Greedy Algorithms</h4>
+<p>Greedy Algorithms are considered &ldquo;greedy&rdquo; since you choose the best choices (lowest values) and combine them.</p>
+<ol>
+<li>Kruskal&rsquo;s</li>
+</ol>
+<ul>
+<li>Best Case:</li>
+<li>Worst Case:</li>
+<li>Average Case:</li>
+</ul>
+<ol start="2">
+<li>Huffman Encoding</li>
+</ol>
+<ul>
+<li>Best Case:</li>
+<li>Worst Case:</li>
+<li>Average Case:</li>
+</ul>
+<ol start="3">
+<li>Prim&rsquo;s algorithm</li>
+</ol>
+<ul>
+<li>Best Case:</li>
+<li>Worst Case:</li>
+<li>Average Case:</li>
+</ul>
+<h3 id="graph-algorithms">Graph Algorithms</h3>
+<h4 id="dynamic-programming">Dynamic Programming</h4>
+<p>Uses/relies on memoization to boost performance/shorten runtime complexity of an existing algorithm.</p>
+<ol>
+<li>Floyd-Warshall</li>
+</ol>
+<ul>
+<li>Best Case:</li>
+<li>Worst Case:</li>
+<li>Average Case:</li>
+</ul>
+<ol start="2">
+<li>Bellman-Ford</li>
+</ol>
+<ul>
+<li>Best Case:</li>
+<li>Worst Case:</li>
+<li>Average Case:</li>
+</ul>
+<ol start="3">
+<li></li>
+</ol>
+<h4 id="divide-and-conquer">Divide and Conquer</h4>
+<ol>
+<li>Mergesort (Sorting Algorithm)</li>
+</ol>
+<ul>
+<li>Best Case: $\Omega(nlogn)$</li>
+<li>Worst Case: $O(n logn)$</li>
+<li>Average Case: $\theta(nlogn)$</li>
+</ul>
+<ol start="2">
+<li>Quicksort (Sorting Algorithm)</li>
+</ol>
+<ul>
+<li>Best Case: $\Omega(n logn)$</li>
+<li>Worst Case: $O(n^2)$</li>
+<li>Average Case: $\theta(n logn)$</li>
+</ul>
+<ol start="3">
+<li>Binary Search (Selection Algorithm)</li>
+</ol>
+<ul>
+<li>Best Case: $O(1)$</li>
+<li>Worst Case: $O(logn)$</li>
+<li>Average Case: $O(logn)$</li>
+</ul>
+<h3 id="hash-tables">Hash Tables</h3>
+<p>Closed Hasing</p>
+<p>Open Hashing</p>
+<h3 id="treaps">Treaps</h3>
+<p>Is a combination of both a tree and a heap.</p>
+<blockquote>
+<p>Must be able to know how to calculate the modulus of the e^theta(i) problem. Again, look at the last page of the 3rd midterm.</p>
+</blockquote>
+<h3 id="last-problem-of-3rd-midterm-runtime-when-implementing-memos">Last Problem of 3rd Midterm: Runtime When Implementing Memos</h3>
+<pre><code>               f(n)
+            /   |    \
+        f(n/2)  |    f(n/3)
+       /  |  \  |  /    |    \
+   f(n/4)    f(n/6) f(n/18) f(n/9)
+  /      \ 
+</code></pre>
+<p>In terms of implementing a memos for a recursive functions, when you use a treap, the runtime would be $\theta(log^2nloglogn)$</p>
 
-    <h2 class="posts-year">2023</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/sortingalgos/" class="post-link">Sorting Algorithms</a>
-    <div class="flex-break"></div>
-    <span class="post-date">December 2, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs477finalreview/" class="post-link">CS477 Final Study Guide</a>
-    <div class="flex-break"></div>
-    <span class="post-date">November 27, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs477exam3review/" class="post-link">CS477 Exam 3 Review</a>
-    <div class="flex-break"></div>
-    <span class="post-date">November 20, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs477notes02/" class="post-link">CS 477 Study Guide</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 23, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs477notes01/" class="post-link">CS 477 Study Guide</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 23, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/shortestpaths/" class="post-link">Shortest Path</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 21, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/leetcode/" class="post-link">Leetcode Doc</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 10, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs477notes00/" class="post-link">CS 477 Notes 00</a>
-    <div class="flex-break"></div>
-    <span class="post-date">August 29, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/timecomplexity/" class="post-link">Time Complexity</a>
-    <div class="flex-break"></div>
-    <span class="post-date">August 25, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/oanotes/" class="post-link">OA Notes</a>
-    <div class="flex-break"></div>
-    <span class="post-date">August 25, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/algos/" class="post-link">Algorithms</a>
-    <div class="flex-break"></div>
-    <span class="post-date">August 25, 2023</span>
-</article>
+        </p>
+        
+    </div>
 
-    
-
+    <div class="prev-next">
+        
+    </div>
 </div>
 
+
+
+    
 
         </main><footer class="footer">
     

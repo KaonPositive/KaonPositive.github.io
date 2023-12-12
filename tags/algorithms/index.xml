@@ -6,7 +6,29 @@
     <description>Recent content in algorithms on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sorting Algorithms</title>
+      <link>https://kaonpositive.github.io/posts/sortingalgos/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/sortingalgos/</guid>
+      <description>Important terms:
+ Comparison-based Sorting: Sort elements by comparing them with each other. Non-comparison-based Sorting: Sorts do NOT compare elements with one another.  Selection Sort Is a comparison-based sorting algorithm.
+You basically iterate through the array and find the smallest/largest element. If the smallest/largest element is found, exchange it with the first element. Keep doing this until you reach at the end of list.
+TLDR; Find smallest element and exchange it with element in the first position; find the second smallest element and exchange it in the second position, etc.</description>
+    </item>
+    
+    <item>
+      <title>CS477 Final Study Guide</title>
+      <link>https://kaonpositive.github.io/posts/cs477finalreview/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs477finalreview/</guid>
+      <description>Time Complexity Implementing Sparse Array w/ Search Structure In terms of implementing a sparse array with a search structure, you can implement any search strcuture as you wish (a search structure must be able have a find function which returns a boolean value. That will indicate whether the item is found or not).
+For example, you can implement a sparse array with memos. With these memos, you have pairs (i, A[i]) where i is the query and A[i] is the collection of items/data of said query.</description>
+    </item>
+    
     <item>
       <title>CS477 Exam 3 Review</title>
       <link>https://kaonpositive.github.io/posts/cs477exam3review/</link>

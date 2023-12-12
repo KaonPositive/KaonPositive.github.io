@@ -6,7 +6,7 @@
     <description>Recent content on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Archive - Basics</title>
       <link>https://kaonpositive.github.io/posts/theme-documentation-basics/</link>
@@ -37,6 +37,64 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
       
       <guid>https://kaonpositive.github.io/posts/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>STATS 411 Final Exam Review</title>
+      <link>https://kaonpositive.github.io/posts/stats411finalreview/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/stats411finalreview/</guid>
+      <description>Binomial Distibution Bernoulli Distribution PMF of Bernoulli: $f_W(w) = P(W = w) = $ p if w = 1; 1 - p if w = 0
+$f_W(w) = p^w(1-p)^{1-w} = p^wq^{1-w}$ for w = 0, 1
+Random Sample Random Sample and Population Sample are two different things.
+For population: $\mu = $ population mean of X $M = $ population median of X $\sigma^2 = $ population variance of X $\sigma = $ population std of X</description>
+    </item>
+    
+    <item>
+      <title>CS422 Final Study Guide</title>
+      <link>https://kaonpositive.github.io/posts/cs422finalreview/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422finalreview/</guid>
+      <description>Logistic Regression Is a classification algorithm.
+Is a discriminative classification algorithm that has the form $P(y|x, \theta)$ where $X\in R^D$ (basically, it&amp;rsquo;s continuous and D-dimensional).
+ NOTE: Logistic Regression can use categorical inputs. Naive Bayes is a generative algorithm.
+ If output size is:
+ C = 2, then it is classified as binary logistic regression. C &amp;gt; 2, then it is classified as multi-class logistic regression.  Binary Logistic Regression $P(y|x, \theta)$ = Ber$( y|\mu(x))$</description>
+    </item>
+    
+    <item>
+      <title>Sorting Algorithms</title>
+      <link>https://kaonpositive.github.io/posts/sortingalgos/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/sortingalgos/</guid>
+      <description>Important terms:
+ Comparison-based Sorting: Sort elements by comparing them with each other. Non-comparison-based Sorting: Sorts do NOT compare elements with one another.  Selection Sort Is a comparison-based sorting algorithm.
+You basically iterate through the array and find the smallest/largest element. If the smallest/largest element is found, exchange it with the first element. Keep doing this until you reach at the end of list.
+TLDR; Find smallest element and exchange it with element in the first position; find the second smallest element and exchange it in the second position, etc.</description>
+    </item>
+    
+    <item>
+      <title>CS456 Final Study Guide</title>
+      <link>https://kaonpositive.github.io/posts/cs456finalreview/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs456finalreview/</guid>
+      <description>What is DFA? Known as Deterministic Finite Accepter. It accepts a finite set of internal states
+It is a five-tuple, where:
+ Q = Finite set of states ${\Sigma}$ = Finite set of input alphabet symbols. ${\sigma}$ = Transition function mapping: ${Q * {\Sigma} -&amp;gt; Q}$ ${q_0 \in Q}$ = is the initial state. F ${\subset}$ ${Q}$ = set of final/accept states. Q($F \subset Q$)Has multiple final states.  What is NFA?</description>
+    </item>
+    
+    <item>
+      <title>CS477 Final Study Guide</title>
+      <link>https://kaonpositive.github.io/posts/cs477finalreview/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs477finalreview/</guid>
+      <description>Time Complexity Implementing Sparse Array w/ Search Structure In terms of implementing a sparse array with a search structure, you can implement any search strcuture as you wish (a search structure must be able have a find function which returns a boolean value. That will indicate whether the item is found or not).
+For example, you can implement a sparse array with memos. With these memos, you have pairs (i, A[i]) where i is the query and A[i] is the collection of items/data of said query.</description>
     </item>
     
     <item>

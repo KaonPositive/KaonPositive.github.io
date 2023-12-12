@@ -6,7 +6,20 @@
     <description>Recent content in machine learning on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS422 Final Study Guide</title>
+      <link>https://kaonpositive.github.io/posts/cs422finalreview/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs422finalreview/</guid>
+      <description>Logistic Regression Is a classification algorithm.
+Is a discriminative classification algorithm that has the form $P(y|x, \theta)$ where $X\in R^D$ (basically, it&amp;rsquo;s continuous and D-dimensional).
+ NOTE: Logistic Regression can use categorical inputs. Naive Bayes is a generative algorithm.
+ If output size is:
+ C = 2, then it is classified as binary logistic regression. C &amp;gt; 2, then it is classified as multi-class logistic regression.  Binary Logistic Regression $P(y|x, \theta)$ = Ber$( y|\mu(x))$</description>
+    </item>
+    
     <item>
       <title>CS 422 Notes 09</title>
       <link>https://kaonpositive.github.io/posts/cs422notes09/</link>

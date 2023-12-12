@@ -17,26 +17,26 @@
     
 
     
-    <title>algorithms</title>
+    <title>STATS 411 Final Exam Review</title>
     <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <meta name="keywords" content='blog, gokarna, hugo, stats411, notes'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/tags/algorithms/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/stats411finalreview/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="algorithms">
+    <meta property="og:title" content="STATS 411 Final Exam Review">
     <meta property="og:description" content="Obsession creates greatness.">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="algorithms">
+    <meta name="twitter:title" content="STATS 411 Final Exam Review">
     <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/tags/algorithms/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/tags/algorithms/">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/stats411finalreview/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/stats411finalreview/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/tags/algorithms/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/stats411finalreview/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -156,72 +156,100 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>STATS 411 Final Exam Review</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            December 5, 2023
+        </p>
 
-    <h1 class="list-title">algorithms</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/stats411">stats411</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <h3 id="binomial-distibution">Binomial Distibution</h3>
+<h3 id="bernoulli-distribution">Bernoulli Distribution</h3>
+<p>PMF of Bernoulli:
+$f_W(w) = P(W = w) = $ p if w = 1; 1 - p if w = 0</p>
+<p>$f_W(w) = p^w(1-p)^{1-w} = p^wq^{1-w}$ for w = 0, 1</p>
+<h3 id="random-sample">Random Sample</h3>
+<p>Random Sample and Population Sample are two different things.</p>
+<p>For population:
+$\mu = $ <code>population mean</code> of X
+$M = $ <code>population median</code> of X
+$\sigma^2  = $ <code>population variance</code> of X
+$\sigma = $ <code>population std</code> of X</p>
+<p>For random sample:
+$\bar x = $ <code>sample mean</code> of data
+$\tilde x = $ <code>sample median</code> of data
+$s^2 = $ <code>sample variance</code> of data
+$s = $ <code>sample std</code> of data</p>
+<h3 id="poisson-distribution">Poisson Distribution</h3>
+<p>Is useful when you want to model the number of events that occurs in a fixed interval of time.
+Ex: # of text messages PER hour</p>
+<p>Uses the probability mass function:
+$p(x;\mu) = P(X=x) = \frac{e^{-\mu}\mu^x}{x!}$</p>
+<p>R Code:</p>
+<ul>
+<li>dpois($x, \lambda$) - probability density function</li>
+<li>ppois($x, \lambda$) - cumulative density function. sum from 0 to n</li>
+</ul>
+<h3 id="normal-distribution">Normal Distribution</h3>
+<p>R Code:</p>
+<ul>
+<li>pnorm($x, \mu, \sigma$) - cumulative density function. sum from 0 to n. find area under curve/percentage</li>
+<li>qnorm($x, \mu, \sigma$) - inverse cdf. used to find k or value of z</li>
+</ul>
+<p>Standardization is used for normal distribution when you want your data to be a standard normal distribution.</p>
+<p>Standardization:
+$z^* = \frac{x^*-\mu}{\sigma}$ (z score)</p>
+<p>De-standardization:
+$x^* = \mu + \sigma z^*$</p>
+<h3 id="central-limit-theorem">Central Limit Theorem</h3>
+<p>Use when sampling distribution of $\bar X$ is <code>approximately normal</code> ($\mu_X = \mu$ and $\sigma^2_{\bar X} = \frac{\sigma^2}{n}$) AND $n \geq 30$</p>
+<p>For Central Limit Theorem, you must use standardization.</p>
+<p>$Z = \frac{\bar X - \mu}{\sigma / \sqrt n}$</p>
+<h3 id="t-distribution">T-Distribution</h3>
+<p>Use when you don&rsquo;t know population standard deviation and $n &lt; 30$.</p>
+<p>R Code:</p>
+<ul>
+<li>qt($\alpha, df, lower.tail=F$)</li>
+</ul>
+<h3 id="chi-squared-distribution">Chi-Squared Distribution</h3>
+<h3 id="hypothesis-testing">Hypothesis Testing</h3>
+<p>Reject: p-value &lt; $\alpha$
+Fail to Reject: p-value $\ge \alpha$</p>
+<p>Notation is as follows:
+$H_0 = \mu$</p>
+<h3 id="confidence-intervals">Confidence Intervals</h3>
+<h3 id="gossets-theorem">Gosset&rsquo;s Theorem</h3>
+<p>Useful when the population mean and population standard deviation is <code>unknown.</code></p>
+<p>$H_0: \mu = \mu_0$</p>
+<p>Test Statistic:
+$t = \frac{\bar x - \mu_0}{(s / \sqrt n)} $</p>
+<h3 id="difference-between-s-and-sigma">Difference Between S and Sigma</h3>
+<p>$\sigma$ represents the population, S represents the sample</p>
 
-    <h2 class="posts-year">2023</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/sortingalgos/" class="post-link">Sorting Algorithms</a>
-    <div class="flex-break"></div>
-    <span class="post-date">December 2, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs477finalreview/" class="post-link">CS477 Final Study Guide</a>
-    <div class="flex-break"></div>
-    <span class="post-date">November 27, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs477exam3review/" class="post-link">CS477 Exam 3 Review</a>
-    <div class="flex-break"></div>
-    <span class="post-date">November 20, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs477notes02/" class="post-link">CS 477 Study Guide</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 23, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs477notes01/" class="post-link">CS 477 Study Guide</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 23, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/shortestpaths/" class="post-link">Shortest Path</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 21, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/leetcode/" class="post-link">Leetcode Doc</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 10, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs477notes00/" class="post-link">CS 477 Notes 00</a>
-    <div class="flex-break"></div>
-    <span class="post-date">August 29, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/timecomplexity/" class="post-link">Time Complexity</a>
-    <div class="flex-break"></div>
-    <span class="post-date">August 25, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/oanotes/" class="post-link">OA Notes</a>
-    <div class="flex-break"></div>
-    <span class="post-date">August 25, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/algos/" class="post-link">Algorithms</a>
-    <div class="flex-break"></div>
-    <span class="post-date">August 25, 2023</span>
-</article>
+        </p>
+        
+    </div>
 
-    
-
+    <div class="prev-next">
+        
+    </div>
 </div>
 
+
+
+    
 
         </main><footer class="footer">
     

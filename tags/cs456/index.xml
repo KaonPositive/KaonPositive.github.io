@@ -6,7 +6,18 @@
     <description>Recent content in cs456 on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs456/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs456/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS456 Final Study Guide</title>
+      <link>https://kaonpositive.github.io/posts/cs456finalreview/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs456finalreview/</guid>
+      <description>What is DFA? Known as Deterministic Finite Accepter. It accepts a finite set of internal states
+It is a five-tuple, where:
+ Q = Finite set of states ${\Sigma}$ = Finite set of input alphabet symbols. ${\sigma}$ = Transition function mapping: ${Q * {\Sigma} -&amp;gt; Q}$ ${q_0 \in Q}$ = is the initial state. F ${\subset}$ ${Q}$ = set of final/accept states. Q($F \subset Q$)Has multiple final states.  What is NFA?</description>
+    </item>
+    
     <item>
       <title>CS456 Notes 04</title>
       <link>https://kaonpositive.github.io/posts/cs456notes04/</link>

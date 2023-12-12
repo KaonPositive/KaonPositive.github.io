@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>CS422 Final Study Guide</title>
+    <meta name="description" content="Obsession creates greatness.">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs422, machine learning'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs422finalreview/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CS422 Final Study Guide">
+    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS422 Final Study Guide">
+    <meta name="twitter:description" content="Obsession creates greatness.">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs422finalreview/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs422finalreview/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs422finalreview/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS422 Final Study Guide</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            December 2, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs422">cs422</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/machine-learning">machine learning</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="logistic-regression">Logistic Regression</h3>
+<p>Is a <code>classification</code> algorithm.</p>
+<p>Is a <code>discriminative classification</code> algorithm that has the form $P(y|x, \theta)$ where $X\in R^D$ (basically, it&rsquo;s continuous and D-dimensional).</p>
+<blockquote>
+<p>NOTE: Logistic Regression can use categorical inputs. Naive Bayes is a generative algorithm.</p>
+</blockquote>
+<p>If output size is:</p>
+<ul>
+<li>C = 2, then it is classified as <code>binary</code> logistic regression.</li>
+<li>C &gt; 2, then it is classified as <code>multi-class</code> logistic regression.</li>
+</ul>
+<h4 id="binary-logistic-regression">Binary Logistic Regression</h4>
+<p>$P(y|x, \theta)$ = Ber$( y|\mu(x))$</p>
+<p>$\mu(x)$ represents the probability of &lsquo;x&rsquo; belonging to class 1.</p>
+<p>Since it is a discriminative classifier, it will compute the posterior probability directly using the inputs of the parameters of the model.</p>
+<p>$P(y=1|x,\theta) = \mu(x) = sigm(f(x))=sigm(w^Tx+w_0)$</p>
+<blockquote>
+<p>NOTE: theta represents the parameters of the model.</p>
+</blockquote>
+<p>where:
+$w_0 = $ bias
+$W^Tx = $ $w_1x_1 + w_2x_2 + &hellip; + w_Dx_D$
+D = number of features</p>
+<h3 id="linear-regression">Linear Regression</h3>
+<p>In a Linear Regression model, a straight line will pass through a cluster of data points as close as possible. This model is basically a straight line that passes through a cluster of data points, then you would need to measure the distance between the model&rsquo;s predicted outputs and the actual output of the $i^{th}$ data instance.</p>
+<blockquote>
+<p>NOTE: Getting the difference between the acual and predict outputs is called the RESIDUAL ERROR.</p>
+</blockquote>
+<p>Residual Error Formula:
+$\epsilon_i = y_i - f(x_i)$</p>
+<p>Linear Regression assumes the output of the data comes from a <code>Gaussian Distribution.</code>
+$P(y | x, \theta) \sim N(y | x, \theta) = N(y | w_0 + w^Tx, \sigma^2)$</p>
+<p>where:
+$\mu(x) = w_0 + w^Tx $ is the mean and $\sigma^2$ is the variance of the distribution.</p>
+<p>$w_0 = $ bias term
+$w^T = $ not including bias term</p>
+<p><em><strong>Since there are infinitely many lines that can fit inside the data, there can exist infinitely many set of parameters.</strong></em></p>
+<p>In Linear Regression, parameters are optimized during training to find the line of best fit.</p>
+<p>In Linear Regression, it uses <code>squared error</code> for its loss (calculates average of squared differences between predicted and actual values).</p>
+<blockquote>
+<p>NOTE: Loss is the difference between the predicted and actual outputs of the model.</p>
+</blockquote>
+<p>$Cost(w) = \frac{1}{2N}\sum^N_{n=1}(y_n - \mu(x_n))^2$
+Remember:
+$f(xn) = w^Tx_n + w_0$
+or
+$w^Tx_n$ if $w$ includes $w_0$</p>
+<p>GOAL FOR LINEAR REGRESSION:</p>
+<ul>
+<li>Find the w (parameter/weight) vector that will minimize the cost.</li>
+</ul>
+<p>In terms for linear regression with gradeint descent, the gradient descent will find the gradient of the cost function and will subtract a fraction of it from w.</p>
+<h3 id="neural-networks-for-tabular-data">Neural Networks for Tabular Data</h3>
+<p>What is a Perceptron?</p>
+<ul>
+<li>It is a deterministic version of logistic regression. Logistic regression&rsquo;s output is between 0 and 1, making it <code>probabilistic</code>.</li>
+<li>A perceptron&rsquo;s output is 1 iff $sigm(w^Tx + w_0) \ge 0.5$, 0 iff $sigm(w^Tx + w_0) &lt; 0.5$</li>
+</ul>
+<p>Difference between deep learning and multi-layer perceptron:</p>
+<ul>
+<li>Deep Learning - Networks w/ multiple layers</li>
+<li>Multi-layer Perceptron - Simplest deep-learning neural network (also called Feedforward Neural Network)</li>
+</ul>
+<p>Functions used as activation functions:</p>
+<ol>
+<li>Sigmoid (non-linear)</li>
+<li>Hyperbolic Tangent aka tanh (nonlinear)</li>
+<li>Rectified Linear Unit aka ReLu (nonlinear)</li>
+<li>Identity (linear)</li>
+</ol>
+<blockquote>
+<p>NOTE: We only use non-linear functions at hidden units.</p>
+</blockquote>
+<p>Multi-layer Perceptron Architecture:</p>
+<ul>
+<li>An MLP will have 1 input layer and 1 output layer; there can exist 1 or more hidden layers.</li>
+</ul>
+<p>Types of Models:</p>
+<ol>
+<li>Shallow Model - 1 Hidden Layer</li>
+<li>Deep Model - 2 or more hidden layers</li>
+</ol>
+<p>Things to Note:</p>
+<ul>
+<li>in MLP, bias node will exist in every layer except for the output layer, the bias will connect to the output.</li>
+<li>feed-forward/MLP does not allow connections within the samle layer, or allow backward connections.</li>
+<li>there are neural networks w/ the same layer and/or backward connections, but they are not MLPs or feedforward neural networks.</li>
+<li>when indicating how many layers an MLP has we don&rsquo;t count the input layer.</li>
+</ul>
+<p>SoftMax Function</p>
+<ul>
+<li>Its argument/input is a vector of continuous values, and output is corresponding probabilities for those continuous values.</li>
+<li>A softmax function will take a vector of real numbers as input and normalize them into a probability distribution (sum of values will add up to 1).</li>
+</ul>
+<blockquote>
+<p>NOTE: a neural network that is used for multi-class class classification uses the softmax function as an activation at the output layer.</p>
+</blockquote>
+<p>Formula:
+$\sum^k_{j=1} s_j(a) = 1$ where
+$s_j(a) = \frac{e^{a_j}}{e^{a_1}+e^{a_2}+e^{a_3}+&hellip;{e^{a_k}}}$</p>
+<h3 id="backpropagation-algorithm-w-gradient-descent">Backpropagation Algorithm w/ Gradient Descent</h3>
+<p>Steps to algorithm:</p>
+<ol>
+<li>Initialize the parameters (w&rsquo;s)</li>
+<li>Perform forward pass to compute model&rsquo;s output</li>
+<li>Compute error signals at the output layer nodes</li>
+<li>Pass error signals backwards to compute error signals at the hidden layers</li>
+<li>Compute gradients (w/ chain derivatives)</li>
+<li>Update parameters (weights) by substracting a portion of the gradient from the correct weights.</li>
+</ol>
+<h3 id="training-neural-networks">Training Neural Networks</h3>
+<p>There are 3 types of training based on what portion of the training data is used at each iteration (epoch):</p>
+<ol>
+<li>Batch Learning</li>
+</ol>
+<ul>
+<li>The entire training dataset is used at each iteration to train the model.</li>
+</ul>
+<ol start="2">
+<li>Online Learning</li>
+</ol>
+<ul>
+<li>One data instance (example) is used at each iteration to train the model.</li>
+</ul>
+<ol start="3">
+<li>Mini-Batch Learning</li>
+</ol>
+<ul>
+<li>Subset of the training data is used at each iteration to train the model.</li>
+</ul>
+<blockquote>
+<p>NOTE: an epoch is a single complete pass of the following data.</p>
+</blockquote>
+<p>Example:
+N = 1,000 examples</p>
+<ul>
+<li>In Batch Learning: each iteration uses 1,000 examples to train model; 1 epoch = 1 iteration</li>
+<li>In Online Learning: each iteration uses 1 example to train model; 1 epoch = 1,000 iterations</li>
+<li>In Mini-Batch Learning: if batch size = 50, 1 epoch = 20 iterations since $\frac{1000}{50} = 20$</li>
+</ul>
+<blockquote>
+<p>NOTE: For online and mini-batch, datashet should be shuffled before each epoch.</p>
+</blockquote>
+<h3 id="neural-networks-for-images">Neural Networks for Images</h3>
+<ol>
+<li>Images have pixels, which have channels.
+ex: each pixel has 3 channels for RGB color, which would make the # of input features grow quickly.</li>
+<li>The MLP would ignore transitional invariability, which is the existence of a shape, object, etc. in a image, regardless of its position in the image.</li>
+<li>Images have different sizes, which would require learning w&rsquo;s w/ varying dimensions.</li>
+</ol>
+<h3 id="clustering">Clustering</h3>
+<h3 id="convolutional-neural-networks-cnn">Convolutional Neural Networks (CNN)</h3>
+<ul>
+<li>Are a type of Multi-layer Perceptron.</li>
+<li>Inspired by <code>animal visual cortex</code> (basically scanning your surroundings).</li>
+<li>Is useful for image recognition and processing.</li>
+</ul>
+<p>It uses weight sharing, which would decrease the number of connections (ex: model&rsquo;s complexity).</p>
+<blockquote>
+<p>NOTE: if the number of connections decrease, the complexity decreases as well.</p>
+</blockquote>
+<h3 id="k-nearest-neighbor-knn">K-Nearest Neighbor (KNN)</h3>
+<p>Is a classification algorithm.
+It would simply look for k instances in training data that are nearest (closests) to the test input x, then counts how many are in each class, and returns the probability distribution of the output.</p>
+<blockquote>
+<p>NOTE: Euclidean Distance is the most commonly used distance in KNN.</p>
+</blockquote>
+<p>Example:
+You choose a spot in a graph (graph would represent fruits; y = color, x = size).
+You then would look at the three closest neighbors of that particular spot. If there are more neighbors of one class over the other, then that spot would be classified by that certain class (look at page 189 in Grokking Algorithms textbook).</p>
+<p>Practical Applications of KNN: a recommendation system for music, food, etc.</p>
+<h3 id="parametric-vs-non-parametric-models">Parametric vs Non-parametric Models:</h3>
+<ul>
+<li>Parametric: If a ML model has a fixed # of parameters regardless of size of the training dataset.</li>
+<li>Non-parametric: If # of parameters grow w/ the size of the dataset.</li>
+</ul>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2023 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

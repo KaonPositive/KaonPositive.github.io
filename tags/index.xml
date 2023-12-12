@@ -6,29 +6,11 @@
     <description>Recent content in Tags on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>algorithms</title>
-      <link>https://kaonpositive.github.io/tags/algorithms/</link>
-      <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/tags/algorithms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cs477</title>
-      <link>https://kaonpositive.github.io/tags/cs477/</link>
-      <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/tags/cs477/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>notes</title>
       <link>https://kaonpositive.github.io/tags/notes/</link>
-      <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/tags/notes/</guid>
       <description></description>
@@ -37,18 +19,63 @@
     <item>
       <title>stats411</title>
       <link>https://kaonpositive.github.io/tags/stats411/</link>
-      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/tags/stats411/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>algorithms</title>
+      <link>https://kaonpositive.github.io/tags/algorithms/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/tags/algorithms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cs422</title>
+      <link>https://kaonpositive.github.io/tags/cs422/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/tags/cs422/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>https://kaonpositive.github.io/tags/machine-learning/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sort</title>
+      <link>https://kaonpositive.github.io/tags/sort/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/tags/sort/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>cs456</title>
       <link>https://kaonpositive.github.io/tags/cs456/</link>
-      <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/tags/cs456/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cs477</title>
+      <link>https://kaonpositive.github.io/tags/cs477/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/tags/cs477/</guid>
       <description></description>
     </item>
     
@@ -76,24 +103,6 @@
       <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/tags/shortest-paths/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cs422</title>
-      <link>https://kaonpositive.github.io/tags/cs422/</link>
-      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/tags/cs422/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>machine learning</title>
-      <link>https://kaonpositive.github.io/tags/machine-learning/</link>
-      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
     

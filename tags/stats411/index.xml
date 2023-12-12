@@ -6,7 +6,19 @@
     <description>Recent content in stats411 on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/stats411/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/stats411/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>STATS 411 Final Exam Review</title>
+      <link>https://kaonpositive.github.io/posts/stats411finalreview/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/stats411finalreview/</guid>
+      <description>Binomial Distibution Bernoulli Distribution PMF of Bernoulli: $f_W(w) = P(W = w) = $ p if w = 1; 1 - p if w = 0
+$f_W(w) = p^w(1-p)^{1-w} = p^wq^{1-w}$ for w = 0, 1
+Random Sample Random Sample and Population Sample are two different things.
+For population: $\mu = $ population mean of X $M = $ population median of X $\sigma^2 = $ population variance of X $\sigma = $ population std of X</description>
+    </item>
+    
     <item>
       <title>STATS 411 Exam2 Review</title>
       <link>https://kaonpositive.github.io/posts/stats411exam2review/</link>

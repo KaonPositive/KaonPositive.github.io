@@ -6,7 +6,17 @@
     <description>Recent content in cs477 on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs477/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs477/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS477 Final Study Guide</title>
+      <link>https://kaonpositive.github.io/posts/cs477finalreview/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs477finalreview/</guid>
+      <description>Time Complexity Implementing Sparse Array w/ Search Structure In terms of implementing a sparse array with a search structure, you can implement any search strcuture as you wish (a search structure must be able have a find function which returns a boolean value. That will indicate whether the item is found or not).
+For example, you can implement a sparse array with memos. With these memos, you have pairs (i, A[i]) where i is the query and A[i] is the collection of items/data of said query.</description>
+    </item>
+    
     <item>
       <title>CS477 Exam 3 Review</title>
       <link>https://kaonpositive.github.io/posts/cs477exam3review/</link>

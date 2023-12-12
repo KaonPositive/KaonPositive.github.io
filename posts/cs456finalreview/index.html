@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>CS456 Final Study Guide</title>
+    <meta name="description" content="Final Review for CS456">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs456'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs456finalreview/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CS456 Final Study Guide">
+    <meta property="og:description" content="Final Review for CS456">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS456 Final Study Guide">
+    <meta name="twitter:description" content="Final Review for CS456">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs456finalreview/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs456finalreview/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs456finalreview/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS456 Final Study Guide</h1>
+        <small role="doc-subtitle">Final Review for CS456</small>
+        <p class="post-date">
+            November 27, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs456">cs456</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="what-is-dfa">What is DFA?</h3>
+<p>Known as Deterministic Finite Accepter. It accepts a <code>finite set</code> of internal states</p>
+<p>It is a <code>five-tuple</code>, where:</p>
+<ol>
+<li>Q = <code>Finite</code> set of states</li>
+<li>${\Sigma}$ = <code>Finite</code> set of input alphabet symbols.</li>
+<li>${\sigma}$ = Transition function mapping: ${Q * {\Sigma} -&gt; Q}$</li>
+<li>${q_0 \in Q}$ = is the <code>initial state.</code></li>
+<li>F ${\subset}$ ${Q}$ = <code>set</code> of final/accept states. Q($F \subset Q$)Has multiple final states.</li>
+</ol>
+<h3 id="what-is-nfa">What is NFA?</h3>
+<p>Known as Nondeterministic Finite Automata. It is a finite state accepter that has <code>several options/relative paths that i can go to. It has choices to pick the best path.</code></p>
+<p>It is a <code>five-tuple</code>, where:</p>
+<ol>
+<li>Q = <code>Finite</code> set of states</li>
+<li>${\Sigma}$ = <code>Finite</code> set of input alphabet symbols (finite)</li>
+<li>${\sigma}$ = Transition function mapping: ${Q * {\Sigma} -&gt; Q}$</li>
+<li>${q_0 \in Q}$ = is the <code>initial state.</code></li>
+<li>F ${\subset}$ ${Q}$ = <code>set</code> of final/accept states. Has multiple final/accept states.</li>
+<li>${\sigma}$ maps: Q * (${\Sigma}$ ${\cup}$ {${\lambda}$}) -&gt; ${2^Q}$</li>
+</ol>
+<blockquote>
+<p>2^Q is the powerset</p>
+</blockquote>
+<h3 id="what-is-a-regular-language">What is a Regular Language?</h3>
+<p>It can be recognized by a DFA/NFA.</p>
+<h3 id="what-is-a-regular-expression">What is a Regular Expression?</h3>
+<p>It is a way to denote a regular language.</p>
+<h3 id="is-every-subset-of-a-regular-language-regular">Is every subset of a regular language regular?</h3>
+<p>No, every subset of a regular language is <code>not</code> regular.</p>
+<p>Proof:
+$L_1 = a^nb^m | n,m \ge 0$ is regular
+$L_2 = a^nb^n | n \ge 0$ is <strong>NOT</strong> regular</p>
+<p>Therefore, $L_2 \subset L_1$</p>
+<h3 id="closure-properties-of-regular-languages">Closure Properties of Regular Languages</h3>
+<ol>
+<li>If $L_1$ and $L_2$ are regular, then $L_1 \cup L_2$ is regular.</li>
+<li>If $L_1$ and $L_2$ are regular, then $L_1 \cap L_2$ is regular.</li>
+<li>If $L_1$ is regular, then $\bar L_1$ is regular.</li>
+</ol>
+<h3 id="pumping-lemma-for-regular-languages">Pumping Lemma for Regular Languages</h3>
+<p>It is used to prove nonregularity of regular languages.</p>
+<p>Definition: Let L be an infinite regular language. Then there exists some positive integer m such that for any $w{\in}L$ with ${|w| &gt;= m}$ can be decomposed into 3 parts:</p>
+<p>If A is a regular language, then there is a number p (the pumping length) where, if s is any string in A of length at least p, then s may be divided into three pieces, <code>s = xyz</code> where it satisfies the three conditions:</p>
+<ol>
+<li>for each i &gt;= 0, ${xy^iz \in A}$</li>
+<li>$|y| &gt; 0$</li>
+<li>$|xy| &lt;= p$</li>
+</ol>
+<h3 id="context-free-grammars-cfg">Context Free Grammars (CFG)</h3>
+<p>A context free grammar (CFG) ($G = (V, T, P, S)$) is a <code>4-tuple</code> where:</p>
+<ol>
+<li>V = finite set of variables</li>
+<li>T = finite set of terminals</li>
+<li>P = finite set of production</li>
+<li>$S{\in}V$ is the start symbol</li>
+</ol>
+<p>In context-free grammar G, if a string has two or more different derivations, then G is considered ambiguous.</p>
+<blockquote>
+<p>For any context-free grammar that is unambiguous, then we can find another grammar that is unambiguous that still generates the same language.</p>
+</blockquote>
+<p>Inherently ambiguous - language that can be generated only by ambigous grammars.
+Example of Inherently ambiguous:
+L = {$a^n b^n c^m $} $\cup$ {$a^n b^m c^m$}, where n, m &gt;= 1
+= $L_1 \cup L_2$</p>
+<p>CFG <code>generates</code> CFL.
+You can generate CFG to a PDA.</p>
+<h4 id="derivation">Derivation</h4>
+<p>It is a sequence of substitutions to obtain a string.
+Ex: A -&gt; 0A1 -&gt; 00A11 -&gt; 000A111 -&gt; 000B111 -&gt; 000#111</p>
+<h3 id="context-free-languages">Context Free Languages</h3>
+<p>A Context-Free Language is any language that can be generated by some context-free grammar.</p>
+<p>It is a collection of languages associated w/ context-free grammars.</p>
+<h3 id="chomsky-normal-form">Chomsky Normal Form</h3>
+<p>One of the simplified forms of grammar.</p>
+<p>Is in the form:
+A -&gt; BC
+A -&gt; a</p>
+<p>where:
+a = terminal
+A, B, C = variables</p>
+<blockquote>
+<p>Note: B and C may not be the start variable.</p>
+</blockquote>
+<p>IMPORTANT:
+Any context-free language can be generated by CFG in Chomsky Normal Form.</p>
+<h3 id="greibach-normal-form">Greibach Normal Form</h3>
+<h3 id="pumping-lemma-for-context-free-languages">Pumping Lemma for Context Free Languages</h3>
+<p>If A is a CFL, then there is a number p (pumping length) where if s is any string in A of length &gt;= p, then s can be divided into 5 pieces s = uvxyz which would satify the following conditions:</p>
+<ol>
+<li>for each i &gt;= 0, $uv^ixy^i \in A$</li>
+<li>$|vy| &gt; 0$</li>
+<li>$|vxy| &lt;= p$</li>
+</ol>
+<h3 id="push-down-automata-pda">Push Down Automata (PDA)</h3>
+<p>It is a <code>7-tuple</code>, where:</p>
+<ol>
+<li>Q = <code>Finite</code> set of states of <code>control unit</code>.</li>
+<li>$\sum$ = <code>Finite</code> set of input alphabet symbols.</li>
+<li>$\tau$ = <code>Finite</code> set of stack alphabet symbols.</li>
+<li>$\sigma$ = Transition function mapping: $\sigma$: $Q$ * ($\sum \cup$ {$\lambda$}) * $\tau$ -&gt; $Q<em>F^</em>$</li>
+<li>$q_0 \in$ Q is the initial state.</li>
+<li>$z \in \tau$ is the stack start symbol.</li>
+<li>$\tau \subseteq Q$ is the set of final states.</li>
+</ol>
+<p>It is a class of machines that <code>recognize</code> context-free languages.</p>
+<p>Are basically NDFA but they contain a stack.</p>
+<blockquote>
+<p>The implementation of a stack would allow to recognize nonregular languages. The stack also has infinite memory.</p>
+</blockquote>
+<p>PDA can be implemented in two ways:</p>
+<ol>
+<li>DPDA (Deterministic Pushdown Automata)</li>
+<li>NPDA (Non-deterministic Pushdown Automata)</li>
+</ol>
+<p>For NPDA, it can determine which states to transition to depending if its the best one.
+ex: $\sigma(q_2,\lambda,g) = $ { $(q_3, c_3d_3), (q_10, c_9d_9)$ }</p>
+<blockquote>
+<p>Says that machine in state q2, top of stack symbol g, can do one of the following moves: 1. go to state q3 and replace g by c3d3 OR 2. it goes to state q10 and replaces g by c9d9.</p>
+</blockquote>
+<p>A language is context free iff some pushdown automaton recognizes it.</p>
+<p>If pushdown automaton recognizes some language, then it is context free.</p>
+<h3 id="turing-machine">Turing Machine</h3>
+<p>It is a <code>seven-tuple</code>, where:</p>
+<ol>
+<li>Q = <code>Finite</code> set of states</li>
+<li>$\tau = $ <code>Finite</code> set of tape symbols</li>
+<li>$\sum = $ a subset of $\tau$, not including B, in the set of input symbols</li>
+<li>$\sigma$ = nexy move is the mapping: $Q * \tau$ -&gt; $Q * \tau$ * {$L, R$}</li>
+<li>$q_0 \in Q$ is the <code>initial</code> state</li>
+<li>$F \subseteq Q$ is the set of <code>final</code> states</li>
+<li>$B$ is the <code>blank</code> symbol</li>
+</ol>
+<p>A recurively enumerable language is recognized by a Turing Machine.</p>
+<blockquote>
+<p>NOTE: A recursive language is accepted by a Turing Machine that will halt.</p>
+</blockquote>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#what-is-dfa">What is DFA?</a></li>
+            <li><a href="#what-is-nfa">What is NFA?</a></li>
+            <li><a href="#what-is-a-regular-language">What is a Regular Language?</a></li>
+            <li><a href="#what-is-a-regular-expression">What is a Regular Expression?</a></li>
+            <li><a href="#is-every-subset-of-a-regular-language-regular">Is every subset of a regular language regular?</a></li>
+            <li><a href="#closure-properties-of-regular-languages">Closure Properties of Regular Languages</a></li>
+            <li><a href="#pumping-lemma-for-regular-languages">Pumping Lemma for Regular Languages</a></li>
+            <li><a href="#context-free-grammars-cfg">Context Free Grammars (CFG)</a>
+              <ul>
+                <li><a href="#derivation">Derivation</a></li>
+              </ul>
+            </li>
+            <li><a href="#context-free-languages">Context Free Languages</a></li>
+            <li><a href="#chomsky-normal-form">Chomsky Normal Form</a></li>
+            <li><a href="#greibach-normal-form">Greibach Normal Form</a></li>
+            <li><a href="#pumping-lemma-for-context-free-languages">Pumping Lemma for Context Free Languages</a></li>
+            <li><a href="#push-down-automata-pda">Push Down Automata (PDA)</a></li>
+            <li><a href="#turing-machine">Turing Machine</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2023 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

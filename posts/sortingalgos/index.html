@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Sorting Algorithms</title>
+    <meta name="description" content="Obsession creates greatness.">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, algorithms, sort'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/sortingalgos/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sorting Algorithms">
+    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sorting Algorithms">
+    <meta name="twitter:description" content="Obsession creates greatness.">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/sortingalgos/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/sortingalgos/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/sortingalgos/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Sorting Algorithms</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            December 2, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/algorithms">algorithms</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/sort">sort</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>Important terms:</p>
+<ol>
+<li>Comparison-based Sorting: Sort elements by comparing them with each other.</li>
+<li>Non-comparison-based Sorting: Sorts do <code>NOT</code> compare elements with one another.</li>
+</ol>
+<h3 id="selection-sort">Selection Sort</h3>
+<p>Is a <code>comparison-based</code> sorting algorithm.</p>
+<p>You basically iterate through the array and find the smallest/largest element. If the smallest/largest element is found, exchange it with the first element. Keep doing this until you reach at the end of list.</p>
+<p>TLDR;
+Find smallest element and exchange it with element in the first position; find the second smallest element and exchange it in the second position, etc. It&rsquo;s a find and replace algorithm.</p>
+<p>Pseudo Code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">selectionSort</span>( lst ):
+  <span style="color:#66d9ef">for</span> i, e <span style="color:#f92672">in</span> enumerate(lst):
+    minElem <span style="color:#f92672">=</span> min( range(i, len(lst)), key<span style="color:#f92672">=</span>list<span style="color:#f92672">.</span>__getitem__ )
+    lst[i], lst[minElem] <span style="color:#f92672">=</span> lst[minElem], e
+
+  <span style="color:#66d9ef">return</span> lst
+</code></pre></div><ul>
+<li>Best Case: $O(n^2)$ (if input array is already sorted)</li>
+<li>Average Case: $O(n^2)$</li>
+<li>Worst Case: $O(n^2)$</li>
+</ul>
+<h3 id="insertion-sort">Insertion Sort</h3>
+<p>Is a <code>comparison-based</code> sorting algorithm that moves elements one at a time into the correct position.</p>
+<p>It is useful for small datasets or partially sorted datasets.
+It is stable&ndash;it maintains the relative order of equal elements (ex: won&rsquo;t overwrite the original order of the dataset).</p>
+<p>Steps:</p>
+<ol>
+<li>You start sorting from the second element (you would assume the first is already sorted).</li>
+<li>The current element will be compared to the preceding elements in the array. If the current element is less than the one it is being compared to, shift the current element to the left.</li>
+<li>Repeat step 2 for each element in the array.</li>
+<li>Once the final element is sorted, the entire array will be sorted.</li>
+</ol>
+<p>Pseudo Code:</p>
+<ul>
+<li>Best Case: $O(n)$ (if input array is already sorted)</li>
+<li>Average Case: $O(n^2)$</li>
+<li>Worst Case: $O(n^2)$</li>
+</ul>
+<h3 id="mergesort">Mergesort</h3>
+<p>A divide-and-conquer algorithm.</p>
+<p>It is useful for large datasets.</p>
+<p>The premise of this sorting algorithm is splitting the list into two halves, recursively sort each half, and then merge the two sorted sublists together.</p>
+<p>Pseudo Code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mergeSort</span>( lst ):
+  <span style="color:#66d9ef">if</span> len( lst ) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
+    <span style="color:#66d9ef">return</span> m;
+
+  middle <span style="color:#f92672">=</span> len(m) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+  left <span style="color:#f92672">=</span> m[:middle];
+  right <span style="color:#f92672">=</span> m[middle:]
+
+  left <span style="color:#f92672">=</span> merge( left );
+  right <span style="color:#f92672">=</span> merge( right );
+  
+  <span style="color:#66d9ef">return</span> list( merge(left, right) );
+
+</code></pre></div><ul>
+<li>Best Case: $O(n)$</li>
+<li>Average Case: $O(nlogn)$</li>
+<li>Worst Case: $O(nlogn)$</li>
+</ul>
+<h3 id="quicksort">Quicksort</h3>
+<p>An efficient divide-and-conquer algorithm.</p>
+<p>It is useful for large datasets.</p>
+<p>Ways to select pivot:</p>
+<ol>
+<li>Last element - selecting last element of the array</li>
+<li>First element - selecting first element of the array</li>
+<li>Random element - selecting a random element inside of array</li>
+<li>Median - Picking the median value of array</li>
+</ol>
+<blockquote>
+<p>NOTE: If quicksort chooses either the smallest or largest element as the pivot, quicksort will perform poorly and will give a time complexity of O(n^2). This pivot selection will lead to unbalanced partitions.</p>
+</blockquote>
+<p>Steps:</p>
+<ol>
+<li>Select a pivot element. Pointers i and j are made. Pointer i will be initialized to -1 (indicates position before the start of the array); pointer j will be initialized at the beginning of the array (index 0)</li>
+<li>Compare each element pointed to by j with the pivot. If element at index j is less than the pivot, increment i and then swap elements found at index i and j.</li>
+<li>After pointer j is finished iterating, increment i and swap the pivot with the element found at index i. This will place the pivot in its correct sorted position.</li>
+<li>The array will be rearranged so all elements smaller than the pivot come before it; all elements greater than pivot will come after it. After partitioning, the pivot will be in the last position.</li>
+<li>Recursively apply quicksort to the sub-arrays to the left and right of the pivot.</li>
+<li>Once sub-arrays are sorted, the entire array will be sorted.</li>
+</ol>
+<p>TLDR;
+-&gt; Choose an appropriate pivot
+-&gt; Divide elements (except for pivot) into two partitions (first partition will have elements less than pivot; second parition will have elements greater than pivot).
+-&gt; Apply quicksort on both partitions
+-&gt; After paritions have been sorted, join the pivot and partitions together.</p>
+<p>Pseudo Code:</p>
+<ul>
+<li>Best Case: $O(nlogn)$ pivot divides array into two equal halves.</li>
+<li>Average Case: $O(nlogn)$ pivot is not perfectly in the middle but is reasonably positioned.</li>
+<li>Worst Case: $O(n^2)$ pivot ends up being the smallest or largest element in the array.</li>
+</ul>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#selection-sort">Selection Sort</a></li>
+            <li><a href="#insertion-sort">Insertion Sort</a></li>
+            <li><a href="#mergesort">Mergesort</a></li>
+            <li><a href="#quicksort">Quicksort</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2023 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
