@@ -15,7 +15,7 @@
       <guid>https://kaonpositive.github.io/posts/cs456finalreview/</guid>
       <description>What is DFA? Known as Deterministic Finite Accepter. It accepts a finite set of internal states
 It is a five-tuple, where:
- Q = Finite set of states ${\Sigma}$ = Finite set of input alphabet symbols. ${\sigma}$ = Transition function mapping: ${Q * {\Sigma} -&amp;gt; Q}$ ${q_0 \in Q}$ = is the initial state. F ${\subset}$ ${Q}$ = set of final/accept states. Q($F \subset Q$)Has multiple final states.  What is NFA?</description>
+ Q = Finite set of states ${\Sigma}$ = Finite set of input alphabet symbols. ${\sigma}$ = Transition function mapping: ${Q * {\Sigma} -&amp;gt; Q}$ ${q_0 \in Q}$ = is the initial state. F ${\subset}$ ${Q}$ = set of final/accept states. Q($F \subset Q$) Has multiple final states.  What is NFA?</description>
     </item>
     
     <item>

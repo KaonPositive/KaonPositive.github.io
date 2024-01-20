@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>image processing on Jared Rosario</title>
+    <link>https://kaonpositive.github.io/tags/image-processing/</link>
+    <description>Recent content in image processing on Jared Rosario</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 469 Notes 00</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes00/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes00/</guid>
+      <description>What is Digital Image Processing? Image - a 2D function f(x,y) where x and y represent the coordinates. f would be the amplitude for the given coordinates x and y.
+ NOTE: the 2D function f(x,y) (amplitude) is called the intensity/gray level of the image.
+ An image is considered a digital image when x, y, and intensity of values are all finite and discrete.
+ NOTE: for an analog image: x, y, and intensity of values are continuous.</description>
+    </item>
+    
+  </channel>
+</rss>

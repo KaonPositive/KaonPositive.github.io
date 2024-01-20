@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Machine Learning Notes</title>
+    <meta name="description" content="Information about ML">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, algorithms, machine learning'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/generalml/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Machine Learning Notes">
+    <meta property="og:description" content="Information about ML">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Machine Learning Notes">
+    <meta name="twitter:description" content="Information about ML">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/generalml/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/generalml/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/generalml/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Machine Learning Notes</h1>
+        <small role="doc-subtitle">Information about ML</small>
+        <p class="post-date">
+            January 16, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/algorithms">algorithms</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/machine-learning">machine learning</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="goal-for-machine-learning">Goal for Machine Learning</h3>
+<p>The goal for machine learning is to help us make decisions with or without human supervision. To achieve this, machine learning uses a group of algorithms/methodologies to discover and formulate <code>repeatable patterns in data.</code></p>
+<h3 id="unsupervised-learning">Unsupervised Learning</h3>
+<p>An algorithm that detects and utilizes data that <code>are not</code> generated randomly, therefore it finds patterns/structure within the data to comprehend it.</p>
+<blockquote>
+<p>Laymen&rsquo;s Terms: Non-randomly generated data is read and the algorithm will detect certain patterns within the data to better understand it.</p>
+</blockquote>
+<p>NOTE:</p>
+<ul>
+<li>Feature - the characteristics of the data.
+Ex: Data about customer information. Features of the customer would include their age, purchase history, browsing behavior, etc.</li>
+<li>Label - represents the outcomes of the model&rsquo;s predictions based on those features.</li>
+</ul>
+<h4 id="types-of-distances">Types of Distances:</h4>
+<p>Distance - how similar/different two data points are in a multi-dimensional space.</p>
+<ol>
+<li>Euclidean - It is a <code>straight-line</code> distance between two points in 3D space&ndash;it is the most common and simplest. Use Pythagorean Theorem to find the distances between the two points.</li>
+<li>Manhattan - A grid-like distance where the distance between the two points are represented as a <code>zigzag path</code>.</li>
+<li>Cosine - Assesses the cosine of the angle formed by two data points to an origin&ndash;main focus here is the angle that is created by these two points.</li>
+</ol>
+<h4 id="k-means-clustering">K-Means Clustering</h4>
+<p>You create &lsquo;k&rsquo; clusters (group of data) and use the means/averages to proximate the closeness between the data points. The mean will refer to the center point of each cluster that is created via each feature within the cluster.</p>
+<blockquote>
+<p>Laymen&rsquo;s Terms: You have a bag of different colored marbles and you want to group the marbles based on their colors.</p>
+</blockquote>
+<p>Steps for K-Means Clustering:</p>
+<ol>
+<li>Choose # of clusters, k.</li>
+<li>Among data points, randomly choose k points as cluster centers.</li>
+<li>Using distance measure (cosine, manhattan, or euclidean), iteratively compute distance from each point in the problem space to each of the k-cluster centers. For example, if k = 3 and there are 10,000 points, then you will need to compute 30,000 distances.</li>
+<li>Assign each data point to the nearest cluster center.</li>
+<li>Recalculate cluster centers by computing the mean of data points of each of the k clusters.</li>
+<li>If clusters have changed, then recompute the cluster assignment for each data point (go back to step 3), else if there is no change, then the algorithm is done.</li>
+</ol>
+<h3 id="supervised-learning">Supervised Learning</h3>
+<p>An algorithm that uses <code>features</code> as their inputs and <code>labels</code> as their outputs.
+Ex: User profiles would be a <code>feature</code> and customer purchasing habits/product quality ratings would be a <code>label</code>.</p>
+<p>The goal for supervised learning is to train the model by using complex relationships between the features and labels represented by a mathematical formula. As a reuslt of this, it can be used to make predictions.</p>
+<blockquote>
+<p>Layman&rsquo;s Terms: You feed the model by showing various examples (instances). By using the examples, it will make predictions/decisions.</p>
+</blockquote>
+<p>Categories within Supervised Learning:</p>
+<ol>
+<li>Regression</li>
+<li>Neural Networks</li>
+<li>Classification</li>
+</ol>
+<p>Ways to train the model:</p>
+<ol>
+<li>Using Naive Bayes Classifier</li>
+<li>Decision Trees</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Terminology</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Label</td>
+<td>Variable where the model is tasked with predicting. Can only be one label in a supervised learning model.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Set of inputs variables used to predict the label.</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>Mathematical formulation of the patterns to gather the relationship between the label and the features.</td>
+</tr>
+<tr>
+<td>Training</td>
+<td>Creating a model using training data.</td>
+</tr>
+<tr>
+<td>Prediction</td>
+<td>Utilizing the trained model to estimate the label.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="two-types-of-supervised-models">Two Types of Supervised Models:</h4>
+<ol>
+<li>Classifiers - Label is categorical: qualitative variables are classified into distinct categories.</li>
+</ol>
+<blockquote>
+<p>Example of Classifier: Determining whether abnomal tissue growith is malignant or not.</p>
+</blockquote>
+<ol start="2">
+<li>Regressors - Label is numeric: an infinite number of values exist between two variables.</li>
+</ol>
+<blockquote>
+<p>Exaple of Regressor: Determining the price of a particular home given its characteristics.</p>
+</blockquote>
+<blockquote>
+<p>MAIN DIFFERENCE BETWEEN SUPERVISED AND UNSUPERVISED LEARNING: SUPERVISED is given LABELED DATA (desired inputs and outputs are provided) to better understand data; UNSUPERVISED is given UNLABLED DATA, and it must FIND patterns to better understand data.</p>
+</blockquote>
+<h3 id="neural-networks">Neural Networks</h3>
+<p>THere are two important neural networks:</p>
+<ol>
+<li>CNN (Convolutional Neural Network)</li>
+<li>KNN (K-Nearest Neighbor)</li>
+</ol>
+<h4 id="convolutional-neural-networks">Convolutional Neural Networks</h4>
+<h4 id="k-nearest-neighbor">K-Nearest Neighbor</h4>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#goal-for-machine-learning">Goal for Machine Learning</a></li>
+            <li><a href="#unsupervised-learning">Unsupervised Learning</a>
+              <ul>
+                <li><a href="#types-of-distances">Types of Distances:</a></li>
+                <li><a href="#k-means-clustering">K-Means Clustering</a></li>
+              </ul>
+            </li>
+            <li><a href="#supervised-learning">Supervised Learning</a>
+              <ul>
+                <li><a href="#two-types-of-supervised-models">Two Types of Supervised Models:</a></li>
+              </ul>
+            </li>
+            <li><a href="#neural-networks">Neural Networks</a>
+              <ul>
+                <li><a href="#convolutional-neural-networks">Convolutional Neural Networks</a></li>
+                <li><a href="#k-nearest-neighbor">K-Nearest Neighbor</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

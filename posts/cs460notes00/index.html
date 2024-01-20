@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>CS 460 Notes 00</title>
+    <meta name="description" content="Notes for CS460">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs460, compilers'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs460notes00/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CS 460 Notes 00">
+    <meta property="og:description" content="Notes for CS460">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS 460 Notes 00">
+    <meta name="twitter:description" content="Notes for CS460">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs460notes00/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs460notes00/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs460notes00/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 460 Notes 00</h1>
+        <small role="doc-subtitle">Notes for CS460</small>
+        <p class="post-date">
+            January 17, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs460">cs460</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/compilers">compilers</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="chapter-1-reading">Chapter 1 Reading</h2>
+<p>Syntax - <code>Set of rules</code> that describe how symbols can be combined to form a <code>correctly</code> structured program.</p>
+<blockquote>
+<p>NOTE: In most cases, syntatic rules for a programming language are described using a context-free grammar written in Backus-Nauer Form</p>
+</blockquote>
+<p>Semantics - <code>Meaning</code> of a syntatically correct program.</p>
+<blockquote>
+<p>NOTE: Denotational and operational semantics are the most used formal semantics for compiler and interpreter writing.</p>
+</blockquote>
+<h4 id="compiling-and-interpreting">Compiling and Interpreting</h4>
+<p>Two ways to execute programs:</p>
+<ol>
+<li>Compilation - Source program is translated to a target program, which can then be executed directly by an OS (running on hardware).</li>
+<li>Interpretation - Source program is interpreted by another program that is run on the hardware.</li>
+</ol>
+<blockquote>
+<p>NOTE: Java is a hybrid language&ndash;it can be both compiled and interpreted. Javac (compiler) produces a Java class file, which then will be interpreted by the Java Virtual Machine</p>
+</blockquote>
+<p>Compiler is divided into two parts:</p>
+<ol>
+<li>frontend - performs syntatic and semantic checks.</li>
+<li>backend - If the program is both syntactically and semantically correct, the front end will produce some representation <code>i</code> of the source program. <code>i</code> will then be used as an input in the backend and will then perform a number of tasks that are related to the target architecture of the machine on which the program will run. It also produces a target program <code>t</code> which can be executed on the target architecture.</li>
+</ol>
+<blockquote>
+<p>NOTE: For backend, the &lsquo;tasks&rsquo; could either be for optimization or analyses of uninitialized variables and code that can never be executed (dead code).</p>
+</blockquote>
+<p>Frontend -&gt; i -&gt; Backend</p>
+<h4 id="stages-of-a-compiler">Stages of a Compiler</h4>
+<ol start="0">
+<li><strong><em>Source Program</em> (initial)</strong></li>
+<li><em><strong>Lexical Analysis</strong></em> - <em>Scans source code one chracter at a time (reads from a character stream)</em></li>
+<li><em><strong>Syntax Analysis</strong></em> -</li>
+<li><em><strong>Semantic Analysis</strong></em> -</li>
+<li><em><strong>Intermediate Code</strong></em> -</li>
+<li><em><strong>Optimizer</strong></em> - <em>New version of the program in the intermediate language</em></li>
+<li><em><strong>Code Generator</strong></em> -</li>
+<li><em><strong>Target Program (final)</strong></em></li>
+</ol>
+<h4 id="single-vs-multi-ass-compilers">Single vs. Multi-ass Compilers</h4>
+<p>Number of parse tree traversals is proportional to its runtime.</p>
+<blockquote>
+<p>NOTE: Less fewer passes through a parse tree = harder to read and maintain.</p>
+</blockquote>
+<p>For efficiency, it is wise for a compiler to be organized into many smaller stages (micro-passes)&ndash;this would make it easy to make changes and add/remove specific tasks. It would also improve readability and writability, as well as making the compiler be less buggy.</p>
+<h4 id="frontend">Frontend</h4>
+<p>The compiler front end has a number of stages.</p>
+<blockquote>
+<p>NOTE: The frontend is responsible for making an &lsquo;intermediate representation&rsquo; of the program if it is BOTH semantically and syntactically correct.</p>
+</blockquote>
+<p>Parts of the frontend:</p>
+<ol>
+<li><strong>Scanner/Tokenizer/Lexer</strong> - Inputs a source program one character at a time from a string/stream of characters (basically, compiler reads the file first).</li>
+</ol>
+<blockquote>
+<p>NOTE: A token is a substring of one or more characters. It represents a terminal in the grammar of the language (Ex: keywords, literals [0 and 3.14], separators [; and ,], operators [+, -, *, /], identifiers [names of methods/classes], etc.)</p>
+</blockquote>
+<p><strong>Keywords</strong>: int, float, double, etc.</p>
+<p><strong>Identifiers</strong>: main, foo, bar,</p>
+<p><strong>Separators/Delimiters</strong>: &lsquo;(&rsquo;, &lsquo;)&rsquo;, &lsquo;;&rsquo;</p>
+<p><strong>Operators</strong>: &lsquo;+&rsquo;, &lsquo;-&rsquo;, &lsquo;*&rsquo;, &lsquo;/&rsquo;</p>
+<p><strong>Literals (fixed values)</strong>: &lsquo;42&rsquo;, &lsquo;3.14&rsquo;, &lsquo;true&rsquo;, &lsquo;false&rsquo;, &lsquo;null&rsquo;, &lsquo;[1, 2, 3]&rsquo;, &lsquo;Hello world&rsquo;</p>
+<p>After a token is made, it is then given a type known as a <code>lexeme</code>.</p>
+<ol start="2">
+<li><strong>Parsing and Syntax Analysis</strong>
+The parser makes sure that the source program is <code>syntactically correct</code>.</li>
+</ol>
+<blockquote>
+<p>NOTE: A syntacticlly correct program is defined as a program that is in the language that the compiler is written in (basically, it is a program that can be generated by the context-free grammar that specifies that language).</p>
+</blockquote>
+<p>If the parser can crate a parse tree for the program (that is, the program is accepted by the parser), then the program is deemed to be <code>syntactically correct</code>.</p>
+<p>Tree walkers - traverses the parse tree and does various checks to see if the source program is semantically correct.</p>
+<p>Parser will take the tokens as input, which will then have the parser output a <code>syntax tree</code>.</p>
+<ol start="3">
+<li><strong>Semantic Checking</strong>
+Ensures that the translation of the source program to the intermediate/target code can be performed (basically, if program is not semantically correct, then it is not possible to perform the code generation) so that the semantics of the language is preserved.</li>
+</ol>
+<p>For semantic checks, multiple passes of the parse tree are performed (however, we can have micro-passes).</p>
+<p>Micro-passes - multiple passes that have individual tasks (some can be large tasks, while others can be small to ensure the source program is semantically correct.</p>
+<blockquote>
+<p>ex: a large task can be type checking; small task can be declaration checking</p>
+</blockquote>
+<ol start="4">
+<li><strong>Name Resoultion and Checking</strong>
+It ensures that variables and other named entities are declared/defined before they are used. This makes sure that the entities are referenced properly (not out of scope).</li>
+</ol>
+<p><code>forward referenced</code> - names can be used before they have been declared</p>
+<blockquote>
+<p>Ex: prototype declarations in C++. This informs the compiler that a proper implementation is to follow later. prototype declarations are used to avoid multiple passes through the parse tree in the name resolution stage.</p>
+</blockquote>
+<p>Second Pass: Resolve the use of names</p>
+<p>Name Resolution can be used at compile time for statically scoped languages.</p>
+<ol start="5">
+<li><strong>Type Checking</strong>
+Type Checking at compile time is only possible for <code>statically typed languages</code>.</li>
+</ol>
+<blockquote>
+<p>NOTE: If a language is statically typed. then type checking is possible at compile time.</p>
+</blockquote>
+<p>Why type checking is important:</p>
+<ul>
+<li>Ensures that the assignment is valid with respect to type so that no information is lost (ex: assigning a value 3.14 to a float type is valid; however, assigning it to an int is not since .14 is lost in the assignment).</li>
+<li>Resolve method invocations (executing/calling a function) (ex: assigning a variable of type int to a function of type str).</li>
+</ul>
+<h4 id="middle-end">Middle End</h4>
+<p>The <code>middle end</code> operates on the internal representation.</p>
+<p>It consists of an optimizer that is independent of the architecture (middle end does not know anything about the target architecture, so the optimizations performed are generic).</p>
+<h4 id="backend">Backend</h4>
+<p>Consists of two parts:</p>
+<ol>
+<li>Code Generation - generates the final (or near final) code (target program). Depending on architecture, number of tasks must be performed before the code generates.</li>
+<li>Target Code Optimization - Can be performed at the level of the syntax tree and the level of the intermediate language (if architecture is known beforehand).</li>
+</ol>
+<h4 id="evaluation-and-interpreters">Evaluation and Interpreters</h4>
+<p>Compiler - translates source code to a different program w/ the same semantics in a target language where it can be executed on a hardware architecture.</p>
+<p>Interpreter - virtual arcitecture and executes the source code directly.</p>
+<p>The compiler will check if the source program is both syntactically and semantically correct before producing the target program.</p>
+<p>The interpreter will perform checks while the program is being evaluation. If the code is syntactically incorrect, it cannot be evaluated by the interpreter, and if it is semantically incorrect, it can never be evaluated by the interpreter (it is never reported).</p>
+<blockquote>
+<p>NOTE: One may favor an interpreter over a compiler is portability&ndash;an interpreted language can be evaluated on any machine that has an interpreter.</p>
+</blockquote>
+<h2 id="summary">Summary</h2>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#chapter-1-reading">Chapter 1 Reading</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#compiling-and-interpreting">Compiling and Interpreting</a></li>
+                <li><a href="#stages-of-a-compiler">Stages of a Compiler</a></li>
+                <li><a href="#single-vs-multi-ass-compilers">Single vs. Multi-ass Compilers</a></li>
+                <li><a href="#frontend">Frontend</a></li>
+                <li><a href="#middle-end">Middle End</a></li>
+                <li><a href="#backend">Backend</a></li>
+                <li><a href="#evaluation-and-interpreters">Evaluation and Interpreters</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
