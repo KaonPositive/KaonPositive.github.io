@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on Jared Rosario</title>
+    <link>https://kaonpositive.github.io/tags/java/</link>
+    <description>Recent content in java on Jared Rosario</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Notes</title>
+      <link>https://kaonpositive.github.io/posts/javanotes/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/javanotes/</guid>
+      <description>What is Java Virtual Machine? An abstract machine where java bytecode can be executed. It is platform dependent.
+JVM loads, verifies, and executes the code that is given.
+JVM Architecture contains 8 parts:
+ Classloader Class Area Heap Stack Program Counter Register Native Method Stack Execution Engine Java Native Interface  </description>
+    </item>
+    
+  </channel>
+</rss>

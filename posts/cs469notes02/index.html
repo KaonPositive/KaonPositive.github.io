@@ -17,26 +17,26 @@
     
 
     
-    <title>cs460</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>CS 469 Notes 02</title>
+    <meta name="description" content="Notes for CS469 1/29/24">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs469, image processing'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/tags/cs460/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs469notes02/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="cs460">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="CS 469 Notes 02">
+    <meta property="og:description" content="Notes for CS469 1/29/24">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="cs460">
-    <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/tags/cs460/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/tags/cs460/">
+    <meta name="twitter:title" content="CS 469 Notes 02">
+    <meta name="twitter:description" content="Notes for CS469 1/29/24">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs469notes02/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs469notes02/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/tags/cs460/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs469notes02/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -156,37 +156,111 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 469 Notes 02</h1>
+        <small role="doc-subtitle">Notes for CS469 1/29/24</small>
+        <p class="post-date">
+            January 29, 2024
+        </p>
 
-    <h1 class="list-title">cs460</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs469">cs469</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/image-processing">image processing</a></li>
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <h2 id="lecture-notes">Lecture Notes</h2>
+<p>Images can be represented as:</p>
+<ol>
+<li>Surface in a 3D space</li>
+<li>Visual Intensity Array</li>
+<li>2D Numerical Array</li>
+</ol>
+<p>Representing Digital Images:
+Consider a continuous image with a function $f(s, t)$
+Through sampling and quantization, the digital image will then be $f(x, y)$</p>
+<p>Formula to get the coordinates of the center of the image:
+$(x_c, y_c) = (floor(M/2), floor(N/2))$</p>
+<p>Two types of different image resolutions:</p>
+<ol>
+<li>
+<p><strong>Spatial Resolution (1920 x 1080)</strong> - is determined how fine/coarse the image is (ex: low spatial resolution would result in <strong>jagged lines</strong>; think of pixelated alphabets/sharp images). It is sensitive to shape variation.</p>
+</li>
+<li>
+<p><strong>Intensity Resolution (Bit depth): 8-bit, 16-bit, 24-bit</strong> - refers to the number of intensity levels used to represent an image (depends on the number of bits). Greater the sensitivity, the finer the level of detail that can be distinguished in the image.</p>
+</li>
+</ol>
+<p>Saturation - the intensity level of an image.</p>
+<p>Noise - It is a variation of brightness</p>
+<p>Picking the resolution of an image depends on 5 factors:</p>
+<ol>
+<li>Intended Use</li>
+<li>Viewing Conditions</li>
+<li>Display/Output Device Capabilities</li>
+<li>File Size and Storage</li>
+<li>Image Content</li>
+</ol>
+<p>Relationship Between Pixels:</p>
+<p>Neighbors of a Pixel:
+The 4-neighborhood of pixel p(x,y) is the set:
+{(x-1, y), (x+1, y), (x, y-1), (x, y+1)}</p>
+<p>The two pixels p and q are 4-adjacent (or connected) if q is in $N_4(p)$ or p is in $N_4(q)$</p>
+<p>The 8-neighborhood of pixel p(x,y) is the set:</p>
+<h4 id="distance-measures">Distance Measures</h4>
+<p>The use of distance measures are used to measure the distance between pixel coordinates in an image.</p>
+<p>Three common distance measures:</p>
+<ol>
+<li>Euclidean - straight line distance</li>
+<li>City-Block (Manhattan Distance) - creates a diamond-shape distance measure.</li>
+<li>Chessboard -</li>
+</ol>
+<h2 id="readings">Readings</h2>
+<h2 id="summary">Summary</h2>
 
-    <h2 class="posts-year">2024</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes03/" class="post-link">CS 460 Notes 03</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 31, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes02/" class="post-link">CS 460 Notes 02</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 29, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes01/" class="post-link">CS 460 Notes 01</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 24, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes00/" class="post-link">CS 460 Notes 00</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 17, 2024</span>
-</article>
+        </p>
+        
+    </div>
 
-    
-
+    <div class="prev-next">
+        
+    </div>
 </div>
 
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture-notes">Lecture Notes</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#distance-measures">Distance Measures</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#readings">Readings</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
 
         </main><footer class="footer">
     

@@ -6,18 +6,53 @@
     <description>Recent content in cs460 on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs460/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/cs460/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 460 Notes 03</title>
+      <link>https://kaonpositive.github.io/posts/cs460notes03/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs460notes03/</guid>
+      <description>Lecture Notes Reading Summary </description>
+    </item>
+    
+    <item>
+      <title>CS 460 Notes 02</title>
+      <link>https://kaonpositive.github.io/posts/cs460notes02/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs460notes02/</guid>
+      <description>Lecture Notes RECALL: A Parser&amp;rsquo;s job is to make sure if the program is syntactically correct.
+Types of Parsers:
+ LL(k) - First L says to scan from Left to Right; Second L says to use left-most derivation (always develop the left-most non-terminal in a sentential form).   NOTE: A good thing about a LL(k) parser is that it is linear&amp;ndash;there is no backtracking.
+ LR(k) - First L says to scan from Left to Right; Second R says to use reverse right-most derivation (start w/ input string, find appropriate grammar rule, then start at the right).</description>
+    </item>
+    
+    <item>
+      <title>CS 460 Notes 01</title>
+      <link>https://kaonpositive.github.io/posts/cs460notes01/</link>
+      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs460notes01/</guid>
+      <description>Lecture Notes 1/22 Rules for a Regular Expression:
+if s &amp;amp; t are regular expressions, then:
+ s | t s * t (concatenate) s*  ( continued from last lecture ) NFA for recognizing tokens construct NFAs for each construct of a Regular Expression.
+If all tokens of a language are represented by regular expressions $r_1, r_2, r_3, &amp;hellip; r_n$, then we can create $N(r_1), N(r_2), &amp;hellip; N(r_n)$.
+NFA is classified somewhat as a greedy algorithm.</description>
+    </item>
+    
     <item>
       <title>CS 460 Notes 00</title>
       <link>https://kaonpositive.github.io/posts/cs460notes00/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs460notes00/</guid>
-      <description>Chapter 1 Reading Syntax - Set of rules that describe how symbols can be combined to form a correctly structured program.
- NOTE: In most cases, syntatic rules for a programming language are described using a context-free grammar written in Backus-Nauer Form
- Semantics - Meaning of a syntatically correct program.
- NOTE: Denotational and operational semantics are the most used formal semantics for compiler and interpreter writing.
- Compiling and Interpreting Two ways to execute programs:</description>
+      <description>Lecture Notes 1/22 Chapter 1 Syntax - rules for what a syntactically program looks like ( the structure of the language is correct )
+Semantics - meaning of the program
+In terms of a compiler, the compiler would output the target code. That target code.
+Frontend - syntax checking, semantic checking
+Backend - create target program (code generation) and optimization
+Frontend -&amp;gt; i (intermediate code or parse tree) -&amp;gt; Backend</description>
     </item>
     
   </channel>

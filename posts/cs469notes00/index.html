@@ -177,7 +177,8 @@
 
     <div class="post-content">
         <p>
-            <h2 id="what-is-digital-image-processing">What is Digital Image Processing?</h2>
+            <h2 id="lecture-notes">Lecture Notes</h2>
+<h4 id="what-is-digital-image-processing">What is Digital Image Processing?</h4>
 <p>Image - a 2D function f(x,y) where x and y represent the coordinates. <code>f</code> would be the amplitude for the given coordinates x and y.</p>
 <blockquote>
 <p>NOTE: the 2D function f(x,y) (amplitude) is called the intensity/gray level of the image.</p>
@@ -190,10 +191,34 @@
 <p>Common formats for digital images:</p>
 <ol>
 <li>Grayscale - 1 value per pixel (Black and White). Value goes from 0-255. 1-tuple.  Grayscale has 1 grid.</li>
-<li>RGB - 3 values per pixel (R, G, B). Each value goes from 0-255. 3-tuple. RGB has 3 grids.</li>
-<li>RGBA - 4 values per pixel (R, G, B, Alpha/Opacity). Each value goes from 0-255. 4-tuple RGBA has 4 grids.</li>
+<li>Binary - 1-bit depth: each pixel can either be 0 or 1 (0 for black, 1 for white)</li>
+<li>RGB - 24-bit depth: 8 bits per channel. 3 values per pixel (R, G, B). Each value goes from 0-255. 3-tuple. RGB has 3 grids.</li>
 </ol>
+<p>(8b, 8b, 8b) = 0 - 255 (256bits in total or 3 bytes)
+256 ^ 3 bits</p>
+<ol start="4">
+<li>RGBA - 48-bit depth: 16 bits per channel. 3 values per pixel (R, G, B, Alpha/Opacity). Each value goes from 0-255. 3-tuple RGBA has 3 grids.</li>
+</ol>
+<p>(16b, 16b, 16b) = 0 - 65,535 (65,536 bits in total)
+65,536 ^ 3 bits</p>
 <p>Digital Image Processing - The process of using an algorithm to <code>perform processing on digital images</code>.</p>
+<p>A pixel is the smallest element in a digital image&ndash;each pixel carries information about the color and intensity.</p>
+<p>The image size refers to the <em><strong>number of pixels in an image</strong></em>.</p>
+<p>JPEG - lossy compression (reduces file size and quality is lost)
+PNG - lossless compression (preserves quality but file size is larger than JPEG)
+TIFF -lossless compression and uncompressed formats (file size varies)</p>
+<p>Origin of Digital Image Processing:
+Submarine cable used in the early 1920s to transmit pictures between <code>London to New York</code>.</p>
+<p>The Bartlane Cable Picture Transmission System reduced the amount of time it took to transmit a picture across the Atlantic from over a <code>week to less than 3 hours</code>.</p>
+<p>in 1929, gray scale levels for code images went from 5 levels to 15 levels.</p>
+<p>Diverse Appliations of Images:</p>
+<ol>
+<li>Electromagnetic</li>
+<li>Acoustic - Soundwaves to create image</li>
+<li>Ultrasonic - Subset of accoustic. Has a higher frequency than accoustic</li>
+<li>Electronic - Sensors capture images</li>
+<li>Synthetic/Generated - VR, Computer Models, animation</li>
+</ol>
 <h2 id="chapter-1-reading">Chapter 1 Reading</h2>
 <p>Digital Image Processing is important because:</p>
 <ol>
@@ -238,7 +263,9 @@ Other sources of energy include:</p>
 <h4 id="x-ray-imaging">X-Ray Imaging</h4>
 <p>X-rays for medical and industrial imaging are generated via an X-ray tube (vacuum tube w/ cathode and anode) where electrons strike a nucleus, where then X-rays are released.</p>
 <p>Intensity of X-rays are modified by absorption via a film sensitive to X-ray energy.</p>
+<blockquote>
 <p>IMPORTANT: IN DIGITAL RADIOGRAPHY, DIGITAL IMAGES ARE OBTAINED BY USING TWO METHODS</p>
+</blockquote>
 <ol>
 <li>Digitizing X-ray films</li>
 <li>X-rays pass through the patient directly onto devices (phosphor screen)</li>
@@ -273,6 +300,36 @@ Radar will illuminate an area (via micowave pulses) then a radar will use an ant
 </ol>
 <h4 id="components-to-digital-image-processing">Components to Digital Image Processing</h4>
 <h2 id="summary">Summary</h2>
+<p>Image - a 2D function f, that has two coordinates x and y that serves as the <strong>amplitude</strong> for the given coordinates.</p>
+<p>Digital Image - x, y, and intensity values are all <strong>finite and discrete</strong>.
+Analog Image - x, y, and intensity values are <strong>continuous</strong></p>
+<p>Digitation - making digital images as approximations. mapping of continous values to digital.</p>
+<p>Formats of digital images:</p>
+<ol>
+<li>Grayscale - 1 value per pixel that has values from 0-255</li>
+<li>Binary - 1-bit depth; pixel outputs 1 or 0 (0-black, 1-white)</li>
+<li>RGB - 24-bit depth; 8 bits per channel; 3-tuple; 3 values per pixel (r,g,b); each value goes from 0-255; 256 ^ 3 total bits = 16,777,216 possible colors</li>
+<li>RGBA - 48-bit depth; 16 bits per channel; 3-tuple; 4 values per pixel (r,g,b,a); each value goes from 0-65,535; 65,536^3 total bits = 65,536^3 possible colors</li>
+</ol>
+<p>Digital Image Processing - use of algorithms to perform processing on digital images</p>
+<p>Image Size - total number of pixels in an image</p>
+<ul>
+<li>JPEG - lossy compression where file size and quality is lost</li>
+<li>PNG - lossless compression where quality is preserved but file size is bigger than JPEG</li>
+<li>TIFF - lossless compression and uncompressed formats (file size carries)</li>
+</ul>
+<blockquote>
+<p>NOTE: order from least to worst is JPG, PNG, TIFF</p>
+</blockquote>
+<p>The first use of digital image processing <strong>started in the early 1920s&ndash;pictures sent from London to New York.</strong></p>
+<p>Diverse Applications of Images:</p>
+<ol>
+<li>Electro</li>
+<li>Accoustic (sound)</li>
+<li>Ultrasonic (higher freq sound)</li>
+<li>Electronic (sensor)</li>
+<li>Synthetic/Generated (artificial)</li>
+</ol>
 
         </p>
         
@@ -289,7 +346,15 @@ Radar will illuminate an area (via micowave pulses) then a radar will use an ant
   <ul>
     <li>
       <ul>
-        <li><a href="#what-is-digital-image-processing">What is Digital Image Processing?</a></li>
+        <li><a href="#lecture-notes">Lecture Notes</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#what-is-digital-image-processing">What is Digital Image Processing?</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <li><a href="#chapter-1-reading">Chapter 1 Reading</a>
           <ul>
             <li>

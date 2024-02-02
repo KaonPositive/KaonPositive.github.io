@@ -17,26 +17,26 @@
     
 
     
-    <title>cs460</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>CS 460 Notes 01</title>
+    <meta name="description" content="Notes for CS460">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs460, compilers'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/tags/cs460/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs460notes01/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="cs460">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="CS 460 Notes 01">
+    <meta property="og:description" content="Notes for CS460">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="cs460">
-    <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/tags/cs460/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/tags/cs460/">
+    <meta name="twitter:title" content="CS 460 Notes 01">
+    <meta name="twitter:description" content="Notes for CS460">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs460notes01/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs460notes01/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/tags/cs460/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs460notes01/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -156,37 +156,85 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 460 Notes 01</h1>
+        <small role="doc-subtitle">Notes for CS460</small>
+        <p class="post-date">
+            January 24, 2024
+        </p>
 
-    <h1 class="list-title">cs460</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs460">cs460</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/compilers">compilers</a></li>
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <h2 id="lecture-notes-122">Lecture Notes 1/22</h2>
+<p>Rules for a Regular Expression:</p>
+<p>if s &amp; t are regular expressions, then:</p>
+<ol>
+<li>s | t</li>
+<li>s * t (concatenate)</li>
+<li>s*</li>
+</ol>
+<p><strong>( continued from last lecture )</strong>
+NFA for recognizing tokens construct NFAs for each construct of a Regular Expression.</p>
+<p>If all tokens of a language are represented by regular expressions $r_1, r_2, r_3, &hellip; r_n$, then we can create $N(r_1), N(r_2), &hellip; N(r_n)$.</p>
+<p>NFA is classified somewhat as a greedy algorithm. Parse trees are created&ndash;NFA will then pick the best possible path.</p>
+<blockquote>
+<p>NOTE: Look at CS456Notes02 to see how to minimize a DFA.</p>
+</blockquote>
+<h2 id="chapter-2-reading-not-that-important">Chapter 2 Reading (Not That Important)</h2>
+<h2 id="chapter-3-reading">Chapter 3 Reading</h2>
+<p>The lexical analyzer (scanner) reads a stream of characters and outputs a groups of tokens.</p>
+<blockquote>
+<p>NOTE: In most cases, the scanner is the first step of the front end of a compiler.</p>
+</blockquote>
+<p>Attributes of a Token:</p>
+<ol>
+<li>Token Type - Parser is more concerned about how the token is an <strong>identifier</strong> rather than it being a text (<strong>lexeme</strong>).</li>
+<li>Lexeme - In the compiling process, the values of literals and identifers mus tbe accessible.</li>
+<li>Line &amp; Column Numbers of Token&rsquo;s Lexeme - For the sake of error reporting (location of the token within the input would produce meaningful error messages).</li>
+</ol>
+<h2 id="summary">Summary</h2>
 
-    <h2 class="posts-year">2024</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes03/" class="post-link">CS 460 Notes 03</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 31, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes02/" class="post-link">CS 460 Notes 02</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 29, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes01/" class="post-link">CS 460 Notes 01</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 24, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes00/" class="post-link">CS 460 Notes 00</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 17, 2024</span>
-</article>
+        </p>
+        
+    </div>
 
-    
-
+    <div class="prev-next">
+        
+    </div>
 </div>
 
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture-notes-122">Lecture Notes 1/22</a></li>
+        <li><a href="#chapter-2-reading-not-that-important">Chapter 2 Reading (Not That Important)</a></li>
+        <li><a href="#chapter-3-reading">Chapter 3 Reading</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
 
         </main><footer class="footer">
     

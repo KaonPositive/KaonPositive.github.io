@@ -6,14 +6,50 @@
     <description>Recent content in image processing on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 469 Notes 03</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes03/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes03/</guid>
+      <description>Lecture NOTE: QUIZ ON MONDAY FEB 5
+Spatial Operations Set of operations include:
+ Single-pixel Neighborhood Geometric  Difference between intensity transformation and spatial filtering
+ Intensity Transformation - it is point-based&amp;ndash;affects each pixel independently. Spatial Filtering - neighborhood-based&amp;ndash;considers the surrounding pixels.  Intensity transformations is also known as point processing The transformation is independent of locations&amp;ndash;determined only by the intensity values. Intensity transformation can be denoted by the formula: $s = T(r)$ where: s is the transformed; r is the original pixel</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 02</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes02/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes02/</guid>
+      <description>Lecture Notes Images can be represented as:
+ Surface in a 3D space Visual Intensity Array 2D Numerical Array  Representing Digital Images: Consider a continuous image with a function $f(s, t)$ Through sampling and quantization, the digital image will then be $f(x, y)$
+Formula to get the coordinates of the center of the image: $(x_c, y_c) = (floor(M/2), floor(N/2))$
+Two types of different image resolutions:
+  Spatial Resolution (1920 x 1080) - is determined how fine/coarse the image is (ex: low spatial resolution would result in jagged lines; think of pixelated alphabets/sharp images).</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 01</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes01/</link>
+      <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes01/</guid>
+      <description>Lecture Notes Why studying the human eye is important:
+ Mimicking visual processes Image interpretation and design Quality Color Processing Avoiding Artifacts Human-Computer Interaction  Key Components of the Eye:
+ Lens and Muscles - Focuses light onto the retina Retina - Contains photoreceptors cells (rods and cones). It is a light-sensitive layer that is in the back of the eye. Rods and cones are essentially the &amp;lsquo;sensors&amp;rsquo; that receive the light.</description>
+    </item>
+    
     <item>
       <title>CS 469 Notes 00</title>
       <link>https://kaonpositive.github.io/posts/cs469notes00/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs469notes00/</guid>
-      <description>What is Digital Image Processing? Image - a 2D function f(x,y) where x and y represent the coordinates. f would be the amplitude for the given coordinates x and y.
+      <description>Lecture Notes What is Digital Image Processing? Image - a 2D function f(x,y) where x and y represent the coordinates. f would be the amplitude for the given coordinates x and y.
  NOTE: the 2D function f(x,y) (amplitude) is called the intensity/gray level of the image.
  An image is considered a digital image when x, y, and intensity of values are all finite and discrete.
  NOTE: for an analog image: x, y, and intensity of values are continuous.</description>

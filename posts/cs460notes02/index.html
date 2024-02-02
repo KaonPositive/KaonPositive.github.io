@@ -17,26 +17,26 @@
     
 
     
-    <title>cs460</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>CS 460 Notes 02</title>
+    <meta name="description" content="Notes for CS460">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs460, compilers'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/tags/cs460/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs460notes02/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="cs460">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="CS 460 Notes 02">
+    <meta property="og:description" content="Notes for CS460">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="cs460">
-    <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/tags/cs460/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/tags/cs460/">
+    <meta name="twitter:title" content="CS 460 Notes 02">
+    <meta name="twitter:description" content="Notes for CS460">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs460notes02/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs460notes02/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/tags/cs460/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs460notes02/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -156,37 +156,131 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 460 Notes 02</h1>
+        <small role="doc-subtitle">Notes for CS460</small>
+        <p class="post-date">
+            January 29, 2024
+        </p>
 
-    <h1 class="list-title">cs460</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs460">cs460</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/compilers">compilers</a></li>
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <h2 id="lecture-notes">Lecture Notes</h2>
+<p><strong>RECALL:</strong> A Parser&rsquo;s job is to make sure if the program is syntactically correct.</p>
+<p>Types of Parsers:</p>
+<ol>
+<li>LL(k) - First L says to scan from Left to Right; Second L says to use left-most derivation (always develop the left-most non-terminal in a sentential form).</li>
+</ol>
+<blockquote>
+<p>NOTE: A good thing about a LL(k) parser is that it is linear&ndash;there is no backtracking.</p>
+</blockquote>
+<ol start="2">
+<li>LR(k) - First L says to scan from Left to Right; Second R says to use <strong>reverse</strong> right-most derivation (start w/ input string, find appropriate grammar rule, then start at the right).</li>
+</ol>
+<blockquote>
+<p>NOTE: The k represents the number of tokens.</p>
+</blockquote>
+<p>Example:
+$a^<em>b^</em>$</p>
+<p>$L(a^<em>b^</em>)$ = {$\epsilon, a, b, aa, ab, bb, aaa, aab, abb, bbb, &hellip;$}
+S -&gt; A
+A -&gt; aA | B
+B -&gt; bB | $\epsilon$</p>
+<p>A string w $\in$ $L(a^<em>b^</em>)$ &lt;=&gt; $S-&gt;^* w$</p>
+<p>Let&rsquo;s try $w = aabb$</p>
+<p>$S-&gt;<em>{LM} A-&gt;</em>{LM} aA -&gt;<em>{LM} aaA -&gt;</em>{LM}aaB -&gt;<em>{LM}aabB -&gt;</em>{LM}aabbB -&gt;_{LM}aabb$</p>
+<p><strong>A Question to Consider:</strong>
+What if B could generate strings starting w/ a?
+S -&gt; A
+A -&gt; aA | B
+B -&gt; bB | a | $\epsilon$</p>
+<blockquote>
+<p>NOTE: The above cannot perform with just 1 lookahead.</p>
+</blockquote>
+<p>w = aabb (w/ just 1 lookahead)</p>
+<p><strong>In general:</strong>
+A -&gt; $\alpha_1 | \alpha_2$</p>
+<p>A is <strong>not</strong> LL(1) if:
+$\exist w_1 \in L(\alpha_1)$ ^
+$\exist w_2 \in L(\alpha_2)$ ^
+.
+.
+.
+$w_1 = aw_1'$ ^
+$w_2 = aw_2'$ ^</p>
+<p><strong>Define:</strong> a set representing tokens that a sentential form can start with: Call it FIRST(.)</p>
+<p>$\epsilon: FIRST(\epsilon) = {\epsilon}$
+$a \in \sum: FIRST(a) = {a}$
+a mixed string $Y_1, Y_2, &hellip; Y_n$
+$FIRST(Y_1, Y_2, &hellip;) \subset FIRST(Y_1) / {\epsilon}$</p>
+<p>if $\epsilon\epsilon FIRST(Y_1):$
+$Y_1, Y_2, &hellip; Y_n -&gt;^* Y_2 &hellip; Y_n$
+$Y_1 -&gt;^* \epsilon $</p>
+<p>if $\epsilon\epsilon FIRST(Y_1):$
+$FIRST(Y_1 &hellip; Y_n) \subset FIRST(Y_2) / {\epsilon}$</p>
+<p>.
+.
+.
+if all $Y_i$ have $\epsilon$ in their FIRST sets, then add $\epsilon$ to $FIRST(Y_1 &hellip; Y_n)$</p>
+<blockquote>
+<p>NOTE: LOOK AT PICTURE FOR EXAMPLE 4.3. ALSO LOOK AT CHAPTER 4</p>
+</blockquote>
+<p>In more general..
+$A -&gt; \alpha_1 | \alpha_2 | &hellip; | \alpha_n$</p>
+<p>if $\exist i,j: i != j : FIRST( \alpha_i ) INTERSECT FIRST(\alpha_j) != \empty -&gt; NOT LL(1)$</p>
+<p>In most general&hellip;
+$A_1 -&gt; \alpha_{11} | &hellip; | \alpha_{1n_1}$
+.
+.
+.
+$A_m -&gt; \alpha_{m1} | &hellip; | \alpha_{mn_m}$</p>
+<p>Pick a non-terminal:
+$\forall i : 1 \leq i \leq m: $
+Pick 2 RHS of $A_i$
+$\forall j,k: 1 \leq j &lt; k \leq n_i$</p>
+<h2 id="reading">Reading</h2>
+<h2 id="summary">Summary</h2>
 
-    <h2 class="posts-year">2024</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes03/" class="post-link">CS 460 Notes 03</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 31, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes02/" class="post-link">CS 460 Notes 02</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 29, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes01/" class="post-link">CS 460 Notes 01</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 24, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes00/" class="post-link">CS 460 Notes 00</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 17, 2024</span>
-</article>
+        </p>
+        
+    </div>
 
-    
-
+    <div class="prev-next">
+        
+    </div>
 </div>
 
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture-notes">Lecture Notes</a></li>
+        <li><a href="#reading">Reading</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
 
         </main><footer class="footer">
     

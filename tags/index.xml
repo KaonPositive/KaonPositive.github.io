@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>compilers</title>
       <link>https://kaonpositive.github.io/tags/compilers/</link>
-      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/tags/compilers/</guid>
       <description></description>
@@ -19,7 +19,7 @@
     <item>
       <title>cs460</title>
       <link>https://kaonpositive.github.io/tags/cs460/</link>
-      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/tags/cs460/</guid>
       <description></description>
@@ -28,7 +28,7 @@
     <item>
       <title>cs469</title>
       <link>https://kaonpositive.github.io/tags/cs469/</link>
-      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/tags/cs469/</guid>
       <description></description>
@@ -37,7 +37,7 @@
     <item>
       <title>image processing</title>
       <link>https://kaonpositive.github.io/tags/image-processing/</link>
-      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/tags/image-processing/</guid>
       <description></description>
@@ -46,9 +46,18 @@
     <item>
       <title>notes</title>
       <link>https://kaonpositive.github.io/tags/notes/</link>
-      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://kaonpositive.github.io/tags/java/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/tags/java/</guid>
       <description></description>
     </item>
     

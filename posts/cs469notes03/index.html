@@ -17,26 +17,26 @@
     
 
     
-    <title>cs460</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>CS 469 Notes 03</title>
+    <meta name="description" content="Notes for CS469 1/31/24">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs469, image processing'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/tags/cs460/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs469notes03/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="cs460">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="CS 469 Notes 03">
+    <meta property="og:description" content="Notes for CS469 1/31/24">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="cs460">
-    <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/tags/cs460/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/tags/cs460/">
+    <meta name="twitter:title" content="CS 469 Notes 03">
+    <meta name="twitter:description" content="Notes for CS469 1/31/24">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs469notes03/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs469notes03/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/tags/cs460/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs469notes03/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -156,37 +156,90 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 469 Notes 03</h1>
+        <small role="doc-subtitle">Notes for CS469 1/31/24</small>
+        <p class="post-date">
+            January 31, 2024
+        </p>
 
-    <h1 class="list-title">cs460</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs469">cs469</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/image-processing">image processing</a></li>
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <h2 id="lecture">Lecture</h2>
+<p><strong>NOTE: QUIZ ON MONDAY FEB 5</strong></p>
+<h4 id="spatial-operations">Spatial Operations</h4>
+<p>Set of operations include:</p>
+<ol>
+<li>Single-pixel</li>
+<li>Neighborhood</li>
+<li>Geometric</li>
+</ol>
+<p><strong>Difference between intensity transformation and spatial filtering</strong></p>
+<ul>
+<li>Intensity Transformation - it is point-based&ndash;affects each pixel independently.</li>
+<li>Spatial Filtering - neighborhood-based&ndash;considers the surrounding pixels.</li>
+</ul>
+<p>Intensity transformations is also known as point processing
+The transformation is independent of locations&ndash;determined only by the intensity values.
+Intensity transformation can be denoted by the formula:
+$s = T(r)$
+where: s is the transformed; r is the original pixel</p>
+<p>In terms of thresholding in intensity transformations, if a pixel&rsquo;s value is at a certain range, then it is assigned to a certain value.
+For example: if a pixel is less than 127, then automatically assign it to 0; otherwise assign it with a value of 255.</p>
+<p>Log transformations:
+$s = clog(1+r)$
+Log transformations are useful for enhancing (stretching) dark areas.</p>
+<h2 id="reading">Reading</h2>
+<h2 id="summary">Summary</h2>
 
-    <h2 class="posts-year">2024</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes03/" class="post-link">CS 460 Notes 03</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 31, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes02/" class="post-link">CS 460 Notes 02</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 29, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes01/" class="post-link">CS 460 Notes 01</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 24, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460notes00/" class="post-link">CS 460 Notes 00</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 17, 2024</span>
-</article>
+        </p>
+        
+    </div>
 
-    
-
+    <div class="prev-next">
+        
+    </div>
 </div>
 
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture">Lecture</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#spatial-operations">Spatial Operations</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#reading">Reading</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
 
         </main><footer class="footer">
     

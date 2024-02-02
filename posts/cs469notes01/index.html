@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>CS 469 Notes 01</title>
+    <meta name="description" content="Notes for CS469 1/22/24">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs469, image processing'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs469notes01/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CS 469 Notes 01">
+    <meta property="og:description" content="Notes for CS469 1/22/24">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS 469 Notes 01">
+    <meta name="twitter:description" content="Notes for CS469 1/22/24">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs469notes01/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs469notes01/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs469notes01/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 469 Notes 01</h1>
+        <small role="doc-subtitle">Notes for CS469 1/22/24</small>
+        <p class="post-date">
+            January 22, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs469">cs469</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/image-processing">image processing</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="lecture-notes">Lecture Notes</h2>
+<p>Why studying the human eye is important:</p>
+<ol>
+<li>Mimicking visual processes</li>
+<li>Image interpretation and design</li>
+<li>Quality</li>
+<li>Color Processing</li>
+<li>Avoiding Artifacts</li>
+<li>Human-Computer Interaction</li>
+</ol>
+<p>Key Components of the Eye:</p>
+<ol>
+<li>Lens and Muscles - Focuses light onto the retina</li>
+<li>Retina - Contains photoreceptors cells (rods and cones). It is a light-sensitive layer that is in the back of the eye. Rods and cones are essentially the &lsquo;sensors&rsquo; that receive the light.</li>
+</ol>
+<blockquote>
+<p>NOTE: The iris is the main reason as to why we see the types of colors in light.</p>
+</blockquote>
+<ul>
+<li>Cones - it is responsible for color <strong>vision</strong>.</li>
+<li>Rods - aids to see in the dark/dim environment (<strong>scotopic vision</strong>). They do not perceieve color.</li>
+<li>Fovea - focuses on the main object. surrounding environment of the object is blurred out.</li>
+</ul>
+<p>Photopic Vision - aids to see in a very bright environment.</p>
+<h4 id="what-is-needed-for-image-acquision">What is needed for Image Acquision?</h4>
+<ol>
+<li>Illumination (light) Source</li>
+<li>A scene</li>
+<li>Imaging System</li>
+<li>Projection of the scene onto the image plane</li>
+<li>A digitized image</li>
+</ol>
+<h4 id="process-of-image-sensing">Process of Image Sensing</h4>
+<ol>
+<li>Sensors capture the scene&rsquo;s visual information</li>
+<li>Sensor absorbs light energy. Sensor then creates electrical charges.</li>
+<li>Sensor then converts the charges into a voltage signal.</li>
+<li>Voltage is then converted into digital data through a Analog-to-Digital Converter (ADC)</li>
+</ol>
+<blockquote>
+<p>NOTE: IMPORTANT TO REMEMBER!!!</p>
+</blockquote>
+<h4 id="components-of-image-formation-function">Components of Image Formation Function</h4>
+<ol>
+<li>Illumination - represents the amount of light on the scene</li>
+<li>Reflection - represents the illumination that objects reflect.</li>
+</ol>
+<p>Formula: $f(x,y) = i(x,y) * r(x,y)$</p>
+<p>Converting Analog to Digital:
+Analog Image -&gt; Sampling(x,y) -&gt; Quantization(f) -&gt; Digital Image</p>
+<blockquote>
+<p>NOTE: Sampling converts a contunous image into a discrete medium. Quantization is the mapping of continuous pixel values into a finite value (quantization is also known as the <strong>gray/intensity level</strong>).</p>
+</blockquote>
+<p>As in the name, when in the sampling stage, several samples are taken from the image to get their intensity. These samples will then be mapped/represented on a grid to convert it into a digital image.</p>
+<blockquote>
+<p>NOTE: The more samples that you get in an image, the better the quality of the digital image will be.</p>
+</blockquote>
+<h2 id="reading">Reading</h2>
+<p>The front of the iris contains <strong>visible pigment</strong> of the eye; back contains a <strong>black pigment</strong></p>
+<p>Whenever the eye is fixed on focusing onto an object, the light from the object would be imaged on the retina.</p>
+<p>A retina has receptors, and there are two types of receptors:</p>
+<ol>
+<li>cones</li>
+<li>rods</li>
+</ol>
+<p><strong>fovea</strong> - the central portion of the retina. is sensitive to color</p>
+<p><strong>Photopic</strong>/bright-light vision - aids vision in bright environment (is called cone vision)</p>
+<p><strong>Scotopic</strong>/dim-light vision - aids vision in dim/dark environments. lack of stimulation of rods&ndash;which results having objects to appear colorless.</p>
+<p>Perceived brightness is perceived by two phenomena:</p>
+<ol>
+<li>Visual system undershoots or overshoots around the boundary of regions of different intensities levels.</li>
+<li>Simultaneous contract (region&rsquo;s perceived brightness does not depend ONLY on its itensity.). Surrounding areas of an object is what perceives the brightness.</li>
+</ol>
+<p>Colors perceived in an object is determined of how the object reflects the light.</p>
+<p>Monochromatic (achromatic) light - light that is void of color. Colors include blac, white, and gray.</p>
+<p>Chromatic light - spans the electromagnetic energy spectrum.
+Four quantities to describe chromatic light:</p>
+<ol>
+<li>radiance - total amount of energy that flows from the light source</li>
+<li>luminance - measure of amount of energy an observer perceives from a light source</li>
+<li>brightness - descriptor of light perception. embodies the achromatic notion of intensity</li>
+</ol>
+<p>The term &lsquo;gray level&rsquo; denotes the monochromatic intensity.</p>
+<p>Image Sensing Process:</p>
+<ol>
+<li>Incoming energy is transformed into voltage via combo of input electrical power and sensor material that is responsive to the type of energy being detected.</li>
+<li>Output voltage waveform is the response of the sensor; digital quantity is obtained by digitizing that response</li>
+</ol>
+<h4 id="image-formation-model">Image Formation Model</h4>
+<p>Images are denoted by two-dimensional functions of the form f(x,y)</p>
+<p>Spatial coordinaes (x,y) is a scalar quantity. The physical meaning is determined by the source of the image, and whose values are proportional to energy radiated by a physical source.</p>
+<p>Function f(x,y) is characterized by two components:</p>
+<ol>
+<li>illumination - amount of source illumination denoted by i(x,y)</li>
+<li>reflectance - amount of illumination reflected by the objects in the scene denoted by r(x,y)</li>
+</ol>
+<p>The two components combine as a product to form f(x,y).</p>
+<p>f(x,y) = i(x,y)r(x,y) where:
+$0 \leq i(x,y) &lt; \infty $ and $ 0 \leq r(x,y) \leq 1$</p>
+<blockquote>
+<p>NOTE: Reflectance is bounded by 0 (total absorption) and 1 (total reflectance)</p>
+</blockquote>
+<h4 id="image-sampling-and-quantization">Image Sampling and Quantization</h4>
+<p>To created a digital image, we need to convert the continuous sensed data into a digital format, and it requires two processes:</p>
+<ol>
+<li>sampling</li>
+<li>quantization</li>
+</ol>
+<p>Before digitizing an image, an image may be continuous w/ respect to the x and y coordinates, as well as in amplitude.</p>
+<p>To digitize an image, the function $f$ must be sampled in both coordinates as well as in amplitude.</p>
+<blockquote>
+<p>NOTE: Digitizing the coordinate values is called sampling. Digitizing the amplitude is called quantization</p>
+</blockquote>
+<h2 id="summary">Summary</h2>
+<p>Components of the eye:</p>
+<ol>
+<li>Lens and Muscles - Focuses light onto the retina</li>
+<li>Retina - Light-sensitive layer that is at the back of the eye, and it has two types of receptors: cones and rods</li>
+</ol>
+<blockquote>
+<p>NOTE: a receptor contains photoreceptor cells</p>
+</blockquote>
+<ul>
+<li>Cones - is in the Fovea and is responsible for color vision&ndash;aids to see in bright environment (<strong>photopic vision</strong>).</li>
+<li>Rods - aids to see in dark/dim environment (<strong>scotopic vision</strong>). DOES NOT perceive color. very sensitive to light</li>
+<li>Fovera - focuses on the main object&ndash;surrounding environment is blurred</li>
+</ul>
+<h4 id="how-the-eye-perceives-objects-steps">How the eye perceives objects (steps)</h4>
+<ol>
+<li>object reflects the light&ndash;light enters cornea (transparent front layer) and passes thru the lens.</li>
+<li>lens bends the light to focus on object. ciliary muscles adjust lens' curvature for focus. lens' convex shape flips the image of object upside down and is reversed left to right while it is projected onto the retina</li>
+<li>retina reads inverted image; cones grab color and detail of the object; rods get the shape of object</li>
+<li>photoreceptors convert light into electrical signals. signals are sent to the brain thru optic nerve.</li>
+<li>brain reads and reorients image, perceiving object right side up. processing of object in various brain regions leads to recognition and interpretation of object features</li>
+</ol>
+<h4 id="process-of-image-sensing-1">Process of Image Sensing</h4>
+<ol>
+<li>Sensors expose to light to cpature scene&rsquo;s visual info.</li>
+<li>Sensor elements absorb light, creating electrical charges</li>
+<li>Sensor converts charges into a voltage signal</li>
+<li>Voltage converts digital data via Analog-to-Digitcal Converter (ADC)</li>
+</ol>
+<h4 id="image-formation-model-in-dip">Image Formation Model in DIP</h4>
+<p>There are two components to the image formation function:</p>
+<ol>
+<li>Illumination (i) - amount of source illumination; ranges from 0 (no light) to inf (very bright light)</li>
+<li>Reflection (r) - amount of illumination reflected by objects in scene; ranges from 0 (complete absorption) to 1 (full reflection)</li>
+</ol>
+<p>The two components form the <strong>image formation equation:</strong>
+$f(x,y) = i(x,y) * r(x,y)$</p>
+<p>Digitizing requires two processes:</p>
+<ol>
+<li>sampling</li>
+<li>quantization</li>
+</ol>
+<blockquote>
+<p>NOTE: before digitizing an image, an image is continuous in x, y, and amplitude values.</p>
+</blockquote>
+<p>Digitizing an image requires the function $f$ to be sampled in both coordinates, as well as the values.
+TLDR; basically mapping continuous values to discrete values</p>
+<p>Analog -&gt; Sampling -&gt; QUantization -&gt; Digital Image</p>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture-notes">Lecture Notes</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#what-is-needed-for-image-acquision">What is needed for Image Acquision?</a></li>
+                <li><a href="#process-of-image-sensing">Process of Image Sensing</a></li>
+                <li><a href="#components-of-image-formation-function">Components of Image Formation Function</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#reading">Reading</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#image-formation-model">Image Formation Model</a></li>
+                <li><a href="#image-sampling-and-quantization">Image Sampling and Quantization</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#summary">Summary</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#how-the-eye-perceives-objects-steps">How the eye perceives objects (steps)</a></li>
+                <li><a href="#process-of-image-sensing-1">Process of Image Sensing</a></li>
+                <li><a href="#image-formation-model-in-dip">Image Formation Model in DIP</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

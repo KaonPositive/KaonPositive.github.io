@@ -177,7 +177,51 @@
 
     <div class="post-content">
         <p>
-            <h2 id="chapter-1-reading">Chapter 1 Reading</h2>
+            <h2 id="lecture-notes-122">Lecture Notes 1/22</h2>
+<h4 id="chapter-1">Chapter 1</h4>
+<p>Syntax - rules for what a syntactically program looks like ( the structure of the language is correct )</p>
+<p>Semantics - meaning of the program</p>
+<p>In terms of a compiler, the compiler would output the target code. That target code.</p>
+<p>Frontend - syntax checking, semantic checking</p>
+<p>Backend - create target program (code generation) and optimization</p>
+<p>Frontend -&gt; i (intermediate code or parse tree) -&gt; Backend</p>
+<p>Lexical Analysis - chop inputs into tokens</p>
+<p>Semantic Analysis - type checking, declaration checking</p>
+<p>Intermediate Code - Immediate Code generation</p>
+<h4 id="chapter-3">Chapter 3</h4>
+<p>Lexical Analysis/Scanner - Stream of characters are converted into a stream of tokens.</p>
+<p>Steps for Lexical Analysis:</p>
+<ol>
+<li>Find all terminals in the grammar (categorize these tokens into their respective lexeme)</li>
+<li>Write scanner</li>
+</ol>
+<p>Chomsky Hierarchy:</p>
+<ol>
+<li>Regular Expressions - recognized by NFA/DFA</li>
+<li>Context-Free Grammar - recognized by PDA</li>
+<li>Context Sensitive -</li>
+<li>Unrestricted - Turing Machine</li>
+</ol>
+<p>Both regular expressions and context-free grammar have:</p>
+<ol>
+<li>non terminals on the left</li>
+<li>any combination of terminals on the right.</li>
+</ol>
+<p>Examples:
+s -&gt; x
+x -&gt; axb | d
+// is not regular since it is a^ndb^n</p>
+<p>s-&gt; x
+x -&gt; ax | b
+// is regular since a*b</p>
+<p>s -&gt; x
+x -&gt; ay | $\epsilon$
+y -&gt; bx
+// is not regular
+s -&gt; ay -&gt; abx -&gt; abay -&gt; .. (ab)*</p>
+<p>If we&rsquo;re writing the scanner, we must consider token types to use either NFA/DFA or PDA. ??</p>
+<p>; , + &laquo; for while are its own regular expresions.</p>
+<h2 id="chapter-1-reading">Chapter 1 Reading</h2>
 <p>Syntax - <code>Set of rules</code> that describe how symbols can be combined to form a <code>correctly</code> structured program.</p>
 <blockquote>
 <p>NOTE: In most cases, syntatic rules for a programming language are described using a context-free grammar written in Backus-Nauer Form</p>
@@ -215,7 +259,7 @@
 <li><em><strong>Code Generator</strong></em> -</li>
 <li><em><strong>Target Program (final)</strong></em></li>
 </ol>
-<h4 id="single-vs-multi-ass-compilers">Single vs. Multi-ass Compilers</h4>
+<h4 id="single-vs-multi-pass-compilers">Single vs. Multi-pass Compilers</h4>
 <p>Number of parse tree traversals is proportional to its runtime.</p>
 <blockquote>
 <p>NOTE: Less fewer passes through a parse tree = harder to read and maintain.</p>
@@ -298,6 +342,23 @@ Type Checking at compile time is only possible for <code>statically typed langua
 <p>NOTE: One may favor an interpreter over a compiler is portability&ndash;an interpreted language can be evaluated on any machine that has an interpreter.</p>
 </blockquote>
 <h2 id="summary">Summary</h2>
+<p><em><strong>Syntax</strong></em> is a set of rules that form a correctly structured program.</p>
+<p><em><strong>Semantics</strong></em> is the meaning of a syntactically correct program.</p>
+<p>A <em><strong>compiler</strong></em> inputs the source program, then produces machine/target code.</p>
+<p>An <em><strong>interpreter</strong></em> inputs the source program, then interprets</p>
+<p>A <em><strong>token</strong></em> consists of one or more characters and is a label that assigns a lexeme its meaning (think of verbs, nouns, adjectives, etc. in a english sentence).</p>
+<p>A <em><strong>lexeme</strong></em> is the representation of individual words (think of car as a noun, run as a verb, nice as an adjective, etc. ).</p>
+<p>The <em><strong>front end</strong></em> consists of three parts: <em><strong>Lexical analysis, Syntax analysis, and Semantic analysis</strong></em>.</p>
+<p>The <em><strong>back end</strong></em> consists of the <em><strong>code generator and target code optimization</strong></em>.</p>
+<p><strong>Phases to a Compiler:</strong></p>
+<ol>
+<li><strong>Lexical Analysis (Scanner)</strong> - Converts stream of characters into tokens.</li>
+<li><strong>Syntax Analysis (Parser)</strong> - Determines the structure of the program (validifies if grammar is correct or not). Outputs a parse/syntax tree.</li>
+<li><strong>Semantic Analysis</strong> - Makes sure that the program follows the rule of the programming language so that it can execute correctly.</li>
+<li><strong>Intermediate Code</strong> - Code that is between source and object code. It is machine dependent&ndash;it can run on any machine.</li>
+<li><strong>Optimizer</strong> -</li>
+<li><strong>Code Generator</strong> - Takes intermediate code and generates code for the target machine.</li>
+</ol>
 
         </p>
         
@@ -314,13 +375,23 @@ Type Checking at compile time is only possible for <code>statically typed langua
   <ul>
     <li>
       <ul>
+        <li><a href="#lecture-notes-122">Lecture Notes 1/22</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#chapter-1">Chapter 1</a></li>
+                <li><a href="#chapter-3">Chapter 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <li><a href="#chapter-1-reading">Chapter 1 Reading</a>
           <ul>
             <li>
               <ul>
                 <li><a href="#compiling-and-interpreting">Compiling and Interpreting</a></li>
                 <li><a href="#stages-of-a-compiler">Stages of a Compiler</a></li>
-                <li><a href="#single-vs-multi-ass-compilers">Single vs. Multi-ass Compilers</a></li>
+                <li><a href="#single-vs-multi-pass-compilers">Single vs. Multi-pass Compilers</a></li>
                 <li><a href="#frontend">Frontend</a></li>
                 <li><a href="#middle-end">Middle End</a></li>
                 <li><a href="#backend">Backend</a></li>
