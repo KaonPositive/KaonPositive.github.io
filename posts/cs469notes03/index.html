@@ -203,6 +203,31 @@ $s = clog(1+r)$
 Log transformations are useful for enhancing (stretching) dark areas.</p>
 <h2 id="reading">Reading</h2>
 <h2 id="summary">Summary</h2>
+<h4 id="set-operations">Set Operations</h4>
+<p>A grayscale image is represented as:
+$A^c = {(x, y, K-z) | (x, y, z) \in A}$ where K is the maximum intensity values in an image.</p>
+<blockquote>
+<p>EXAMPLE: In an 8-bit image, K would be K = 255</p>
+</blockquote>
+<h4 id="spatial-operations-1">Spatial Operations</h4>
+<p>The use of spatial operations are performed directly on the pixels of an image. Spatial Operations are branched into 3 categories:</p>
+<ol>
+<li>Single-pixel (Intensity transformation) - Also known as point processing, is the most simplest operation. Alters <strong>intensity</strong> of individual pixels using a transformation function $T$ in the form:
+$s = T(z)$ where z is the intensity of a pixel in the original image and s is the mapped intensity of the corresponding pixel in the processed image.</li>
+</ol>
+<blockquote>
+<p>NOTE: Intensity transformation uses a Look-Up Table to define the transformation function T(*) for specific intensity adjustments. Ex: if a pixel&rsquo;s value is at a certain range, then it is assigned to a certain value.</p>
+</blockquote>
+<ol start="2">
+<li>Neighborhood (Spatial Filtering) - Generates a corresponding pixel by analyzing each pixel by considering the values of nearby pixels.</li>
+<li>Geometric - Modifies the spatial arrangement of pixels in an image.</li>
+</ol>
+<h4 id="log-transformations">Log Transformations</h4>
+<p>It is a non-linear (line curves), transformation function that is in the formula:
+$S = clog(1+r)$ where c is the scaling parameter.</p>
+<blockquote>
+<p>NOTE: Log transformations are useful in the sense that it enhances (stretches) the dark areas.</p>
+</blockquote>
 
         </p>
         
@@ -229,7 +254,17 @@ Log transformations are useful for enhancing (stretching) dark areas.</p>
           </ul>
         </li>
         <li><a href="#reading">Reading</a></li>
-        <li><a href="#summary">Summary</a></li>
+        <li><a href="#summary">Summary</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#set-operations">Set Operations</a></li>
+                <li><a href="#spatial-operations-1">Spatial Operations</a></li>
+                <li><a href="#log-transformations">Log Transformations</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

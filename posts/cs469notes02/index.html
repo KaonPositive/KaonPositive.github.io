@@ -232,8 +232,11 @@ $(x_c, y_c) = (floor(M/2), floor(N/2))$</p>
 <p>Two Types of image resolutions:</p>
 <ol>
 <li>Spatial Resolution - Depends on the number of samples; is sensitive to shape variation.</li>
-<li>Intensity Resolution - Depends on the number of bits; is sensitive to lighting variations.</li>
+<li>Intensity Resolution - Depends on the number of bits; is sensitive to lighting variations. The greater the intensity levels, the finer the image is.</li>
 </ol>
+<blockquote>
+<p>NOTE: Intensity level is determined 2^{num of bits}</p>
+</blockquote>
 <p>Saturation describes the intensity level of an image.</p>
 <p>Noise is the variation of brightness or color in images. Produces grainy texture.</p>
 <p>You must consider 5 factors when picking a resolution of an image:</p>
@@ -247,16 +250,27 @@ $(x_c, y_c) = (floor(M/2), floor(N/2))$</p>
 <p>The Neighbors of a Pixel is useful for edge detection and other applications.
 There are <strong>three</strong> adjacency types:</p>
 <ol>
-<li>4-adjacency -</li>
-<li>8-adjacency -</li>
-<li>m-adjacency -</li>
+<li>4-adjacency - A pixel $p$ at coordinates $(x,y)$ that has two horizontal and two vertical neighbors w/ coordinates
+$(x+1, y), (x-1, y), (x, y+1), (x, y-1)$</li>
+<li>8-adjacency - A pixel $p$ at coordinates $(x, y)$ that has four neighbors + the other 4 neighbors in the <strong>4-adjacency neighbors</strong>
+$(x+1, y+1), (x+1, y-1), (x-1, y+1), (x-1, y-1)$</li>
+<li>m-adjacency (mixed adjacency) -</li>
 </ol>
+<blockquote>
+<p>NOTE: first two are the main important ones.</p>
+</blockquote>
 <p>Distance Measures are used to <strong>measure the distance between pixel coordinates in an image.</strong> There are <strong>three</strong> distance measured used for image processing:</p>
 <ol>
-<li>Euclidean - Straight Line</li>
-<li>City-Block - Diamond-centered shape</li>
-<li>ChessBoard - Square-centered shape</li>
+<li>Euclidean - Straight Line
+$D(p, q) = \sqrt{(x-u)^2 + (y-v)^2}$ where p and q represent a pixel.</li>
+<li>City-Block - Diamond-centered shape
+$D(p, q) = |x - u| + |y - v|$</li>
+<li>ChessBoard - Square-centered shape
+$D(p, q) = max(|x-u|, |y-v|)$</li>
 </ol>
+<blockquote>
+<p>NOTE: picking the appropriate distance is important since the distance could affect the outcome of image processing algorithms.</p>
+</blockquote>
 
         </p>
         
