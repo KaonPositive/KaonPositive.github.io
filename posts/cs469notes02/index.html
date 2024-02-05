@@ -218,12 +218,45 @@ The 4-neighborhood of pixel p(x,y) is the set:
 <p>The use of distance measures are used to measure the distance between pixel coordinates in an image.</p>
 <p>Three common distance measures:</p>
 <ol>
-<li>Euclidean - straight line distance</li>
-<li>City-Block (Manhattan Distance) - creates a diamond-shape distance measure.</li>
-<li>Chessboard -</li>
+<li>Euclidean - straight line distance
+$ D(p,q) = \sqrt((x-u)^2 + (y-v)^2 )$</li>
+<li>City-Block (Manhattan Distance) - creates a diamond-shape distance measure.
+$ D(p, q) = |x - u| + |y - v|$</li>
+<li>Chessboard - creates a squared-shape distance measure.
+$ D(p, q) = max(|x-u|, |y-v|)$</li>
 </ol>
 <h2 id="readings">Readings</h2>
 <h2 id="summary">Summary</h2>
+<p>Formula to get center of image:
+$(x_c, y_c) = (floor(M/2), floor(N/2))$</p>
+<p>Two Types of image resolutions:</p>
+<ol>
+<li>Spatial Resolution - Depends on the number of samples; is sensitive to shape variation.</li>
+<li>Intensity Resolution - Depends on the number of bits; is sensitive to lighting variations.</li>
+</ol>
+<p>Saturation describes the intensity level of an image.</p>
+<p>Noise is the variation of brightness or color in images. Produces grainy texture.</p>
+<p>You must consider 5 factors when picking a resolution of an image:</p>
+<ol>
+<li>Intended Use</li>
+<li>Viewing Conditions</li>
+<li>Display/Output Device Capabilities</li>
+<li>File Size and Storage</li>
+<li>Image Content</li>
+</ol>
+<p>The Neighbors of a Pixel is useful for edge detection and other applications.
+There are <strong>three</strong> adjacency types:</p>
+<ol>
+<li>4-adjacency -</li>
+<li>8-adjacency -</li>
+<li>m-adjacency -</li>
+</ol>
+<p>Distance Measures are used to <strong>measure the distance between pixel coordinates in an image.</strong> There are <strong>three</strong> distance measured used for image processing:</p>
+<ol>
+<li>Euclidean - Straight Line</li>
+<li>City-Block - Diamond-centered shape</li>
+<li>ChessBoard - Square-centered shape</li>
+</ol>
 
         </p>
         
