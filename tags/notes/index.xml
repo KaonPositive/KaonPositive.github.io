@@ -6,7 +6,37 @@
     <description>Recent content in notes on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 301 Notes 02</title>
+      <link>https://kaonpositive.github.io/posts/cs301notes02/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs301notes02/</guid>
+      <description>Readings 911 Swatting, VoIP, and Doxxing What is the definition of 911 swatting given in the article?  malicious act that involves making fraudulent 911 calls to cause emergency response teams, such as law enfrocement special weapons and tactic teams, or SWAT teams, to react forcefully to a nonexistent public threat.  The article gives 7 examples of 911 swatting. List 3 of them:  celebrity swatting directed against public figures gamer swatting directed against adversaries in online gaming environments hate swatting and mean-spirited attacks motivated by bigotry, racism, homophobia, and personal animosity  What is the definition of &amp;lsquo;criminal doxing&amp;rsquo; given in the article?</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 04</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes04/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes04/</guid>
+      <description>Lecture NOTE: For the log function, the reason as to why we are adding 1 to r is due to the fact that if log(0), then it would be undefined.
+Power Law (Gamma) Transformation Formula is: $ s = cr^\gamma $ or $ s = c(r + \epsilon)^\gamma$ for $c &amp;gt; 0$ and $\gamma &amp;gt; 0$ and s and r are scaled to $[0, 1]$
+Conditions to consider:
+ If $\gamma &amp;lt; 1$: Enhance dark areas If $\gamma &amp;gt; 1$: Enhance bright areas If $\gamma = c = 1$: Identity transformation  Application that use Power Law (Gamma) Transformation</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 05</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes05/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes05/</guid>
+      <description>Lecture  Reading Summary </description>
+    </item>
+    
     <item>
       <title>CS 460 Notes 03</title>
       <link>https://kaonpositive.github.io/posts/cs460notes03/</link>
@@ -84,10 +114,7 @@ NFA is classified somewhat as a greedy algorithm.</description>
       <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs301notes00/</guid>
-      <description>Lecture Notes In the context of social media, self selection is one of many problematic issues.
-Readings Fatal Flaws in ChatAI as a Content Generator List 3 speculations that AIChat why AIChat is valuable in specific areas.
- Fails to advance interactive technology much beyond the more pedestrian goals of content generation. HyperLinks   One area in which AIChat is least likely to have much to offer? *
-An alternative phrase that the author uses for authomated content generation?</description>
+      <description>Readings Fatal Flaws in ChatAI as a Content Generator The author speculates that AIChat may likely be very valueable in several areas. List 3  Database query support languages Repurposing codebases Natural language translation  What is the one area in which AIChat is least likely to have much to offer?  automated content generation  What is the alternative phrase that the author uses for authomated content generation?  bloviation generation  Two major characteristics define the World Wide Web?</description>
     </item>
     
     <item>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>CS 469 Notes 04</title>
+    <meta name="description" content="Notes for CS469 2/5/24">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs469, image processing'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs469notes04/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CS 469 Notes 04">
+    <meta property="og:description" content="Notes for CS469 2/5/24">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS 469 Notes 04">
+    <meta name="twitter:description" content="Notes for CS469 2/5/24">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs469notes04/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs469notes04/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs469notes04/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 469 Notes 04</h1>
+        <small role="doc-subtitle">Notes for CS469 2/5/24</small>
+        <p class="post-date">
+            February 5, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs469">cs469</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/image-processing">image processing</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="lecture">Lecture</h2>
+<p>NOTE: For the log function, the reason as to why we are adding 1 to r is due to the fact that if log(0), then it would be undefined.</p>
+<h4 id="power-law-gamma-transformation">Power Law (Gamma) Transformation</h4>
+<p>Formula is: $ s = cr^\gamma $ or $ s = c(r + \epsilon)^\gamma$ for $c &gt; 0$ and $\gamma &gt; 0$ and s and r are scaled to $[0, 1]$</p>
+<p>Conditions to consider:</p>
+<ol>
+<li>If $\gamma &lt; 1$: Enhance dark areas</li>
+<li>If $\gamma &gt; 1$: Enhance bright areas</li>
+<li>If $\gamma = c = 1$: Identity transformation</li>
+</ol>
+<p>Application that use Power Law (Gamma) Transformation</p>
+<ul>
+<li>CRT Screens</li>
+</ul>
+<h4 id="piecewise-linear-transformation-functions">Piecewise Linear Transformation Functions</h4>
+<p>There are four transformations:</p>
+<ol>
+<li>Global Transformations - uniformly applies a single formula to all pixel values.</li>
+<li>Piecewise Lienar Transformations - different linear adjustments are applied across specific intensity segments</li>
+<li>Complexity - a more detailed process&ndash;focuses on specific areas.</li>
+<li>Ideal Use Cases - enhances images w/ bright and dark areas.</li>
+</ol>
+<blockquote>
+<p>NOTE: Piecewise basically just applies to a specific range/group of pixels.</p>
+</blockquote>
+<h4 id="contrast-stretching">Contrast Stretching:</h4>
+<p>Basically stretches a range of intensity levels to improve contrast.</p>
+<p>What is an artifact?</p>
+<ul>
+<li>It is a type of noise</li>
+</ul>
+<p>Conditions to consider for contrast stretching:</p>
+<ol>
+<li>If r1 = s1 and r2 = s2, then there is no change (basically an identity)</li>
+<li>If r1 = r2 and s1 = 0, s2 = L-1, then there are <strong>various degrees of spread in gray levels.</strong> _|- (this is basically saying there is a jump in intensity levels lol)</li>
+<li>If r1 &lt;= r2 and s1 &lt;= s2, then it is single valued and monotonically increasing.</li>
+</ol>
+<h4 id="intensity-level-slicing">Intensity-Level Slicing:</h4>
+<p>Technique that is used in DIP that enhances a specific range of intensities.</p>
+<h4 id="bit-plane-slicing">Bit-Plane Slicing:</h4>
+<p>It is a technique that divides an image into a series of <strong>binary images</strong> (For example, an 8-bit image being separated into 8 1-bit images) where each image represets one-bit level in the pixel intensity representation.</p>
+<p>To separate the individual sliced images, refer to the columns. Basically, the total number of columns determine the number of images.</p>
+<p>Uses for Bit-plane slicing:</p>
+<ol>
+<li>highlights different components of an image</li>
+<li>compression and watermarking</li>
+<li>enhancement and extraction</li>
+</ol>
+<h4 id="histograms">Histograms</h4>
+<p>Plots the frequency of each intensity value in an image (counts the number of times each intensity value occurs).</p>
+<p>Intensity Levels in an image:
+The intensity level of an image is represented by $r_k$ for k = 0, 1, 2, &hellip; , L-1
+L levels in total for image f(x,y)</p>
+<blockquote>
+<p>Ex: For an 8-bit image, there are 0-255 bits. Therefore, L-1 = 255</p>
+</blockquote>
+<p>Unnormalized Histogram:
+Basically counts the pixel occurrence by intensity</p>
+<p>Is defined as $h(r_k) = n_k$, where $n_k$ is the number of pixels with intensity $r_k$.</p>
+<p>Normalized Histogram:
+Represents the probability of intensity occurrence.
+Total number of pixels is M x N</p>
+<h4 id="histogram-processing">Histogram Processing</h4>
+<p>The intensity level of k is represented by the sum of probabilities of k.</p>
+<h4 id="histogram-equalization">Histogram Equalization</h4>
+<p>In digital image processing, it can be categorized into two types:</p>
+<ol>
+<li>Discrete - Standard in DIP&ndash;pixel&rsquo;s intensity values are discrete</li>
+<li>Continuous - Used in theory and simulations&ndash;data is not discrete; however, there is a specific range of values.</li>
+</ol>
+<p>For discrete cases, it requires the use of probabilities and summations; continuous cases requires the use of probability densities and integration.</p>
+<h2 id="readings">Readings</h2>
+<h2 id="summary">Summary</h2>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture">Lecture</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#power-law-gamma-transformation">Power Law (Gamma) Transformation</a></li>
+                <li><a href="#piecewise-linear-transformation-functions">Piecewise Linear Transformation Functions</a></li>
+                <li><a href="#contrast-stretching">Contrast Stretching:</a></li>
+                <li><a href="#intensity-level-slicing">Intensity-Level Slicing:</a></li>
+                <li><a href="#bit-plane-slicing">Bit-Plane Slicing:</a></li>
+                <li><a href="#histograms">Histograms</a></li>
+                <li><a href="#histogram-processing">Histogram Processing</a></li>
+                <li><a href="#histogram-equalization">Histogram Equalization</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#readings">Readings</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
