@@ -58,7 +58,7 @@ Power Law (Gamma) Transformation Formula is: $ s = cr^\gamma $ or $ s = c(r + \e
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs469notes05/</guid>
-      <description>Lecture Histogram A histogram plots how many times (frequency) each intensity value in an image occurs.
+      <description>Lecture 7 Histogram A histogram plots how many times (frequency) each intensity value in an image occurs.
 Histogram Equalization It produces a transformation function to generate an output image w/ a uniform histogram.
 Histogram equalization in DIP can be categorized into two types:
  Discrete - Is the standard in digital image processing. Intensity levels of pixels are discrete values Continuous - Used in theory and simulations. Data not limited to a set of discrete values&amp;ndash;value can be within a range.</description>
