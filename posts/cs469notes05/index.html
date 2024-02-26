@@ -178,7 +178,44 @@
     <div class="post-content">
         <p>
             <h2 id="lecture">Lecture</h2>
-<h4 id="heading"></h4>
+<h4 id="histogram">Histogram</h4>
+<p>A histogram plots how many times (frequency) each intensity value in an image occurs.</p>
+<h4 id="histogram-equalization">Histogram Equalization</h4>
+<p>It produces a transformation function to generate an output image w/ a uniform histogram.</p>
+<p>Histogram equalization in DIP can be categorized into two types:</p>
+<ol>
+<li>Discrete - Is the standard in digital image processing. Intensity levels of pixels are discrete values</li>
+<li>Continuous - Used in theory and simulations. Data not limited to a set of discrete values&ndash;value can be within a range.</li>
+</ol>
+<p>For discrete cases, probabilities and summations are used.
+For continuous cases, probability densities and integrals are used.</p>
+<h4 id="histogram-equalization-discrete">Histogram Equalization: Discrete</h4>
+<p>A normalized histogram is denoted as:
+$p_r(r_k) = \frac{n_k}{MN}$ where $p_r$ is the probability and $n_k$ is hte number of pixels w/ intensity $r_k$. $MN$ is the total number of pixels in an image.</p>
+<p>Discrete transformation function is defined as:</p>
+<p>$S_k = T(r_k) = (L - 1) \sum^k_{j=0}p_r(r_j)$ where $k = 0, 1, 2, 3, &hellip; L - 1$</p>
+<blockquote>
+<p>NOTE: Histogram Equalization is basically using the formula above.</p>
+</blockquote>
+<h4 id="histogram-equalization-continuous">Histogram Equalization: Continuous</h4>
+<p>Transformation function for intensity mapping is represented as:
+$s = T(r)$ where $0 \leq r \leq L-1$</p>
+<p>Conditions for T(r):</p>
+<ol>
+<li>Monotonicity - T(r) increases monotonically within [0,L-1] to ensure higher input intensities will result in higher/equal output intensities</li>
+<li>Range Constraint - 0 $\leq T(r) \leq L-1$ for $0 \leq r \leq L-1$</li>
+</ol>
+<p>A function $T$ is <strong>strictly monotonic</strong> if it is one-to-one and reversible.
+$r = T^-1(s)$ for $0 \leq s \leq L-1$</p>
+<h4 id="histogram-matching-specification">Histogram Matching (Specification)</h4>
+<p>Is a method to specify the histogram shape ourselves. It adjusts the histogram of an image to match the histogram of a target image.</p>
+<h4 id="local-histogram-processing">Local Histogram Processing</h4>
+<p>Histogram equalization and histogram matching are both <strong>global histogram prcoessing methods.</strong> These processes modify pixels based on the intensity distribution of an entire image.</p>
+<p>Enhancing details over small areas of an image would result in a fail since the number of pixels in small areas would have a less significant impact in computation of global transformations.</p>
+<blockquote>
+<p>SOLUTION TO PROBLEM: perform transformations based on intensity distribution of pixel neighborhoods</p>
+</blockquote>
+<p>So, local histogram processing won&rsquo;t work best if you want to enhance details over small areas of an image.</p>
 <h2 id="reading">Reading</h2>
 <h2 id="summary">Summary</h2>
 
@@ -201,7 +238,12 @@
           <ul>
             <li>
               <ul>
-                <li><a href="#heading"></a></li>
+                <li><a href="#histogram">Histogram</a></li>
+                <li><a href="#histogram-equalization">Histogram Equalization</a></li>
+                <li><a href="#histogram-equalization-discrete">Histogram Equalization: Discrete</a></li>
+                <li><a href="#histogram-equalization-continuous">Histogram Equalization: Continuous</a></li>
+                <li><a href="#histogram-matching-specification">Histogram Matching (Specification)</a></li>
+                <li><a href="#local-histogram-processing">Local Histogram Processing</a></li>
               </ul>
             </li>
           </ul>

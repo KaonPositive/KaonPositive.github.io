@@ -17,20 +17,20 @@
     
 
     
-    <title>Jared Rosario</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>CS 460 Notes 04</title>
+    <meta name="description" content="Notes for CS460">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs460, compilers'>
 
     <meta property="og:url" content="https://kaonpositive.github.io/posts/cs460notes04/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Jared Rosario">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="CS 460 Notes 04">
+    <meta property="og:description" content="Notes for CS460">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jared Rosario">
-    <meta name="twitter:description" content="Obsession creates greatness.">
+    <meta name="twitter:title" content="CS 460 Notes 04">
+    <meta name="twitter:description" content="Notes for CS460">
     <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs460notes04/">
     <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs460notes04/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
@@ -156,7 +156,132 @@
     </nav>
 </header>
 <main id="content">
-    
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 460 Notes 04</h1>
+        <small role="doc-subtitle">Notes for CS460</small>
+        <p class="post-date">
+            February 14, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs460">cs460</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/compilers">compilers</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="lecture-notes">Lecture Notes</h2>
+<p>Chapter 6 Name Resolution and Scoping:</p>
+<h2 id="reading">Reading</h2>
+<h4 id="chapter-6-name-resolution-and-scoping">Chapter 6: Name Resolution and Scoping</h4>
+<p>List of what can be named in a program:</p>
+<ol>
+<li>Variables (local/global) and parameters</li>
+<li>Procedures/Functions/Methods/Sub-routines</li>
+<li>Modules/Packages</li>
+<li>Classes</li>
+<li>Fields</li>
+<li>Program locations (labels)</li>
+<li>Types and Structures</li>
+</ol>
+<h5 id="activation-records">Activation Records</h5>
+<p>All code runs in a data context (a state)&ndash;the context is the data associated w/ the running code.
+The data associated is typically the state of parameters and the local variables; the state associated w/ an object is <strong>kept in dynamically allocated blocks of memory on the heap.</strong></p>
+<blockquote>
+<p>IMPORTANT: Parameters and local variables are typically stored in an activation record</p>
+</blockquote>
+<p>What is an activation record?
+An activation record (sometimes called an activation or frame) contains other information aside from the parameters and local variables. They contain:</p>
+<ol>
+<li>return address</li>
+<li>saved registers</li>
+<li>pointers (links) to other activation records</li>
+<li>other language-dependent / architecture-dependent information</li>
+</ol>
+<p>When a procedure is called, an activation record is called. The size of the activation record depends on the number of local variables and parameters.
+The order in which they need to be arranged in should be:</p>
+<ol>
+<li>Place parameters first in the order they appear in the program</li>
+<li>Place locals second in the order they appear in the program</li>
+</ol>
+<p>For each local, allocate a separate location; however, there are some compilers that would determine if two locals can share a location in the activation record bc their use in the code does not overlap.</p>
+<p>The pointer that points to the activation record is called a <strong>stack pointer</strong>&ndash;all locals and parameters are addressed relative to it.</p>
+<p>If the execution architecture uses registers, an activation record might contain space for storing registers' values before a call to a new procedure and for restoring the values of registers upon returning from a procedure call. ALso, return values from procedures returning a value might be stored in the activation record.</p>
+<p>If the execution architecture are non-register-based using stack evaluation, the evaluation stack also might be stored in the activation record. Non-variable/parameter content of an activation record will depend on the execution architecture.</p>
+<h5 id="static-and-dynamic-links">Static and Dynamic Links</h5>
+<ul>
+<li>Dynamic Link - stored in an activation record for a method/function $f$ points to the activation record for the method/function that called $f$ ($f$ is the <strong>callee</strong>; the one calling $f$ is the <strong>caller</strong>)</li>
+</ul>
+<p>The Dynamic Link serves two purposes:</p>
+<ol>
+<li>Points to the activation record of the caller (when the callee terminates, activation record is restored as the current activation record); therefore, the dynamic link will point to the activation record of its caller, etc.</li>
+<li>If the language is dynamically scoped, the dynamic link will access the activation record of the caller and its caller, and etc. to search for variables/parameters not found in the activation record of the function that is currently running.</li>
+</ol>
+<blockquote>
+<p>NOTE: if a language is dynamically scoped, the callee can legally refer to the caller&rsquo;s variables (or at least the variables currently in its activation record).</p>
+</blockquote>
+<p>Call chain - the collection of dynamic links, starting at the current method</p>
+<p>Closests enclosing scope - Following the static link to the activation record that lexically is closest tot he code associated w/ the activation record in which we did not find the variable.</p>
+<p>Every time a procedure is called, or a method is invoked, a corresponding activation record is created. The activation record is then placed on top of a stack called the <strong>activation stack</strong> and made the current activation. Once the procedure is finished executing, the corresponding activation record (found at the top of the activation stack) will be removed. The current activation at the top of the activation stack will be made as the current activation, and the progam execution will continue in the code associated w/ this activation.</p>
+<p>If a language supports multi-threading, each thread must have its own activation stack.</p>
+<h5 id="name-binding-and-scoping">Name Binding and Scoping</h5>
+<p>Scope has two different uses:</p>
+<ol>
+<li>Part of the code in which a referene to a <strong>name binding</strong> is valid.</li>
+<li>Part of the code in which names are <strong>validly bound</strong>.</li>
+</ol>
+<p>Name Binding - is an association of an identifier (<strong>name</strong>) with an <strong>entity</strong>. For example: declaring a variable where you associate the name of the variable with the location of the declaration in the parse tree. Declaring a method or a function would associate a name w/ the source code for the method/function.</p>
+<p>Name of a class, name of a variable, name of a function, and the name of a parameter are examples of name bindings.</p>
+<p>Scope of name binding - part of the code in which a reference to that name results in that specific name and not a different one.</p>
+<h5 id="forward-referencable">Forward Referencable</h5>
+<p>Forward referencable - can be used before its declaration point.
+Requires a multi-pass compiler to capture the declaration in a prior pass tot he resolution pass, unless we use forward declarations or prototypes for functions.</p>
+<p>Forward declarations - prototypes in C/C++. It is a incomplete declaration that appears before the first use of a name. Are necessary to implement on a one-pass compiler.</p>
+<h5 id="symbol-table">Symbol Table</h5>
+<p>A symbol table is used to associate names w/ declarations/definitions. Each scope within the program has associated a symbol table associated w/ it. A symbol table also has a reference to a parent symbol table associated w/ the enclosing scope of the code w/ which the table is associated.</p>
+<h2 id="summary">Summary</h2>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture-notes">Lecture Notes</a></li>
+        <li><a href="#reading">Reading</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#chapter-6-name-resolution-and-scoping">Chapter 6: Name Resolution and Scoping</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
 
     
 

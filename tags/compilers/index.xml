@@ -6,14 +6,28 @@
     <description>Recent content in compilers on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/compilers/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/compilers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 460 Notes 04</title>
+      <link>https://kaonpositive.github.io/posts/cs460notes04/</link>
+      <pubDate>Wed, 14 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs460notes04/</guid>
+      <description>Lecture Notes Chapter 6 Name Resolution and Scoping:
+Reading Chapter 6: Name Resolution and Scoping List of what can be named in a program:
+ Variables (local/global) and parameters Procedures/Functions/Methods/Sub-routines Modules/Packages Classes Fields Program locations (labels) Types and Structures  Activation Records All code runs in a data context (a state)&amp;ndash;the context is the data associated w/ the running code. The data associated is typically the state of parameters and the local variables; the state associated w/ an object is kept in dynamically allocated blocks of memory on the heap.</description>
+    </item>
+    
     <item>
       <title>CS 460 Notes 03</title>
       <link>https://kaonpositive.github.io/posts/cs460notes03/</link>
-      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Feb 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs460notes03/</guid>
-      <description>Lecture Notes Reading Summary </description>
+      <description>Lecture Notes Reading Chapter 5 Parse Trees Parse Trees ( sometimes referred to as Abstract Syntax Trees (AST) ) are used as an internal representation of a sourced program (recall that the parser generates a parse-tree representation of the correctly parsed program).
+A parse tree preserves rules for associativity, commutativity, and precedence as defined by the grammar.
+A parse tree consists of two different kinds of nodes:
+ Internal Nodes - correspond to nonterminals from the grammar Leaf Nodes - correspond to the terminals of the grammar as found in the parsed source program.</description>
     </item>
     
     <item>

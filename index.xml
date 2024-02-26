@@ -6,7 +6,7 @@
     <description>Recent content on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Archive - Basics</title>
       <link>https://kaonpositive.github.io/posts/theme-documentation-basics/</link>
@@ -40,6 +40,29 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
     </item>
     
     <item>
+      <title>CS 460 Notes 04</title>
+      <link>https://kaonpositive.github.io/posts/cs460notes04/</link>
+      <pubDate>Wed, 14 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs460notes04/</guid>
+      <description>Lecture Notes Chapter 6 Name Resolution and Scoping:
+Reading Chapter 6: Name Resolution and Scoping List of what can be named in a program:
+ Variables (local/global) and parameters Procedures/Functions/Methods/Sub-routines Modules/Packages Classes Fields Program locations (labels) Types and Structures  Activation Records All code runs in a data context (a state)&amp;ndash;the context is the data associated w/ the running code. The data associated is typically the state of parameters and the local variables; the state associated w/ an object is kept in dynamically allocated blocks of memory on the heap.</description>
+    </item>
+    
+    <item>
+      <title>CS 460 Notes 03</title>
+      <link>https://kaonpositive.github.io/posts/cs460notes03/</link>
+      <pubDate>Mon, 12 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs460notes03/</guid>
+      <description>Lecture Notes Reading Chapter 5 Parse Trees Parse Trees ( sometimes referred to as Abstract Syntax Trees (AST) ) are used as an internal representation of a sourced program (recall that the parser generates a parse-tree representation of the correctly parsed program).
+A parse tree preserves rules for associativity, commutativity, and precedence as defined by the grammar.
+A parse tree consists of two different kinds of nodes:
+ Internal Nodes - correspond to nonterminals from the grammar Leaf Nodes - correspond to the terminals of the grammar as found in the parsed source program.</description>
+    </item>
+    
+    <item>
       <title>CS 301 Notes 02</title>
       <link>https://kaonpositive.github.io/posts/cs301notes02/</link>
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
@@ -55,9 +78,10 @@ Post This is the default blog post type which will be shown in your &amp;ldquo;P
       
       <guid>https://kaonpositive.github.io/posts/cs469notes04/</guid>
       <description>Lecture NOTE: For the log function, the reason as to why we are adding 1 to r is due to the fact that if log(0), then it would be undefined.
-Power Law (Gamma) Transformation Formula is: $ s = cr^\gamma $ or $ s = c(r + \epsilon)^\gamma$ for $c &amp;gt; 0$ and $\gamma &amp;gt; 0$ and s and r are scaled to $[0, 1]$
-Conditions to consider:
- If $\gamma &amp;lt; 1$: Enhance dark areas If $\gamma &amp;gt; 1$: Enhance bright areas If $\gamma = c = 1$: Identity transformation  Application that use Power Law (Gamma) Transformation</description>
+Recall from last lecture (Intensity Transformation): Formula for intensity transformation (or point processing): $s = T(r)$
+Formula for Image Negatives: $s = (L-1)-r$
+Formula for Log Transformation: $s = clog(1 + r)$
+Power Law (Gamma) Transformation Formula is: $ s = cr^\gamma $ or $ s = c(r + \epsilon)^\gamma$ for $c &amp;gt; 0$ and $\gamma &amp;gt; 0$ and s and r are scaled to $[0, 1]$</description>
     </item>
     
     <item>
@@ -66,16 +90,22 @@ Conditions to consider:
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs469notes05/</guid>
-      <description>Lecture  Reading Summary </description>
+      <description>Lecture Histogram A histogram plots how many times (frequency) each intensity value in an image occurs.
+Histogram Equalization It produces a transformation function to generate an output image w/ a uniform histogram.
+Histogram equalization in DIP can be categorized into two types:
+ Discrete - Is the standard in digital image processing. Intensity levels of pixels are discrete values Continuous - Used in theory and simulations. Data not limited to a set of discrete values&amp;ndash;value can be within a range.</description>
     </item>
     
     <item>
-      <title>CS 460 Notes 03</title>
-      <link>https://kaonpositive.github.io/posts/cs460notes03/</link>
-      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <title>CS 469 Notes 06</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes06/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://kaonpositive.github.io/posts/cs460notes03/</guid>
-      <description>Lecture Notes Reading Summary </description>
+      <guid>https://kaonpositive.github.io/posts/cs469notes06/</guid>
+      <description>Lecture Spatial Filtering It is a technique for modifying/enhancing images by manipulating the value of each pixel based on its own value and the values of surrounding neighbors.
+In terms of digital image processing, a filter is a predefined matrix known as a kernel/mask/template/window.
+ NOTE: the matrix will determine how to integrate a pixel w/ its neighbors to generate a new pixel value.
+ Depending on the intended effect of an image, filters will vary in size, shape, and the values that they contain.</description>
     </item>
     
     <item>
@@ -87,7 +117,8 @@ Conditions to consider:
       <description>Lecture NOTE: QUIZ ON MONDAY FEB 5
 Spatial Operations Set of operations include:
  Single-pixel Neighborhood Geometric  Difference between intensity transformation and spatial filtering
- Intensity Transformation - it is point-based&amp;ndash;affects each pixel independently. Spatial Filtering - neighborhood-based&amp;ndash;considers the surrounding pixels.  Intensity transformations is also known as point processing The transformation is independent of locations&amp;ndash;determined only by the intensity values. Intensity transformation can be denoted by the formula: $s = T(r)$ where: s is the transformed; r is the original pixel</description>
+ Intensity Transformation - it is point-based&amp;ndash;affects each pixel independently. Spatial Filtering - neighborhood-based&amp;ndash;considers the surrounding pixels.  Intensity transformations It is also known as point processing The purpose of intensity transformations is to modify pixels values to enhance the image.
+The transformation is independent of locations&amp;ndash;determined only by the intensity values.</description>
     </item>
     
     <item>
@@ -657,10 +688,10 @@ What does each node have?  Each node in the tree must have:  Data: Holds the val
     
     <item>
       <title></title>
-      <link>https://kaonpositive.github.io/posts/cs460notes04/</link>
+      <link>https://kaonpositive.github.io/posts/cs460notes05/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaonpositive.github.io/posts/cs460notes04/</guid>
+      <guid>https://kaonpositive.github.io/posts/cs460notes05/</guid>
       <description></description>
     </item>
     

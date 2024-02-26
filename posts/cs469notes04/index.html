@@ -179,6 +179,13 @@
         <p>
             <h2 id="lecture">Lecture</h2>
 <p>NOTE: For the log function, the reason as to why we are adding 1 to r is due to the fact that if log(0), then it would be undefined.</p>
+<h4 id="recall-from-last-lecture-intensity-transformation">Recall from last lecture (Intensity Transformation):</h4>
+<p>Formula for intensity transformation (or point processing):
+$s = T(r)$</p>
+<p>Formula for Image Negatives:
+$s = (L-1)-r$</p>
+<p>Formula for Log Transformation:
+$s = clog(1 + r)$</p>
 <h4 id="power-law-gamma-transformation">Power Law (Gamma) Transformation</h4>
 <p>Formula is: $ s = cr^\gamma $ or $ s = c(r + \epsilon)^\gamma$ for $c &gt; 0$ and $\gamma &gt; 0$ and s and r are scaled to $[0, 1]$</p>
 <p>Conditions to consider:</p>
@@ -188,9 +195,19 @@
 <li>If $\gamma = c = 1$: Identity transformation</li>
 </ol>
 <p>Application that use Power Law (Gamma) Transformation</p>
-<ul>
-<li>CRT Screens</li>
-</ul>
+<p>CRT Screens
+In terms of CRT screens/monitors, they must have their gammas be corrected. CRT monitors have a gammer response between 1.8 to 2.5&ndash;this would result to having images being darker than intended.
+To correct the gammas of CRTs, an inverse gamma transformation is applied $(s = cr^{1/\gamma})$</p>
+<ol>
+<li>Identity - no change within an image (linear line).</li>
+<li>Negative - light areas are converted to dark (inverted linear line).</li>
+<li>Log - enhances details of dark areas in an image (inverted exponential function).</li>
+<li>Inverse Log - reduces dominance of bright areas to balance the overall exposure (exponential function).</li>
+<li>Gamma - overall brightness for an image is adjusted using a non-linear transformation, which is controlled by a gamma value.</li>
+</ol>
+<blockquote>
+<p>NOTE: REMEMBER THESE</p>
+</blockquote>
 <h4 id="piecewise-linear-transformation-functions">Piecewise Linear Transformation Functions</h4>
 <p>There are four transformations:</p>
 <ol>
@@ -208,6 +225,7 @@
 <ul>
 <li>It is a type of noise</li>
 </ul>
+<p>The function for contract stretching must be increasing so artifacts won&rsquo;t be present.</p>
 <p>Conditions to consider for contrast stretching:</p>
 <ol>
 <li>If r1 = s1 and r2 = s2, then there is no change (basically an identity)</li>
@@ -216,6 +234,7 @@
 </ol>
 <h4 id="intensity-level-slicing">Intensity-Level Slicing:</h4>
 <p>Technique that is used in DIP that enhances a specific range of intensities.</p>
+<p>The ranges $[A, B]$ will have their ranges changed. For example, imagine a linear line, where each point (x, y) == x = y. The points within the ranges $[A, B]$ will have their values changed, and the others left untouched.</p>
 <h4 id="bit-plane-slicing">Bit-Plane Slicing:</h4>
 <p>It is a technique that divides an image into a series of <strong>binary images</strong> (For example, an 8-bit image being separated into 8 1-bit images) where each image represets one-bit level in the pixel intensity representation.</p>
 <p>To separate the individual sliced images, refer to the columns. Basically, the total number of columns determine the number of images.</p>
@@ -249,7 +268,84 @@ Total number of pixels is M x N</p>
 </ol>
 <p>For discrete cases, it requires the use of probabilities and summations; continuous cases requires the use of probability densities and integration.</p>
 <h2 id="readings">Readings</h2>
-<h2 id="summary">Summary</h2>
+<h2 id="summary-lecture-56">Summary (LECTURE 5/6)</h2>
+<h4 id="intensity-transformation-formulas">Intensity Transformation Formulas:</h4>
+<ol>
+<li>Intensity transformation (point processing): $s = T(r)$</li>
+<li>Image Negatives: $s = (L-1)-r$</li>
+<li>Log Transformation: $s = clog(1+r)$</li>
+</ol>
+<h4 id="power-law-gamma-transformation-1">Power Law (Gamma) Transformation</h4>
+<p>General formula is $s = cr^{\gamma}$ or $s = c(r+\epsilon)^{\gamma}$ if $c &gt; 0$ and $\gamma &gt; 0$ where $s$ and $r$ are scaled to $[0,1]$</p>
+<p>Conditions to consider:</p>
+<ol>
+<li>If $\gamma &lt; 1$, enhance <strong>dark</strong> areas</li>
+<li>If $\gamma &gt; 1$, enhance <strong>bright</strong> areas</li>
+<li>If $\gamma = c = 1$, it is an <strong>identity transformation</strong></li>
+</ol>
+<p><strong>IMPORTANT TO REMEMBER:</strong></p>
+<ol>
+<li>Identity - no change in image (linear line, y=x)</li>
+<li>Negative - light areas converted into dark <strong>(inverted linear line)</strong></li>
+<li>Log - enhances details of dark areas in an image <strong>(inverted exponential function)</strong></li>
+<li>Inverse Log - reduces dominance of bright areas to balance overall exposure <strong>(exponential function)</strong></li>
+<li>Gamma - overall brightness of image is adjusted using non-linear transformation controlled by a gamma value</li>
+</ol>
+<h4 id="piecewise-linear-transformation-functions-1">Piecewise Linear Transformation Functions</h4>
+<ol>
+<li>Global Transformation - uniformly applies single formula to all pixel values</li>
+<li>Piecewise Linear Transformation - different linear adjustments applied across specific intensity segments</li>
+<li>Complexity - more detailed process that focuses on specific areas</li>
+<li>Ideal Use Case - enhance images w/ bright and dark areas.</li>
+</ol>
+<h4 id="contrast-stretching-1">Contrast Stretching</h4>
+<p>Stretches a range of intensity levels to improve contrast.</p>
+<p>Function for constrast stretching <strong>must be increasing</strong> so artifacts won&rsquo;t be present.</p>
+<blockquote>
+<p>ARTIFACT: A TYPE OF NOISE</p>
+</blockquote>
+<p>Conditions for contrast stretching:</p>
+<ol>
+<li>$r1 = s1$, $r2 = s2$, then identity (no change)</li>
+<li>$r1 = r2$, $s1 = 0$, $s2 = L-1$, then there are <strong>various degrees of spread in gray levels.</strong></li>
+<li>$r1 \leq r2$, $s1 \leq s2$, then <strong>single valued and monotonically increasing</strong></li>
+</ol>
+<h4 id="intensity-level-slicing-1">Intensity-level Slicing</h4>
+<p>Enhances specific range of intensities at $[A,B]$.</p>
+<h4 id="bit-plane-slicing-1">Bit-plane Slicing</h4>
+<p>Divides an image into a series of binary images&ndash;each binary image represents one-bit level in the pixel intensity representation.</p>
+<blockquote>
+<p>NOTE: total number of columns determine number of binary images</p>
+</blockquote>
+<p>The first (or rightmost) bit of an intensity value at each pixel is the least significant bit</p>
+<p>The last (or leftmost) bit of an intensity value at each pixel is the most significant bit</p>
+<p>Useful for:</p>
+<ol>
+<li>highlighting different components of an image</li>
+<li>compression and watermarking</li>
+<li>enhancement and extraction</li>
+</ol>
+<h4 id="histograms-1">Histograms</h4>
+<p>Plots frequency of each intensity value in an image (basically counts the number of times each intensity value occurs).</p>
+<h4 id="histogram-processing-1">Histogram Processing</h4>
+<p>Intensity level of $k$ is represented by the sum of probabilities of $k$.</p>
+<p>Intensity Levels in an image:
+Total number of intensity levels for image $f(x,y)$ is represented using $r_k$, for $k = 0, 1, 2, &hellip; L-1$</p>
+<blockquote>
+<p>EXAMPLE: For an 8-bit image, there are 0-255 bits, so L-1 = 255</p>
+</blockquote>
+<p>Unnormalized Histogram:
+Counts the pixel occurrenec by intensity</p>
+<p>Normalized Histogram:
+Represents probability of intensity occurrence.
+Total number of pixels is $M x N$</p>
+<h4 id="histogram-equalization-1">Histogram Equalization</h4>
+<p>It is categorized into two types:</p>
+<ol>
+<li>Discrete</li>
+<li>Continuous</li>
+</ol>
+<p>For discrete cases, it requires probablities and summation; continuous requires probability densities and integration.</p>
 
         </p>
         
@@ -270,6 +366,7 @@ Total number of pixels is M x N</p>
           <ul>
             <li>
               <ul>
+                <li><a href="#recall-from-last-lecture-intensity-transformation">Recall from last lecture (Intensity Transformation):</a></li>
                 <li><a href="#power-law-gamma-transformation">Power Law (Gamma) Transformation</a></li>
                 <li><a href="#piecewise-linear-transformation-functions">Piecewise Linear Transformation Functions</a></li>
                 <li><a href="#contrast-stretching">Contrast Stretching:</a></li>
@@ -283,7 +380,23 @@ Total number of pixels is M x N</p>
           </ul>
         </li>
         <li><a href="#readings">Readings</a></li>
-        <li><a href="#summary">Summary</a></li>
+        <li><a href="#summary-lecture-56">Summary (LECTURE 5/6)</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#intensity-transformation-formulas">Intensity Transformation Formulas:</a></li>
+                <li><a href="#power-law-gamma-transformation-1">Power Law (Gamma) Transformation</a></li>
+                <li><a href="#piecewise-linear-transformation-functions-1">Piecewise Linear Transformation Functions</a></li>
+                <li><a href="#contrast-stretching-1">Contrast Stretching</a></li>
+                <li><a href="#intensity-level-slicing-1">Intensity-level Slicing</a></li>
+                <li><a href="#bit-plane-slicing-1">Bit-plane Slicing</a></li>
+                <li><a href="#histograms-1">Histograms</a></li>
+                <li><a href="#histogram-processing-1">Histogram Processing</a></li>
+                <li><a href="#histogram-equalization-1">Histogram Equalization</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

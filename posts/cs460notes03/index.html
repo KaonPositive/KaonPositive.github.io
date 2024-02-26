@@ -161,7 +161,7 @@
         <h1>CS 460 Notes 03</h1>
         <small role="doc-subtitle">Notes for CS460</small>
         <p class="post-date">
-            January 31, 2024
+            February 12, 2024
         </p>
 
         <ul class="post-tags">
@@ -179,6 +179,29 @@
         <p>
             <h2 id="lecture-notes">Lecture Notes</h2>
 <h2 id="reading">Reading</h2>
+<h4 id="chapter-5-parse-trees">Chapter 5 Parse Trees</h4>
+<p>Parse Trees ( sometimes referred to as Abstract Syntax Trees (AST) ) are used as an internal representation of a sourced program (recall that the parser generates a parse-tree representation of the correctly parsed program).</p>
+<p>A parse tree preserves rules for associativity, commutativity, and precedence as defined by the grammar.</p>
+<p>A parse tree consists of two different kinds of nodes:</p>
+<ol>
+<li>Internal Nodes - correspond to nonterminals from the grammar</li>
+<li>Leaf Nodes - correspond to the terminals of the grammar as found in the parsed source program.</li>
+</ol>
+<p>For traversing through a parse tree, we use Depth-first Search, left-to-right traversal.</p>
+<p>For example, consider the context-free grammar rule:
+$A$ -&gt; $aBc$
+Then, the corresponding part of a parse tree generated would look like:
+A
+/ | <br>
+a B c</p>
+<p>where a and c are terminals and leaf nodes; B is an internal node that will have child nodes when the nonterminal B is developed in derivation.</p>
+<h4 id="grammar-attributes">Grammar Attributes</h4>
+<p>For each grammar symbol x, we can define a set of attribute values $A(x)$. For each parse-tree node, we can associate various attributes, which will fall into one of three categories:</p>
+<ol>
+<li>Intrinsic - terminals already associated w/ the parse-tree node (ex: value of a literal &ldquo;Hello&rdquo;). They are computed from the node itself.</li>
+<li>Synthesized - are computed based on attributes found in the node&rsquo;s children (ex: binary expression 2 + 3.4 has the type double as the + operator applied to a double and integer type will result in a double). The synthesized attribute will propagate information up the parse tree.</li>
+<li>Inherited - are comuputed (or directly inherited) from sibling nodes or the parent node.</li>
+</ol>
 <h2 id="summary">Summary</h2>
 
         </p>
@@ -197,7 +220,16 @@
     <li>
       <ul>
         <li><a href="#lecture-notes">Lecture Notes</a></li>
-        <li><a href="#reading">Reading</a></li>
+        <li><a href="#reading">Reading</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#chapter-5-parse-trees">Chapter 5 Parse Trees</a></li>
+                <li><a href="#grammar-attributes">Grammar Attributes</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <li><a href="#summary">Summary</a></li>
       </ul>
     </li>

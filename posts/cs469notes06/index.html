@@ -17,26 +17,26 @@
     
 
     
-    <title>CS 469 Notes 03</title>
-    <meta name="description" content="Notes for CS469 1/31/24">
+    <title>CS 469 Notes 06</title>
+    <meta name="description" content="Notes for CS469 2/14/24">
     <meta name="keywords" content='blog, gokarna, hugo, notes, cs469, image processing'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs469notes03/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs469notes06/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CS 469 Notes 03">
-    <meta property="og:description" content="Notes for CS469 1/31/24">
+    <meta property="og:title" content="CS 469 Notes 06">
+    <meta property="og:description" content="Notes for CS469 2/14/24">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CS 469 Notes 03">
-    <meta name="twitter:description" content="Notes for CS469 1/31/24">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs469notes03/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs469notes03/">
+    <meta name="twitter:title" content="CS 469 Notes 06">
+    <meta name="twitter:description" content="Notes for CS469 2/14/24">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs469notes06/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs469notes06/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs469notes03/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs469notes06/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -158,10 +158,10 @@
 <main id="content">
     <div class="post container">
     <div class="post-header-section">
-        <h1>CS 469 Notes 03</h1>
-        <small role="doc-subtitle">Notes for CS469 1/31/24</small>
+        <h1>CS 469 Notes 06</h1>
+        <small role="doc-subtitle">Notes for CS469 2/14/24</small>
         <p class="post-date">
-            January 31, 2024
+            February 5, 2024
         </p>
 
         <ul class="post-tags">
@@ -178,81 +178,54 @@
     <div class="post-content">
         <p>
             <h2 id="lecture">Lecture</h2>
-<p><strong>NOTE: QUIZ ON MONDAY FEB 5</strong></p>
-<h4 id="spatial-operations">Spatial Operations</h4>
-<p>Set of operations include:</p>
+<h4 id="spatial-filtering">Spatial Filtering</h4>
+<p>It is a technique for modifying/enhancing images by manipulating the value of each pixel based on its own value and the values of surrounding neighbors.</p>
+<p>In terms of digital image processing, a <strong>filter</strong> is a predefined matrix known as a <strong>kernel/mask/template/window</strong>.</p>
+<blockquote>
+<p>NOTE: the matrix will determine how to integrate a pixel w/ its neighbors to generate a new pixel value.</p>
+</blockquote>
+<p>Depending on the intended effect of an image, filters will vary in size, shape, and the values that they contain.</p>
+<p>Types of filters:</p>
 <ol>
-<li>Single-pixel</li>
-<li>Neighborhood</li>
-<li>Geometric</li>
+<li>Linear - applying a linear operation</li>
+<li>Non-linear - utilzie operators that are not linear combos of input pixel.</li>
 </ol>
-<p><strong>Difference between intensity transformation and spatial filtering</strong></p>
-<ul>
-<li>Intensity Transformation - it is point-based&ndash;affects each pixel independently.</li>
-<li>Spatial Filtering - neighborhood-based&ndash;considers the surrounding pixels.</li>
-</ul>
-<h4 id="intensity-transformations">Intensity transformations</h4>
-<p>It is also known as point processing
-The purpose of intensity transformations is to modify pixels values to enhance the image.</p>
-<p>The transformation is independent of locations&ndash;determined only by the intensity values.</p>
-<p>Intensity transformation can be denoted by the formula:
-$s = T(r)$
-where: s is the transformed; r is the original pixel</p>
-<p>In terms of thresholding in intensity transformations, if a pixel&rsquo;s value is at a certain range, then it is assigned to a certain value.
-For example: if a pixel is less than 127, then automatically assign it to 0; otherwise assign it with a value of 255.</p>
-<p>Log transformations:
-$s = clog(1+r)$
-Log transformations are useful for enhancing (stretching) dark areas.</p>
+<p>For linear spatial filtering, we perform the sum-of-products between an image f and a filter kernel w.</p>
+<blockquote>
+<p>NOTE: basically, for each coefficient in w, we multiply it with each coefficient found in w.
+Once the sum-of-products is performed, then replace the value that is being performed (typically the center value) with the sum-of-products.</p>
+</blockquote>
+<p>The generalized kernel size (m x n) is given in the form: $m = 2a + 1$ and $n = 2b + 1$</p>
+<blockquote>
+<p>NOTE: The form 2n + 1 is given to be a odd number. Therefore, m and n will always be odd for any integer a and b. This will grab the center pixel of an image. KERNEL SIZE MUST ALWAYS BE ODD</p>
+</blockquote>
+<h4 id="handling-pixels-close-to-boundaries">Handling Pixels Close to Boundaries</h4>
+<p>In order to deal with pixels that are close to boundaries, we use padding. There are two types of padding:</p>
+<ol>
+<li>Zero Padding - have the surrounding pixels of the center pixel be set to 0 (only applicable if its out of bounds&ndash;leave pixels that have a value be left alone).</li>
+<li>Replica Padding - have the surrounding pixels of the center pixel be set to the same value as the center pixel (only applicable if its out of bounds&ndash;leave pixels that have a value be left alone.)</li>
+</ol>
+<h4 id="spatial-correlation-and-convolution">Spatial Correlation and Convolution</h4>
+<p>There are two types of spatial operations:</p>
+<ol>
+<li>Convolution - is a mathematical operation to apply filters to images in the spatial domain. must flip kernel both horizontally and vertically before application.</li>
+<li>Correlation - it measures the similarity between an image and a kernel. flipping the kernel is not needed.</li>
+</ol>
+<blockquote>
+<p>NOTE: To flip the kernel, first flip numbers that are found horizontally, then after applying the horizontal bit, then flip numbers in the vertical.</p>
+</blockquote>
+<h4 id="separable-filter-kernels">Separable Filter Kernels</h4>
+<p>A 2D Function $G(x,y)$ is said to be separable if it can be written as a product of two 1D functions:
+$G(x, y) = G_1(x) * G_2(y)$</p>
+<p>A separable kernel of size $m * n$ can be expressed as the outer product of two vectors $v$ and $w$:
+$w = vw^t$ where $v$ and $w$ are vectors of size mx1 and nx1 respectively.</p>
+<blockquote>
+<p>NOTE: if a square kernel with dimensions mxm, then it will be w = vv^t</p>
+</blockquote>
+<p>The computational advantage of a kernel is represented as:
+$C = \frac{mn}{m+n}$</p>
 <h2 id="reading">Reading</h2>
-<p>Two principal categories of spatial processing:</p>
-<ol>
-<li>intensity transformations - operate on singel pixels of an image (ex: contrast manipulation and image thresholding)</li>
-<li>spatial filtering - performs operations on the neighborhood of every pixel in an image (image smothing and sharpening).</li>
-</ol>
-<p>Frequency domain - operations performed on the Fourier transform of an image, rather than the image itself.</p>
-<p>The spatial domain processes are based on the expression:
-$ g(x, y) = T[f(x,y)]$
-where $f(x,y)$ is an input image and $g(x,y)$ is the output image, and T is an operator of $f$ defined over a neighborhood of point $(x,y)$</p>
-<p>Enhancement - process of manipulating an image so that the result is more suitable than the original for a specific application.</p>
-<h4 id="negative-images">Negative Images</h4>
-<p>It has intensity levels in the range $[0, L-1]$
-Negative transformation is in the form:
-$s = L - 1 - r$
-Is useful for enhacing white/gray detail that is embedded in dark regions of an image.</p>
-<h4 id="log-transformations">Log Transformations</h4>
-<p>Has the general form $s = clog(1+r)$ where $c$ is a constant and $r \geq 0$
-It maps a narrow range of low intensity values in the input into a wider range of output levels.</p>
-<blockquote>
-<p>Basically high values of input levels are mapped to narrower range in output; lower values of input levels are mapped to wider range in output</p>
-</blockquote>
-<p>Log transformations are useful to expand values of dark pixels in an image while compressing high-level values.</p>
-<p>Log functions have an important characteristic that it compresses the dynamic range of pixel values.</p>
 <h2 id="summary">Summary</h2>
-<h4 id="set-operations">Set Operations</h4>
-<p>A grayscale image is represented as:
-$A^c = {(x, y, K-z) | (x, y, z) \in A}$ where K is the maximum intensity values in an image.</p>
-<blockquote>
-<p>EXAMPLE: In an 8-bit image, K would be K = 255</p>
-</blockquote>
-<h4 id="spatial-operations-1">Spatial Operations</h4>
-<p>The use of spatial operations are performed directly on the pixels of an image. Spatial Operations are branched into 3 categories:</p>
-<ol>
-<li>Single-pixel (Intensity transformation) - Also known as point processing, is the most simplest operation. Alters <strong>intensity</strong> of individual pixels using a transformation function $T$ in the form:
-$s = T(z)$ where z is the intensity of a pixel in the original image and s is the mapped intensity of the corresponding pixel in the processed image.</li>
-</ol>
-<blockquote>
-<p>NOTE: Intensity transformation uses a Look-Up Table to define the transformation function T(*) for specific intensity adjustments. Ex: if a pixel&rsquo;s value is at a certain range, then it is assigned to a certain value.</p>
-</blockquote>
-<ol start="2">
-<li>Neighborhood (Spatial Filtering) - Generates a corresponding pixel by analyzing each pixel by considering the values of nearby pixels.</li>
-<li>Geometric - Modifies the spatial arrangement of pixels in an image.</li>
-</ol>
-<h4 id="log-transformations-1">Log Transformations</h4>
-<p>It is a non-linear (line curves), transformation function that is in the formula:
-$S = clog(1+r)$ where c is the scaling parameter.</p>
-<blockquote>
-<p>NOTE: Log transformations are useful in the sense that it enhances (stretches) the dark areas.</p>
-</blockquote>
 
         </p>
         
@@ -273,33 +246,16 @@ $S = clog(1+r)$ where c is the scaling parameter.</p>
           <ul>
             <li>
               <ul>
-                <li><a href="#spatial-operations">Spatial Operations</a></li>
-                <li><a href="#intensity-transformations">Intensity transformations</a></li>
+                <li><a href="#spatial-filtering">Spatial Filtering</a></li>
+                <li><a href="#handling-pixels-close-to-boundaries">Handling Pixels Close to Boundaries</a></li>
+                <li><a href="#spatial-correlation-and-convolution">Spatial Correlation and Convolution</a></li>
+                <li><a href="#separable-filter-kernels">Separable Filter Kernels</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#reading">Reading</a>
-          <ul>
-            <li>
-              <ul>
-                <li><a href="#negative-images">Negative Images</a></li>
-                <li><a href="#log-transformations">Log Transformations</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#summary">Summary</a>
-          <ul>
-            <li>
-              <ul>
-                <li><a href="#set-operations">Set Operations</a></li>
-                <li><a href="#spatial-operations-1">Spatial Operations</a></li>
-                <li><a href="#log-transformations-1">Log Transformations</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+        <li><a href="#reading">Reading</a></li>
+        <li><a href="#summary">Summary</a></li>
       </ul>
     </li>
   </ul>

@@ -251,6 +251,42 @@ $\forall i : 1 \leq i \leq m: $
 Pick 2 RHS of $A_i$
 $\forall j,k: 1 \leq j &lt; k \leq n_i$</p>
 <h2 id="reading">Reading</h2>
+<h4 id="chapter-4-syntax-analysis-and-parsers">Chapter 4: Syntax Analysis and Parsers</h4>
+<p>In a compiler&rsquo;s POV, the process of lexical analysis (parsing) will determine if a given source program (or string) is <strong>syntactically correct</strong>.</p>
+<p>A syntactically correct program is a member of a language defined by a grammar&ndash;there exists a derivation starting at the start symbol of the grammar (for the language) and ending in the program (string).</p>
+<p>There are two types of parsing:</p>
+<ol>
+<li>LL(k) - top-down parsing where input is read <strong>left to right</strong> and the derivation is a <strong>leftmost derivation</strong>, which is guided by a lookahead of k tokens.</li>
+<li>LR(k) - bottom-up parsing where input is read <strong>left to right</strong> and the derivation is a <strong>rightost derivation in reverse</strong>, which is guided by a lookahead of k tokens.</li>
+</ol>
+<p>Example of LL Parsing:
+$L(a^<em>b^</em>) = {\epsilon, a, b, aa, ab, bb, aaa, &hellip; }$
+This regular expression can be written as a CFG:
+$S$ -&gt; $A$
+$A$ -&gt; $aA | B$
+$B$ -&gt; $bB | \epsilon$</p>
+<p>To define the parsing problem in terms of derivations, let $w$ be a string that is <strong>syntactically correct</strong> w/ respect to the language of a grammar iff there exists a derivation $S$ -&gt;$^*$ $w$ where $S$ is the start symbol of the grammar.</p>
+<p>How to derive the string w:
+In order to see if the string $w$ is syntactically correct, you must derive it.
+Approach to derive:</p>
+<ol>
+<li>Derive all strings of the same length as $w$ then check if $w$ is in that set. (Not recommended since this would lead to exponential time complexity since there are many choices to choose from on the right-hand side)</li>
+<li>Guide the derivation in a way that we do NOT take steps that would NOT lead to the correct string (only taking the correct path). This would have a better time complexity than the first.
+Ex: string $w = bbb$
+We would need to derive it from $S$, then we can start by $S$ -&gt; $A$
+Since $w$ starts w/ $b$, (where $b$ is the <strong>lookahead</strong>), we negate the rule $S$ -&gt; $aA$ since it only generates a string starting with $a$.</li>
+</ol>
+<blockquote>
+<p>TLDR; Basically, we are just guiding the leftmost derivation by using the lookahead. By matching the lookahead with the terminals/token strings generated in the right-hand side, we pick the correct right-hand side to get the correct path.</p>
+</blockquote>
+<h4 id="first-sets-pg-112">FIRST Sets pg 112</h4>
+<p>FIRST Sets would tell us which terminals for all possible strings start with.
+For example, the set:
+$L(G) = {\epsilon, a, bb} \cup {c^nbd^nb|n \ge 1 }$</p>
+<p>would give the FIRST set:
+FIRST(A) = ${\epsilon, a, b, c }$
+This says that we get $a$ from the string $a$, $b$ from the string $bb$, and $c$ from all the strings $c^nbd^nb$</p>
+<h4 id="grammar-transformations">Grammar Transformations</h4>
 <h2 id="summary">Summary</h2>
 
         </p>
@@ -269,7 +305,17 @@ $\forall j,k: 1 \leq j &lt; k \leq n_i$</p>
     <li>
       <ul>
         <li><a href="#lecture-notes">Lecture Notes</a></li>
-        <li><a href="#reading">Reading</a></li>
+        <li><a href="#reading">Reading</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#chapter-4-syntax-analysis-and-parsers">Chapter 4: Syntax Analysis and Parsers</a></li>
+                <li><a href="#first-sets-pg-112">FIRST Sets pg 112</a></li>
+                <li><a href="#grammar-transformations">Grammar Transformations</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <li><a href="#summary">Summary</a></li>
       </ul>
     </li>
