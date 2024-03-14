@@ -6,7 +6,79 @@
     <description>Recent content in notes on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compilers Study Guide -- Midterm</title>
+      <link>https://kaonpositive.github.io/posts/compilersmidtermstudyguide/</link>
+      <pubDate>Tue, 12 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/compilersmidtermstudyguide/</guid>
+      <description>Lexical Analysis (Chapter 3)  Syntax - rules for a syntactically correct program Semantics - meaning of the program.  Lexical Analysis is the process that reads a stream of characters and groups them into tokens based on a set of rules (these rules will create keywords, literals, separators, etc.)
+The process for lexical analysis:
+ Find all terminals in the grammar Write the scanner  ex:
+for( int i = 0; i &amp;lt; 100; ++i )    kind lexeme line column     Token.</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 09</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes09/</link>
+      <pubDate>Wed, 06 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes09/</guid>
+      <description>Lecture Reading Summary </description>
+    </item>
+    
+    <item>
+      <title>CS 460 Notes 06</title>
+      <link>https://kaonpositive.github.io/posts/cs460notes06/</link>
+      <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs460notes06/</guid>
+      <description>Lecture For CharAt, the type must be a string type.
+ PHASE 4 NOTES
+ S -&amp;gt; E E -&amp;gt; E + F | F F -&amp;gt; id | (E)
+Ex:
+   $I_0 = Closure({ [S -&amp;gt; •E] })$     [S-&amp;gt;•E]   [E-&amp;gt;•E+F]   [E-&amp;gt;•F]   [F-&amp;gt;•id]   [F-&amp;gt;•(E)]    E -&amp;gt;
+   $I_1 = Goto(I_0, E)$     [S-&amp;gt;E•]   [E-&amp;gt;E•+F]     LOOK AT CANVAS NOTES FOR MORE DETAILS</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 08</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes08/</link>
+      <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes08/</guid>
+      <description>Lecture Filtering Frequency Domain Fourier - Any periodic function can be rewritten as a weighted sum of infinite sinusoids of different frequencies.
+ Periodic - signal/function repeats its values in regular intervals/periods
+ Reasons why images may not be periodic:
+ Limited to size There are unique content Edge limits  Fourier Series - any periodic function can be represented as the sum of sines and/or cosines of different frequencies.</description>
+    </item>
+    
+    <item>
+      <title>CS 460 Notes 05</title>
+      <link>https://kaonpositive.github.io/posts/cs460notes05/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs460notes05/</guid>
+      <description>Lecture Chapter 4.20 Example: $S -&amp;gt; A B C$ $A -&amp;gt; aA | \epsilon $ $B -&amp;gt; bB | \epsilon $ $C -&amp;gt; cC | \epsilon $
+$ w = abbc $
+Left-most: $S -&amp;gt; ABC -&amp;gt; aABC -&amp;gt; aBC -&amp;gt; abBC -&amp;gt; abbBC -&amp;gt; abbC -&amp;gt; abbcC -&amp;gt; abbc$
+Right-most: $S -&amp;gt; ABC -&amp;gt; ABcC -&amp;gt; ABC -&amp;gt; AbBc -&amp;gt; AbbBc -&amp;gt; Abbc -&amp;gt; aAbbc -&amp;gt; abbc$
+ NOTE: FOR RIGHT-MOST DERIVATIONS, MUST REFER TO HOW IT WAS DERIVED ON THE LEFT-MOST.</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 07</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes07/</link>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes07/</guid>
+      <description>Lecture Image Enhancement Consists of two spatial filters:
+ Smoothing (lowpass) Sharpening (highpass)  There are two types of smoothing filters:
+ Linear   Box Filter Kernels Lowpass Gaussian Filter Kernels  Nonlinear   Order-Statistic Filters   IMPORTANT: In terms of box filters, if the kernel size gets bigger, then the image will be much blurier, since the average of pixels increase.
+ Disadvantages of box filters:</description>
+    </item>
+    
     <item>
       <title>CS 460 Notes 04</title>
       <link>https://kaonpositive.github.io/posts/cs460notes04/</link>
@@ -28,15 +100,6 @@ Reading Chapter 6: Name Resolution and Scoping List of what can be named in a pr
 A parse tree preserves rules for associativity, commutativity, and precedence as defined by the grammar.
 A parse tree consists of two different kinds of nodes:
  Internal Nodes - correspond to nonterminals from the grammar Leaf Nodes - correspond to the terminals of the grammar as found in the parsed source program.</description>
-    </item>
-    
-    <item>
-      <title>CS 301 Notes 02</title>
-      <link>https://kaonpositive.github.io/posts/cs301notes02/</link>
-      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/cs301notes02/</guid>
-      <description>Readings 911 Swatting, VoIP, and Doxxing What is the definition of 911 swatting given in the article?  malicious act that involves making fraudulent 911 calls to cause emergency response teams, such as law enfrocement special weapons and tactic teams, or SWAT teams, to react forcefully to a nonexistent public threat.  The article gives 7 examples of 911 swatting. List 3 of them:  celebrity swatting directed against public figures gamer swatting directed against adversaries in online gaming environments hate swatting and mean-spirited attacks motivated by bigotry, racism, homophobia, and personal animosity  What is the definition of &amp;lsquo;criminal doxing&amp;rsquo; given in the article?</description>
     </item>
     
     <item>
@@ -90,15 +153,6 @@ The transformation is independent of locations&amp;ndash;determined only by the 
     </item>
     
     <item>
-      <title>CS 301 Notes 01</title>
-      <link>https://kaonpositive.github.io/posts/cs301notes01/</link>
-      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/cs301notes01/</guid>
-      <description>Readings Generative Artificial Intelligence, Semantic Entropy, and the Big Sort What was the &amp;lsquo;unanimous agreement&amp;rsquo; relating to Generative AI mentioned in the article?  the unanimous agreement that the government needs to intervene to avert the potential pitfalls of the evolving technology.  What did H.L. Menken mean by bloviation?  gibberish&amp;ndash;the content is not polished/complete.  According to the author, what is deceptive about generative AI?  disinformation (???)  According to the author, if society is to deal with generative AI&amp;rsquo;s automated bioviation, it must deal with a fundamental question.</description>
-    </item>
-    
-    <item>
       <title>CS 460 Notes 02</title>
       <link>https://kaonpositive.github.io/posts/cs460notes02/</link>
       <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
@@ -134,15 +188,6 @@ if s &amp;amp; t are regular expressions, then:
  s | t s * t (concatenate) s*  ( continued from last lecture ) NFA for recognizing tokens construct NFAs for each construct of a Regular Expression.
 If all tokens of a language are represented by regular expressions $r_1, r_2, r_3, &amp;hellip; r_n$, then we can create $N(r_1), N(r_2), &amp;hellip; N(r_n)$.
 NFA is classified somewhat as a greedy algorithm.</description>
-    </item>
-    
-    <item>
-      <title>CS 301 Notes 00</title>
-      <link>https://kaonpositive.github.io/posts/cs301notes00/</link>
-      <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaonpositive.github.io/posts/cs301notes00/</guid>
-      <description>Readings Fatal Flaws in ChatAI as a Content Generator The author speculates that AIChat may likely be very valueable in several areas. List 3  Database query support languages Repurposing codebases Natural language translation  What is the one area in which AIChat is least likely to have much to offer?  automated content generation  What is the alternative phrase that the author uses for authomated content generation?  bloviation generation  Two major characteristics define the World Wide Web?</description>
     </item>
     
     <item>

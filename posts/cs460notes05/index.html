@@ -17,20 +17,20 @@
     
 
     
-    <title>Jared Rosario</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>CS 460 Notes 05</title>
+    <meta name="description" content="Notes for CS460">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs460, compilers'>
 
     <meta property="og:url" content="https://kaonpositive.github.io/posts/cs460notes05/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Jared Rosario">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="CS 460 Notes 05">
+    <meta property="og:description" content="Notes for CS460">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jared Rosario">
-    <meta name="twitter:description" content="Obsession creates greatness.">
+    <meta name="twitter:title" content="CS 460 Notes 05">
+    <meta name="twitter:description" content="Notes for CS460">
     <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs460notes05/">
     <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs460notes05/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
@@ -156,7 +156,231 @@
     </nav>
 </header>
 <main id="content">
-    
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 460 Notes 05</h1>
+        <small role="doc-subtitle">Notes for CS460</small>
+        <p class="post-date">
+            February 28, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs460">cs460</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/compilers">compilers</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="lecture">Lecture</h2>
+<h4 id="chapter-420">Chapter 4.20</h4>
+<p>Example:
+$S -&gt; A B C$
+$A -&gt; aA | \epsilon $
+$B -&gt; bB | \epsilon $
+$C -&gt; cC | \epsilon $</p>
+<p>$ w = abbc $</p>
+<p>Left-most:
+$S -&gt; ABC -&gt; aABC -&gt; aBC -&gt; abBC -&gt; abbBC -&gt; abbC -&gt; abbcC -&gt; abbc$</p>
+<p>Right-most:
+$S -&gt; ABC -&gt; ABcC -&gt; ABC -&gt; AbBc -&gt; AbbBc -&gt; Abbc -&gt; aAbbc -&gt; abbc$</p>
+<blockquote>
+<p>NOTE: FOR RIGHT-MOST DERIVATIONS, MUST REFER TO HOW IT WAS DERIVED ON THE LEFT-MOST.</p>
+</blockquote>
+<h4 id="reverse-rightmost-derivation-of-abbc">Reverse rightmost derivation of $abbc$</h4>
+<p>$ -&gt; AbbBc -&gt; Abbc-&gt; aAbbc -&gt; abbc$</p>
+<h4 id="first-attempt-for-a-lr-parser">First Attempt for a LR parser:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++">R :<span style="color:#f92672">=</span> w
+<span style="color:#66d9ef">do</span> {
+  <span style="color:#66d9ef">if</span> there exists a substring <span style="color:#960050;background-color:#1e0010">$\</span>beta<span style="color:#960050;background-color:#1e0010">$</span> in R such that 
+  <span style="color:#f92672">-</span> <span style="color:#960050;background-color:#1e0010">$</span>B <span style="color:#f92672">-&gt;</span> <span style="color:#960050;background-color:#1e0010">\</span>beta<span style="color:#960050;background-color:#1e0010">$</span>
+  <span style="color:#f92672">-</span> <span style="color:#960050;background-color:#1e0010">$</span>R <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">\</span>alpha<span style="color:#960050;background-color:#1e0010">\</span>beta<span style="color:#960050;background-color:#1e0010">\</span>alpha<span style="color:#960050;background-color:#1e0010">$</span>
+  <span style="color:#f92672">-</span> <span style="color:#960050;background-color:#1e0010">$\</span>alpha<span style="color:#960050;background-color:#1e0010">\</span>beta<span style="color:#960050;background-color:#1e0010">\</span>alpha<span style="color:#960050;background-color:#1e0010">$</span> is the previous right<span style="color:#f92672">-</span>sentential form, then 
+    <span style="color:#960050;background-color:#1e0010">$</span>R <span style="color:#f92672">=</span> {<span style="color:#960050;background-color:#1e0010">\</span>alpha}B{<span style="color:#960050;background-color:#1e0010">\</span>alpha}<span style="color:#960050;background-color:#1e0010">$</span>
+} until (R is the start symbol S)
+</code></pre></div><h4 id="problem">Problem:</h4>
+<p>For sentential form, which RHS is <strong>the</strong> handle?</p>
+<p>Example:
+$E -&gt; E + T | T$
+$T -&gt; T * F | F$
+$F -&gt; id$</p>
+<p>$w = id + id$</p>
+<p>$id + id &lt;- F + id &lt;- T + id &lt;- E + id &lt;- E + F &lt;- E + T &lt;- E $</p>
+<blockquote>
+<p>NOTE: ALWAYS STAY ON THE LEFT MOST UNTIL IT IS DONE, THEN GO TO THE NEXT TO FINISH THE RHS</p>
+</blockquote>
+<h4 id="stack-problem-for-rhs">Stack Problem for RHS</h4>
+<table>
+<thead>
+<tr>
+<th>Stack</th>
+<th>Input</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$</td>
+<td>id + id$</td>
+<td>push id</td>
+</tr>
+<tr>
+<td>$id</td>
+<td>+id$</td>
+<td>replace id by F</td>
+</tr>
+<tr>
+<td>$F</td>
+<td>+id$</td>
+<td>replace F by T</td>
+</tr>
+<tr>
+<td>$T</td>
+<td>+id$</td>
+<td>replace T by E</td>
+</tr>
+<tr>
+<td>$E</td>
+<td>+id$</td>
+<td>push +</td>
+</tr>
+<tr>
+<td>$E+</td>
+<td>id$</td>
+<td>push id</td>
+</tr>
+<tr>
+<td>$E+id</td>
+<td>$</td>
+<td>Replace id by F</td>
+</tr>
+<tr>
+<td>$E + F</td>
+<td>$</td>
+<td>replace F by T</td>
+</tr>
+<tr>
+<td>$E + T</td>
+<td>$</td>
+<td>replace E + T by E</td>
+</tr>
+<tr>
+<td>$E</td>
+<td>$</td>
+<td>done</td>
+</tr>
+</tbody>
+</table>
+<h4 id="code-for-stack">Code for Stack:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++">stack v <span style="color:#f92672">=</span> []
+repeat {
+  <span style="color:#66d9ef">if</span>( there is a handle <span style="color:#960050;background-color:#1e0010">\</span>beta on top of the stack v) {
+    B <span style="color:#f92672">-&gt;</span> <span style="color:#960050;background-color:#1e0010">\</span>beta a prod
+    pop <span style="color:#960050;background-color:#1e0010">\</span>beta from v
+    push B
+  } <span style="color:#66d9ef">else</span>
+    push the next token from input
+} until (v <span style="color:#f92672">=</span> [s] or out of input and no handle on the stack)
+
+<span style="color:#66d9ef">if</span>( v <span style="color:#f92672">=</span> [s] and out of input ) 
+  success
+<span style="color:#66d9ef">else</span>
+  not success
+</code></pre></div><p>Term: Viable Prefix</p>
+<ul>
+<li>found on page 182 chapter 4</li>
+</ul>
+<h4 id="example-491-lr0-items">Example 4.9.1 LR(0) Items</h4>
+<p>Let G be a CFG. $A -&gt; \alpha$ a prodct
+An LR(0) item of $A -&gt; \alpha$ is: $[A -&gt; \alpha]$</p>
+<blockquote>
+<p>LOOK AT CANVAS NOTES: The dot tells you how much work you have done on the right hand side.</p>
+</blockquote>
+<p>Example:
+S -&gt; E
+E -&gt; E + T | T
+T -&gt; T * F | F
+F -&gt; id | (E)</p>
+<p>input: (id + id) * id
+[S -&gt; <em>E] -&gt; [S -&gt; E</em>]
+/       <br>
+[E -&gt; *E+T]   [E -&gt; <em>T] - &gt; [E-&gt;T</em>]
+we pick the second one ([E -&gt; <em>T])
+/       <br>
+[T-&gt;<em>T</em>F]     [T-&gt;<em>F]
+/     |     <br>
+[T-&gt;T<strong>F] -&gt; [T-&gt;T</strong>F]  -&gt;F [T -&gt; T</em>F</em>]
+[T-&gt;<em>T</em>F]   [T-&gt;<em>F] -&gt; [T-&gt;F</em>]
+/       <br>
+[F-&gt;<em>id]    [F-&gt;</em>(E)]</p>
+<blockquote>
+<p>an asterik represents a dot.</p>
+</blockquote>
+<h4 id="creating-an-nfa-based-on-a-cfg">Creating an NFA based on a CFG</h4>
+<p>$G = (V, \sigma, P, S) $</p>
+<p>Definition 4.9:
+Create $G' = (V \cup { S' }, \sigma, P \cup {S' -&gt; s}, S' )$</p>
+<p>Make NFA $M = (Q, V \cup \sigma, \delta, q_0, F)$</p>
+<p>Steps:</p>
+<ol>
+<li>$\delta(q_0, \sigma) = { [S' -&gt; •s] | s'-&gt;s \in p }$</li>
+<li></li>
+<li>$\delta([A -&gt; \alpha • X\beta, x) = { [A -&gt; \alpha x • \beta] | x \in V \cup \sum }$</li>
+</ol>
+<blockquote>
+<p>V \cup sum represents the terminals and nonterminals.</p>
+</blockquote>
+<p>Look at page 186 for more examples of this process.</p>
+<h4 id="parsing-w-the-dfa">Parsing w/ the DFA</h4>
+<p>Look at canvas notes</p>
+<p>The numbers shown on the stack represent what state it is in.</p>
+<p>If a lookahead is 0, then you are not allowed to look at the input.</p>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture">Lecture</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#chapter-420">Chapter 4.20</a></li>
+                <li><a href="#reverse-rightmost-derivation-of-abbc">Reverse rightmost derivation of $abbc$</a></li>
+                <li><a href="#first-attempt-for-a-lr-parser">First Attempt for a LR parser:</a></li>
+                <li><a href="#problem">Problem:</a></li>
+                <li><a href="#stack-problem-for-rhs">Stack Problem for RHS</a></li>
+                <li><a href="#code-for-stack">Code for Stack:</a></li>
+                <li><a href="#example-491-lr0-items">Example 4.9.1 LR(0) Items</a></li>
+                <li><a href="#creating-an-nfa-based-on-a-cfg">Creating an NFA based on a CFG</a></li>
+                <li><a href="#parsing-w-the-dfa">Parsing w/ the DFA</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
 
     
 

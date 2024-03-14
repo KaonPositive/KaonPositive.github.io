@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>CS 469 Notes 07</title>
+    <meta name="description" content="Notes for CS469 2/26/24">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs469, image processing'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs469notes07/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CS 469 Notes 07">
+    <meta property="og:description" content="Notes for CS469 2/26/24">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS 469 Notes 07">
+    <meta name="twitter:description" content="Notes for CS469 2/26/24">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs469notes07/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs469notes07/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs469notes07/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 469 Notes 07</h1>
+        <small role="doc-subtitle">Notes for CS469 2/26/24</small>
+        <p class="post-date">
+            February 26, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs469">cs469</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/image-processing">image processing</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="lecture">Lecture</h2>
+<h4 id="image-enhancement">Image Enhancement</h4>
+<p>Consists of two spatial filters:</p>
+<ol>
+<li>Smoothing (lowpass)</li>
+<li>Sharpening (highpass)</li>
+</ol>
+<p>There are two types of smoothing filters:</p>
+<ol>
+<li>Linear</li>
+</ol>
+<ul>
+<li>Box Filter Kernels</li>
+<li>Lowpass Gaussian Filter Kernels</li>
+</ul>
+<ol start="2">
+<li>Nonlinear</li>
+</ol>
+<ul>
+<li>Order-Statistic Filters</li>
+</ul>
+<blockquote>
+<p>IMPORTANT: In terms of box filters, if the kernel size gets bigger, then the image will be much blurier, since the average of pixels increase.</p>
+</blockquote>
+<p>Disadvantages of box filters:</p>
+<ol>
+<li>Blurry Edges</li>
+<li>Equal Weighting</li>
+<li>Noise Handling</li>
+<li>Visual Artifacts</li>
+</ol>
+<h4 id="nonlinear-order-statistic-filters">Nonlinear: Order-Statistic Filters</h4>
+<p>Works based on the ordering (ranking) of pixels in the region encompassed by the neighborhood.</p>
+<p>You must rank (sort from ascending) the numbers in the image first, then find the median of those numbers and replace the origin/middle value of the image w/ the numbers that you have sorted.</p>
+<p>This filter would better smooth the image.</p>
+<p>Benefits of Median Over Average Filters:</p>
+<ol>
+<li>Outlier Resistance</li>
+<li>Edge Preservation</li>
+<li>Non-linear Flexibility</li>
+<li>Effective in Noise</li>
+</ol>
+<h4 id="sharpening-highpass-filters">Sharpening (highpass) Filters:</h4>
+<p>For averaging, it would make the image less detailed and blurry since it is blending the intensities via integration.</p>
+<p>For sharpening, it would make details clearer and more defined since it is highlighting the edges and contrasts via differentiation.</p>
+<h4 id="different-types-of-derivatives">Different types of derivatives:</h4>
+<p>In image sharpening, there are different types of derivatives.</p>
+<p>The first derivative - Highlights the rapid changes in intensity (edges)
+The second derivative - Detects areas where intensity changes begin or end</p>
+<blockquote>
+<p>NOTE: A derivative is a continous function</p>
+</blockquote>
+<p>Derivatives are useful to edge detection.</p>
+<p>For first-order derivatives of a 1D function, it is represented using the formula:
+$\frac{df}{dx} = f(x+1) - f(x)$
+Order: x, x+1</p>
+<p>For second-order derivatives of a 1D function, it is represented using the formula:
+$\frac{d^2f}{dx^2} = f(x+1)+f(x-1)-2f(x)$
+Order: x-1, x, x+1</p>
+<blockquote>
+<p>NOTE: Look at canvas notes to see the outputs of the first and second derivatives.</p>
+</blockquote>
+<ul>
+<li>Ramp - downwards slope that decrements by $n$</li>
+<li>Step - upwards slope that increments by $n$</li>
+<li>Edge/intensity transition - when the first and second derivative values are the same.</li>
+<li>Zero Crossing - when connecting the first and second derivative value by using a line, it crosses the x-axis. Says that there is a change in signal or intensity.</li>
+<li>Constant intensity - when the values of either the first or second derivative does not change.</li>
+</ul>
+<h4 id="second-order-derivatives---the-laplacian">Second-Order Derivatives - The Laplacian</h4>
+<p>It enhances the edges by highlighting the second derivative&rsquo;s zero crossings.</p>
+<p>$\frac{d^2f}{dx^2} = f(x+1, y) + f(x-1, y) - 2f(x,y)$
+$\frac{d^2f}{dx^2} = f(x,y+1) + f(x,y-1) - 2f(x,y)$</p>
+<p>If we replace the two second-derivative terms, then the formula is denoted as:
+$\delta^2f(x,y) = f(x+1,y) + f(x-1,y)$</p>
+<p>In terms of the kernels are being used:
+if c = 1, then add
+else if c = -1, then subtract</p>
+<h4 id="steps-for-unsharp-masking-and-highboost-filtering">Steps for Unsharp Masking and Highboost Filtering</h4>
+<ol>
+<li>Blur the original image</li>
+<li>Subtract the blurred image from the orginal (resulting difference is called a mask)</li>
+<li>Add the mask to the original</li>
+</ol>
+<blockquote>
+<p>NOTE: Potential MC question for this topic</p>
+</blockquote>
+<h4 id="gradient">Gradient</h4>
+<ul>
+<li>First derivatives are implemented using the magnitude of the gradient.</li>
+</ul>
+<h2 id="reading">Reading</h2>
+<h2 id="summary">Summary</h2>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture">Lecture</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#image-enhancement">Image Enhancement</a></li>
+                <li><a href="#nonlinear-order-statistic-filters">Nonlinear: Order-Statistic Filters</a></li>
+                <li><a href="#sharpening-highpass-filters">Sharpening (highpass) Filters:</a></li>
+                <li><a href="#different-types-of-derivatives">Different types of derivatives:</a></li>
+                <li><a href="#second-order-derivatives---the-laplacian">Second-Order Derivatives - The Laplacian</a></li>
+                <li><a href="#steps-for-unsharp-masking-and-highboost-filtering">Steps for Unsharp Masking and Highboost Filtering</a></li>
+                <li><a href="#gradient">Gradient</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#reading">Reading</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

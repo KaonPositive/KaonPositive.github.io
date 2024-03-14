@@ -6,7 +6,46 @@
     <description>Recent content in compilers on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/compilers/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/compilers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compilers Study Guide -- Midterm</title>
+      <link>https://kaonpositive.github.io/posts/compilersmidtermstudyguide/</link>
+      <pubDate>Tue, 12 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/compilersmidtermstudyguide/</guid>
+      <description>Lexical Analysis (Chapter 3)  Syntax - rules for a syntactically correct program Semantics - meaning of the program.  Lexical Analysis is the process that reads a stream of characters and groups them into tokens based on a set of rules (these rules will create keywords, literals, separators, etc.)
+The process for lexical analysis:
+ Find all terminals in the grammar Write the scanner  ex:
+for( int i = 0; i &amp;lt; 100; ++i )    kind lexeme line column     Token.</description>
+    </item>
+    
+    <item>
+      <title>CS 460 Notes 06</title>
+      <link>https://kaonpositive.github.io/posts/cs460notes06/</link>
+      <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs460notes06/</guid>
+      <description>Lecture For CharAt, the type must be a string type.
+ PHASE 4 NOTES
+ S -&amp;gt; E E -&amp;gt; E + F | F F -&amp;gt; id | (E)
+Ex:
+   $I_0 = Closure({ [S -&amp;gt; •E] })$     [S-&amp;gt;•E]   [E-&amp;gt;•E+F]   [E-&amp;gt;•F]   [F-&amp;gt;•id]   [F-&amp;gt;•(E)]    E -&amp;gt;
+   $I_1 = Goto(I_0, E)$     [S-&amp;gt;E•]   [E-&amp;gt;E•+F]     LOOK AT CANVAS NOTES FOR MORE DETAILS</description>
+    </item>
+    
+    <item>
+      <title>CS 460 Notes 05</title>
+      <link>https://kaonpositive.github.io/posts/cs460notes05/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs460notes05/</guid>
+      <description>Lecture Chapter 4.20 Example: $S -&amp;gt; A B C$ $A -&amp;gt; aA | \epsilon $ $B -&amp;gt; bB | \epsilon $ $C -&amp;gt; cC | \epsilon $
+$ w = abbc $
+Left-most: $S -&amp;gt; ABC -&amp;gt; aABC -&amp;gt; aBC -&amp;gt; abBC -&amp;gt; abbBC -&amp;gt; abbC -&amp;gt; abbcC -&amp;gt; abbc$
+Right-most: $S -&amp;gt; ABC -&amp;gt; ABcC -&amp;gt; ABC -&amp;gt; AbBc -&amp;gt; AbbBc -&amp;gt; Abbc -&amp;gt; aAbbc -&amp;gt; abbc$
+ NOTE: FOR RIGHT-MOST DERIVATIONS, MUST REFER TO HOW IT WAS DERIVED ON THE LEFT-MOST.</description>
+    </item>
+    
     <item>
       <title>CS 460 Notes 04</title>
       <link>https://kaonpositive.github.io/posts/cs460notes04/</link>

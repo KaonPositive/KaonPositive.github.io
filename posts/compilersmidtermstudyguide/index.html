@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Compilers Study Guide -- Midterm</title>
+    <meta name="description" content="Study Guide for Compilers Midterm">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs460, compilers'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/compilersmidtermstudyguide/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Compilers Study Guide -- Midterm">
+    <meta property="og:description" content="Study Guide for Compilers Midterm">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Compilers Study Guide -- Midterm">
+    <meta name="twitter:description" content="Study Guide for Compilers Midterm">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/compilersmidtermstudyguide/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/compilersmidtermstudyguide/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/compilersmidtermstudyguide/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Compilers Study Guide -- Midterm</h1>
+        <small role="doc-subtitle">Study Guide for Compilers Midterm</small>
+        <p class="post-date">
+            March 12, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs460">cs460</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/compilers">compilers</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="lexical-analysis-chapter-3">Lexical Analysis (Chapter 3)</h2>
+<ul>
+<li>Syntax - rules for a syntactically correct program</li>
+<li>Semantics - meaning of the program.</li>
+</ul>
+<p>Lexical Analysis is the process that <strong>reads a stream of characters and groups them into tokens</strong> based on a set of rules (these rules will create keywords, literals, separators, etc.)</p>
+<p>The process for lexical analysis:</p>
+<ol>
+<li>Find all terminals in the grammar</li>
+<li>Write the scanner</li>
+</ol>
+<p>ex:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#66d9ef">for</span>( <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100</span>; <span style="color:#f92672">++</span>i )
+</code></pre></div><table>
+<thead>
+<tr>
+<th>kind</th>
+<th>lexeme</th>
+<th>line</th>
+<th>column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Token.FOR</td>
+<td>for</td>
+<td>37</td>
+<td>54</td>
+</tr>
+<tr>
+<td>Token.LPAREN</td>
+<td>(</td>
+<td>37</td>
+<td>58</td>
+</tr>
+</tbody>
+</table>
+<p>The lexical analysis uses a scanner that reads a stream of characters, which will in turn output a stream of tokens.</p>
+<h2 id="regular-expressions">Regular Expressions</h2>
+<p>In terms of regular expressions, there exists a chomsky language hierarchy. It goes:
+Regular Expressions &gt; Context-Free &gt; Context Sensitive &gt; Unrestricted</p>
+<p>Both regular expressions and context-free grammars have:</p>
+<ol>
+<li>non terminals on the left</li>
+<li>any combination of terminals/non-terminals on the right</li>
+</ol>
+<blockquote>
+<p>NOTE: IMPORTANT TO REMEMBER THIS.</p>
+</blockquote>
+<ul>
+<li>Context-free Grammar - the way symbols are combined to form larger structures does NOT depend on the symbols around them.</li>
+</ul>
+<p>Regular expressions are recognized by an NFA or a DFA&ndash;there is also a one-to-one correspondence between regular languages and regular expressions.</p>
+<p>Strings that make up the tokens are <strong>regular expressions</strong>. Therefore, we can specify a set of regular expressions, one for each token type, and combine them as a <strong>NFA</strong>. After converting it into an NFA, we can transform it into a DFA to minimize it.
+In order to do this, it is advised to known <strong>Thompson&rsquo;s Construction Algorithm</strong> on page 75.</p>
+<h2 id="parsing">Parsing</h2>
+<p>Parsing determines whether the start symbol can derive the program or not.</p>
+<p>MUST REMEMBER: a finite automaton recognizes regular languages.</p>
+<p>A LL(1) parser is a <strong>Top Down</strong> Parser.</p>
+<ul>
+<li>Top Down Parser - Starting from the highest lvl of structure and breaking it down into smaller components until it reaches the individual components.</li>
+</ul>
+<blockquote>
+<p>TOP DOWN PARSING EXPANDS THE START SYMBOL TO THE WHOLE PROGRAM.</p>
+</blockquote>
+<p>A LL(1) parser <strong>mimics a leftmost derivation of the input string by reading it from left to right with one single lookahead</strong>.</p>
+<p>It is parsed with just <strong>one lookahead</strong></p>
+<p>To prevent the derivation from leading to the incorrect string, we rely on a <strong>lookahead</strong>.
+Ex: consider a string $w = bbb$</p>
+<p>Since $w$ starts with $b$, we don&rsquo;t have to consider the rule $S-&gt;aA$</p>
+<p>So to derive a string, $B$ must be able to generate a string starting with $b$. Look at page 111</p>
+<ul>
+<li>Bottom-Up Parser - Reduce the program to the start symbol.
+Probably on page 181, 294</li>
+</ul>
+<blockquote>
+<p>NOTE: If parsing is successful, then the program is a valid program.</p>
+</blockquote>
+<h2 id="first-sets">First Sets</h2>
+<p><strong>The use of a parser is to see if the stream of tokens is syntactically correct or not</strong></p>
+<p>For what the parser produces, it will output a parse tree. There are two types of parsers:</p>
+<ol>
+<li>LL(k) - input is read from left to right, where derivation is a leftmost derivation</li>
+<li>LR(k) - input is read from left to right, where derivation is a rightmost derivation in reverse</li>
+</ol>
+<p>For both L&rsquo;s, they represent the <strong>left-to-right scanning</strong>.
+For LL(k), the second L represents <strong>left-most derivation</strong>.
+For LR(k), the R represents <strong>reverse right-most derivation</strong>.</p>
+<p>k is usually 1 in most cases.</p>
+<h2 id="follow-sets">Follow Sets</h2>
+<p>On page 135</p>
+<p>They are a <strong>set of terminals&ndash;which can never be epsilon&ndash;that indicate what can follow a nonterminal in a sentential form</strong>.</p>
+<p>Basically, FOLLOW Sets tell you what you are <strong>allowed to do after applying a particular rule.</strong> So, if you are going to follow a rule for a certain symbol (ex: X), then the FOLLOW Set for that rule (X in this case) would tell you what symbols would come after that symbol.</p>
+<blockquote>
+<p>EX: If you see a symbol X, you can put a symbol Y right after it. Y would be in the FOLLOW Set for X.</p>
+</blockquote>
+<h2 id="recursive-descent-parsers">Recursive Descent Parsers</h2>
+<p>On page 129</p>
+<p>It is a technique that uses recursion stack of whatever langauge it is implemented in as the equivalent to the stack found in push-down automaton needed for recognizing the language of a context-free grammar.</p>
+<p>It basically breaks down the grammar into smaller parts (production rules), where the rules describe how the different parts of the language fit together.</p>
+<h2 id="name-checking">Name Checking</h2>
+<p>On page 358? Somewhere on Chapter 6</p>
+<p>It ensures that all identifies (names) used in a program refer to valid entities (ex: variables, functions, types, etc.) where they adhere to the language&rsquo;s rules.</p>
+<h2 id="static--dynamic-links">Static &amp; Dynamic Links</h2>
+<p>Somewhere on Chapter 6</p>
+<h2 id="predictive-parsing--recursive-descent-parsers">Predictive Parsing &amp; Recursive Descent Parsers</h2>
+<p>On page 146</p>
+<p>Predictive Parsing - parsing technique that analyzes and understands the structure of a language, which is defined by a context-free grammar. It is a <strong>top-down parsing approach</strong> where the parser predicts the production rule to apply based on the current input symbol and a fixed number of lookahead symbols.</p>
+<h2 id="llk-grammars">LL(k) Grammars</h2>
+<p>On page 160</p>
+<p>LL Stands for <strong>Left-to-right, Leftmost Derivation</strong>. It is a parsing method where the parser reads from <strong>left to right</strong> and constructs the leftmost derivation of the input string.</p>
+<blockquote>
+<p>IT EXPANDS THE NON-TERMINALS FROM THE LEFT SIDE OF THE PRODUCTION RULES.</p>
+</blockquote>
+<p>(K) indicates the number of lookahead symbols the parser considers when deciding which production rule to apply.</p>
+<h2 id="lr-parsing">LR Parsing</h2>
+<p>On page 181</p>
+<p>It produces a rightmost derivation and build the parse tree from the bottom up by comining smaller trees to form bigger trees.</p>
+<h2 id="nfa-to-dfa">NFA to DFA</h2>
+<p>On page 46</p>
+<p>Use subset construction to do this.</p>
+<h2 id="lr0">LR(0)</h2>
+<p>On page 194</p>
+<p>Must be able to determine what action to take in any situation w/o looking at the input (no lookahead). Must be able to determine if we should shift the next input symbol onto the stack or if there is a handle already on top of the stack, which would call for a reduction by the production of which the handle is a right-hand side.</p>
+<p>Bottom-up parsing that analyzes and understand the structure of a language defined by context-free grammar.</p>
+<p>LR stands for <strong>Left-to-right, Rightmost Derivation</strong>. It is a parsing method where the parser reads from <strong>left to right</strong> and constructs the rightmost derivation of the input string.</p>
+<p>(0) indicates the parsing <strong>doesn&rsquo;t use any lookahead symbols</strong>. It makes parsing decisions based on <strong>the current input symbol w/o looking ahead</strong>.</p>
+<h2 id="slr1-automaton">SLR(1) Automaton</h2>
+<p>On page 199</p>
+<p>It is a parser that parses context-free grammars. It is the <strong>simplified version of LR(1) Parsing</strong></p>
+<p>In SLR(1) Parsining, it uses <strong>1 lookahead</strong> to determine what it should do (decides to either shift, reduce, accept, or error).</p>
+<h2 id="action-goto-table">Action-Goto Table</h2>
+<p>On page 196?</p>
+<blockquote>
+<p>NOTE: DANGLING ELSE PROBLEM ON PAGE 155, 224</p>
+</blockquote>
+<h2 id="summary">Summary</h2>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lexical-analysis-chapter-3">Lexical Analysis (Chapter 3)</a></li>
+        <li><a href="#regular-expressions">Regular Expressions</a></li>
+        <li><a href="#parsing">Parsing</a></li>
+        <li><a href="#first-sets">First Sets</a></li>
+        <li><a href="#follow-sets">Follow Sets</a></li>
+        <li><a href="#recursive-descent-parsers">Recursive Descent Parsers</a></li>
+        <li><a href="#name-checking">Name Checking</a></li>
+        <li><a href="#static--dynamic-links">Static &amp; Dynamic Links</a></li>
+        <li><a href="#predictive-parsing--recursive-descent-parsers">Predictive Parsing &amp; Recursive Descent Parsers</a></li>
+        <li><a href="#llk-grammars">LL(k) Grammars</a></li>
+        <li><a href="#lr-parsing">LR Parsing</a></li>
+        <li><a href="#nfa-to-dfa">NFA to DFA</a></li>
+        <li><a href="#lr0">LR(0)</a></li>
+        <li><a href="#slr1-automaton">SLR(1) Automaton</a></li>
+        <li><a href="#action-goto-table">Action-Goto Table</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

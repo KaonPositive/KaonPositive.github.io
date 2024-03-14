@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>CS 460 Notes 06</title>
+    <meta name="description" content="Notes for CS460">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs460, compilers'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs460notes06/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CS 460 Notes 06">
+    <meta property="og:description" content="Notes for CS460">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS 460 Notes 06">
+    <meta name="twitter:description" content="Notes for CS460">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs460notes06/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs460notes06/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs460notes06/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 460 Notes 06</h1>
+        <small role="doc-subtitle">Notes for CS460</small>
+        <p class="post-date">
+            March 4, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs460">cs460</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/compilers">compilers</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="lecture">Lecture</h2>
+<p>For CharAt, the type must be a string type.</p>
+<blockquote>
+<p>PHASE 4 NOTES</p>
+</blockquote>
+<p>S -&gt; E
+E -&gt; E + F | F
+F -&gt; id | (E)</p>
+<p>Ex:</p>
+<table>
+<thead>
+<tr>
+<th>$I_0 = Closure({ [S -&gt; •E] })$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[S-&gt;•E]</td>
+</tr>
+<tr>
+<td>[E-&gt;•E+F]</td>
+</tr>
+<tr>
+<td>[E-&gt;•F]</td>
+</tr>
+<tr>
+<td>[F-&gt;•id]</td>
+</tr>
+<tr>
+<td>[F-&gt;•(E)]</td>
+</tr>
+</tbody>
+</table>
+<p>E
+-&gt;</p>
+<table>
+<thead>
+<tr>
+<th>$I_1 = Goto(I_0, E)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[S-&gt;E•]</td>
+</tr>
+<tr>
+<td>[E-&gt;E•+F]</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>LOOK AT CANVAS NOTES FOR MORE DETAILS</p>
+</blockquote>
+<p>Transition terminals are used/useful for shifting</p>
+<p>Reductions in states:
+$I_1$ - accept
+$I_2$ -
+$I_3$ -
+$I_7$ -
+$I_8$ -</p>
+<p>When doing a reduction, if the input that you&rsquo;re reading is not found in the FOLLOW set,</p>
+<h2 id="readings">Readings</h2>
+<h4 id="chapter-7-type-checking">Chapter 7 Type Checking</h4>
+<p>Type checking ensures all operators are compatible w/ their operands.</p>
+<p>Two approaches to type checking:</p>
+<ol>
+<li>static type checking - performs type checking at compile time</li>
+<li>dynamic type checking - performs type checking at runtime</li>
+</ol>
+<p>In statically typed languages, variables and parameters are bounds to types at compile time; their use are also checked at compile time to assure there are no type errors.
+Statically typed languages also declare variables before they are used&ndash;when declared, they are bound to a type.</p>
+<p>In dynamically typed languages, there is no binding.
+A variable&rsquo;s type is determined by the values assigned to it&ndash;which happens at runtime.</p>
+<p>Tradeoffs with both approaches typically involve the flexibility and type safety.</p>
+<p><strong>Strongly typed</strong> - all type errors canbe detected at runtime
+<strong>Weakly typed</strong> - expressions w/ pointer arthimetic cannot be type checked at compile time.</p>
+<blockquote>
+<p>NOTE: a variable of superclass type can hold a reference to an object of subclass type.</p>
+</blockquote>
+<p><strong>Type Safe</strong> - there are no type errors.
+If a program is written in a strongly typed language, then it is considered to be type safe; if a program is written in a language that are type safe, then the lagnauge is strongly typed.</p>
+<p>No dynamically typed language can be type safe&ndash;neither can any useful OOP language.</p>
+<p>A type has a set of values $v$ and a set of operations $o$. Operations in $o$ are applicable to the values found in $v$</p>
+<p>For example: A type $int$ (32-bit) has a set of possible values ${-2147483648, &hellip; , -2, -1, 0, 1, 2, &hellip; , 2147483647}$ and has a set of operations ${ +, -, *, /, %, &hellip; }$</p>
+<p><strong>Type system</strong> - collection of types that has a set of rules for associating types w/ expressions, variables, and other entities that can have a type.</p>
+<p><strong>Sound</strong> - invalid programs are rejected
+<strong>Complete</strong> - valid programs are accepted</p>
+<blockquote>
+<p>Page 367 for more info about sound and complete</p>
+</blockquote>
+<p><strong>Equal</strong> - Two types $T_1$ and $T_2$ are considered equal if they have the same type</p>
+<p><strong>Type Equivalent</strong> - Given two types $T_1$ and $T_2$, they are type equivalent if any value of type $T_1$ can be assigned to a variable of type $T_2$, and any value of $T_2$ can be assigned to a variable of $T_1$.</p>
+<blockquote>
+<p>Look at examples on page 368</p>
+</blockquote>
+<h4 id="atomic-types">Atomic Types</h4>
+<p>Typically referred as a <strong>primitive type</strong>, it is a type that is not made up of other types&ndash;it is built into the language.
+Examples: integers, doubles, booleans, characters, byte, etc.</p>
+<h4 id="type-constructors">Type Constructors</h4>
+<p>Type Constructor - a mechanism that allows for the creation of new constructed types that is based on the existing atomic/other constructed types.
+Ex: LL, trees, graphs, struct</p>
+<blockquote>
+<p>NOTE: no two fields in a record can have the same name&ndash;it is not a type checking issue.</p>
+</blockquote>
+<h4 id="arrays">Arrays</h4>
+<p>It is an ordered list that is indexable by integral values, starting at $0$ and going to $n-1$ if it contains $n$ elements.
+<strong>Base Type</strong> - Each element within an array must have the same type.</p>
+<p>By definition, an array is a <em><strong>pair consisting of the base type and index set.</strong></em>
+$Array(base type, [low..high])$</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Array(int, [<span style="color:#ae81ff">0..9</span>]) <span style="color:#f92672">=</span> int a[<span style="color:#ae81ff">10</span>]
+</code></pre></div><p><strong>Refiable type</strong> - type whose type information is fully available at runtime. Does not have all its info available at runtime.</p>
+<h4 id="constructed-types">Constructed Types</h4>
+<p>There are two approaches to determine type equivalence for constructed types:</p>
+<ol>
+<li>Name equivalence - types have the same name</li>
+<li>Structural equivalence - types have the same structure</li>
+</ol>
+<p>Example: Records (structs)
+A value of a record type is an ordered set of values that are compatible w/ the types of the record.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">s</span> {
+  <span style="color:#66d9ef">int</span> a;
+  <span style="color:#66d9ef">double</span> d;
+  <span style="color:#66d9ef">char</span> c;
+};
+</code></pre></div><p>Can be initialized as one of the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#75715e">// order does not matter since the fields are named.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">s</span> myS <span style="color:#f92672">=</span> { .a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, .d <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.5</span>, .c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;d&#39;</span> };
+
+<span style="color:#75715e">// order matters since fields are NOT named
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">s</span> myS <span style="color:#f92672">=</span> { <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10.5</span>, <span style="color:#e6db74">&#39;d&#39;</span> };
+</code></pre></div><p>When using typedef, declarations would be of the same type&ndash;this is an example of declaration equivalence.</p>
+<h2 id="summary">Summary</h2>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture">Lecture</a></li>
+        <li><a href="#readings">Readings</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#chapter-7-type-checking">Chapter 7 Type Checking</a></li>
+                <li><a href="#atomic-types">Atomic Types</a></li>
+                <li><a href="#type-constructors">Type Constructors</a></li>
+                <li><a href="#arrays">Arrays</a></li>
+                <li><a href="#constructed-types">Constructed Types</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

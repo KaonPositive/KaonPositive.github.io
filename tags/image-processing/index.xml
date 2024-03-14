@@ -6,7 +6,40 @@
     <description>Recent content in image processing on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 469 Notes 09</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes09/</link>
+      <pubDate>Wed, 06 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes09/</guid>
+      <description>Lecture Reading Summary </description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 08</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes08/</link>
+      <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes08/</guid>
+      <description>Lecture Filtering Frequency Domain Fourier - Any periodic function can be rewritten as a weighted sum of infinite sinusoids of different frequencies.
+ Periodic - signal/function repeats its values in regular intervals/periods
+ Reasons why images may not be periodic:
+ Limited to size There are unique content Edge limits  Fourier Series - any periodic function can be represented as the sum of sines and/or cosines of different frequencies.</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 07</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes07/</link>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes07/</guid>
+      <description>Lecture Image Enhancement Consists of two spatial filters:
+ Smoothing (lowpass) Sharpening (highpass)  There are two types of smoothing filters:
+ Linear   Box Filter Kernels Lowpass Gaussian Filter Kernels  Nonlinear   Order-Statistic Filters   IMPORTANT: In terms of box filters, if the kernel size gets bigger, then the image will be much blurier, since the average of pixels increase.
+ Disadvantages of box filters:</description>
+    </item>
+    
     <item>
       <title>CS 469 Notes 04</title>
       <link>https://kaonpositive.github.io/posts/cs469notes04/</link>
