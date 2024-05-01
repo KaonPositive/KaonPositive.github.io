@@ -17,26 +17,26 @@
     
 
     
-    <title>cs469</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>CS 469 Notes 09</title>
+    <meta name="description" content="Notes for CS469 3/18/24">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs469, image processing'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/tags/cs469/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs469notes10/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="cs469">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="CS 469 Notes 09">
+    <meta property="og:description" content="Notes for CS469 3/18/24">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="cs469">
-    <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/tags/cs469/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/tags/cs469/">
+    <meta name="twitter:title" content="CS 469 Notes 09">
+    <meta name="twitter:description" content="Notes for CS469 3/18/24">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs469notes10/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs469notes10/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/tags/cs469/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs469notes10/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -156,102 +156,109 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 469 Notes 09</h1>
+        <small role="doc-subtitle">Notes for CS469 3/18/24</small>
+        <p class="post-date">
+            March 18, 2024
+        </p>
 
-    <h1 class="list-title">cs469</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs469">cs469</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/image-processing">image processing</a></li>
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <h2 id="lecture">Lecture</h2>
+<p>For an image, it consists of two parts:</p>
+<ol>
+<li>Background</li>
+<li>Foreground</li>
+</ol>
+<p>A Structured Element (SE) has three parameters to consider:</p>
+<ol>
+<li>How much</li>
+<li>Different Shapes</li>
+<li>Different Size</li>
+</ol>
+<blockquote>
+<p>NOTE: Look back at structuring elements and the use of erosion.
+Example: if you have a 5 x 20 image, where 5 is the width and 20 is the height, if you want to remove the amount of pixels vertically, you do d/2; if you want to remove the amount of pixels horizontally, you do d/4.</p>
+</blockquote>
+<p>+&mdash;+
+| 1 |    &lt;- removes one pixel at the top
++&mdash;+
++&mdash;+
+| <strong>1</strong> |    &lt;- this is the origin
++&mdash;+
++&mdash;+
+| 1 |    &lt;- removes one pixel at the bottom.
++&mdash;+</p>
+<p>The above graphic is used for erosion.</p>
+<h4 id="opening-and-closing">Opening and Closing</h4>
+<ul>
+<li>Opening - It smoothens the contour of an object.
+Is ideal for eliminating small objects. Erosion followed by dilation.</li>
+<li>Closing -</li>
+</ul>
+<h4 id="matlab-morphology-opening-erosion-dilation">MatLab: Morphology, Opening, Erosion, Dilation</h4>
+<p>In MatLab, in order to use morphology, you use the function:
+strel();</p>
+<p>To use an Opening, you use imopen();</p>
+<p>To use erosion, you use imerode();</p>
+<p>To use dilationm you use imdilate();</p>
+<h4 id="hit-or-miss-transform">Hit-or-miss Transform</h4>
+<p>It is a basic tool for shape detection in binary images.
+Performs erosion on the image w/ first structuring element and on the complement of the image w/ the second structuring element.</p>
+<h2 id="reading">Reading</h2>
+<h2 id="summary">Summary</h2>
 
-    <h2 class="posts-year">2024</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes15/" class="post-link">CS 469 Notes 14</a>
-    <div class="flex-break"></div>
-    <span class="post-date">April 22, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460finalstudyguide/" class="post-link">CS 460 Final Study Guide</a>
-    <div class="flex-break"></div>
-    <span class="post-date">April 22, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes14/" class="post-link">CS 469 Notes 14</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 27, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes13/" class="post-link">CS 469 Notes 13</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 27, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes12/" class="post-link">CS 469 Notes 12</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 27, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes11/" class="post-link">CS 469 Notes 10</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 25, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes10/" class="post-link">CS 469 Notes 09</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 18, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes09/" class="post-link">CS 469 Notes 09</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 18, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes08/" class="post-link">CS 469 Notes 08</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 4, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes07/" class="post-link">CS 469 Notes 07</a>
-    <div class="flex-break"></div>
-    <span class="post-date">February 26, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes06/" class="post-link">CS 469 Notes 06</a>
-    <div class="flex-break"></div>
-    <span class="post-date">February 5, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes05/" class="post-link">CS 469 Notes 05</a>
-    <div class="flex-break"></div>
-    <span class="post-date">February 5, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes04/" class="post-link">CS 469 Notes 04</a>
-    <div class="flex-break"></div>
-    <span class="post-date">February 5, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes03/" class="post-link">CS 469 Notes 03</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 31, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes02/" class="post-link">CS 469 Notes 02</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 29, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes01/" class="post-link">CS 469 Notes 01</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 22, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes00/" class="post-link">CS 469 Notes 00</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 17, 2024</span>
-</article>
+        </p>
+        
+    </div>
 
-    
-
+    <div class="prev-next">
+        
+    </div>
 </div>
 
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture">Lecture</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#opening-and-closing">Opening and Closing</a></li>
+                <li><a href="#matlab-morphology-opening-erosion-dilation">MatLab: Morphology, Opening, Erosion, Dilation</a></li>
+                <li><a href="#hit-or-miss-transform">Hit-or-miss Transform</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#reading">Reading</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
 
         </main><footer class="footer">
     

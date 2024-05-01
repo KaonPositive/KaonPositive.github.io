@@ -6,14 +6,99 @@
     <description>Recent content in image processing on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 460 Final Study Guide</title>
+      <link>https://kaonpositive.github.io/posts/cs460finalstudyguide/</link>
+      <pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs460finalstudyguide/</guid>
+      <description>Additional guide here.
+FIRST Sets * Terminal - lowercase letters; symbols of a language Non-terminal - uppercase letters; each letter represents a language.
+ if X -&amp;gt; epsilon, then FIRST(X) = {epsilon} For any terminal a, then FIRST(a) = {a} For a production rule $X \rightarrow Y_1Y_2Y_3$:   if $\epsilon \notin FIRST(Y_1)$, then $FIRST(X) = FIRST(Y_1)$ if $\epsilon \in FIRST(Y_1)$ then $FIRST(X) = {FIRST(Y_1) - \epsilon } \cup FIRST(Y_2Y_3)$  Eliminating Left Recursion Direct Left Recursion  Find bodies of all nonterminal A production w/ left recursion and delete them.</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 14</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes15/</link>
+      <pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes15/</guid>
+      <description>Lecture Image Compression In terms of image compression, we use Huffman Coding.
+YCbCr = Y is for luminance; Cb is for chrominance blue; Cr is for chrominance red
+JPEG Encoder Steps:
+ Preprocessing Dividing int NxN blocks Transform each block (Y, Cb, Cr) from spatial to frequency domain. Quantization Encoding (Huffman)  Forward Transformation Transforms image/iamge blocks from
+There are 3 transformation approaches:
+ DFT DCT KLT  Reading Summary </description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 12</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes12/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes12/</guid>
+      <description>Lecture Image Segmentation Edge - a rapid change in image intensity or a discontinuity in pixel value.
+In edge detection, it requires the use of first and second derivatives.
+ First Derivative - produces a thick edge profile. Second Derivative - produces a double-edge profile w/ a sign change  If noises are present in an image, noise must be reduced if edge detection is going to be used.
+Edge Detection Algorithms  Image Gradient - measures the change in intensity across the image; derivatves on the x and y directions; also uses derivatives to calculate magnitude and direction of edges within an image.</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 13</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes13/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes13/</guid>
+      <description>Lecture Region Growing It is a procedure that groups pixels or subregions into larger regions.
+Region Growing is useful for:
+ Segmenting images where regions of interests are not clearly defined by edges. Images has varying intensity levels that make traditional thresholding ineffective.  Images as Graphs  Graph Representation - Image can be modeled as a graph G=(V,E), where: V is a set of nodes representing pixels or pixel clusters.</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 14</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes14/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes14/</guid>
+      <description>Lecture Image Compression JPEG - a form of image compression.
+Code - a list of symbols (letters, numbers, bits, etc.) Code word - a sequence of symbols used to represent some information (ex: gray levels) Code worth length - number of symbols in a code word.
+In terms for coding redundancy, assume you have a discrete random variable $r_k$ where it is an interval [0, L-1]. It is used to represent the intensities of an $M * N$ image.</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 10</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes11/</link>
+      <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes11/</guid>
+      <description>Lecture Boundary Extraction - can be obtained by eroding A (set of foreground pixels) by a suitable structuring element, B. Performs the set difference between A and its erosion. $\beta(A) = A - (A \ominus B)$
+$(A \ominus B)$ = erosion $A$ = object
+ To increase the boundary, you use a larger structuring element.
+ Hole Filling It is a morphological process that is used to identify and fill the background regions that are surrounded by foreground regions in a binary image.</description>
+    </item>
+    
     <item>
       <title>CS 469 Notes 09</title>
       <link>https://kaonpositive.github.io/posts/cs469notes09/</link>
-      <pubDate>Wed, 06 Mar 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kaonpositive.github.io/posts/cs469notes09/</guid>
-      <description>Lecture Reading Summary </description>
+      <description>Lecture Recall that there are three types of low pass filters:
+ Ideal Butterworth Gaussian   NOTE: Equations for each of these filters can be found on canvas.
+ Image Sharpening Using Highpass Frequency Filters  Edges and rapid changes correspond to high frequencies.   The Laplacian in the Frequency Domain is the second derivative of an image $f(x, y)$
+Unsharp Masking and High-boost Filtering When K &amp;gt; 1, then High-boost filtering When K == 1, then unsharp masking</description>
+    </item>
+    
+    <item>
+      <title>CS 469 Notes 09</title>
+      <link>https://kaonpositive.github.io/posts/cs469notes10/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/cs469notes10/</guid>
+      <description>Lecture For an image, it consists of two parts:
+ Background Foreground  A Structured Element (SE) has three parameters to consider:
+ How much Different Shapes Different Size   NOTE: Look back at structuring elements and the use of erosion. Example: if you have a 5 x 20 image, where 5 is the width and 20 is the height, if you want to remove the amount of pixels vertically, you do d/2; if you want to remove the amount of pixels horizontally, you do d/4.</description>
     </item>
     
     <item>

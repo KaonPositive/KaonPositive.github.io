@@ -17,26 +17,26 @@
     
 
     
-    <title>cs469</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>CS 469 Notes 14</title>
+    <meta name="description" content="Notes for CS469 4/17/24">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs469, image processing'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/tags/cs469/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs469notes14/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="cs469">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="CS 469 Notes 14">
+    <meta property="og:description" content="Notes for CS469 4/17/24">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="cs469">
-    <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/tags/cs469/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/tags/cs469/">
+    <meta name="twitter:title" content="CS 469 Notes 14">
+    <meta name="twitter:description" content="Notes for CS469 4/17/24">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs469notes14/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs469notes14/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/tags/cs469/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs469notes14/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -156,102 +156,102 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 469 Notes 14</h1>
+        <small role="doc-subtitle">Notes for CS469 4/17/24</small>
+        <p class="post-date">
+            March 27, 2024
+        </p>
 
-    <h1 class="list-title">cs469</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs469">cs469</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/image-processing">image processing</a></li>
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <h2 id="lecture">Lecture</h2>
+<h4 id="image-compression">Image Compression</h4>
+<p>JPEG - a form of image compression.</p>
+<p>Code - a list of symbols (letters, numbers, bits, etc.)
+Code word - a sequence of symbols used to represent some information (ex: gray levels)
+Code worth length - number of symbols in a code word.</p>
+<p>In terms for coding redundancy, assume you have a discrete random variable $r_k$ where it is an interval [0, L-1]. It is used to represent the intensities of an $M * N$ image.</p>
+<blockquote>
+<p>NOTE: each r_k occurs with some probability p_r(r_k)</p>
+</blockquote>
+<p>List of formulas to remember:</p>
+<ol>
+<li>Redundancy (R) = $ 1 - \frac{1}{C}$ or $\frac{C-1}{C}$</li>
+<li>Compression Rate (C) = $\frac{b}{b'}$</li>
+<li>$P_r(r_k) = \frac{n_k}{M*N}$</li>
+<li>$L_{AVG} = \sum^{L-1}_{k=0} l(r_k) * P_r(r_k)$</li>
+</ol>
+<p>$P_r(r_k)$ is code 2</p>
+<h4 id="general-compression-system">General Compression System</h4>
+<ol>
+<li>Encoder - Performs the compression</li>
+<li>Decoder - Performs decompression</li>
+<li>Mapper - Converts data into a format suitable for compression.</li>
+<li>Quantizer</li>
+</ol>
+<h4 id="huffman-encoding">Huffman Encoding</h4>
+<ul>
+<li>Is used to remove coding redundancy.</li>
+<li>A lossless compression technique.</li>
+<li>Utilizes a frequency-sorted binary tree to encode data.</li>
+</ul>
+<p>Huffman is used becuase pixels in an image do NOT have equal frequencies.</p>
+<p>General idea of Huffman Encoding - assigns the shortest codes to the most frequently occurring pixel values (symbols).</p>
+<p>In terms of entropy, the reason as to why the formula $H = - \sum^J_{i=1}P(a_j)logP(a_j)$ has a negative sign is because if you input any number for $a_j$ for $log$, it will be negative. A negative times a negative is a positive.</p>
+<h2 id="reading">Reading</h2>
+<h2 id="summary">Summary</h2>
 
-    <h2 class="posts-year">2024</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes15/" class="post-link">CS 469 Notes 14</a>
-    <div class="flex-break"></div>
-    <span class="post-date">April 22, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs460finalstudyguide/" class="post-link">CS 460 Final Study Guide</a>
-    <div class="flex-break"></div>
-    <span class="post-date">April 22, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes14/" class="post-link">CS 469 Notes 14</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 27, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes13/" class="post-link">CS 469 Notes 13</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 27, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes12/" class="post-link">CS 469 Notes 12</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 27, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes11/" class="post-link">CS 469 Notes 10</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 25, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes10/" class="post-link">CS 469 Notes 09</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 18, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes09/" class="post-link">CS 469 Notes 09</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 18, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes08/" class="post-link">CS 469 Notes 08</a>
-    <div class="flex-break"></div>
-    <span class="post-date">March 4, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes07/" class="post-link">CS 469 Notes 07</a>
-    <div class="flex-break"></div>
-    <span class="post-date">February 26, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes06/" class="post-link">CS 469 Notes 06</a>
-    <div class="flex-break"></div>
-    <span class="post-date">February 5, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes05/" class="post-link">CS 469 Notes 05</a>
-    <div class="flex-break"></div>
-    <span class="post-date">February 5, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes04/" class="post-link">CS 469 Notes 04</a>
-    <div class="flex-break"></div>
-    <span class="post-date">February 5, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes03/" class="post-link">CS 469 Notes 03</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 31, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes02/" class="post-link">CS 469 Notes 02</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 29, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes01/" class="post-link">CS 469 Notes 01</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 22, 2024</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs469notes00/" class="post-link">CS 469 Notes 00</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 17, 2024</span>
-</article>
+        </p>
+        
+    </div>
 
-    
-
+    <div class="prev-next">
+        
+    </div>
 </div>
 
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture">Lecture</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#image-compression">Image Compression</a></li>
+                <li><a href="#general-compression-system">General Compression System</a></li>
+                <li><a href="#huffman-encoding">Huffman Encoding</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#reading">Reading</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
 
         </main><footer class="footer">
     

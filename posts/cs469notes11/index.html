@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>CS 469 Notes 10</title>
+    <meta name="description" content="Notes for CS469 3/25/24">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs469, image processing'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs469notes11/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CS 469 Notes 10">
+    <meta property="og:description" content="Notes for CS469 3/25/24">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS 469 Notes 10">
+    <meta name="twitter:description" content="Notes for CS469 3/25/24">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs469notes11/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs469notes11/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs469notes11/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 469 Notes 10</h1>
+        <small role="doc-subtitle">Notes for CS469 3/25/24</small>
+        <p class="post-date">
+            March 25, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs469">cs469</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/image-processing">image processing</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="lecture">Lecture</h2>
+<p>Boundary Extraction - can be obtained by eroding A (<strong>set of foreground pixels</strong>) by a suitable <strong>structuring element, B</strong>. Performs the set difference between A and its erosion.
+$\beta(A) = A - (A \ominus B)$</p>
+<p>$(A \ominus B)$ = erosion
+$A$ = object</p>
+<blockquote>
+<p>To increase the boundary, you use a larger structuring element.</p>
+</blockquote>
+<h4 id="hole-filling">Hole Filling</h4>
+<p>It is a <strong>morphological process</strong> that is used to <strong>identify and fill</strong> the background regions that are surrounded by foreground regions in a binary image.</p>
+<h4 id="thinning">Thinning</h4>
+<p>Reduces binary objects or shapes in an image to strokes that are a single pixel wide.</p>
+<h4 id="grayscale-morphology">GrayScale Morphology</h4>
+<p>Grayscale Erosion - replaces the pixel&rsquo;s value w/ the <strong>minimum value</strong> of all the pixels in the neighborhood defined by the structuring element.</p>
+<p>Grayscale Dilation - replaces the pixel&rsquo;s value w/ the <strong>maximum value</strong> of all the pixels in the neighborhood defined by the structuring element.</p>
+<h4 id="image-segmentation">Image Segmentation</h4>
+<p>It is the process of partitioning a digital image into multiple segments (sets of pixels), often</p>
+<h4 id="fundamentals-of-image-segmentation">Fundamentals of Image Segmentation</h4>
+<ol>
+<li>Connectivity - Focuses on idenitifying abrupt changes in intensity</li>
+<li>Similarity -</li>
+</ol>
+<h4 id="finite-differences">Finite Differences</h4>
+<ol>
+<li>First-order Derivatives - produces thick edges in images.</li>
+<li>Second-order Derivatives - stronger response to fine details, such as thin lines, isolated points and noise.</li>
+</ol>
+<p>In second-order derivatives, the signs indicate whether the image is dark or not. For instance, if a value goes from + to -, then the image has converted from dark to light (or the other way around).</p>
+<blockquote>
+<p>NOTE: when using laplacian, the sum of values in an image must always equal to 0.</p>
+</blockquote>
+<h4 id="point-detection">Point Detection</h4>
+<p>Requires the use of the Laplacian operator.
+Steps:</p>
+<ol>
+<li>Compute Laplacian response at every pixel.</li>
+<li>Take absolute value of Laplacian response</li>
+<li>If the result is greater than a threshold, set the pixel to 1. Otherwise, 0.</li>
+</ol>
+<h4 id="line-detection">Line Detection</h4>
+<p>Uses the second-order derivative. Second-order derivatives result in a stronger filter response and thinner lines in comparison to first-order derivatives.
+We can definte filter kernels to detect lines in specified directions.</p>
+<h4 id="edge-detection">Edge Detection</h4>
+<p>Is a common approach for image segmentation based on local intensity changes and discontinuities.</p>
+<p>There are three types of edges:</p>
+<ol>
+<li>Step edge - transition between two intensity levels occurring ideally over the distance of one pixel</li>
+<li>Ramp edge - gradual transition between two intensity levels</li>
+<li>Roof edge - intensities on both sides of the rood are similar, with different intensity in the middle.</li>
+</ol>
+<p>If the image is noisy, you must first eliminate the noise (by smoothing the image). After the noise is eliminated, then edge detection can be applied.</p>
+<blockquote>
+<p>NOTE: it is mandatory that noise must be elimininated before applying edge detection, as the first and second derivatives are sensitive to noise.</p>
+</blockquote>
+<p>You can use spatial and frequency domain to reduce the amount of noise.</p>
+<h2 id="reading">Reading</h2>
+<h2 id="summary">Summary</h2>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lecture">Lecture</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#hole-filling">Hole Filling</a></li>
+                <li><a href="#thinning">Thinning</a></li>
+                <li><a href="#grayscale-morphology">GrayScale Morphology</a></li>
+                <li><a href="#image-segmentation">Image Segmentation</a></li>
+                <li><a href="#fundamentals-of-image-segmentation">Fundamentals of Image Segmentation</a></li>
+                <li><a href="#finite-differences">Finite Differences</a></li>
+                <li><a href="#point-detection">Point Detection</a></li>
+                <li><a href="#line-detection">Line Detection</a></li>
+                <li><a href="#edge-detection">Edge Detection</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#reading">Reading</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

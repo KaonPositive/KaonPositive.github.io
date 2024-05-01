@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>CS 460 Final Study Guide</title>
+    <meta name="description" content="Study Guide for 460">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, cs469, image processing'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/cs460finalstudyguide/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CS 460 Final Study Guide">
+    <meta property="og:description" content="Study Guide for 460">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS 460 Final Study Guide">
+    <meta name="twitter:description" content="Study Guide for 460">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs460finalstudyguide/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs460finalstudyguide/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/cs460finalstudyguide/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>CS 460 Final Study Guide</h1>
+        <small role="doc-subtitle">Study Guide for 460</small>
+        <p class="post-date">
+            April 22, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/cs469">cs469</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/image-processing">image processing</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>Additional guide <a href="/docs/cs460_study_guide.pdf">here.</a></p>
+<h2 id="first-sets-">FIRST Sets *</h2>
+<p>Terminal - lowercase letters; symbols of a language
+Non-terminal - uppercase letters; each letter represents a language.</p>
+<ol>
+<li>if X -&gt; epsilon, then FIRST(X) = {epsilon}</li>
+<li>For any terminal a, then FIRST(a) = {a}</li>
+<li>For a production rule $X \rightarrow Y_1Y_2Y_3$:</li>
+</ol>
+<ul>
+<li>if $\epsilon \notin FIRST(Y_1)$, then $FIRST(X) = FIRST(Y_1)$</li>
+<li>if $\epsilon \in FIRST(Y_1)$ then $FIRST(X) = {FIRST(Y_1) - \epsilon } \cup FIRST(Y_2Y_3)$</li>
+</ul>
+<h2 id="eliminating-left-recursion">Eliminating Left Recursion</h2>
+<h4 id="direct-left-recursion">Direct Left Recursion</h4>
+<ol>
+<li>Find bodies of all nonterminal A production w/ left recursion and <strong>delete</strong> them.</li>
+<li>Add deleted bodies to a new non-terminal A'</li>
+<li>For each non-terminal A':</li>
+</ol>
+<ul>
+<li>Delete the first recursive call A</li>
+<li>Add A' at the end</li>
+</ul>
+<ol start="4">
+<li>Add epsilon production to A'</li>
+<li>Add A' at the end for all remaining non-terminal production A.</li>
+</ol>
+<h2 id="follow-sets-">FOLLOW Sets *</h2>
+<ol>
+<li>For start symbol $S$, place dollar sign in $FOLLOW(S)$.</li>
+<li>For any production rule $A \rightarrow \alpha B$, then $FOLLOW(B) = FOLLOW(A)$</li>
+<li>For any production rule $A \rightarrow \alpha B \beta$:</li>
+</ol>
+<ul>
+<li>If $\epsilon \notin FIRST(\beta)$, then $FOLLOW(B) = FIRST(\beta)$</li>
+<li>If $\epsilon \in FIRST(\beta)$, then $FOLLOW(B) = {FIRST(\beta) - \epsilon} \cup FOLLOW(A)$</li>
+</ul>
+<blockquote>
+<p>For FOLLOW sets, epsilon CANNOT exist within a set.</p>
+</blockquote>
+<h2 id="predict-sets-">PREDICT Sets *</h2>
+<h2 id="parsing-tables">Parsing Tables</h2>
+<h2 id="grammars-and-derivations">Grammars and Derivations</h2>
+<h4 id="left-most">Left-most</h4>
+<h4 id="right-most">Right-most</h4>
+<h4 id="ambiguity">Ambiguity</h4>
+<p>A grammar is said to be ambiguous if a string produces more than one:</p>
+<ol>
+<li>Parse tree</li>
+<li>or derivation tree</li>
+<li>or syntax tree</li>
+<li>or leftmost derivation</li>
+<li>or rightmost derivation</li>
+</ol>
+<h2 id="parser-conflicts">Parser Conflicts</h2>
+<h2 id="regular-expressions">Regular Expressions</h2>
+<h2 id="how-can-a-cfg-be-ll1">How can a CFG be LL(1)?</h2>
+<ol>
+<li>Must be unambiguous</li>
+<li>No left recursion (indirect or immediate)</li>
+<li>No FIRST-FIRST Conflict</li>
+<li>No FIRST-FOLLOW Conflict</li>
+</ol>
+<h2 id="lr0-">LR(0) *</h2>
+<p>A bottom-up parser that does the left-to-right scanning of the input and constructs a rightmost derivation in reverse.</p>
+<p>LR is table-driven, similar to non-recursive LL parsers.</p>
+<p>Pros of LR:</p>
+<ol>
+<li>can be constructed to recognize all programming language constructs for which CFG can be written.</li>
+<li>is the most general nonbacktracking shift-reduce parsing methid known, and can be implemented efficiently.</li>
+<li>can detect syntatic errors as soon as it is possible to do so on a left-to-right scan of the input</li>
+</ol>
+<h4 id="how-it-works">How it works:</h4>
+<p>A LR parser makes shift-reduce decisions by mainintaing states to keep track of where we are in a parse.</p>
+<blockquote>
+<p>NOTE: States are a set of items in this case.</p>
+</blockquote>
+<p>A LR(0) item of some grammar G is a production of G with a dot at some position of the body.
+ex: The grammar $A \rightarrow XYZ$ produces four items:
+$A \rightarrow \boldsymbol\cdot XYZ$
+$A \rightarrow X\boldsymbol\cdot YZ$
+$A \rightarrow XY \boldsymbol\cdot Z$
+$A \rightarrow XYZ \boldsymbol\cdot$</p>
+<blockquote>
+<p>NOTE: n + 1 LR(0) are created, hence the reason why 4 items are produced. If A -&gt; epsilon is a production, then 1 item exists.</p>
+</blockquote>
+<p>The dot in LR(0) indicates which part of the rule has already been parsed and what is expected next.
+So, for example:
+$A \rightarrow X\boldsymbol\cdot YZ$ says that $X$ has been parsed successfully and it is expected that a string can be derived from $YZ$ in the upcoming parse.</p>
+<p>Basically, an LR(0) item separates the RHS of production into two parts: parsed and not-yet-parsed part.</p>
+<p>At any given time during parsing, we indicate how much of the RHS of a production has been matched to input and how much is still to be matched.</p>
+<blockquote>
+<p>NOTE: Shifting is taking the next token from the input and adding it to the current sequence; Reduce is taking several tokens that were shifted and combining them into a larger unit based on the set of rules. For example, if you have the word &lsquo;New York&rsquo;, you might reduce them to &lsquo;city&rsquo; because &lsquo;New York&quot; is a type of city.</p>
+</blockquote>
+<p>LR(0) DOES NOT HAVE A REDUCTION LOOKAHEAD (that is, it does not have the ability for the parser to decide when to apply certain grammar rules based on the input token it sees)!!!</p>
+<blockquote>
+<p>IMPORTANT TO KNOW: For LR(0), reductions are done on FOLLOW sets; LR(1) on reduction lookahead.</p>
+</blockquote>
+<h4 id="lr0-parsing">LR(0) Parsing</h4>
+<p>For a grammar to be LR(0), it must be able to determine what action to take without looking at the input (hence the reason why it does not have a reduction lookahead). Decisions to add the next input symbol onto the stack or to perform a reduction are made soley on what&rsquo;s currently on the table (stack) w/o peeking at what comes next.</p>
+<h4 id="determine-if-a-grammar-is-lr0">Determine if a grammar is LR(0)</h4>
+<p>A language L has an LR(0) grammar iff L is a deterministic CFL w/ a prefix property.</p>
+<p>Prefix Property - no proper prefix of any valid word is also a valid word in the same language.</p>
+<blockquote>
+<p>EXAMPLE: &lsquo;apple&rsquo; is a valid word; however, &lsquo;app&rsquo; is not valid in the same language.</p>
+</blockquote>
+<p>So for example, consider the valid word &lsquo;(())':</p>
+<ul>
+<li>&lsquo;(&rsquo; is not valid because it does not have a matching closing parenthesis.</li>
+<li>&lsquo;((&rsquo; is not valid because it is missing two matching closing parenthesis.</li>
+<li>&lsquo;(()&rsquo; is not valid because it is not complete&ndash;it is missing a matching closing parenthesis.</li>
+</ul>
+<p>So the valid word &lsquo;(())&rsquo; satisfies the prefix propert because it has proper matching.</p>
+<h2 id="lr1">LR(1)</h2>
+<p>LR(1) items uses one lookahead symbol. Items have information about the next symbol that the parser expects to see after the dot (lookahead symbol). A parsing table is created so that the parser can make decisions during parsing, which will consider the current state and the next input symbol.</p>
+<h2 id="slr-parsing">SLR Parsing</h2>
+<p>Known as Simple LR, it is the construction from the gramar of the LR(0) automaton.
+States are the set of items from canonical LR(0) collection; transitions are given by a GOTO function.</p>
+<h4 id="slr1-">SLR(1) *</h4>
+<p>Is a shift-reduce parser.</p>
+<h2 id="determine-if-its-context-free-or-not">Determine if it&rsquo;s Context-free or Not</h2>
+<h2 id="recursive-descent-parsing">Recursive Descent Parsing</h2>
+<p>A technqiue that uses the recursion stack as the equivalent to the stack found in push-down automaton needed for recognizing the language of a CFG. page 129</p>
+<h2 id="lexical-analyzers">Lexical Analyzers</h2>
+<h2 id="left-factorization">Left Factorization</h2>
+<h2 id="predictive-parsers">Predictive Parsers</h2>
+<h2 id="basic-block-and-control-flow-graphs-">Basic Block and Control Flow Graphs *</h2>
+<p>Basic block - consecutive piece of code that is always executed together.
+Example of basic block:
+iload_1
+iload_2
+iload_3
+iload_4
+idiv
+iload_1
+imul
+iadd
+ishr
+istore5</p>
+<blockquote>
+<p>NOTE: The above is bytecode of q = a &raquo; b + ( c/d * a )</p>
+</blockquote>
+<p>What is a leader?
+a leader is one of the following instructions:</p>
+<ol>
+<li>the first instruction is a leader</li>
+<li>any labeled instruction is a leader</li>
+<li>any instruction following a jump is a leader.</li>
+</ol>
+<blockquote>
+<p>TIP: First make basic blocks, then find its leaders.</p>
+</blockquote>
+<h2 id="type-checking-">Type Checking *</h2>
+<p>Involves having the compiler assign a type expression to each component of the source program. It then must determine if type expressions conform to the collection of logical rules (type system).</p>
+<p>It is used to catch errors in programs.</p>
+<p>Ensures all operators (+, -, *, etc.) are compatible with their operands.</p>
+<p>There are two types of type checking:</p>
+<ol>
+<li>
+<p>Static type checking - performs type checking at compile time (program is translated into a language that the computer&rsquo;s hardware can understand and execute, known as machine code).
+Variables and parameters are bound to types at compile time. Uses are checked at compile time to assure no type errors. Variables are declared before they are used, and when declared, are bound to a type.</p>
+</li>
+<li>
+<p>Dynamic type checking - performs type checking at runtime (program is running after it has been compiled ).
+No binding of variables or parameters are done. Variable&rsquo;s type is determined by vaules assigned to it, which happens at runtime. Also means that tye checking of expressions happen at runtime when variables&rsquo; types are known&ndash;leads to more type errors at runtime than statically typed languages.</p>
+</li>
+</ol>
+<p>Strongly Typed - ALL type errors are detected at compile time&ndash;no type-related errors can occur at runtime. Programs will run w/o type errors.
+Weakly Typed - Type errors cannot be typed checked at compile time. Variables can be assigned to any type without declaring it beforehand.</p>
+<h4 id="coercion">Coercion</h4>
+<p>Automatic conversion of a data type (implicit). Compilers allow coercion for types when <strong>there is no loss of precision</strong>.</p>
+<blockquote>
+<p>EXAMPLE: adding an integer to a double is only legal if the language supports coercion. The integer mus tbe converted to a double before the addition will happen.</p>
+</blockquote>
+<h4 id="casting">Casting</h4>
+<p>Manual conversion of a data type (explicit).</p>
+<blockquote>
+<p>EXAMPLE: if you want to convert an integer to a double, then you must manually do it. For example, int i = (int)doubleType will convert a double type into an int type.</p>
+</blockquote>
+<blockquote>
+<p>NOTE: Any OOP language with inheritance cannot be strongly typed.</p>
+</blockquote>
+<h4 id="purpose-of-type-checking">Purpose of type checking:</h4>
+<ol>
+<li>Type checking at compile time is possible only for statically typed languages.</li>
+</ol>
+<blockquote>
+<p>NOTE: statically typed languages - must declare the kind of data that each variable will hold before you use it&ndash;they are given at declaration time.</p>
+</blockquote>
+<p>Ex: assigning value 3.14 to a variable of integral type is not legal since the decimal part &lsquo;.14&rsquo; will be lost in the assignment.</p>
+<ol start="2">
+<li>Apart from checking numeric types, a type checker can also be used to check assignments involving object references.</li>
+</ol>
+<blockquote>
+<p>NOTE: a superclass type can be assigned a reference to an object of a subclass type. So, if A is a superclass of B, then a reference to an object of class B may be stored in a variable of type A.</p>
+</blockquote>
+<ol start="3">
+<li>It is also the type checker&rsquo;s task to resolve method invocations (if the language is statically typed)</li>
+</ol>
+<h4 id="type-compatability-of-classes">Type Compatability of Classes</h4>
+<p>Use the formula $A &lt;:_T B$ where B is a subtype of the supertype A. Any expression of type B can be used anywhere that an expression of type A is expected</p>
+<blockquote>
+<p>NOTE: a class is not a subclass of itself.</p>
+</blockquote>
+<p>If $A &lt;:_T B$ and $B &lt;:_T C$, then $A &lt;:_T C$ (transitive) but <strong>NOT SYMMETRIC</strong> ($A &lt;:_T B$ != $B &lt;:_T A$)</p>
+<p>Ex:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">A v <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> B(...); <span style="color:#75715e">// is legal iff A = B or $A &lt;:_T B$
+</span></code></pre></div><p>$T_v :=T_e \Longleftrightarrow (A=B) \lor (A &lt;:_t B)$</p>
+<blockquote>
+<p>Basically says &ldquo;variable must be equal or higher type than expression to establish assignment compatability.&rdquo;</p>
+</blockquote>
+<h4 id="rules-for-type-checking">Rules for type checking:</h4>
+<h2 id="basic-block-and-control-flow-graphs--1">Basic Block and Control Flow Graphs *</h2>
+<h2 id="espresso">Espresso</h2>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#first-sets-">FIRST Sets *</a></li>
+        <li><a href="#eliminating-left-recursion">Eliminating Left Recursion</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#direct-left-recursion">Direct Left Recursion</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#follow-sets-">FOLLOW Sets *</a></li>
+        <li><a href="#predict-sets-">PREDICT Sets *</a></li>
+        <li><a href="#parsing-tables">Parsing Tables</a></li>
+        <li><a href="#grammars-and-derivations">Grammars and Derivations</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#left-most">Left-most</a></li>
+                <li><a href="#right-most">Right-most</a></li>
+                <li><a href="#ambiguity">Ambiguity</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#parser-conflicts">Parser Conflicts</a></li>
+        <li><a href="#regular-expressions">Regular Expressions</a></li>
+        <li><a href="#how-can-a-cfg-be-ll1">How can a CFG be LL(1)?</a></li>
+        <li><a href="#lr0-">LR(0) *</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#how-it-works">How it works:</a></li>
+                <li><a href="#lr0-parsing">LR(0) Parsing</a></li>
+                <li><a href="#determine-if-a-grammar-is-lr0">Determine if a grammar is LR(0)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#lr1">LR(1)</a></li>
+        <li><a href="#slr-parsing">SLR Parsing</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#slr1-">SLR(1) *</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#determine-if-its-context-free-or-not">Determine if it&rsquo;s Context-free or Not</a></li>
+        <li><a href="#recursive-descent-parsing">Recursive Descent Parsing</a></li>
+        <li><a href="#lexical-analyzers">Lexical Analyzers</a></li>
+        <li><a href="#left-factorization">Left Factorization</a></li>
+        <li><a href="#predictive-parsers">Predictive Parsers</a></li>
+        <li><a href="#basic-block-and-control-flow-graphs-">Basic Block and Control Flow Graphs *</a></li>
+        <li><a href="#type-checking-">Type Checking *</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#coercion">Coercion</a></li>
+                <li><a href="#casting">Casting</a></li>
+                <li><a href="#purpose-of-type-checking">Purpose of type checking:</a></li>
+                <li><a href="#type-compatability-of-classes">Type Compatability of Classes</a></li>
+                <li><a href="#rules-for-type-checking">Rules for type checking:</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#basic-block-and-control-flow-graphs--1">Basic Block and Control Flow Graphs *</a></li>
+        <li><a href="#espresso">Espresso</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

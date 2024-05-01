@@ -18,19 +18,19 @@
 
     
     <title>CS 469 Notes 09</title>
-    <meta name="description" content="Notes for CS469 3/06/24">
+    <meta name="description" content="Notes for CS469 3/18/24">
     <meta name="keywords" content='blog, gokarna, hugo, notes, cs469, image processing'>
 
     <meta property="og:url" content="https://kaonpositive.github.io/posts/cs469notes09/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="CS 469 Notes 09">
-    <meta property="og:description" content="Notes for CS469 3/06/24">
+    <meta property="og:description" content="Notes for CS469 3/18/24">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CS 469 Notes 09">
-    <meta name="twitter:description" content="Notes for CS469 3/06/24">
+    <meta name="twitter:description" content="Notes for CS469 3/18/24">
     <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/cs469notes09/">
     <meta property="twitter:url" content="https://kaonpositive.github.io/posts/cs469notes09/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
@@ -159,9 +159,9 @@
     <div class="post container">
     <div class="post-header-section">
         <h1>CS 469 Notes 09</h1>
-        <small role="doc-subtitle">Notes for CS469 3/06/24</small>
+        <small role="doc-subtitle">Notes for CS469 3/18/24</small>
         <p class="post-date">
-            March 6, 2024
+            March 18, 2024
         </p>
 
         <ul class="post-tags">
@@ -178,8 +178,115 @@
     <div class="post-content">
         <p>
             <h2 id="lecture">Lecture</h2>
+<p>Recall that there are three types of low pass filters:</p>
+<ol>
+<li>Ideal</li>
+<li>Butterworth</li>
+<li>Gaussian</li>
+</ol>
+<blockquote>
+<p>NOTE: Equations for each of these filters can be found on canvas.</p>
+</blockquote>
+<h4 id="image-sharpening-using-highpass-frequency-filters">Image Sharpening Using Highpass Frequency Filters</h4>
+<ul>
+<li>Edges and rapid changes correspond to high frequencies.</li>
+<li></li>
+</ul>
+<p>The Laplacian in the Frequency Domain is the second derivative of an image $f(x, y)$</p>
+<h4 id="unsharp-masking-and-high-boost-filtering">Unsharp Masking and High-boost Filtering</h4>
+<p>When K &gt; 1, then High-boost filtering
+When K == 1, then unsharp masking</p>
+<blockquote>
+<p>NOTE: Must remember the equation for high-boost filtering.</p>
+</blockquote>
+<h4 id="morphological-image-processing">Morphological Image Processing</h4>
+<p>It refers to a set of <strong>image processing operations that process images based on shapes</strong>. Morphological operations apply a <strong>structuring element</strong> to an input image, which creates an output image of the <strong>same size</strong>.</p>
+<p>Mathematical Morphology - In biology, it is the study of form and structure. In mathematical morphology, images are collection of sets.</p>
+<h4 id="reflection-and-translation-in-morphology">Reflection and Translation in Morphology</h4>
+<ul>
+<li>Translation - Basically sliding/shifting an element.</li>
+</ul>
+<h4 id="erosion-and-dilation">Erosion and Dilation</h4>
+<ul>
+<li>Erosion - removing pixels on object boundaries.</li>
+<li>Dilation - adding pixels on object boundaries.</li>
+</ul>
+<p>Applications for Erosion:</p>
+<ol>
+<li><strong>Shrinking</strong> Objects</li>
+<li><strong>Removing</strong> bridges and branches (bridges, as in, a line connecting an object; branches are lines sticking out from an object).</li>
+</ol>
+<p>In MatLab, we can use erosion by using the function &lsquo;imerode( Image, SE );&rsquo;</p>
+<p>For erosion, the set of 1&rsquo;s indicated is the foreground (object) of an image.</p>
+<p>For erosion&hellip;</p>
+<ul>
+<li>Fully Match - Structured Element (SE)&rsquo;s values all match with values found in the image. = 1</li>
+<li>Partially Match - There are some matches but not all are matching. = 0</li>
+<li>No Match - No matching values. = 0</li>
+</ul>
+<p>Applications for Dilation:</p>
+<ol>
+<li>Expanding Shapes</li>
+<li>Filling holes and gaps</li>
+</ol>
+<p>In MatLab, we can use dilation by using the function '</p>
+<p>For Dilation&hellip;</p>
+<ul>
+<li>Fully Match = 1</li>
+<li>Partially Match = 1</li>
+<li>No Match = 0</li>
+</ul>
+<h4 id="complementation-and-reflection">Complementation and Reflection</h4>
+<h4 id="closing-and-opening">Closing and Opening</h4>
 <h2 id="reading">Reading</h2>
 <h2 id="summary">Summary</h2>
+<p>For image enhancement, there are two types of spatial filters:</p>
+<ol>
+<li>Smoothing (lowpass)</li>
+<li>Sharpening (highpass)</li>
+</ol>
+<p>Smoothing consists of linear and non-liner (median) filters.</p>
+<blockquote>
+<p>Linear filters have subset of filters, such as box filters and gaussian.</p>
+</blockquote>
+<p>Smoothing = reduce sharp transitions in intensity; noise reduction; reduce aliasing; reduce false contouring</p>
+<p>NOTE: for box filtering, for any nxn dimensional filter, you multiply 1/n to every value within that filter.</p>
+<p>(1/3^2) * every value (9) in filter</p>
+<p>Basically, perform the product of sums in an image with values of the box filter. Afterwards, multiply the coefficient (1/n^2) to the resulting product of sums. After that, replace the middle value of the image with that computated result.</p>
+<p>MATLAB CODE:</p>
+<h4 id="distadvantages-of-box-filtering">Distadvantages of box filtering:</h4>
+<ol>
+<li>blurs edges - important edge details are not preserved.</li>
+<li>equal weighting - nearby pixels are treated the same&ndash;less natural-looking images as a result.</li>
+<li>noise handling - not capable in reducing noise; could increase certain noise</li>
+<li>visual artifacts - can create unwanted visual effects</li>
+</ol>
+<h4 id="lowpass-gaussian">Lowpass Gaussian</h4>
+<p>Gaussian kernels are circularly symmetric and separable</p>
+<p>Equation:
+$w(s, t) = G(s,t) = Ke^{\frac{s^2+t^2}{2\omega^2}}$</p>
+<h4 id="nonlinear-order-statistic-filters">Nonlinear Order-Statistic Filters</h4>
+<p>It is based on ordering (ranking) of pixels in the region encompassed by the neighborhood.</p>
+<p>Median Filter - replaces the value of center pixel by the median of intensity values defined in the neighborhood of that pixel.
+Basically get all values, order them from least to greatest. The median of the rank would be the value of the center pixel.</p>
+<h4 id="advantages-of-median-over-average-filters">Advantages of Median Over Average Filters</h4>
+<ol>
+<li>Outlier Resistance - Median ignores extremes; average is skewed</li>
+<li>Edge Preservation - Median maintains edges; average blurs</li>
+<li>Non-linear Flexibility - Median adapts to various noises; average does not</li>
+<li>Effective in Noise - Median recovers pixels in noise; average may fail.</li>
+</ol>
+<h4 id="sharpening-highpass-spatial-filters">Sharpening (Highpass) Spatial Filters</h4>
+<ul>
+<li>Averaging (Smoothing) -  image is less detailed and blurry by blending intensities (integration)</li>
+<li>Sharpening - details are clearer and more defined via highlighting edges and contrasts (differentiation). It highlights transitions in intensity.</li>
+</ul>
+<p>First Derivative - highlights rapid changes in intensity (edges)
+$\frac$
+Second Derivative - detects areas where intensity changes begin or end.</p>
+<blockquote>
+<p>IMPORTANCE: derivatives identify features that contribute to perceived sharpness.</p>
+</blockquote>
 
         </p>
         
@@ -196,9 +303,35 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#lecture">Lecture</a></li>
+        <li><a href="#lecture">Lecture</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#image-sharpening-using-highpass-frequency-filters">Image Sharpening Using Highpass Frequency Filters</a></li>
+                <li><a href="#unsharp-masking-and-high-boost-filtering">Unsharp Masking and High-boost Filtering</a></li>
+                <li><a href="#morphological-image-processing">Morphological Image Processing</a></li>
+                <li><a href="#reflection-and-translation-in-morphology">Reflection and Translation in Morphology</a></li>
+                <li><a href="#erosion-and-dilation">Erosion and Dilation</a></li>
+                <li><a href="#complementation-and-reflection">Complementation and Reflection</a></li>
+                <li><a href="#closing-and-opening">Closing and Opening</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <li><a href="#reading">Reading</a></li>
-        <li><a href="#summary">Summary</a></li>
+        <li><a href="#summary">Summary</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#distadvantages-of-box-filtering">Distadvantages of box filtering:</a></li>
+                <li><a href="#lowpass-gaussian">Lowpass Gaussian</a></li>
+                <li><a href="#nonlinear-order-statistic-filters">Nonlinear Order-Statistic Filters</a></li>
+                <li><a href="#advantages-of-median-over-average-filters">Advantages of Median Over Average Filters</a></li>
+                <li><a href="#sharpening-highpass-spatial-filters">Sharpening (Highpass) Spatial Filters</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
