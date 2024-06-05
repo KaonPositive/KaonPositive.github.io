@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>ML Notes0</title>
+    <meta name="description" content="ML Notes for YOLO, Roboflow, and Colab">
+    <meta name="keywords" content='blog, gokarna, hugo, notes, machine learning'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/notesresearch0/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ML Notes0">
+    <meta property="og:description" content="ML Notes for YOLO, Roboflow, and Colab">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ML Notes0">
+    <meta name="twitter:description" content="ML Notes for YOLO, Roboflow, and Colab">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/notesresearch0/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/notesresearch0/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/notesresearch0/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>ML Notes0</h1>
+        <small role="doc-subtitle">ML Notes for YOLO, Roboflow, and Colab</small>
+        <p class="post-date">
+            June 2, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/machine-learning">machine learning</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="setup">Setup</h2>
+<p>Purpose of making these notes is for the YOLOv8 with Roboflow CV pipeline on Google Colab.</p>
+<h4 id="step-1---install-dependencies">Step 1 - Install Dependencies</h4>
+<p>Installing dependencies is the first step for this. Two important dependencies to install:</p>
+<ol>
+<li>ultralytics</li>
+<li>roboflow</li>
+</ol>
+<p>Code to install dependencies:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">!</span>pip install ultralytics
+<span style="color:#960050;background-color:#1e0010">!</span>pip install roboflow
+</code></pre></div><blockquote>
+<p>NOTE: Before installing dependencies, make sure to have the runtime to be set using the GPU and not the CPU. Using the GPU will allow the model to utilize parallelism&ndash;this enables CUDA.</p>
+</blockquote>
+<p>CUDA - Enabling CUDA will allow operations to be evenly distributed across the GPU&rsquo;s cores, allowing for significant speedups.</p>
+<p>Since machine learning models demand signficant computational resources, using CUDA will accelerate computations, which would result in reducing training times.</p>
+<p>Example of when CUDA is used:
+Data Processing - CUDA is used to accelerate preprocessing tasks (image augmentation, feature extraction, etc.).</p>
+<h4 id="step-2---set-up-roboflow">Step 2 - Set Up Roboflow</h4>
+<p>You must have Roboflow set up. To have a Roboflow CV model set up, you must have a dataset ready to be exported (you do this in the roboflow website). Code to set roboflow up:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> roboflow <span style="color:#f92672">import</span> Roboflow
+rf <span style="color:#f92672">=</span> Roboflow( api_key<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;API KEY HERE&#34;</span> )
+project <span style="color:#f92672">=</span> rf<span style="color:#f92672">.</span>workspace( <span style="color:#e6db74">&#34;research-XXXXX&#34;</span> )<span style="color:#f92672">.</span>project( <span style="color:#e6db74">&#34;PROJECT NAME HERE&#34;</span> )
+version <span style="color:#f92672">=</span> project<span style="color:#f92672">.</span>version( <span style="color:#ae81ff">1</span> )
+dataset <span style="color:#f92672">=</span> version<span style="color:#f92672">.</span>download( <span style="color:#e6db74">&#34;yolov8&#34;</span> )
+</code></pre></div><h4 id="step-3---load-the-model">Step 3 - Load the Model</h4>
+<p>After Roboflow is set up, you must load the model.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> ultralytics <span style="color:#f92672">import</span> YOLO
+model <span style="color:#f92672">=</span> YOLO( <span style="color:#e6db74">&#39;yolov8m.pt&#39;</span> )
+</code></pre></div><blockquote>
+<p>NOTE: There are different variations of YOLOv8 Models (as you can see above, one of those models are called &lsquo;yolov8m&rsquo;.)</p>
+</blockquote>
+<ol>
+<li>YOLOv8n (Nano) - Is the fastest and has the fewest parameters. It is designed for scenarios where computational resources are limited.</li>
+<li>YOLOv8s (Small) - Is the second fastest and has few parameters. The model strikes the balance between speed and accuracy. It is designed for scenarios where moderate resources are available and both speed and accuracy are important.</li>
+<li>YOLOv8m (Moderate) - Has moderate parameters and moderate speed. It is designed for scenarios where there are balanced use cases.</li>
+<li>YOLOv8l (Large) - It is designed for scenarios such as detailed analysis and less resource-constrained settings.</li>
+<li>YOLOv8x - Model that has the most parameters and is the slowest of all. It is designed for scenarios where high accuracy is needed and is suitable for powerful systems.</li>
+</ol>
+<h4 id="step-4---train-model">Step 4 - Train Model</h4>
+<p>After loading the model, you must train the model.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model<span style="color:#f92672">.</span>train(data<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span>dataset<span style="color:#f92672">.</span>location<span style="color:#e6db74">}</span><span style="color:#e6db74">/data.yaml&#39;</span>, epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, imgsz<span style="color:#f92672">=</span><span style="color:#ae81ff">640</span>)
+</code></pre></div><p><strong>Epochs</strong> - Is a single complete pass that goes through the entire training dataset.</p>
+<blockquote>
+<p>NOTE: On Colab, dataset.location will use the directory where &lsquo;data.yaml&rsquo; is currently in. ALSO, YOU MUST FIX PATHS FOR TEST, TRAIN, and VAL IMAGES IN &lsquo;data.yaml&rsquo;</p>
+</blockquote>
+<h4 id="step-5---model-predictions">Step 5 - Model Predictions</h4>
+<p>After training the model, you must have the model make a set of predictions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">!</span>yolo task<span style="color:#f92672">=</span>detect mode<span style="color:#f92672">=</span>predict model<span style="color:#f92672">=/</span>content<span style="color:#f92672">/</span>runs<span style="color:#f92672">/</span>detect<span style="color:#f92672">/</span>train7<span style="color:#f92672">/</span>weights<span style="color:#f92672">/</span>best<span style="color:#f92672">.</span>pt conf<span style="color:#f92672">=</span><span style="color:#ae81ff">0.25</span> source<span style="color:#f92672">=</span>{dataset<span style="color:#f92672">.</span>location}<span style="color:#f92672">/</span>test<span style="color:#f92672">/</span>images save<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>
+</code></pre></div><p>There are two types of confidence:</p>
+<ol>
+<li><strong>Objectness Confidence</strong> - It is the probability that an object exists within the bounding box.</li>
+<li><strong>Class Confidence</strong> - It is the probability distribution over all possible classes for the detected object.</li>
+</ol>
+<p>conf=0.25 indicates the <strong>MINIMUM</strong> confidence score that a detected object mus thave to be considered a valid object.</p>
+<blockquote>
+<p>NOTE: For the source, you must use the test images directory.</p>
+</blockquote>
+<h4 id="step-6---show-results">Step 6 - Show Results</h4>
+<p>After the model has made its predictions, show the results.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> glob
+<span style="color:#f92672">from</span> IPython.display <span style="color:#f92672">import</span> Image, display
+
+<span style="color:#66d9ef">for</span> imagePath <span style="color:#f92672">in</span> glob<span style="color:#f92672">.</span>glob( <span style="color:#e6db74">&#39;/content/runs/detect/predict/*.jpg&#39;</span> ):
+  display( Image(filename<span style="color:#f92672">=</span>imagePath, width<span style="color:#f92672">=</span><span style="color:#ae81ff">600</span>) )
+  print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</code></pre></div>
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#setup">Setup</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#step-1---install-dependencies">Step 1 - Install Dependencies</a></li>
+                <li><a href="#step-2---set-up-roboflow">Step 2 - Set Up Roboflow</a></li>
+                <li><a href="#step-3---load-the-model">Step 3 - Load the Model</a></li>
+                <li><a href="#step-4---train-model">Step 4 - Train Model</a></li>
+                <li><a href="#step-5---model-predictions">Step 5 - Model Predictions</a></li>
+                <li><a href="#step-6---show-results">Step 6 - Show Results</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

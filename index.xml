@@ -817,6 +817,40 @@ What does each node have?  Each node in the tree must have:  Data: Holds the val
     </item>
     
     <item>
+      <title>Coding Interview Prep1</title>
+      <link>https://kaonpositive.github.io/posts/techintprep1/</link>
+      <pubDate>Sun, 04 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/techintprep1/</guid>
+      <description>Stacks It is a linear data structure that follows the Last In First Out principle (that is, it removes the last inserted element first from the top).
+Operations of Stacks  Push Pop Peek isFull isEmpty  There are two ways to implement a stack:
+ Array Implementation Linked List Implementation  Push Operation Steps for push:
+ Check if the stack is full. If full, then throw an error. If the stack is not full, increment the top (index) by 1 and point to the available space.</description>
+    </item>
+    
+    <item>
+      <title>Coding Interview Prep0</title>
+      <link>https://kaonpositive.github.io/posts/techintprep0/</link>
+      <pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/techintprep0/</guid>
+      <description>Data Structures to Learn (Ordered by Priority)  Arrays Strings Hash Table Recursion Sorting/searching Matrix Linked List Queue Stack Tree Graph Heap Trie Interval Dynamic Programming Binary Math Geometry  Arrays A type of data structure that stores more than one data item of the similar data type. It is a container of elements. Items of an array are allocated at adjacent memory locations.
+Elements - Memory locations found in array.</description>
+    </item>
+    
+    <item>
+      <title>ML Notes0</title>
+      <link>https://kaonpositive.github.io/posts/notesresearch0/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/notesresearch0/</guid>
+      <description>Setup Purpose of making these notes is for the YOLOv8 with Roboflow CV pipeline on Google Colab.
+Step 1 - Install Dependencies Installing dependencies is the first step for this. Two important dependencies to install:
+ ultralytics roboflow  Code to install dependencies:
+!pip install ultralytics !pip install roboflow  NOTE: Before installing dependencies, make sure to have the runtime to be set using the GPU and not the CPU. Using the GPU will allow the model to utilize parallelism&amp;ndash;this enables CUDA.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://kaonpositive.github.io/posts/cs477notes03/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

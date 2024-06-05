@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #4dff8e;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Coding Interview Prep0</title>
+    <meta name="description" content="General notes for general coding interview">
+    <meta name="keywords" content='blog, gokarna, hugo, notes'>
+
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/techintprep0/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Coding Interview Prep0">
+    <meta property="og:description" content="General notes for general coding interview">
+    <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
+    <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Coding Interview Prep0">
+    <meta name="twitter:description" content="General notes for general coding interview">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/techintprep0/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/techintprep0/">
+    <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
+
+    
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/techintprep0/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.1cad96fd391c2b9ae7d512622db1ad1da8fd7f021e784b7b7697075309969323.js" integrity="sha256-HK2W/TkcK5rn1RJiLbGtHaj9fwIeeEt7dpcHUwmWkyM="></script>
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://kaonpositive.github.io">
+                <img src="https://kaonpositive.github.io/images/profile.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://kaonpositive.github.io">Jared Rosario</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://kaonpositive.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Coding Interview Prep0</h1>
+        <small role="doc-subtitle">General notes for general coding interview</small>
+        <p class="post-date">
+            June 3, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="data-structures-to-learn-ordered-by-priority">Data Structures to Learn (Ordered by Priority)</h2>
+<ol>
+<li>Arrays</li>
+<li>Strings</li>
+<li>Hash Table</li>
+<li>Recursion</li>
+<li>Sorting/searching</li>
+<li>Matrix</li>
+<li>Linked List</li>
+<li>Queue</li>
+<li>Stack</li>
+<li>Tree</li>
+<li>Graph</li>
+<li>Heap</li>
+<li>Trie</li>
+<li>Interval</li>
+<li>Dynamic Programming</li>
+<li>Binary</li>
+<li>Math</li>
+<li>Geometry</li>
+</ol>
+<h4 id="arrays">Arrays</h4>
+<p>A type of data structure that stores more than one data item of the similar data type. It is a container of elements.
+Items of an array are allocated at <strong>adjacent memory locations</strong>.</p>
+<p><strong>Elements</strong> - Memory locations found in array.</p>
+<p><strong>Length</strong> - Total number of elements in an array.</p>
+<blockquote>
+<p>NOTE:</p>
+</blockquote>
+<p>To access a specific element of an array, you use its <strong>index/subscript</strong>.</p>
+<p>Declaring an array:
+In python, you declare an array the following way:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">arrName <span style="color:#f92672">=</span> array<span style="color:#f92672">.</span>array( <span style="color:#e6db74">&#39;i&#39;</span>, [<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">100</span>] )
+</code></pre></div><p>Where <code>i</code> is the data type (type code) and <code>[300,200,100]</code> are the elements of the array</p>
+<p>In C++, you declare an array the following way:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">int</span> arrName[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">100</span>};
+</code></pre></div><h5 id="why-are-arrays-importantuseful">Why Are Arrays Important/Useful?</h5>
+<ol>
+<li>They can store multiple values in a single variable.</li>
+<li>Better at processing many values easily and quickly.</li>
+<li>Sorting and searching values are easy to do.</li>
+</ol>
+<h5 id="difference-between-lists-and-arrays-in-python">Difference Between Lists and Arrays in Python</h5>
+<p>In Python, a list can have different data types, whereas arrays can only have items of the <strong>same</strong> type.</p>
+<h5 id="array-operations">Array Operations</h5>
+<p>For arrays, there are various operations:</p>
+<ol>
+<li>Insert - Inserting one or more elements into an array at the beginning, end, or any given index.</li>
+<li>Delete - Can delete an item from an array by value (value as in, removing the specified element in array).</li>
+<li>Search - Search an item in an array based by value.</li>
+<li>Traverse - Traversing through an array using a loop.</li>
+</ol>
+<h4 id="b-tree">B Tree</h4>
+<p>It is a <strong>self-balancing</strong> data structure that follows a set of rules for searching, inserting, and deleting data in a faster and memory efficient way.</p>
+<blockquote>
+<p>NOTE: Self-balancing means the height/depth of the left and right subtrees of any node differ by at most one.</p>
+</blockquote>
+<h5 id="rules-for-b-tree">Rules for B Tree</h5>
+<ol>
+<li>All leaves are created at the same level.</li>
+<li>B Tree is determined by a number of degree, which is called the &ldquo;order&rdquo;</li>
+<li>Left subtree of the node will have lesser values than the right side of the subtree&ndash;nodes are sorted in ascending order from left to right (basically, an in-order traversal).</li>
+<li>For <strong>EVERY</strong> node, the maximum number of keys each node can have is:
+$m - 1$
+For example, if $m = 4$, then the maximum number of children each node can have is $4$ and node can have at most $3$ keys.</li>
+<li>The minimum <strong>children</strong> a node can have is half of $m$, which is $m/2$ (the ceiling is taken).</li>
+<li>Every node, except for the root, <strong>MUST</strong> contain minimum <strong>keys</strong> of $[m/2]-1$</li>
+</ol>
+<p>$m = 4$</p>
+<pre tabindex="0"><code>            [30]
+         /      \
+      [10, 20]   [40, 50, 60]
+     /   |   \       |    |    \
+[5] [15] [25] [35] [45] [55] [65, 70]
+</code></pre><h5 id="why-use-a-b-tree">Why use a B Tree?</h5>
+<ol>
+<li>It reduces number of reads on the disk.</li>
+<li>They are optimized to adjust the number of children nodes according to disk size.</li>
+<li>It is designed for handling a bulky amount of data.</li>
+<li>Useful for databases and file systems.</li>
+<li>Useful for reading and writing large blocks of data.</li>
+</ol>
+<h5 id="how-a-b-tree-works-in-memory">How a B Tree Works in Memory</h5>
+<p>Index Tables are created that saves the record reference of records based on the blocks they reside in&ndash;this reduces time and memory consumption.</p>
+<h5 id="operations-of-a-b-tree">Operations of a B Tree</h5>
+<ol>
+<li>Search</li>
+<li>Insert</li>
+<li>Delete</li>
+</ol>
+<h5 id="search-operation">Search Operation</h5>
+<p>Steps to search:</p>
+<ol>
+<li>You have some value/key, $k$, be searched.</li>
+<li>Start searching from the root and recursively traverse down.</li>
+<li>If $k$ is less than root value, search the left subtree, else search the right.</li>
+<li>If $k$ is found within a node, simply return the node, else keep traversing down to the child with a <strong>greater</strong> key.</li>
+<li>If $k$ is not found in the tree, return NULL.</li>
+</ol>
+<h5 id="insert-operation">Insert Operation</h5>
+<p>Since a B Tree is self-balanced, you cannot just insert a key into any node.</p>
+<p>Steps to insert:</p>
+<ol>
+<li>First search and find the appropriate place to insert the key.</li>
+<li>Once a proper location is found, insert the key at that location.</li>
+<li>If the proper location is found but the node has a maximum number of keys:</li>
+</ol>
+<ul>
+<li>Then the node, along with the inserted key, will split from the middle element (the split will have each key be its own node).</li>
+<li>The middle element will become the parent for the other two child nodes.</li>
+<li>Nodes <em>need</em> to re-arrange keys in <strong>ascending order</strong>.</li>
+</ul>
+<p><a href="https://www.guru99.com/b-tree-example.html">https://www.guru99.com/b-tree-example.html</a></p>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#data-structures-to-learn-ordered-by-priority">Data Structures to Learn (Ordered by Priority)</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#arrays">Arrays</a></li>
+                <li><a href="#b-tree">B Tree</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 j.red</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

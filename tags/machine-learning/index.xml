@@ -163,5 +163,17 @@ If we try to get comparisons for a data instance, we try to find the best line t
  You improve over tasks T.   Ex: Predicting the price of the house in the market.  W/ repect to some performance P   Ex: How much the house is sold for.</description>
     </item>
     
+    <item>
+      <title>ML Notes0</title>
+      <link>https://kaonpositive.github.io/posts/notesresearch0/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/notesresearch0/</guid>
+      <description>Setup Purpose of making these notes is for the YOLOv8 with Roboflow CV pipeline on Google Colab.
+Step 1 - Install Dependencies Installing dependencies is the first step for this. Two important dependencies to install:
+ ultralytics roboflow  Code to install dependencies:
+!pip install ultralytics !pip install roboflow  NOTE: Before installing dependencies, make sure to have the runtime to be set using the GPU and not the CPU. Using the GPU will allow the model to utilize parallelism&amp;ndash;this enables CUDA.</description>
+    </item>
+    
   </channel>
 </rss>

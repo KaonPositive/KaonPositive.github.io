@@ -234,6 +234,61 @@ Non-terminal - uppercase letters; each letter represents a language.</p>
 </ol>
 <h2 id="parser-conflicts">Parser Conflicts</h2>
 <h2 id="regular-expressions">Regular Expressions</h2>
+<h2 id="types-of-parsers">Types of Parsers</h2>
+<h4 id="top-down-parsing">Top Down Parsing</h4>
+<p>Parser starts from start symbol and tries to tranform it to the input.
+Types of Top Down:</p>
+<ol>
+<li>Rescursive Descent Parsing - makes parse tree from the top an dinput is read from left to right.</li>
+<li>Backtracking - if one derivation fails, the syntax analyzer restarts the process using different rules of the same production. Could process the input string more than once to determine the correct production.</li>
+<li>Non-Back Tracking</li>
+<li>Predictive Parser - form of recursive-descent parsing that does not use back-tracking to predict which production needs to be used to replace the input string.</li>
+<li>LL Parser - only accepts LL grammar (LL grammar is a subset of CFG). LL grammar can be implemented using recursive-descent or table-driven.</li>
+</ol>
+<p>Example of Top Down Parsing:
+input string: $a + b * c$
+$S \rightarrow E$
+$E \rightarrow E + T$
+$E \rightarrow E * T$
+$E \rightarrow T$
+$T \rightarrow id$</p>
+<h4 id="bottom-up-parsing">Bottom Up Parsing</h4>
+<p>Starts with the input symbols and contructs the parse tree up to the start symbol.
+Types of Bottom Up:</p>
+<ol>
+<li>Shift-reduce
+Uses two steps:</li>
+</ol>
+<ul>
+<li>shift step - advance to the next input symbol using dot. Symbol is pushed onto the stack and shifted symbol is treated as a single node of the parse tree.</li>
+<li>reduce step - if parser finds a complete grammar rule (RHS) and replaces it with LHS. Top of the stack contains a handle; reducing requires to POP on the stack to remove handle and replace it with LHS non-term symbol.</li>
+</ul>
+<ol start="2">
+<li>LR Parsing - non-recursive, shift-reduce, bottom up parser.
+Three LR parsers exist:</li>
+</ol>
+<ul>
+<li>SLR Parsing</li>
+<li>LALR Parsing</li>
+<li>LR Parser</li>
+</ul>
+<p>Example of Bottom Up Parsing:
+input string: $a + b * c$
+$a + b * c$
+$T + b * c$
+$E + b * c$
+$E + T * c$
+$E * c$
+$E * T$
+$E$
+$S$</p>
+<h4 id="parsers-weakest-to-strongest">Parsers Weakest to Strongest</h4>
+<ol>
+<li>LL(1)</li>
+<li>SLR(1)</li>
+<li>LALR(1)</li>
+<li>LR(1)</li>
+</ol>
 <h2 id="how-can-a-cfg-be-ll1">How can a CFG be LL(1)?</h2>
 <ol>
 <li>Must be unambiguous</li>
@@ -434,6 +489,17 @@ Weakly Typed - Type errors cannot be typed checked at compile time. Variables ca
         </li>
         <li><a href="#parser-conflicts">Parser Conflicts</a></li>
         <li><a href="#regular-expressions">Regular Expressions</a></li>
+        <li><a href="#types-of-parsers">Types of Parsers</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#top-down-parsing">Top Down Parsing</a></li>
+                <li><a href="#bottom-up-parsing">Bottom Up Parsing</a></li>
+                <li><a href="#parsers-weakest-to-strongest">Parsers Weakest to Strongest</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <li><a href="#how-can-a-cfg-be-ll1">How can a CFG be LL(1)?</a></li>
         <li><a href="#lr0-">LR(0) *</a>
           <ul>

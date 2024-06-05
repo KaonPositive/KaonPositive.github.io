@@ -17,26 +17,26 @@
     
 
     
-    <title>machine learning</title>
-    <meta name="description" content="Obsession creates greatness.">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>Coding Interview Prep1</title>
+    <meta name="description" content="General notes for general coding interview">
+    <meta name="keywords" content='blog, gokarna, hugo, notes'>
 
-    <meta property="og:url" content="https://kaonpositive.github.io/tags/machine-learning/">
+    <meta property="og:url" content="https://kaonpositive.github.io/posts/techintprep1/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="machine learning">
-    <meta property="og:description" content="Obsession creates greatness.">
+    <meta property="og:title" content="Coding Interview Prep1">
+    <meta property="og:description" content="General notes for general coding interview">
     <meta property="og:image" content="https://kaonpositive.github.io/images/profile.webp">
     <meta property="og:image:secure_url" content="https://kaonpositive.github.io/images/profile.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="machine learning">
-    <meta name="twitter:description" content="Obsession creates greatness.">
-    <meta property="twitter:domain" content="https://kaonpositive.github.io/tags/machine-learning/">
-    <meta property="twitter:url" content="https://kaonpositive.github.io/tags/machine-learning/">
+    <meta name="twitter:title" content="Coding Interview Prep1">
+    <meta name="twitter:description" content="General notes for general coding interview">
+    <meta property="twitter:domain" content="https://kaonpositive.github.io/posts/techintprep1/">
+    <meta property="twitter:url" content="https://kaonpositive.github.io/posts/techintprep1/">
     <meta name="twitter:image" content="https://kaonpositive.github.io/images/profile.webp">
 
     
-    <link rel="canonical" href="https://kaonpositive.github.io/tags/machine-learning/" />
+    <link rel="canonical" href="https://kaonpositive.github.io/posts/techintprep1/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -156,90 +156,111 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Coding Interview Prep1</h1>
+        <small role="doc-subtitle">General notes for general coding interview</small>
+        <p class="post-date">
+            June 4, 2023
+        </p>
 
-    <h1 class="list-title">machine learning</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://kaonpositive.github.io/tags/notes">notes</a></li>
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <h2 id="stacks">Stacks</h2>
+<p>It is a <strong>linear data structure</strong> that follows the <strong>Last In First Out</strong> principle (that is, it removes the last inserted element first from the top).</p>
+<h4 id="operations-of-stacks">Operations of Stacks</h4>
+<ol>
+<li>Push</li>
+<li>Pop</li>
+<li>Peek</li>
+<li>isFull</li>
+<li>isEmpty</li>
+</ol>
+<p>There are two ways to implement a stack:</p>
+<ol>
+<li>Array Implementation</li>
+<li>Linked List Implementation</li>
+</ol>
+<h4 id="push-operation">Push Operation</h4>
+<p>Steps for push:</p>
+<ol>
+<li>Check if the stack is full. If full, then throw an error.</li>
+<li>If the stack is not full, increment the top (index) by 1 and point to the available space.</li>
+<li>Add the element to the available space.</li>
+<li>Return a success</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Stack</span>{
+  <span style="color:#66d9ef">int</span> array[<span style="color:#ae81ff">3</span>];
+  <span style="color:#75715e">// Starting at -1 since arr index first starts at 0.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> top{<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>};
 
-    <h2 class="posts-year">2024</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/generalml/" class="post-link">Machine Learning Notes</a>
-    <div class="flex-break"></div>
-    <span class="post-date">January 16, 2024</span>
-</article>
+  Stack()
+  {
+    <span style="color:#66d9ef">for</span>( <span style="color:#66d9ef">int</span> i{}; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; <span style="color:#f92672">++</span>i )
+      stackSize[i] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+  }
+};
 
-    
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">push</span>( Stack <span style="color:#f92672">&amp;</span>, <span style="color:#66d9ef">int</span> );
 
-    <h2 class="posts-year">2023</h2><article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422finalreview/" class="post-link">CS422 Final Study Guide</a>
-    <div class="flex-break"></div>
-    <span class="post-date">December 2, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes09/" class="post-link">CS 422 Notes 09</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 10, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes08/" class="post-link">CS 422 Notes 08</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 3, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes07/" class="post-link">CS 422 Notes 07</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 3, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422midtermreview/" class="post-link">CS 422 Midterm Review</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 3, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes06/" class="post-link">CS 422 Notes 06</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 28, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes05/" class="post-link">CS 422 Notes 05</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 21, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes04/" class="post-link">CS 422 Notes 04</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 19, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes03/" class="post-link">CS 422 Notes 03</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 14, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes02/" class="post-link">CS 422 Notes 02</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 12, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes01/" class="post-link">CS 422 Notes 01</a>
-    <div class="flex-break"></div>
-    <span class="post-date">September 5, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/cs422notes00/" class="post-link">CS 422 Notes 00</a>
-    <div class="flex-break"></div>
-    <span class="post-date">August 31, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://kaonpositive.github.io/posts/notesresearch0/" class="post-link">ML Notes0</a>
-    <div class="flex-break"></div>
-    <span class="post-date">June 2, 2023</span>
-</article>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">push</span>( Stack <span style="color:#f92672">&amp;</span>s, <span style="color:#66d9ef">int</span> num )
+{
+  <span style="color:#75715e">// Getting length array
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> <span style="color:#66d9ef">sizeof</span>( s.array ) <span style="color:#f92672">/</span> <span style="color:#66d9ef">sizeof</span>(s.array[<span style="color:#ae81ff">0</span>] ) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
 
-    
+  <span style="color:#75715e">// If the stack is full, throw error.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span>( s.top <span style="color:#f92672">==</span> len ) {
+    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Stack is full.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+    <span style="color:#66d9ef">return</span>;
+  }
 
+  <span style="color:#75715e">// else, increment top by 1, point to available space, and add element to said space.
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">++</span>s.top;
+  s.array[s.top] <span style="color:#f92672">=</span> num;
+}
+</code></pre></div>
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
 </div>
 
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#stacks">Stacks</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#operations-of-stacks">Operations of Stacks</a></li>
+                <li><a href="#push-operation">Push Operation</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
 
         </main><footer class="footer">
     
