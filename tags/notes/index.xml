@@ -6,7 +6,19 @@
     <description>Recent content in notes on Jared Rosario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kaonpositive.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ML Notes1</title>
+      <link>https://kaonpositive.github.io/posts/notesresearch1/</link>
+      <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaonpositive.github.io/posts/notesresearch1/</guid>
+      <description>CUDA Programming on Jetson Nano Purpose of CUDA Compute Unified Device Architecture (CUDA) is used for parallel computing on CUDA-enabled GPUs.
+Architecture CPU is meant for sequential execution of instructions GPU is meant for parallel execution of control logic.
+By using CUDA&amp;rsquo;s parallel processing feature, it breaks down tasks into thousands of smaller threads that can be executed independently&amp;ndash;this would lead to higher efficiency and parallelism.
+TLDR: Basically, CUDA allows parallel processing of tasks to speed their applications by using GPU accelerators.</description>
+    </item>
+    
     <item>
       <title>Coding Interview Prep1</title>
       <link>https://kaonpositive.github.io/posts/techintprep1/</link>
